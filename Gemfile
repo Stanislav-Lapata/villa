@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 gem 'rails', '4.0.0'
 gem 'pg'
@@ -11,3 +12,4 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'zurb-foundation'
 gem 'slim-rails'
+gem 'rails_12factor'
