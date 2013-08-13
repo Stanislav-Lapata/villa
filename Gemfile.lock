@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:gregbell/active_admin.git
+  remote: https://github.com/gregbell/active_admin.git
   revision: 72a9c30cef47b3f38c38039de021aaa3194c188b
   branch: rails4
   specs:

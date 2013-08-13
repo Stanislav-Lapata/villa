@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
-gem 'activeadmin', git: 'git@github.com:gregbell/active_admin.git', branch: 'rails4'
+gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 'rails4'
 gem 'slim-rails'
 gem 'zurb-foundation'
 
