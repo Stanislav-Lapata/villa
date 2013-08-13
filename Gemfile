@@ -10,6 +10,17 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
-gem 'zurb-foundation'
+gem 'activeadmin', github: 'gregbell/active_admin', branch: 'rails4'
 gem 'slim-rails'
+gem 'zurb-foundation'
+
+
 gem 'rails_12factor'
+
+group :development do
+  gem 'quiet_assets'
+end
+
+group :development, :test do
+  gem 'pry-rails'
+end
