@@ -14,11 +14,13 @@ gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 
 gem 'slim-rails'
 gem 'zurb-foundation'
 
+gem 'unicorn'
 
 gem 'rails_12factor'
 
 group :development do
   gem 'quiet_assets'
+  gem 'capistrano-deploy', :require => nil
 end
 
 group :development, :test do

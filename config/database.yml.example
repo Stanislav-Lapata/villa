@@ -1,0 +1,21 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: oleg
+  password: 2020327
+  host: localhost
+  port: 5432
+
+development:
+  database: villa_development
+  <<: *common
+
+test:
+  database: villa_test
+  min_messages: WARNING
+  <<: *common
+
+production:
+  database: villa_production
+  <<: *common
