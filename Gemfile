@@ -11,6 +11,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 'rails4'
+gem 'active_admin-awesome_nested_set', path: '../active_admin-awesome_nested_set'
+gem 'awesome_nested_set'
+gem 'carrierwave'
+gem 'rmagick'
 gem 'slim-rails'
 gem 'zurb-foundation'
 

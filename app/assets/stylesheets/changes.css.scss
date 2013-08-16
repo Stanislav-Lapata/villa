@@ -1,0 +1,48 @@
+.top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
+  margin-top: -24px !important;
+}
+
+.area-name {
+  margin-bottom: 30px;
+  font-size: 170%;
+  line-height: 1.2em;
+  border-bottom: 1px solid #ccc;
+  padding: 0 30px 25px 0;
+  text-transform: uppercase;
+}
+
+.villas-list {
+  p.title-link {
+    color: #000;
+    font-size: 13px!important;
+    line-height: 1.4em;
+    display: inline-block;
+    padding-left: 5px;
+    width: 215px;
+    margin-bottom: 10px;
+
+    a {
+      color: #000;
+      display: inline-block;
+      padding: 8px 0px 5px 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  span.price {
+    font-size: 18px;
+    padding-left: 5px;
+  }
+}
+
+.villa-show {
+  .panel {
+    border-style: none;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    background: #efefef;
+  }
+}

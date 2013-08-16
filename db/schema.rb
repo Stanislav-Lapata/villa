@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130811134705) do
+ActiveRecord::Schema.define(version: 20130815053808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,18 @@ ActiveRecord::Schema.define(version: 20130811134705) do
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+    t.boolean  "show_on_home_page", default: false
+  end
+
+  create_table "images", force: true do |t|
+    t.string   "image"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "villa_id"
   end
 
   create_table "requests", force: true do |t|

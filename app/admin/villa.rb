@@ -11,7 +11,7 @@ ActiveAdmin.register Villa do
 
   filter :name
 
-  form do |f|
+  form(:html => { multipart: true }) do |f|
     f.inputs "Admin Details" do
       f.input :name
       f.input :area
@@ -30,12 +30,25 @@ ActiveAdmin.register Villa do
       f.input :facilities
     end
 
+    f.inputs "Photos" do
+      f.has_many :images do |i|
+        i.input :image, as: :file, hint: f.template.image_tag(i.object.image.url(:thumb))
+        i.buttons do
+          link_to "Delete", admin_image_path(i.object), method: "delete", class: "button", data: { confirm: 'Are you sure?' } unless i.object.new_record?
+        end
+      end
+    end
+
     f.actions
   end
 
   controller do
     def permitted_params
-      params.permit villa: [:name, :description, :price_from, :price_to, :area_id, :facilities, :services, :bedrooms, :sleeps_up_to]
+      params.permit villa: [
+                            :name, :description, :price_from, :price_to, :area_id,
+                            :facilities, :services, :bedrooms, :sleeps_up_to,
+                            images_attributes: [:id, :image, :_destroy]
+                           ]
     end
   end
 end

@@ -4,6 +4,8 @@ Newvilla::Application.routes.draw do
   ActiveAdmin.routes(self)
   get 'rentals', to: 'villas#index'
 
+  resources :villas
+
   root 'home#index'
 
 end
