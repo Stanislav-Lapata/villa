@@ -1,23 +1,90 @@
-br
-br
+div ng-view=""
 
-.row
-  .large-12.columns
-    .row.villa-show
-      .large-7.columns
-        ul data-orbit=""
-          - @villa.images.each do |image|
-            li= image_tag image.image.url
-      .large-5.columns
-        .panel
-          h5.hide-for-small
-            #{@villa.name}
-            hr
-          h5 From #{number_to_currency(@villa.price_from, precision: 0)}
-          p #{@villa.bedrooms} bedrooms (sleeps up to #{@villa.sleeps_up_to})
 
-          br
-          br
-          br
-          p Category: #{@villa.area.name} Villas
+/ br
+/ br
+
+/ .row
+/   .large-12.columns
+/     .row.villa-show
+/       .large-7.columns
+/         .shadow
+/           ul data-orbit=""
+/             - @villa.images.each do |image|
+/               li= image_tag image.image.url
+/       .large-5.columns
+/         .panel
+/           h5.hide-for-small
+/             #{@villa.name}
+/             hr
+/           h5 From #{number_to_currency(@villa.price_from, precision: 0)}
+/           em= @villa.location
+/           p #{@villa.bedrooms} bedrooms (sleeps up to #{@villa.sleeps_up_to})
+
+/           br
+/           p Price Range: From #{number_to_currency(@villa.price_from, precision: 0)} - #{number_to_currency(@villa.price_to, precision: 0)}
+/           br
+/           em Category: #{@villa.area.name} Villas
+
+/     br
+/     br
+/     .row
+/       .large-12.columns
+/         .section-container.vertical-tabs data-section="vertical-tabs"
+/           section
+/             p.title data-section-title=""
+/               a href="#" Villa description
+/             .content data-section-content=""
+/               = simple_format(@villa.description.html_safe)
+/           section
+/             p.title data-section-title=""
+/               a href="#" Facilities & Services
+/             .content data-section-content=""
+/               p Facilities
+/               - @villa.facilities.split("\r\n").each do |facility|
+/                 br= facility
+
+/               br
+/               br
+/               p Services
+/               - @villa.services.split("\r\n").each do |serv|
+/                 br= serv
+/           section
+/             p.title data-section-title=""
+/               a href="#" Price guide
+/             .content data-section-content=""
+/               p Unless otherwise stated:
+/                 All prices are in US$ and include all taxes
+/                 Prices quoted are for full villa occupancy and maximum 2 adults per double bedroom
+/                 Some villas can be rented at a reduced rate for lower occupancy, please ask for details
+/                 Check-in 3pm / Check-out prior to noon, early check-in or late check-out can be arranged for an additional fee
+/                 No smoking inside the villa
+/                 A refundable security deposit is payable on arrival
+/                 To make a booking or booking enquiry please click on the ‘ENQUIRE NOW’ tab on the left
+/                 For general villa and booking information please see our FAQ page, if you have any questions regarding this particular villa please contact us
+/           section
+/             p.title data-section-title=""
+/               a href="#" Enquire now
+/             .content data-section-content=""
+/               h3 Villa Information Request
+/               p For more information, prices and availability of this villa, please submit a request and a villa specialist will contact you as soon as possible.
+/               = simple_form_for [@villa, @request], html: {"data-abide" => "", "data-invalid" => ""} do |f|
+/                 .large-12.columns
+/                   = f.label :first_name, '* Guest Name'
+/                 .large-6.columns
+/                   = f.input :first_name, label: false, placeholder: 'First Name', input_html: {required: "", "data-invalid" => ""}
+/                 .large-6.columns
+/                   = f.input :last_name, label: false, placeholder: 'Last Name', input_html: {required: "", "data-invalid" => ""}
+/                 br
+/                 br
+/                 .large-6.columns
+/                   = f.input :email, placeholder: 'user@domain.com'
+/                 .large-3.columns
+/                   = f.input :check_in, as: :string, input_html: {class: 'datepicker'}
+/                 .large-3.columns
+/                   = f.input :check_out, as: :string, input_html: {class: 'datepicker'}
+/                 .large-12.columns
+/                   = f.input :comments, placeholder: 'Leave your comments here'
+
+/                 = f.button :submit
 

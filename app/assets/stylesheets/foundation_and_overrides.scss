@@ -51,9 +51,9 @@ $em-base: 16 !default;
 
 $default-float: left;
 
-$body-bg: #efefef;
+$body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: Arial, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -1024,21 +1024,21 @@ $body-bg: #efefef;
 // We use these to set padding and hover factor
 
 // $section-title-padding: emCalc(15);
-// $section-content-padding: emCalc(15);
-// $section-function-factor: 10%;
+$section-content-padding: emCalc(40);
+$section-function-factor: 10%;
 
 // These style the titles
 
-// $section-title-color: #333;
-// $section-title-color-active: #333;
-// $section-title-bg: #efefef;
-// $section-title-bg-active: darken($section-title-bg, $section-function-factor);
+$section-title-color: #ccc;
+$section-title-color-active: #333;
+$section-title-bg: #fff;
+$section-title-bg-active: #fff;
 // $section-title-bg-active-tabs: #fff;
-// $section-title-bg-hover: darken($section-title-bg, $section-function-factor / 2);
+$section-title-bg-hover: #fff;
 
 // Want to control border size, here ya go!
 
-// $section-border-size: 1px;
+$section-border-size: 1px;
 // $section-border-style: solid;
 // $section-border-color: #ccc;
 
@@ -1050,8 +1050,8 @@ $body-bg: #efefef;
 
 // $section-content-bg: #fff;
 // $section-vertical-nav-min-width: emCalc(200);
-// $section-vertical-tabs-title-width: emCalc(200);
-// $section-bottom-margin: emCalc(20);
+$section-vertical-tabs-title-width: emCalc(300);
+$section-bottom-margin: emCalc(5);
 
 // $title-selector: ".title";
 // $content-selector: ".content";
@@ -1234,7 +1234,7 @@ $thumb-border-width: 5px;
 
 // Background color for the top bar
 
-// $topbar-bg: #111;
+$topbar-bg: white;
 
 // Height and margin
 
@@ -1252,7 +1252,7 @@ $topbar-margin-bottom: emCalc(0);
 
 // Style the top bar dropdown elements
 
-// $topbar-dropdown-bg: #222;
+// $topbar-dropdown-bg: #000;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
 // $topbar-dropdown-toggle-size: 5px;

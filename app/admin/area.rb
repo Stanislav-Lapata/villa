@@ -4,6 +4,7 @@ ActiveAdmin.register Area do
   sortable_tree_member_actions
 
   index do
+    render "nested_areas"
     column "&#9650;".html_safe do |resource|
       link_to("&#9650;".html_safe, self.send(:"move_up_admin_#{resource.class.name.underscore.gsub("/", "_")}_path", resource), :class => "arrow") if resource.left_sibling
     end
@@ -23,6 +24,17 @@ ActiveAdmin.register Area do
     default_actions
   end
 
+
+  show do
+    attributes_table do
+      row :name
+      row :test do
+        render "nested_areas"
+      end
+    end
+
+  end
+
   filter :name
 
   form do |f|
@@ -36,7 +48,7 @@ ActiveAdmin.register Area do
 
   controller do
     def permitted_params
-      params.permit area: [:name, :parent_id, :show_on_home_page]
+      params.permit area: [:name, :parent_id, :show_on_home_page, :position]
     end
   end
 end

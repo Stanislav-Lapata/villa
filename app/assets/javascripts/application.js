@@ -11,39 +11,60 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.ui.datepicker
 //= require jquery_ujs
-//= require turbolinks
 //= require foundation
-//= require_tree .
+//= require unstable/angular
+//= require unstable/angular-resource
 
-$(function(){ $(document).foundation(); });
+//= require app
+//= require jquery.throttle_debounce_plugin
+//= require_tree ./angular
 
-$(document).foundation('orbit', {
-  animation: 'fade',
-  timer_speed: 3000,
-  pause_on_hover: true,
-  resume_on_mouseout: false,
-  animation_speed: 500,
-  stack_on_small: true,
-  navigation_arrows: true,
-  slide_number: false,
-  container_class: 'orbit-container',
-  stack_on_small_class: 'orbit-stack-on-small',
-  next_class: 'orbit-next',
-  prev_class: 'orbit-prev',
-  timer_container_class: 'orbit-timer',
-  timer_paused_class: 'paused',
-  timer_progress_class: 'orbit-progress',
-  slides_container_class: 'orbit-slides-container',
-  bullets_container_class: 'orbit-bullets',
-  bullets_active_class: 'active',
-  slide_number_class: 'orbit-slide-number',
-  caption_class: 'orbit-caption',
-  active_slide_class: 'active',
-  orbit_transition_class: 'orbit-transitioning',
-  bullets: false,
-  timer: true,
-  variable_height: false,
-  before_slide_change: function(){},
-  after_slide_change: function(){}
+Array.prototype.remove = function(e) {
+  var t, _ref;
+  if ((t = this.indexOf(e)) > -1) {
+    return ([].splice.apply(this, [t, t - t + 1].concat(_ref = [])), _ref);
+  }
+};
+
+
+$(function(){
+  $(document).foundation();
+  $('.datepicker').datepicker({
+    dateFormat: "yy-mm-dd"
+  });
 });
+
+
+// $(document).foundation('orbit', {
+//   animation: 'fade',
+//   timer_speed: 3000,
+//   pause_on_hover: true,
+//   resume_on_mouseout: false,
+//   animation_speed: 500,
+//   stack_on_small: true,
+//   navigation_arrows: true,
+//   slide_number: false,
+//   container_class: 'orbit-container',
+//   stack_on_small_class: 'orbit-stack-on-small',
+//   next_class: 'orbit-next',
+//   prev_class: 'orbit-prev',
+//   timer_container_class: 'orbit-timer',
+//   timer_paused_class: 'paused',
+//   timer_progress_class: 'orbit-progress',
+//   slides_container_class: 'orbit-slides-container',
+//   bullets_container_class: 'orbit-bullets',
+//   bullets_active_class: 'active',
+//   slide_number_class: 'orbit-slide-number',
+//   caption_class: 'orbit-caption',
+//   active_slide_class: 'active',
+//   orbit_transition_class: 'orbit-transitioning',
+//   bullets: false,
+//   timer: true,
+//   variable_height: false,
+//   before_slide_change: function(){},
+//   after_slide_change: function(){}
+// });
+
+

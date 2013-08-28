@@ -1,0 +1,20 @@
+br
+.row
+  .large-3.columns
+    .row.collapse ng-controller="AreasCtrl"
+      input type="text" placeholder="Villa Name or ID" ng-model="filters.query" ng-ampere-debounce=""
+      ul.no-bullet.areas-list
+        li ng-include="'/areas/areas.html'" ng-repeat="area in areas"
+
+
+  .large-9.columns
+    .row
+      p LUXURY RENTALS
+      .villas-list ng-repeat="villa in villas" ng-animate="'animate'"
+        .large-4.small-8.columns.villa-row
+          .shadow
+            a href="/villas#/villas/{{villa.id}}"
+              img ng-src="{{villa.image_url}}"
+          p.title-link
+            a href="villas#/villas/{{villa.id}}" {{villa.name}}
+          span.price From ${{villa.price_from | number:0}}

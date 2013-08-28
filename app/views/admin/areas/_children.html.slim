@@ -1,0 +1,5 @@
+ul
+  - item.children.each do |child|
+    li id="#{child.id}"
+      = link_to child.name, '#'
+      = render 'children', :item => child unless child.leaf?

@@ -1,0 +1,6 @@
+#sortable
+  ul
+    - for area in Area.roots
+      li id="#{area.id}"
+        = link_to area.name, '#', class: 'clicked'
+        = render 'children', :item => area unless area.leaf?

@@ -2,8 +2,8 @@
   <ul class="title-area">
     <!-- Title Area -->
     <li class="name">
-      <h1 style="width: 400px; padding-left: 100px;">
-        <a style="font-family: Arial; font-weight: normal; font-size: 25px;" href="#">DIGITAL VILLAS </a>
+      <h1 style="width: 400px; padding-left: 100px; font-family: Arial; font-weight: normal; font-size: 25px;">
+        <%= link_to image_tag('logo1.png', size: '190x100'), root_url %>
       </h1>
     </li>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -14,7 +14,7 @@
     <!-- Left Nav Section -->
     <ul class="left">
       <li class="active"><a href="#">Home</a></li>
-      <li class="has-dropdown"><a href="#">Search Villa Rentals</a>
+      <li class="has-dropdown"><a href="/villas">Search Villa Rentals</a>
         <%= render_villas_menu %>
       </li>
       <li><a href="#">Villa Sales</a></li>

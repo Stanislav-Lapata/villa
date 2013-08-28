@@ -1,5 +1,13 @@
 class VillasController < ApplicationController
-  def show
-    @villa = Villa.find(params[:id])
+  def show_villa
+    respond_to do |format|
+      format.html { render layout: false }
+    end
+  end
+
+  def list
+    respond_to do |format|
+      format.html { render layout: false }
+    end
   end
 end
