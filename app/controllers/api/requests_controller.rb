@@ -12,7 +12,7 @@ module Api
     private
 
       def request_params
-        params.require(:request).permit(:first_name, :last_name, :email, :check_in, :check_out, :comments)
+        params.require(:request).permit(:villa_id, :first_name, :last_name, :email, :check_in, :check_out, :comments)
       end
   end
 end

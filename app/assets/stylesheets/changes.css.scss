@@ -44,6 +44,43 @@
     margin-bottom: 1.25em;
     padding: 1.25em;
     background: #fff;
+
+    .title {
+      font-size: 25px;
+      font-family: "Trajan Pro 3";
+      font-weight: normal;
+    }
+
+    .from {
+      font-size: 15px;
+      font-family: "Trajan Pro 3";
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      span.price {
+        font-size: 50px;
+        font-family: "Trajan Pro 3";
+        margin-left: 20px;
+      }
+    }
+
+    .location, .bedrooms {
+      font-family: "Minion Pro";
+      font-size: 15px;
+    }
+
+    .price-range {
+      font-size: 15px;
+      font-family: "Trajan Pro 3";
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    .category {
+      font-family: "Minion Pro";
+      font-size: 12px;
+      margin-top: 10px;
+    }
   }
 }
 
@@ -55,6 +92,11 @@
 }
 
 .section-container.vertical-tabs {
+  section .content {
+    font-family: "Minion Pro" !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+  }
 
   p.title {
     padding-right: 40px;
@@ -168,5 +210,5 @@ nav.top-bar {
 }
 
 .orbit-container {
-  min-height: 300px;
+  height: 300px;
 }

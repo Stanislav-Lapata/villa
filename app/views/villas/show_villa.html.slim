@@ -15,18 +15,25 @@ br
       .large-5.columns
         .panel
           h5.hide-for-small
-            | {{villa.name}}
-            hr
-          h5 From {{villa.price_from | number:0}}
-          em
-            | {{villa.location}}
-          p
-            | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
+            .title
+              | {{villa.name}}
 
           br
-          p Price Range: From {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
           br
-          em Category: {{villa.area.name}} Villas
+
+          .from
+            | From
+            span.price
+              | ${{villa.price_from | number:0}}
+          .location
+            | {{villa.location}}
+          .bedrooms
+            | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
+
+          .price-range
+            p Price Range: From {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
+            br
+          .category Category: {{villa.area.name}} Villas
 
     br
     br
@@ -84,8 +91,6 @@ br
                       input ng-class="{error: requestForm.firstName.$error.required && show_errors}" name="firstName" type="text" ng-model="first_name" required="" placeholder="First Name"
                     .large-6.columns
                       input ng-class="{error: requestForm.lastName.$error.required && show_errors}" name="lastName" type="text" ng-model="last_name" required="" placeholder="Last Name"
-                  br
-                  br
                   .row
                     .large-6.columns
                       label * Email

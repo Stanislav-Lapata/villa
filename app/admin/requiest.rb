@@ -3,6 +3,7 @@ ActiveAdmin.register Request do
     column 'full name' do |request|
       "#{request.last_name} #{request.first_name}"
     end
+    column :villa
     column :email
     column :check_in
     column :check_out

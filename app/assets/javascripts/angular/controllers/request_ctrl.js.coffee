@@ -5,6 +5,7 @@ App.controller 'RequestCtrl', ['$scope', 'Request', ($scope, Request) ->
     request = new Request()
 
     request.request =
+      villa_id: $scope.villa.id
       first_name: $scope.first_name
       last_name: $scope.last_name
       email: $scope.email
@@ -13,7 +14,6 @@ App.controller 'RequestCtrl', ['$scope', 'Request', ($scope, Request) ->
       comments: $scope.comments
 
     request.$save ((success) ->
-      alert "success"
       $scope.success_request = true
       $scope.request = success.data
     ), (error) ->

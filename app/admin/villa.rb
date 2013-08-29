@@ -4,6 +4,7 @@ ActiveAdmin.register Villa do
     column :area
     column :price_from
     column :price_to
+    column :location
     column :bedrooms
     column :sleeps_up_to
     default_actions
@@ -17,6 +18,7 @@ ActiveAdmin.register Villa do
       f.input :area
       f.input :price_from
       f.input :price_to
+      f.input :location
       f.input :bedrooms
       f.input :sleeps_up_to
     end
@@ -45,8 +47,8 @@ ActiveAdmin.register Villa do
   controller do
     def permitted_params
       params.permit villa: [
-                            :name, :description, :price_from, :price_to, :area_id,
-                            :facilities, :services, :bedrooms, :sleeps_up_to,
+                            :name, :description, :price_from, :price_to, :location,
+                            :area_id, :facilities, :services, :bedrooms, :sleeps_up_to,
                             images_attributes: [:id, :image, :_destroy]
                            ]
     end
