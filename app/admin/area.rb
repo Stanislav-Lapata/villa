@@ -21,6 +21,8 @@ ActiveAdmin.register Area do
         status_tag('false', :warn)
       end
     end
+    column :rental
+    column :sale
     default_actions
   end
 
@@ -42,13 +44,15 @@ ActiveAdmin.register Area do
       f.input :name
       f.input :parent
       f.input :show_on_home_page
+      f.input :rental
+      f.input :sale
     end
     f.actions
   end
 
   controller do
     def permitted_params
-      params.permit area: [:name, :parent_id, :show_on_home_page, :position]
+      params.permit area: [:name, :parent_id, :show_on_home_page, :position, :rental, :sale]
     end
   end
 end

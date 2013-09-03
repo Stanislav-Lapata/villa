@@ -1,33 +1,5 @@
-ul data-orbit=""
-  li
-    = image_tag "slide-1-4.jpg"
-  li
-    = image_tag "slide-1-6.jpg"
-  li
-    = image_tag "slide-1-7.jpg"
+base href="/"
 
+#loading Loading...
 
-br
-br
-br
-
-.row
-  .large-12.columns
-    .row
-      .villas-list
-        - @areas.each do |area|
-          .area-name= area.name
-          .clear
-          - area.self_and_descendants.map(&:villas).flatten.each do |villa|
-            .large-3.small-6.columns
-              = link_to villa, class: 'th redius shadow' do
-                = image_tag villa.images.last.image.url(:thumb)
-              p.title-link= link_to villa.name, '#'
-              span.price From #{number_to_currency(villa.price_from, precision: 0)}
-
-
-
-
-  br
-  br
-  br
+div ng-view=""

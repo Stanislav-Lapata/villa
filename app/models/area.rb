@@ -1,6 +1,4 @@
 class Area < ActiveRecord::Base
-  extend Enumerize
-
   acts_as_nested_set
   default_scope order: 'lft ASC'
 
@@ -8,5 +6,7 @@ class Area < ActiveRecord::Base
 
   scope :for_home_page, -> { where(show_on_home_page: true) }
 
-  enumerize :category, in: [:rental, :sale], default: :rental
+  def self_and_descendants_villas
+    self_and_descendants.map(&:villas).flatten
+  end
 end

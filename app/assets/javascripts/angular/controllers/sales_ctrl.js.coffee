@@ -1,4 +1,4 @@
-App.controller 'VillasCtrl', ['$scope', '$http', ($scope, $http) ->
+App.controller 'SalesCtrl', ['$scope', '$http', ($scope, $http) ->
   $scope.filters = { }
 
   $scope.$watch "filters", ( (filters) ->
@@ -6,7 +6,7 @@ App.controller 'VillasCtrl', ['$scope', '$http', ($scope, $http) ->
       q:
         name_cont: filters.query
         area_id_place_eq: filters.area_id
-        area_rental_eq: true
+        area_sale_eq: true
 
     params = $.param(search)
 

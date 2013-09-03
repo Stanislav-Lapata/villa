@@ -1,0 +1,37 @@
+
+
+.home-slider
+  ul.orbit data-orbit="" data-options="bullets:false; slide_number:false; timer:true;"
+    li
+      = image_tag "slide-1-4.jpg"
+    li
+      = image_tag "slide-1-6.jpg"
+    li
+      = image_tag "slide-1-7.jpg"
+
+
+br
+br
+br
+
+.row
+  .large-12.columns
+    .row
+      .villas-list
+        .area-group ng-repeat="area in areas"
+          .area-name
+            | {{area.name}}
+          .clear
+          .villas-list ng-repeat="villa in area.villas" ng-animate="'animate'"
+            .large-3.small-6.columns.villa-row
+              .shadow
+                a href="#/villas/{{villa.id}}"
+                  img ng-src="{{villa.image_url}}"
+              p.title-link
+                a href="villas#/villas/{{villa.id}}" {{villa.name}}
+              span.price From ${{villa.price_from | number:0}}
+
+
+  br
+  br
+  br

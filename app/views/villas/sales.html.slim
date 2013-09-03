@@ -6,10 +6,8 @@ br
       ul.no-bullet.areas-list
         li
           = link_to "Luxury Rentals", '#/villas'
-          ul.no-bullet.areas-list
-            li ng-include="'/areas/areas.html'" ng-repeat="area in areas | filter:{rental:true}"
         li
-          = link_to "Luxury Sales", '#/sales'
+          = link_to "Luxury Sales", '#/villas'
           ul.no-bullet.areas-list
             li ng-include="'/areas/areas.html'" ng-repeat="area in areas | filter:{sale:true}"
 
@@ -20,8 +18,8 @@ br
       .villas-list ng-repeat="villa in villas" ng-animate="'animate'"
         .large-4.small-8.columns.villa-row
           .shadow
-            a href="#/villas/{{villa.id}}"
+            a href="#/sales/{{villa.id}}"
               img ng-src="{{villa.image_url}}"
           p.title-link
-            a href="#/villas/{{villa.id}}" {{villa.name}}
+            a href="#/sales/{{villa.id}}" {{villa.name}}
           span.price From ${{villa.price_from | number:0}}

@@ -10,4 +10,10 @@ class VillasController < ApplicationController
       format.html { render layout: false }
     end
   end
+
+  def sales
+    respond_to do |format|
+      format.html { render layout: false }
+    end
+  end
 end

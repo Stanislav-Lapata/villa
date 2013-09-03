@@ -3,5 +3,9 @@ module Api
     def index
       @areas = Area.roots
     end
+
+    def home
+      @areas = Area.for_home_page.includes(villas: :images)
+    end
   end
 end

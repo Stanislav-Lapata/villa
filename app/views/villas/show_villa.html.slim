@@ -2,14 +2,13 @@ br
 br
 
 
-
 .row
   .large-12.columns
     .row.villa-show
       .large-7.columns
         .shadow.slideshow-wrapper
           .preloader
-          ul#villa-orbit data-orbit="{timer: false}"
+          ul#villa-orbit.orbit data-orbit="" data-options="bullets:false; slide_number:false; timer:true;"
             li ng-repeat="image in villa.images"
               img ng-src="{{ image.image_url }}"
       .large-5.columns
@@ -77,7 +76,7 @@ br
                 For general villa and booking information please see our FAQ page, if you have any questions regarding this particular villa please contact us
           section
             p.title data-section-title=""
-              a href="#" Enquire now
+              a href="" Enquire now
             .content data-section-content=""
               h3 Villa Information Request
               p For more information, prices and availability of this villa, please submit a request and a villa specialist will contact you as soon as possible.
