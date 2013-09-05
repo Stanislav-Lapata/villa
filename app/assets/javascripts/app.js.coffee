@@ -23,6 +23,9 @@ App.config ["$routeProvider", "$locationProvider", "$httpProvider", ($routeProvi
   ).when("/sales/:villaId",
     templateUrl: "/villas/show_villa.html"
     controller: 'VillaCtrl'
+  ).when("/contact",
+    templateUrl: "contact.html"
+    controller: 'ContactCtrl'
   ).otherwise redirectTo: "/"
 ]
 

@@ -25,6 +25,7 @@ Newvilla::Application.routes.draw do
       get :home, on: :collection
     end
     resources :requests
+    resources :contacts
   end
 
   root 'home#index'

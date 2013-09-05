@@ -1,0 +1,31 @@
+script id="contact.html" type="text/ng-template"
+  .row
+    .large-6.columns
+      form name="contactForm" ng-submit="send_contact()" ng-controller="ContactCtrl" novalidate=""
+        fieldset
+          legend Contact Form
+
+          .request-form ng-hide="success_contact"
+            .row
+              .large-6.columns
+                label * First Name
+                input ng-class="{error: contactForm.firstName.$error.required && show_errors}" name="firstName" type="text" ng-model="first_name" required="" placeholder="First Name"
+              .large-6.columns
+                label * Last Name
+                input ng-class="{error: contactForm.lastName.$error.required && show_errors}" name="lastName" type="text" ng-model="last_name" required="" placeholder="Last Name"
+            .row
+              .large-6.columns
+                label * Email
+                input ng-class="{error: contactForm.email.$error.required && show_errors}" name="email" type="email" ng-model="email" required="" placeholder="user@domain.com"
+              .large-6.columns
+                label * Phone
+                input ng-class="{error: contactForm.phone.$error.required && show_errors}" name="phone" type="text" ng-model="phone" required="" placeholder="Your Telephone Number"
+            .row
+              .large-12.columns
+                textarea ng-model="message" placeholder="Leave your message here"
+
+            button type="submit" Submit
+
+          .row
+            .success-request ng-show="success_contact"
+              .alert-box.success Your message has been sent successfully
