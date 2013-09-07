@@ -9,7 +9,7 @@ br
         li
           = link_to "Luxury Sales", '#/villas'
           ul.no-bullet.areas-list
-            li ng-include="'/areas/areas.html'" ng-repeat="area in areas | filter:{sale:true}"
+            li ng-include="'/areas/areas/sale'" ng-repeat="area in areas | filter:{sale:true}"
 
 
   .large-9.columns

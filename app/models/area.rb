@@ -9,4 +9,11 @@ class Area < ActiveRecord::Base
   def self_and_descendants_villas
     self_and_descendants.map(&:villas).flatten
   end
+
+  def pretty_name
+    ancestor_chain = self.ancestors.inject("") do |name, ancestor|
+      name += "#{ancestor.name} -> "
+    end
+    ancestor_chain + "#{name}"
+  end
 end

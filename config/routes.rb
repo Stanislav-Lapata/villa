@@ -7,8 +7,15 @@ Newvilla::Application.routes.draw do
   get 'home/list', to: 'home#list'
 
   resources :areas do
-    get :areas, on: :collection
+    # get :areas, on: :collection
+    get 'areas/:category', to: 'areas#areas', on: :collection
     post :update_positions, on: :collection
+  end
+
+  namespace :admin do
+    resources :images do
+      post :update_positions, on: :collection
+    end
   end
 
   resources :villas do
@@ -23,6 +30,7 @@ Newvilla::Application.routes.draw do
     resources :villas
     resources :areas do
       get :home, on: :collection
+      get :for_admin, on: :collection
     end
     resources :requests
     resources :contacts

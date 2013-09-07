@@ -7,6 +7,7 @@ App.controller 'SalesCtrl', ['$scope', '$http', ($scope, $http) ->
         name_cont: filters.query
         area_id_place_eq: filters.area_id
         area_sale_eq: true
+        sale_eq: true
 
     params = $.param(search)
 

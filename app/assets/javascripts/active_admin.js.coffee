@@ -1,8 +1,59 @@
 #= require active_admin/base
 #= require jstree
 #= require jquery.alerts
+#= require select2
 
 $ ->
+  $('.sortable').sortable
+    update: (event, ui) ->
+      window.test = ui
+      positions = {}
+      $.each $(".admin-villa-form-images", $(@)), (position, obj) ->
+        window.obj = obj
+        reg = /(\w+_?)+_(\d+)/
+        parts = reg.exec($(obj).attr("id"))
+        positions["positions[" + parts[2] + "]"] = position  if parts
+
+      $.ajax
+        type: "POST"
+        dataType: "script"
+        url: $(ui.item).data("sortable-link")
+        data: positions
+
+
+  areaFormatResult = (area) ->
+    area.pretty_name
+
+  $('.admin-villa-area').select2
+    width: 'element'
+    placeholder: "Select Area"
+    ajax:
+      url: "/api/areas/for_admin.json"
+      data: (term, page) ->
+        q:
+          name_cont: term
+
+      results: (data, page) -> # parse the results into the format expected by Select2.
+        # since we are using custom formatting functions we do not need to alter remote JSON data
+        results: data
+
+    initSelection: (element, callback) ->
+
+      # the input tag has a value attribute preloaded that points to a preselected movie's id
+      # this function resolves that id attribute to an object that select2 can render
+      # using its formatResult renderer - that way the movie name is shown preselected
+      id = $(element).val()
+      if id isnt ""
+        $.ajax("/api/areas/#{id}.json",).done (data) ->
+          callback data
+
+
+    formatResult: areaFormatResult
+    formatSelection: areaFormatResult
+    dropdownCssClass: "bigdrop"
+    escapeMarkup: (m) -> # we do not want to escape markup since we are displaying html in results
+      m + "123"
+
   handle_move = (e, data) ->
     last_rollback = data.rlbk
     position = data.rslt.cp
@@ -77,10 +128,6 @@ $ ->
       separator_before: true,
       label: "<i class='icon-edit'></i> " + 'Edit',
       action: (obj) -> window.location = "/admin/areas/#{obj.attr("id")}/edit"
-    custom:
-      separator_before: true,
-      label: "<i class='icon-edit'></i> " + 'Edit',
-      action: (obj) -> window.location = "/admin/areas/#{obj.attr("id")}/edit"
 
   $('#sortable').jstree(
     themes:
@@ -97,3 +144,24 @@ $ ->
     .bind "loaded.jstree", ->
       window.test = $(@)
       $(this).jstree("core").toggle_node($('.jstree-icon'))
+
+  toggle_rental_show = ->
+    if $('#villa_rental').is(':checked')
+      $('#villa_price_from_input, #villa_price_to_input').show('300')
+    else
+      $('#villa_price_from_input, #villa_price_to_input').hide('300')
+
+  toggle_sale_show = ->
+    if $('#villa_sale').is(':checked')
+      $('#villa_sale_price_input').show('300')
+    else
+      $('#villa_sale_price_input').hide('300')
+
+  toggle_rental_show()
+  toggle_sale_show()
+
+  $('#villa_rental').click (e) ->
+    toggle_rental_show()
+
+  $('#villa_sale').click (e) ->
+    toggle_sale_show()

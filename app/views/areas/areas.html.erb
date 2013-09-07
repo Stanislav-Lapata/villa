@@ -1,4 +1,4 @@
 <%= link_to "{{area.name}}", '', "ng-click" => "filters.area_id = area.id; show_nested = show_nested == area.id ? false : area.id" %>
 <ul class="no-bullet" ng-show="area.id == show_nested">
-  <li ng-repeat="area in area.areas" ng-include="" src="'/areas/areas.html'"></li>
+  <li ng-repeat="area in area.areas | filter:{<%= params[:category] %>:true}" ng-include="" src="'/areas/areas/<%= params[:category] %>'"></li>
 </ul>

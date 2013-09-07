@@ -23,6 +23,7 @@ gem 'rabl'
 gem "ransack"
 gem 'rmagick'
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git', branch: 'master'
+gem "select2-rails"
 gem 'slim-rails'
 gem 'zurb-foundation'
 

@@ -17,6 +17,15 @@
 //   .status_tag { background: #6090DB; }
 
 
+body.active_admin {
+  @import "select2";
+}
+
+.sortable {
+  img:hover {
+    cursor: move;
+  }
+}
 
 #popup_container {
   color: #fff;
@@ -56,4 +65,9 @@
   #popup_content {
     text-align: center;
   }
+}
+
+.admin-villa-form-images {
+  display: inline-block;
+  margin: 15px;
 }

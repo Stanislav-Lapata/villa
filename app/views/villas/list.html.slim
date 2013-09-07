@@ -7,12 +7,9 @@ br
         li
           = link_to "Luxury Rentals", '#/villas'
           ul.no-bullet.areas-list
-            li ng-include="'/areas/areas.html'" ng-repeat="area in areas | filter:{rental:true}"
+            li ng-include="'/areas/areas/rental'" ng-repeat="area in areas | filter:{rental:true}"
         li
           = link_to "Luxury Sales", '#/sales'
-          ul.no-bullet.areas-list
-            li ng-include="'/areas/areas.html'" ng-repeat="area in areas | filter:{sale:true}"
-
 
   .large-9.columns
     .row
