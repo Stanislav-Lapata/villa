@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.ui.datepicker
 //= require jquery_ujs
+//= require jquery.gmap
 //= require foundation
 //= require unstable/angular
 //= require unstable/angular-resource

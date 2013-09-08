@@ -44,6 +44,8 @@ br
               a href="" Villa description
             .content data-section-content=""
               div ng-bind-html-unsafe="villa.description"
+              br
+              #map gmap="{{villa.location}}"
           section
             p.title data-section-title=""
               a href="" Facilities & Services
