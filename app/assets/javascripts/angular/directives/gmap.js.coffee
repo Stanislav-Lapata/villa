@@ -10,7 +10,7 @@ App.directive("gmap", ->
           popup: true
         ]
         address: address
-        zoom: 15
+        zoom: 13
         controls: false
         scrollwheel: true
 )
