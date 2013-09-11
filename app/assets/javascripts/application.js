@@ -17,6 +17,7 @@
 //= require foundation
 //= require unstable/angular
 //= require unstable/angular-resource
+//= require angular-google-maps
 
 //= require app
 //= require jquery.throttle_debounce_plugin

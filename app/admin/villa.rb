@@ -24,7 +24,7 @@ ActiveAdmin.register Villa do
       row :sale
       row :sale_price
       row :area do
-        villa.area.pretty_name
+        villa.area && villa.area.pretty_name
       end
       row :location
       row :bedrooms
@@ -93,6 +93,28 @@ ActiveAdmin.register Villa do
       end
     end
 
+    f.inputs "Google Map" do
+      f.template.content_tag(:script, '', 'type' => 'text/javascript', src: 'http://maps.google.com/maps/api/js?sensor=false') +
+      f.template.content_tag(:div, id: 'map', "ng-app" => "Villa", "ng-controller" => "AdminGmapsCtrl", "ng-init" => "get_villa(#{villa.to_json})") do
+        ''.tap do |out|
+          out << f.template.content_tag('google-map', '',
+                                                   center: "position.coords",
+                                                   draggable: "true",
+                                                   zoom: "zoom",
+                                                   markers: "markersProperty",
+                                                   "mark-click" => "true",
+                                                   fit: 'false',
+                                                   latitude: "latitude",
+                                                   longitude: "longitude",
+                                                   style: "height: 400px; width: 600px; display: block;")
+
+          out << f.template.hidden_field_tag('villa[latitude]', '{{latitude}}', "ng-model" => "latitude", "set-default" => "#{villa.latitude}")
+          out << f.template.hidden_field_tag('villa[longitude]', '{{longitude}}', "ng-model" => "longitude", "set-default" => "#{villa.longitude}")
+          out << f.template.hidden_field_tag('villa[zoom]', '{{zoom}}', "ng-model" => "zoom", "set-default" => "#{villa.zoom.to_i}")
+        end.html_safe
+      end
+    end
+
     f.actions
   end
 
@@ -102,6 +124,7 @@ ActiveAdmin.register Villa do
                             :name, :description, :price_from, :price_to, :location,
                             :area_id, :facilities, :services, :bedrooms, :sleeps_up_to,
                             :sale_price, :bathrooms, :rental, :sale, :position,
+                            :latitude, :longitude, :zoom,
                             images_attributes: [:id, :image, :_destroy, :url]
                            ]
     end

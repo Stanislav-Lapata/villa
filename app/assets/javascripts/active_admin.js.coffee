@@ -1,4 +1,10 @@
 #= require active_admin/base
+#= require unstable/angular
+#= require unstable/angular-resource
+#= require angular-google-maps
+#= require app
+
+#= require_tree ./angular
 #= require jstree
 #= require jquery.alerts
 #= require select2
@@ -52,7 +58,7 @@ $ ->
     formatSelection: areaFormatResult
     dropdownCssClass: "bigdrop"
     escapeMarkup: (m) -> # we do not want to escape markup since we are displaying html in results
-      m + "123"
+      m
 
   handle_move = (e, data) ->
     last_rollback = data.rlbk

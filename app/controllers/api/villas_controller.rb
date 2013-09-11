@@ -8,5 +8,10 @@ module Api
     def show
       @villa = Villa.find(params[:id])
     end
+
+    def update
+      @villa = Villa.find(params[:id])
+      @villa.update_attributes(:villa)
+    end
   end
 end

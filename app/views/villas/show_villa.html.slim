@@ -45,7 +45,6 @@ br
             .content data-section-content=""
               div ng-bind-html-unsafe="villa.description"
               br
-              #map gmap="{{villa.location}}"
           section
             p.title data-section-title=""
               a href="" Facilities & Services
@@ -76,6 +75,11 @@ br
                 A refundable security deposit is payable on arrival
                 To make a booking or booking enquiry please click on the ‘ENQUIRE NOW’ tab on the left
                 For general villa and booking information please see our FAQ page, if you have any questions regarding this particular villa please contact us
+          section
+            p.title data-section-title=""
+              a href="" Location
+            .content data-section-content=""
+              #map gmap="{{villa}}"
           section
             p.title data-section-title=""
               a href="" Enquire now
