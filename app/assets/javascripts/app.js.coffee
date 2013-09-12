@@ -21,7 +21,7 @@ App.config ["$routeProvider", "$locationProvider", "$httpProvider", ($routeProvi
     templateUrl: "/villas/show_villa.html"
     controller: 'VillaCtrl'
   ).when("/sales/:villaId",
-    templateUrl: "/villas/show_villa.html"
+    templateUrl: "/villas/show_sales_villa.html"
     controller: 'VillaCtrl'
   ).when("/contact",
     templateUrl: "contact.html"

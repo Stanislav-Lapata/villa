@@ -1,0 +1,120 @@
+br
+br
+
+
+.row
+  .large-12.columns
+    .row.villa-show
+      .large-7.columns
+        .shadow.slideshow-wrapper
+          .preloader
+          ul#villa-orbit.orbit data-orbit="" data-options="bullets:false; slide_number:false; timer:true;"
+            li ng-repeat="image in villa.images"
+              img ng-src="{{ image.image_url }}"
+      .large-5.columns
+        .panel
+          h5.hide-for-small
+            .title
+              | {{villa.name}}
+
+          br
+          br
+
+          .from
+            | From
+            span.price
+              | ${{villa.sale_price | number:0}}
+          .location
+            | {{villa.location}}
+          .bedrooms
+            | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
+
+          .price-range
+            p Price Guide {{villa.sale_price | number:0}}
+            br
+          .category Category: {{villa.area.name}} Villas
+
+    br
+    br
+    .row
+      .large-12.columns.villa-specs
+        .section-container.vertical-tabs data-section="vertical-tabs"
+          section
+            p.title data-section-title=""
+              a href="" Villa description
+            .content data-section-content=""
+              div ng-bind-html-unsafe="villa.description"
+              br
+          section
+            p.title data-section-title=""
+              a href="" Facilities & Services
+            .content data-section-content=""
+              p Facilities
+              div ng-repeat="facility in villa.facilities"
+                span.facility
+                  | {{facility}}
+
+              br
+              br
+              p Services
+              div ng-repeat="service in villa.services"
+                span.service
+                  | {{service}}
+              br
+
+          section
+            p.title data-section-title=""
+              a href="" Price guide
+            .content data-section-content=""
+              p Unless otherwise stated:
+                All prices are in US$ and include all taxes
+                Prices quoted are for full villa occupancy and maximum 2 adults per double bedroom
+                Some villas can be rented at a reduced rate for lower occupancy, please ask for details
+                Check-in 3pm / Check-out prior to noon, early check-in or late check-out can be arranged for an additional fee
+                No smoking inside the villa
+                A refundable security deposit is payable on arrival
+                To make a booking or booking enquiry please click on the ‘ENQUIRE NOW’ tab on the left
+                For general villa and booking information please see our FAQ page, if you have any questions regarding this particular villa please contact us
+          section
+            p.title data-section-title=""
+              a href="" Location
+            .content data-section-content=""
+              #map gmap="{{villa}}"
+          section
+            p.title data-section-title=""
+              a href="" Enquire now
+            .content data-section-content=""
+              h3 Villa Information Request
+              p For more information, prices and availability of this villa, please submit a request and a villa specialist will contact you as soon as possible.
+
+              form name="requestForm" ng-submit="send_request()" ng-controller="RequestCtrl" novalidate=""
+                .request-form ng-hide="success_request"
+                  .row
+                    .large-12.columns
+                      label * Guest Name
+                    .large-6.columns
+                      input ng-class="{error: requestForm.firstName.$error.required && show_errors}" name="firstName" type="text" ng-model="first_name" required="" placeholder="First Name"
+                    .large-6.columns
+                      input ng-class="{error: requestForm.lastName.$error.required && show_errors}" name="lastName" type="text" ng-model="last_name" required="" placeholder="Last Name"
+                  .row
+                    .large-6.columns
+                      label * Email
+                      input ng-class="{error: requestForm.email.$error.required && show_errors}" name="email" type="email" ng-model="email" required="" placeholder="user@domain.com"
+                    .large-3.columns
+                      label * Check In
+                      input ng-class="{error: requestForm.checkIn.$error.required && show_errors}" datepicker="" name="checkIn" type="text" ng-model="check_in" required=""
+                    .large-3.columns
+                      label * Check Out
+                      input ng-class="{error: requestForm.checkOut.$error.required && show_errors}" datepicker="" name="checkOut" type="text" ng-model="check_out" required=""
+
+                  .row
+                    .large-12.columns
+                      textarea ng-model="comments" placeholder="Leave your comments here"
+
+                  button type="submit" Submit
+
+                .row
+                  .success-request ng-show="success_request"
+                    .alert-box.success Your request has been sent successfully
+
+

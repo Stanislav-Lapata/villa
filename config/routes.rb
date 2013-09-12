@@ -21,9 +21,12 @@ Newvilla::Application.routes.draw do
   resources :villas do
     resources :requests, only: :create
 
-    get :show_villa, on: :collection
-    get :list, on: :collection
-    get :sales, on: :collection
+    collection do
+      get :show_villa
+      get :show_sales_villa
+      get :list
+      get :sales
+    end
   end
 
   namespace :api, defaults: { format: 'json' } do
