@@ -1,5 +1,5 @@
 object @villa
-attributes :id, :name, :price_from, :price_to, :area_id, :location, :bedrooms, :sleeps_up_to, :latitude, :longitude, :zoom
+attributes :id, :name, :price_from, :price_to, :sale_price, :area_id, :location, :bedrooms, :sleeps_up_to, :latitude, :longitude, :zoom
 
 child @villa.images, object_root: false do |image|
   attributes :id
