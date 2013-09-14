@@ -2,9 +2,13 @@ Newvilla::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'rentals', to: 'villas#index'
-  get 'sales', to: 'villas#index'
+
   get 'home/list', to: 'home#list'
+
+  get '/villas', to: 'home#index'
+  get '/sales', to: 'home#index'
+  get '/villas/:id', to: 'home#index', constraints: { id: /\d+/ }
+  get '/sales/:id', to: 'home#index', constraints: { id: /\d+/ }
 
   resources :areas do
     # get :areas, on: :collection

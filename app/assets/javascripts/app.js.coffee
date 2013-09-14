@@ -8,6 +8,9 @@ App.config ["$routeProvider", "$locationProvider", "$httpProvider", ($routeProvi
   $httpProvider.defaults.headers.put['X-CSRF-Token'] = token
   $httpProvider.defaults.headers.common['X-CSRF-Token'] = token
 
+  $locationProvider.hashPrefix('!')
+  $locationProvider.html5Mode(true)
+
   $routeProvider.when("/",
     templateUrl: "/home/list.html"
     controller: 'HomeCtrl'

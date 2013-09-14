@@ -8,6 +8,10 @@ App.controller 'VillasCtrl', ['$scope', '$http', ($scope, $http) ->
         area_id_place_eq: filters.area_id
         area_rental_eq: true
         rental_eq: true
+        bedrooms_gteq: filters.bedrooms
+        bathrooms_gteq: filters.bathrooms
+        price_from_gteq: filters.price_from
+        price_to_lteq: filters.price_to
 
     params = $.param(search)
 

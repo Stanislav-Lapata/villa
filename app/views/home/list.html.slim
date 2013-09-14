@@ -25,10 +25,10 @@ br
           .villas-list ng-repeat="villa in area.villas" ng-animate="'animate'"
             .large-3.small-6.columns.villa-row
               .shadow
-                a href="#/villas/{{villa.id}}"
-                  img ng-src="{{villa.image_url}}"
+                a href="/villas/{{villa.id}}"
+                  img disable-context="" ng-src="{{villa.image_url}}"
               p.title-link
-                a href="villas#/villas/{{villa.id}}" {{villa.name}}
+                a href="/villas/{{villa.id}}" {{villa.name}}
               span.price From ${{villa.price_from | number:0}}
 
 

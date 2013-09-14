@@ -2,14 +2,34 @@ br
 .row
   .large-3.columns
     .row.collapse ng-controller="AreasCtrl"
-      input type="text" placeholder="Villa Name or ID" ng-model="filters.query" ng-ampere-debounce=""
-      ul.no-bullet.areas-list
-        li
-          = link_to "Luxury Rentals", '#/villas'
+      .filter
+        input type="text" placeholder="Villa Name or ID" ng-model="filters.query" ng-ampere-debounce=""
+      .filter
+        span Location
+        p
           ul.no-bullet.areas-list
-            li ng-include="'/areas/areas/rental'" ng-repeat="area in areas | filter:{rental:true}"
-        li
-          = link_to "Luxury Sales", '#/sales'
+            li
+              = link_to "Luxury Rentals", '/villas'
+              ul.no-bullet.areas-list
+                li ng-include="'/areas/areas/rental'" ng-repeat="area in areas | filter:{rental:true}"
+            li
+              = link_to "Luxury Sales", '/sales'
+      .filter
+        span Bedrooms
+        p
+          select ng-model="filters.bedrooms" ng-options="room as (room + '+' + ' Bedrooms') for room in [1,2,3,4,5,6,7,8,9]" placeholder="123"
+      .filter
+        span Bathrooms
+        p
+          select ng-model="filters.bathrooms" ng-options="room as (room + '+' + ' Bathrooms') for room in [1,2,3,4,5,6,7,8,9]"
+      .filter
+        span Price Range
+        p
+          span.from From:
+          input.price-from type="text" ng-model="filters.price_from" ng-ampere-debounce=""
+          span.to to:
+          input.price-to type="text" ng-model="filters.price_to" ng-ampere-debounce=""
+
 
   .large-9.columns
     .row
@@ -17,8 +37,8 @@ br
       .villas-list ng-repeat="villa in villas" ng-animate="'animate'"
         .large-4.small-8.columns.villa-row
           .shadow
-            a href="#/villas/{{villa.id}}"
-              img ng-src="{{villa.image_url}}"
+            a href="/villas/{{villa.id}}"
+              img disable-context="" ng-src="{{villa.image_url}}"
           p.title-link
-            a href="#/villas/{{villa.id}}" {{villa.name}}
+            a href="/villas/{{villa.id}}" {{villa.name}}
           span.price From ${{villa.price_from | number:0}}

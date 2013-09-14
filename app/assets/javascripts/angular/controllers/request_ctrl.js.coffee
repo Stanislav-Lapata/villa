@@ -18,6 +18,4 @@ App.controller 'RequestCtrl', ['$scope', 'Request', ($scope, Request) ->
       $scope.request = success.data
     ), (error) ->
       $scope.show_errors = true
-
-
 ]

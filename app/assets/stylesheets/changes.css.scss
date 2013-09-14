@@ -82,6 +82,12 @@
       margin-top: 10px;
     }
   }
+
+  ul#villa-orbit > li > a.preview {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
 }
 
 .villa-specs {
@@ -228,4 +234,31 @@ nav.top-bar {
 #map {
   width: 600px;
   height: 300px;
+}
+
+.filter {
+  color: #777;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+
+  > span {
+    color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  > p {
+    font-size: 12px;
+
+    input, select {
+      margin-top: 10px;
+
+      &.price-from, &.price-to {
+        display: inline-block;
+        width: 30%;
+        margin: 10px;
+      }
+    }
+  }
 }

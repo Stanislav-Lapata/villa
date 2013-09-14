@@ -5,6 +5,7 @@ child @villa.images, object_root: false do |image|
   attributes :id
 
   node(:image_url) { |image| image.image.url(:large) }
+  node(:original_image_url) { |image| image.image.url }
 end
 
 child @villa.area object_root: false do |area|
