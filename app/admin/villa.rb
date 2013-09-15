@@ -73,11 +73,11 @@ ActiveAdmin.register Villa do
       f.input :low_week, label: false, placeholder: 'Per Week'
       f.input :low_night, label: false, placeholder: 'Per Night'
 
-      f.input :high_month, label: 'High Month', placeholder: 'Per Month'
+      f.input :high_month, label: 'High Season', placeholder: 'Per Month'
       f.input :high_week, label: false, placeholder: 'Per Week'
       f.input :high_night, label: false, placeholder: 'Per Night'
 
-      f.input :peak_month, label: 'Peak Month', placeholder: 'Per Month'
+      f.input :peak_month, label: 'Peak Season', placeholder: 'Per Month'
       f.input :peak_week, label: false, placeholder: 'Per Week'
       f.input :peak_night, label: false, placeholder: 'Per Night'
     end
