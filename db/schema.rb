@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130911054753) do
+ActiveRecord::Schema.define(version: 20130915155209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -140,6 +140,15 @@ ActiveRecord::Schema.define(version: 20130911054753) do
     t.string   "latitude"
     t.string   "longitude"
     t.string   "zoom"
+    t.decimal  "low_month"
+    t.decimal  "low_week"
+    t.decimal  "low_night"
+    t.decimal  "high_month"
+    t.decimal  "high_week"
+    t.decimal  "high_night"
+    t.decimal  "peak_month"
+    t.decimal  "peak_week"
+    t.decimal  "peak_night"
   end
 
 end

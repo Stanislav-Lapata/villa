@@ -71,3 +71,21 @@ body.active_admin {
   display: inline-block;
   margin: 15px;
 }
+
+#villa_low_month_input, #villa_high_month_input, #villa_peak_month_input {
+  display: inline-block;
+  width: 30%;
+
+  label { width: 30%; padding-top: 5px; }
+  input { width: 60%; }
+}
+
+#villa_low_week_input, #villa_low_night_input,
+#villa_high_week_input, #villa_high_night_input,
+#villa_peak_week_input, #villa_peak_night_input {
+  display: inline-block;
+  width: 20%;
+
+  label { width: 0px; }
+  input { width: 90%; }
+}

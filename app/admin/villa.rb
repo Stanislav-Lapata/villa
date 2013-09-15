@@ -68,6 +68,20 @@ ActiveAdmin.register Villa do
       f.input :sleeps_up_to
     end
 
+    f.inputs "Seasonal Prices" do
+      f.input :low_month, label: 'Low Season', placeholder: 'Per Month'
+      f.input :low_week, label: false, placeholder: 'Per Week'
+      f.input :low_night, label: false, placeholder: 'Per Night'
+
+      f.input :high_month, label: 'High Month', placeholder: 'Per Month'
+      f.input :high_week, label: false, placeholder: 'Per Week'
+      f.input :high_night, label: false, placeholder: 'Per Night'
+
+      f.input :peak_month, label: 'Peak Month', placeholder: 'Per Month'
+      f.input :peak_week, label: false, placeholder: 'Per Week'
+      f.input :peak_night, label: false, placeholder: 'Per Night'
+    end
+
     f.inputs "Description" do
       f.input :description
     end
@@ -124,8 +138,9 @@ ActiveAdmin.register Villa do
       params.permit villa: [
                             :name, :description, :price_from, :price_to, :location,
                             :area_id, :facilities, :services, :bedrooms, :sleeps_up_to,
-                            :sale_price, :bathrooms, :rental, :sale, :position,
-                            :latitude, :longitude, :zoom,
+                            :sale_price, :bathrooms, :rental, :sale, :position, :latitude,
+                            :longitude, :zoom, :low_month, :peak_month, :low_week, :low_night,
+                            :high_week, :high_night, :peak_week, :peak_night, :high_month,
                             images_attributes: [:id, :image, :_destroy, :url]
                            ]
     end
