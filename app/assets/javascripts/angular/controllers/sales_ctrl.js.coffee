@@ -8,8 +8,8 @@ App.controller 'SalesCtrl', ['$scope', '$http', ($scope, $http) ->
         area_id_place_eq: filters.area_id
         area_sale_eq: true
         sale_eq: true
-        bedrooms_gteq: filters.bedrooms
-        bathrooms_gteq: filters.bathrooms
+        bedrooms_eq: filters.bedrooms
+        bathrooms_eq: filters.bathrooms
         price_from_gteq: filters.price_from
         price_to_lteq: filters.price_to
 

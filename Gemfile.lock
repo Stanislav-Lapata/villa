@@ -197,6 +197,8 @@ GEM
     select2-rails (3.4.8)
       sass-rails
       thor (~> 0.14)
+    sitemap_generator (4.2.0)
+      builder
     slim (2.0.1)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -267,6 +269,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   select2-rails
   simple_form!
+  sitemap_generator
   slim-rails
   therubyracer
   turbolinks

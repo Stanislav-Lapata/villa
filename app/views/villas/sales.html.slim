@@ -17,11 +17,11 @@ br
       .filter
         span Bedrooms
         p
-          select ng-model="filters.bedrooms" ng-options="room as (room + '+' + ' Bedrooms') for room in [1,2,3,4,5,6,7,8,9]" placeholder="123"
+          select ng-model="filters.bedrooms" ng-options="room as (room + ' Bedrooms') for room in [1,2,3,4,5,6,7,8,9]" placeholder="123"
       .filter
         span Bathrooms
         p
-          select ng-model="filters.bathrooms" ng-options="room as (room + '+' + ' Bathrooms') for room in [1,2,3,4,5,6,7,8,9]"
+          select ng-model="filters.bathrooms" ng-options="room as (room + ' Bathrooms') for room in [1,2,3,4,5,6,7,8,9]"
       .filter
         span Price Range
         p

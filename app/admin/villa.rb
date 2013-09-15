@@ -28,6 +28,7 @@ ActiveAdmin.register Villa do
       end
       row :location
       row :bedrooms
+      row :bathrooms
       row :sleeps_up_to
       row :services
       row :facilities
@@ -39,7 +40,7 @@ ActiveAdmin.register Villa do
       ''.tap do |out|
         villa.images.each do |image|
           out << content_tag(:div, class: 'admin-villa-form-images', id: "image_#{image.id}",  "data-sortable-link" => "#{update_positions_admin_images_url}") do
-            image_tag(image.image.url(:thumb)) +
+            image_tag(image.image.url(:thumb), size: "155x100") +
             content_tag(:p) do
               link_to("Delete", admin_image_url(image), method: :delete, data: { confirm: 'Are you sure?' })
             end
@@ -81,7 +82,7 @@ ActiveAdmin.register Villa do
         ''.tap do |out|
           f.object.images.each do |image|
             out << f.template.content_tag(:div, class: 'admin-villa-form-images', id: "image_#{image.id}",  "data-sortable-link" => "#{update_positions_admin_images_url}") do
-              f.template.image_tag(image.image.url(:thumb)) +
+              f.template.image_tag(image.image.url(:thumb), size: "155x100") +
               f.template.content_tag(:p) do
                 f.template.link_to("Delete", f.template.admin_image_url(image), method: :delete, data: { confirm: 'Are you sure?' })
               end
