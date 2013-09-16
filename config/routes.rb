@@ -7,6 +7,7 @@ Newvilla::Application.routes.draw do
 
   get '/villas', to: 'home#index'
   get '/sales', to: 'home#index'
+  get '/contact', to: 'home#index'
   get '/villas/:id', to: 'home#index', constraints: { id: /\d+/ }
   get '/sales/:id', to: 'home#index', constraints: { id: /\d+/ }
 
