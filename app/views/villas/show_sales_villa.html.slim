@@ -11,7 +11,7 @@ br
           ul#villa-orbit.orbit data-orbit="" data-options="bullets:false; slide_number:false; timer:true;"
             li ng-repeat="image in villa.images"
               a.preview colorbox="" href="{{image.original_image_url}}"
-              img.group1 ng-src="{{ image.image_url }}"
+              img ng-src="{{ image.image_url }}"
       .large-5.columns
         .panel
           h5.hide-for-small
@@ -67,6 +67,35 @@ br
             p.title data-section-title=""
               a href="" Price guide
             .content data-section-content=""
+              p
+                span.season-title Low Season:
+                span.night
+                  | US$ {{villa.low_night}} per night
+                span.week ng-hide="!(villa.low_week != 0) && !(villa.high_week) && !(villa.peak_week)"
+                  span ng-show="villa.low_week != 0"  US$ {{villa.low_week}} per week
+                span.month ng-hide="!(villa.low_month != 0) && !(villa.high_month) && !(villa.peak_month)"
+                  span ng-show="villa.low_month != 0" US$ {{villa.low_month}} per month
+
+                br
+
+                span.season-title High Season:
+                span.night
+                  | US$ {{villa.high_night}} per night
+                span.week ng-hide="!(villa.low_week != 0) && !(villa.high_week) && !(villa.peak_week)"
+                  span ng-show="villa.high_week != 0" US$ {{villa.high_week}} per week
+                span.month ng-hide="!(villa.low_month != 0) && !(villa.high_month) && !(villa.peak_month)"
+                  span ng-show="villa.high_month != 0" US$ {{villa.high_month}} per month
+
+                br
+
+                span.season-title Peak Season:
+                span.night
+                  | US$ {{villa.peak_night}} per night
+                span.week ng-hide="!(villa.low_week != 0) && !(villa.high_week) && !(villa.peak_week)"
+                  span ng-show="villa.peak_week != 0" US$ {{villa.peak_week}} per week
+                span.month ng-hide="!(villa.low_month != 0) && !(villa.high_month) && !(villa.peak_month)"
+                  span ng-show="villa.peak_month != 0" US$ {{villa.peak_month}} per month
+
               p Unless otherwise stated:
                 All prices are in US$ and include all taxes
                 Prices quoted are for full villa occupancy and maximum 2 adults per double bedroom
@@ -78,7 +107,7 @@ br
                 For general villa and booking information please see our FAQ page, if you have any questions regarding this particular villa please contact us
           section
             p.title data-section-title=""
-              a href="" Location
+              a#map-location href="" Location
             .content data-section-content=""
               #map gmap="{{villa}}"
           section

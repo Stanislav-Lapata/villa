@@ -246,7 +246,7 @@ nav.top-bar {
 }
 
 #map {
-  width: 600px;
+  width: 100%;
   height: 300px;
 }
 
@@ -275,4 +275,18 @@ nav.top-bar {
       }
     }
   }
+}
+
+
+span.month, span.week, span.night {
+  font-size: 14px;
+  margin-left: 20px;
+  display: inline-block;
+  width: 22%;
+}
+
+span.season-title {
+  display: inline-block;
+  min-width: 110px;
+
 }

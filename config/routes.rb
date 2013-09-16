@@ -43,5 +43,10 @@ Newvilla::Application.routes.draw do
     resources :contacts
   end
 
+  namespace :snapshots do
+    resources :villas, only: [:index, :show]
+    resources :sales, only: [:index, :show]
+  end
+
   root 'home#index'
 end

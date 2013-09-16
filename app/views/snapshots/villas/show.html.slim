@@ -1,0 +1,11 @@
+- content_for :title do
+  = @villa.name
+
+- content_for :description do
+  | Villa Rentals - Just Quality Villas - #{truncate(@villa.description, length: 150)}
+
+- content_for :keywords do
+  | Luxury Villas - Just Quality Villas - #{truncate(@villa.services.split("\r\n").join(', '), length: 150)}
+
+
+= render 'rentals_villa', villa: @villa

@@ -1,0 +1,12 @@
+doctype
+html lang="en" ng-app="Villa"
+  /! <![endif]
+  head
+    meta charset="utf-8"
+    title= content_for?(:title) ? yield(:title) : "Luxury Villas for Sale and Rent - JQ Villas"
+    meta name="description" content="#{yield(:description)}"
+    meta name="keywords" content="#{yield(:keywords)}"
+
+  body
+    = render 'snapshots/shared/navigation'
+    = yield

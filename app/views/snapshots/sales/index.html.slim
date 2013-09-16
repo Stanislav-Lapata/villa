@@ -1,0 +1,11 @@
+- content_for :title do
+  | test
+
+- content_for :description do
+  | Villa Sales - Just Quality Villas - Luxury Private Villa Rentals and Sales in Phuket, Thailand
+
+- content_for :keywords do
+  | Luxury Villas - Just Quality Villas - Sales
+
+- @villas.each do |villa|
+  = render 'sales_villa', villa: villa
