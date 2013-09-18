@@ -51,8 +51,6 @@ ActiveAdmin.register Villa do
     end
   end
 
-  filter :name
-
   form(:html => { multipart: true }) do |f|
     f.inputs "Admin Details" do
       f.input :name

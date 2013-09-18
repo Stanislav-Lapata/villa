@@ -42,6 +42,7 @@ Newvilla::Application.routes.draw do
     end
     resources :requests
     resources :contacts
+    resources :subscribes
   end
 
   namespace :snapshots do

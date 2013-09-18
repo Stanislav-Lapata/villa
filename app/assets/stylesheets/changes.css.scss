@@ -290,3 +290,35 @@ span.season-title {
   min-width: 110px;
 
 }
+
+#body-wrapper {
+  margin-bottom: 50px;
+
+  .panel {
+    border: 7px solid #ccc;
+    background-color: #fff;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+footer {
+  background: -moz-linear-gradient(bottom,  rgba(175,178,181,1) 0%, rgba(175,178,181,0.45) 55%, rgba(125,185,232,0) 100%) !important; /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,rgba(175,178,181,1)), color-stop(55%,rgba(175,178,181,0.45)), color-stop(100%,rgba(125,185,232,0))) !important; /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(bottom,  rgba(175,178,181,1) 0%,rgba(175,178,181,0.45) 55%,rgba(125,185,232,0) 100%) !important; /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(bottom,  rgba(175,178,181,1) 0%,rgba(175,178,181,0.45) 55%,rgba(125,185,232,0) 100%) !important; /* Opera 11.10+ */
+  background: -ms-linear-gradient(bottom,  rgba(175,178,181,1) 0%,rgba(175,178,181,0.45) 55%,rgba(125,185,232,0) 100%) !important; /* IE10+ */
+  background: linear-gradient(to top,  rgba(175,178,181,1) 0%,rgba(175,178,181,0.45) 55%,rgba(125,185,232,0) 100%) !important; /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#afb2b5',GradientType=0 ) !important; /* IE6-9 */
+
+  .row {
+    padding-top: 50px;
+  }
+
+  .side-nav li a {
+    display: inline-block;
+    color: #777;
+  }
+}

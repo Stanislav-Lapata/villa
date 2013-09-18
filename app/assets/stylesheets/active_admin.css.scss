@@ -89,3 +89,14 @@ body.active_admin {
   label { width: 0px; }
   input { width: 90%; }
 }
+
+li.error {
+  input {
+    border-color: #932419;
+    background-color: #f2cbcb;
+  }
+
+  p.inline-errors {
+    display: none;
+  }
+}
