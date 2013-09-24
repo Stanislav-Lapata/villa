@@ -8,7 +8,7 @@ br
       .large-7.columns
         .shadow.slideshow-wrapper
           .preloader
-          ul#villa-orbit.orbit data-orbit="" data-options="bullets:false; slide_number:false; timer:true;"
+          ul#villa-orbit.orbit data-orbit="" data-options="bullets:false; slide_number:false; timer:false;"
             li ng-repeat="image in villa.images"
               a.preview colorbox="" href="{{image.original_image_url}}"
               img disable-context="" ng-src="{{ image.image_url }}"

@@ -1,28 +1,6 @@
 footer
   .row
-    .small-2.large-4.columns Description, phones and etc.
-    .small-2.large-4.columns
-      span Navigation
-      br
-      ul.side-nav
-        li
-          a href="/" Home
-        li
-          a href="/villas" Luxury Villas For Rent
-        li
-          a href="/sales" Luxury Villa For Sale
-        li
-          a href="/contact" Contact
-    .small-2.large-4.columns
-      span Newsletter
-      br
-      br
-      form name="subscribeForm" ng-submit="subscribe()" ng-controller="SubscribeCtrl"
-        .row
-          .large-10.small-5.columns
-            label * Name
-            input ng-class="{error: subscribeForm.name.$error.required && show_errors}" name="name" type="text" ng-model="name" required="" placeholder="John Doe"
-            label * Email
-            input ng-class="{error: subscribeForm.email.$error.required && show_errors}" name="email" type="email" ng-model="email" required="" placeholder="user@domain.com"
-
-            button type="submit" Subscribe
+    .small-3.large-6.columns
+      h6.subheader Phone
+    .small-3.large-6.columns
+      h6.subheader Managed by VicLiz Group Co., Ltd

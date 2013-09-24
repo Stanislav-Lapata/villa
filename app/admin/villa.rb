@@ -30,8 +30,6 @@ ActiveAdmin.register Villa do
       row :bedrooms
       row :bathrooms
       row :sleeps_up_to
-      row :services
-      row :facilities
       row :description
       row :created_at
       row :updated_at
@@ -82,11 +80,6 @@ ActiveAdmin.register Villa do
 
     f.inputs "Description" do
       f.input :description
-    end
-
-    f.inputs "Services & Facilities" do
-      f.input :services
-      f.input :facilities
     end
 
     f.inputs "Photos" do
