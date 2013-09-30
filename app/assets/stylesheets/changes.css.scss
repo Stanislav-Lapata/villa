@@ -275,6 +275,55 @@ nav.top-bar {
       }
     }
   }
+
+  #filter-map {
+    background-image: url(map.png);
+    background-repeat: no-repeat;
+    height: 350px;
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: inline-block;
+      line-height: 18px;
+      font-size: 11px;
+      padding: 0 3px 0 0;
+      white-space: nowrap;
+      text-decoration: none;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+      white-space: nowrap;
+      cursor: pointer;
+      background: white;
+      background-color: rgba(255, 255, 255, 0.75);
+      color: #888888;
+      font-weight: bold;
+      border-radius: 4px;
+
+      input {
+        margin: 3px 0.5ex;
+      }
+
+      span.tail {
+        border-color: white;
+        top: 100%;
+        left: 50%;
+        opacity: 0.75;
+        margin-left: -5px;
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0px;
+        height: 0px;
+        border: 10px solid white;
+        border-width: 5px 5px 0 5px;
+        border-right-color: transparent !important;
+        border-bottom-color: transparent !important;
+        border-left-color: transparent !important;
+      }
+    }
+  }
 }
 
 

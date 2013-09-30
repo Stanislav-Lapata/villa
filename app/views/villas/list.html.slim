@@ -14,6 +14,95 @@ br
                 li ng-include="'/areas/areas/rental'" ng-repeat="area in areas | filter:{rental:true}"
             li
               = link_to "Luxury Sales", '/sales'
+
+
+      / TODO: create relation with areas and move into DB after demo
+      .filter
+        #filter-map
+          label style="top: -15px; left: -10px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            | Phang Nga
+          label style="top: 20px; left: 5px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 50%"
+            | Mai Khao
+          label style="top: 54px; left: -15px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Nai Yang
+          label style="top: 79px; left: -25px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Nai Ton
+          label style="top: 102px; left: -22px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Layan
+          label style="top: 126px; left: -22px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Bangtao
+          label style="top: 149px; left: -22px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Surin
+          label style="top: 171px; left: -38px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Kamala
+          label style="top: 200px; left: -13px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Patong
+          label style="top: 242px; left: -10px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Karon
+          label style="top: 268px; left: 0px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Kata
+          label style="top: 295px; left: -15px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 80%"
+            | Nai Harn
+
+          label style="top: 67px; left: 107px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            | East
+          label style="top: 104px; left: 55px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 20%"
+            | Talang
+          label style="top: 140px; left: 55px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 20%"
+            | Cherngtalay
+          label style="top: 171px; left: 90px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 50%"
+            | Cocos Island
+          label style="top: 191px; left: 48px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 20%"
+            | Kathu
+          label style="top: 211px; left: 65px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 40%"
+            | Phuket City
+          label style="top: 241px; left: 47px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 20%"
+            | Chalong
+          label style="top: 261px; left: 100px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 20%"
+            | Panwa
+          label style="top: 281px; left: 53px;"
+            input type="checkbox" name="test" title="ttt" ng-click="filters.area_id = 10"
+            span.tail style="top: 100%; left: 10%"
+            | Rawai
+
       .filter
         span Bedrooms
         p
