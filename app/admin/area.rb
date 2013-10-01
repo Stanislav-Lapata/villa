@@ -46,13 +46,16 @@ ActiveAdmin.register Area do
       f.input :show_on_home_page
       f.input :rental
       f.input :sale
+      f.input :top
+      f.input :left
+      f.input :left_tail
     end
     f.actions
   end
 
   controller do
     def permitted_params
-      params.permit area: [:name, :parent_id, :show_on_home_page, :position, :rental, :sale]
+      params.permit area: [:name, :parent_id, :show_on_home_page, :position, :rental, :sale, :top, :left, :left_tail]
     end
   end
 end

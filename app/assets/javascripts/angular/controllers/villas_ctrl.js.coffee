@@ -1,6 +1,10 @@
 App.controller 'VillasCtrl', ['$scope', '$http', ($scope, $http) ->
   $scope.filters = { }
 
+  $scope.enable_districts = (area) ->
+    $scope.show_districts = true
+    $scope.districts = area.areas
+
   $scope.$watch "filters", ( (filters) ->
     search =
       q:
