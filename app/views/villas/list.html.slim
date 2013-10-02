@@ -17,10 +17,10 @@ br
 
 
       / TODO: DRY villas and sales views
-      .filter ng-show="show_districts"
+      .filter ng-show="show_districts && parent == 'Phuket'"
         #filter-map
           label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
-            input type="checkbox" name="filters.areas" title="ttt"
+            input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="filter_areas(district)"
             span.tail style="top: 100%; left: {{district.left_tail}}%"
             | {{district.name}}
 
