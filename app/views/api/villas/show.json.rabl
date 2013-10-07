@@ -15,8 +15,6 @@ child @villa.area object_root: false do |area|
 end
 
 
-node(:facilities) { @villa.facilities.split("\r\n") }
-node(:services) { @villa.services.split("\r\n") }
 node(:description) { simple_format(@villa.description.html_safe) }
 
 node(:low_month) { @villa.low_month.to_f }
