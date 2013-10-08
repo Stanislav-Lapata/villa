@@ -289,12 +289,23 @@ nav.top-bar {
   #filter-map {
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 350px;
+
     position: relative;
 
-    &.phuket { background-image: image-url('phuket_island.png'); }
-    &.samui { background-image: image-url('samui.png'); }
-    &.bali { background-image: image-url('bali.png'); }
+    &.phuket {
+      background-image: image-url('phuket_island.png');
+      height: 370px;
+    }
+
+    &.samui {
+      background-image: image-url('samui.png');
+      height: 247px;
+    }
+
+    &.bali {
+      background-image: image-url('bali.png');
+      height: 180px;
+    }
 
     label {
       position: absolute;

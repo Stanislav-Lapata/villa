@@ -11,7 +11,6 @@ App.controller 'VillasCtrl', ['$scope', '$http', ($scope, $http) ->
     $scope.parent = null
 
   $scope.filter_areas = (district) ->
-    console.log district
     if district.checked
       $scope.filters.districts.push(district.id)
     else
@@ -19,7 +18,6 @@ App.controller 'VillasCtrl', ['$scope', '$http', ($scope, $http) ->
         value isnt district.id
 
   $scope.$watch "filters", ( (filters) ->
-    console.log "CHANGED"
     if filters.districts.length
       areas = filters.districts
     else
