@@ -11,7 +11,7 @@ App.controller 'SalesCtrl', ['$scope', '$http', ($scope, $http) ->
         bedrooms_eq: filters.bedrooms
         bathrooms_eq: filters.bathrooms
         price_from_gteq: filters.price_from
-        price_to_lteq: filters.price_to
+        price_from_lteq: filters.price_to
 
     params = $.param(search)
 
