@@ -16,12 +16,26 @@ br
 
 
 
-      / TODO: DRY villas and sales views
+      / TODO: DRY villas and sales views and rewrite through ng-repeat or directive
       .filter ng-show="show_districts && parent == 'Phuket'"
-        #filter-map
+        #filter-map.phuket
           label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
             input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="filter_areas(district)"
-            span.tail style="top: 100%; left: {{district.left_tail}}%"
+            span.tail ng-show="district.left_tail" style="top: 100%; left: {{district.left_tail}}%"
+            | {{district.name}}
+
+      .filter ng-show="show_districts && parent == 'Koh Samui'"
+        #filter-map.samui
+          label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
+            input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="filter_areas(district)"
+            span.tail ng-show="district.left_tail" style="top: 100%; left: {{district.left_tail}}%"
+            | {{district.name}}
+
+      .filter ng-show="show_districts && parent == 'Bali'"
+        #filter-map.bali
+          label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
+            input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="filter_areas(district)"
+            span.tail ng-show="district.left_tail" style="top: 100%; left: {{district.left_tail}}%"
             | {{district.name}}
 
 
