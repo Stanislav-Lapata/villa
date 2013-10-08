@@ -7,6 +7,9 @@ App.controller 'VillasCtrl', ['$scope', '$http', ($scope, $http) ->
     $scope.districts = area.areas
     $scope.parent = area.name
 
+  $scope.disable_districts = ->
+    $scope.parent = null
+
   $scope.filter_areas = (district) ->
     console.log district
     if district.checked

@@ -9,7 +9,7 @@ br
         p
           ul.no-bullet.areas-list
             li ng-repeat="area in areas | filter:{rental:true}"
-              = link_to "{{area.name}}", '', "ng-click" => "filters.area_id = area.id; show_nested = !show_nested"
+              = link_to "{{area.name}}", '', "ng-click" => "filters.area_id = area.id; show_nested = !show_nested; disable_districts()"
               ul.no-bullet ng-show="show_nested"
                 li ng-repeat="area in area.areas | filter:{rental:true}"
                   = link_to "{{area.name}}", '', "ng-click" => "filters.area_id = area.id; enable_districts(area)"
