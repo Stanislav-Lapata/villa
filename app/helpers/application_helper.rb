@@ -23,4 +23,12 @@ module ApplicationHelper
       handle_area[Area.roots.includes(:children)]
     end
   end
+
+  def logo
+    if request.host == 'jqvillas.com'
+      link_to image_tag('logo.png', size: '150x57'), root_url
+    else
+      link_to "Luxury Rentals & Sales", root_url
+    end
+  end
 end
