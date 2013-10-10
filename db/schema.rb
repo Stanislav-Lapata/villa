@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001190456) do
+ActiveRecord::Schema.define(version: 20131010172747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -159,6 +159,7 @@ ActiveRecord::Schema.define(version: 20131001190456) do
     t.decimal  "peak_month"
     t.decimal  "peak_week"
     t.decimal  "peak_night"
+    t.string   "domain"
   end
 
 end

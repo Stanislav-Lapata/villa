@@ -1,6 +1,7 @@
 ActiveAdmin.register Villa do
   index do
     column :name
+    column :domain
     column :area
     column :rental
     column :price_from
@@ -18,6 +19,7 @@ ActiveAdmin.register Villa do
     h1 villa.name
     attributes_table do
       row :name
+      row :domain
       row :rental
       row :price_from
       row :price_to
@@ -52,6 +54,7 @@ ActiveAdmin.register Villa do
   form(:html => { multipart: true }) do |f|
     f.inputs "Admin Details" do
       f.input :name
+      f.input :domain
       f.input :area_id, input_html: {class: 'admin-villa-area'}
       f.input :rental
       f.input :price_from
@@ -127,7 +130,7 @@ ActiveAdmin.register Villa do
   controller do
     def permitted_params
       params.permit villa: [
-                            :name, :description, :price_from, :price_to, :location,
+                            :name, :dmoain, :description, :price_from, :price_to, :location,
                             :area_id, :facilities, :services, :bedrooms, :sleeps_up_to,
                             :sale_price, :bathrooms, :rental, :sale, :position, :latitude,
                             :longitude, :zoom, :low_month, :peak_month, :low_week, :low_night,

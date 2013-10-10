@@ -5,6 +5,10 @@ Newvilla::Application.routes.draw do
 
   get 'home/list', to: 'home#list'
 
+  get '/gallery', to: 'home#gallery'
+  get '/description', to: 'home#description'
+  get '/contact_us', to: 'home#contact'
+
   get '/villas', to: 'home#index'
   get '/sales', to: 'home#index'
   get '/contact', to: 'home#index'
