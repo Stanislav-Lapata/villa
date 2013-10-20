@@ -130,7 +130,7 @@ ActiveAdmin.register Villa do
   controller do
     def permitted_params
       params.permit villa: [
-                            :name, :dmoain, :description, :price_from, :price_to, :location,
+                            :name, :domain, :description, :price_from, :price_to, :location,
                             :area_id, :facilities, :services, :bedrooms, :sleeps_up_to,
                             :sale_price, :bathrooms, :rental, :sale, :position, :latitude,
                             :longitude, :zoom, :low_month, :peak_month, :low_week, :low_night,
