@@ -1,2 +1,6 @@
-= content_for :logo do
-  = link_to @villa.name, '/'
+= render 'villa/navigation', selected: :root
+
+#toolbar
+.clear
+
+p== simple_format @villa.description

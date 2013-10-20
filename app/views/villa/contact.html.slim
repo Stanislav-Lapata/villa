@@ -1,0 +1,32 @@
+= render 'villa/navigation', selected: :contact
+
+#toolbar
+.clear
+
+form name="requestForm" ng-submit="send_request()" ng-controller="RequestCtrl" novalidate=""
+  .request-form ng-hide="success_request"
+    .row
+      .large-12.columns
+        label * Guest Name
+      .large-6.columns
+        input ng-class="{error: requestForm.firstName.$error.required && show_errors}" name="firstName" type="text" ng-model="first_name" required="" placeholder="First Name"
+      .large-6.columns
+        input ng-class="{error: requestForm.lastName.$error.required && show_errors}" name="lastName" type="text" ng-model="last_name" required="" placeholder="Last Name"
+    .row
+      .large-6.columns
+        label * Email
+        input ng-class="{error: requestForm.email.$error.required && show_errors}" name="email" type="email" ng-model="email" required="" placeholder="user@domain.com"
+      .large-3.columns
+        label * Check In
+        input ng-class="{error: requestForm.checkIn.$error.required && show_errors}" datepicker="" name="checkIn" type="text" ng-model="check_in" required=""
+      .large-3.columns
+        label * Check Out
+        input ng-class="{error: requestForm.checkOut.$error.required && show_errors}" datepicker="" name="checkOut" type="text" ng-model="check_out" required=""
+
+    .row
+      .large-12.columns
+        textarea ng-model="comments" placeholder="Leave your comments here"
+
+    .row
+      .large-12.columns
+        button type="submit" Submit

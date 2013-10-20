@@ -1,0 +1,8 @@
+= render 'villa/navigation', selected: :gallery
+#toolbar
+.clear
+
+- @villa.images.each do |image|
+  = link_to image.image.url, class: 'thumb_link' do
+    span.selected
+    = image_tag image.image.url(:mini), alt: image.image.file.filename, class: 'thumb'

@@ -1,0 +1,52 @@
+= render 'villa/navigation', selected: :rates
+
+#toolbar
+.clear
+
+p
+  - show_month = @villa.low_month || @villa.high_month || @villa.peak_month
+  - show_week = @villa.low_week || @villa.high_week || @villa.peak_week
+  table.prices
+    thead
+      tr
+        th Season
+        - if show_month
+          th Per Month
+        - if show_week
+          th Per Week
+        th Per Night
+
+    tbody
+      tr
+        td Low Season
+        - if show_month
+          td
+            - if @villa.low_month
+              | US$ #{number_to_currency(@villa.low_month, precision: 0, unit: '')}
+        - if show_week
+          td
+            - if @villa.low_week
+              | US$ #{number_to_currency(@villa.low_week, precision: 0, unit: '')}
+        td US$ #{number_to_currency(@villa.low_night, precision: 0, unit: '')}
+      tr
+        td High Season
+        - if show_month
+          td
+            - if @villa.high_month
+              | US$ #{number_to_currency(@villa.high_month, precision: 0, unit: '')}
+        - if show_week
+          td
+            - if @villa.high_week
+              | US$ #{number_to_currency(@villa.high_week, precision: 0, unit: '')}
+        td US$ #{number_to_currency(@villa.high_night, precision: 0, unit: '')}
+      tr
+        td Peak Season
+        - if show_month
+          td
+            - if @villa.peak_month
+              | US$ #{number_to_currency(@villa.peak_month, precision: 0, unit: '')}
+        - if show_week
+          td
+            - if @villa.peak_week
+              | US$ #{number_to_currency(@villa.peak_week, precision: 0, unit: '')}
+        td US$ #{number_to_currency(@villa.peak_night, precision: 0, unit: '')}
