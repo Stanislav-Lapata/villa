@@ -225,10 +225,3 @@ function ImageViewMode(theMode){
     $toolbar.html("<span class='lightgrey'>IMAGE VIEW MODE &rsaquo;</span> ORIGINAL");
   }
 }
-
-//preload script images
-var images=["/ajax-loader_dark.gif","/assets/round_custom_scrollbar_bg_over.png"];
-$.each(images, function(i) {
-  images[i] = new Image();
-  images[i].src = this;
-});
