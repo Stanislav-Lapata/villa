@@ -1,5 +1,5 @@
 html,body{height:100%}
-body {margin:0; padding:0; background:#333; font-family:Helvetica, Arial, sans-serif; font-size:16px;}
+body {margin:0; padding:0; font-family:Helvetica, Arial, sans-serif; font-size:16px}
 .clear{clear:both;}
 a:link,a:visited,a:hover{color:#ddd;}
 a:hover{color:#fff; text-decoration:none;cursor:pointer}
@@ -28,14 +28,21 @@ a:hover{color:#fff; text-decoration:none;cursor:pointer}
 .with_border{border:1px solid #000;}
 .with_shadow{-moz-box-shadow:0 0 40px #000; -webkit-box-shadow:0 0 40px #000; box-shadow:0 0 40px #000;}
 
-.navigation > a {
-  margin: 25px;
-  text-decoration:none;
-  color: #444;
-  font-weight: normal;
+.navigation {
+  border-bottom: 10px solid rgba(0,0,0,0.05);
+  padding: 10px 12px 15px 12px;
 
-  &:hover {
-    color: black;
+  > a {
+    margin: 15px;
+    padding: 10px;
+    text-decoration:none;
+    color: #444;
+    font-weight: normal;
+
+    &:hover, &.active {
+      color: black;
+      border-bottom: 1px solid black;
+    }
   }
 }
 
@@ -55,4 +62,9 @@ table.prices {
 
 .request-form input, textarea {
   border-color: #888;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
 }

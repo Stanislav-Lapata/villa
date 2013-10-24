@@ -10,7 +10,6 @@ ActiveAdmin.register Villa do
     column :sale_price
     column :location
     column :bedrooms
-    column :bathrooms
     column :sleeps_up_to
     default_actions
   end

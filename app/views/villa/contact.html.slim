@@ -3,7 +3,7 @@
 #toolbar
 .clear
 
-form name="requestForm" ng-submit="send_request()" ng-controller="RequestCtrl" novalidate=""
+form villa="#{@villa.id}" name="requestForm" ng-submit="send_request()" ng-controller="RequestCtrl" novalidate=""
   .request-form ng-hide="success_request"
     .row
       .large-12.columns
@@ -30,3 +30,6 @@ form name="requestForm" ng-submit="send_request()" ng-controller="RequestCtrl" n
     .row
       .large-12.columns
         button type="submit" Submit
+  .row
+    .success-request ng-show="success_request"
+      .alert-box.success Your request has been sent successfully

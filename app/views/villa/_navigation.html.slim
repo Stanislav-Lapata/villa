@@ -1,6 +1,6 @@
 h5.navigation
-  = link_to "The Villa", root_path
-  = link_to "Gallery", villa_gallery_path
-  = link_to "Location", '#'
-  = link_to "Rates", villa_rates_path
-  = link_to "Contacts", villa_contact_us_path
+  = link_to "The Villa", root_path, class: "#{'active' if selected == :root}"
+  = link_to "Gallery", villa_gallery_path, class: "#{'active' if selected == :gallery}"
+  = link_to "Location", villa_location_path, class: "#{'active' if selected == :location}"
+  = link_to "Rates", villa_rates_path, class: "#{'active' if selected == :rates}"
+  = link_to "Contacts", villa_contact_us_path, class: "#{'active' if selected == :contact}"

@@ -14,9 +14,9 @@
 //= require jquery.ui.datepicker
 //= require jquery.easing.1.3
 //= require jquery.mousewheel.min.js
+//= require jquery.gmap
 //= require unstable/angular
 //= require unstable/angular-resource
-//= require jquery.gmap
 //= require angular-google-maps
 //= require app
 //= require_tree ./angular

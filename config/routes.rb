@@ -7,6 +7,7 @@ Newvilla::Application.routes.draw do
 
   get '/gallery', to: 'home#gallery', as: :villa_gallery
   get '/rates', to: 'home#rates', as: :villa_rates
+  get '/location', to: 'home#location', as: :villa_location
   get '/contact_us', to: 'home#contact', as: :villa_contact_us
 
   get '/villas', to: 'home#index'

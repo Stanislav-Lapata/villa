@@ -15,16 +15,10 @@ class HomeController < ApplicationController
     end
   end
 
-  def gallery
-    render 'villa/gallery', layout: 'villa'
-  end
-
-  def rates
-    render 'villa/rates', layout: 'villa'
-  end
-
-  def contact
-    render 'villa/contact', layout: 'villa'
+  %w[gallery rates contact location].each do |action|
+    define_method action do
+      render "villa/#{action}", layout: 'villa'
+    end
   end
 
   private
