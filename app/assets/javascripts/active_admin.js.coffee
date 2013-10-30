@@ -4,6 +4,7 @@
 #= require angular-google-maps
 #= require app
 
+#= require ap.fotorama
 #= require_tree ./angular
 #= require jstree
 #= require jquery.alerts
