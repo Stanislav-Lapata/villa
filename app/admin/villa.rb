@@ -126,6 +126,10 @@ ActiveAdmin.register Villa do
     f.actions
   end
 
+  action_item :only => :show do
+    link_to 'New Villa', new_admin_villa_path
+  end
+
   controller do
     def permitted_params
       params.permit villa: [
