@@ -27,6 +27,7 @@ gem 'sitemap_generator'
 gem "select2-rails"
 gem 'slim-rails'
 gem 'zurb-foundation'
+gem 'fotoramajs'
 
 gem 'unicorn'
 

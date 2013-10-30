@@ -3,41 +3,35 @@ br
 
 
 .row
+  .large-12.columns ng-controller="FotoramaCtrl"
+    .row ap-fotorama="options" ng-model="villa.images"
+
+    .row
+      .panel
+        h5.hide-for-small
+          .title
+            | {{villa.name}}
+
+        br
+        br
+
+        .from
+          | From
+          span.price
+            | ${{villa.sale_price | number:0}}
+        .location
+          | {{villa.location}}
+        .bedrooms
+          | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
+
+        .price-range
+          p Price Guide {{villa.sale_price | number:0}}
+          br
+        .category Category: {{villa.area.name}} Villas
+
+      br
+      br
   .large-12.columns
-    .row.villa-show
-      .large-7.columns
-        .shadow.slideshow-wrapper
-          .preloader
-          ul#villa-orbit.orbit data-orbit="" data-options="bullets:false; slide_number:false; timer:false;"
-            li ng-repeat="image in villa.images"
-              a.preview colorbox="" href="{{image.original_image_url}}"
-              img width="560" height="310" disable-context="" ng-src="{{ image.image_url }}"
-
-      .large-5.columns
-        .panel
-          h5.hide-for-small
-            .title
-              | {{villa.name}}
-
-          br
-          br
-
-          .from
-            | From
-            span.price
-              | ${{villa.sale_price | number:0}}
-          .location
-            | {{villa.location}}
-          .bedrooms
-            | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
-
-          .price-range
-            p Price Guide {{villa.sale_price | number:0}}
-            br
-          .category Category: {{villa.area.name}} Villas
-
-    br
-    br
     .row
       .large-12.columns.villa-specs
         .section-container.vertical-tabs data-section="vertical-tabs"

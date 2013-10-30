@@ -19,9 +19,11 @@
 //= require unstable/angular-resource
 //= require angular-google-maps
 //= require jquery.colorbox-min
+//= require fotorama
 
 //= require app
 //= require jquery.throttle_debounce_plugin
+//= require ap.fotorama
 //= require_tree ./angular
 
 Array.prototype.remove = function(e) {

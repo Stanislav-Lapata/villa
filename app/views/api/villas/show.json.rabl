@@ -6,6 +6,7 @@ attributes :id, :name, :price_from, :price_to, :sale_price, :area_id,
 child @villa.images, object_root: false do |image|
   attributes :id
 
+  node(:thumb) { |image| image.image.url(:large) }
   node(:image_url) { |image| image.image.url(:large) }
   node(:original_image_url) { |image| image.image.url }
 end
