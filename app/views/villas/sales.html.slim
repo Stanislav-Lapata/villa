@@ -8,16 +8,40 @@ br
         span Location
         p
           ul.no-bullet.areas-list
-            li
-              = link_to "Luxury Rentals", '/villas'
-            li
-              = link_to "Luxury Sales", '/sales'
-              ul.no-bullet.areas-list
-                li ng-include="'/areas/areas/sale'" ng-repeat="area in areas | filter:{sale:true}"
+            li ng-repeat="area in areas | filter:{sale:true}"
+              = link_to "{{area.name}}", '', "ng-click" => "filters.area_id = area.id; show_nested = !show_nested; disable_districts()"
+              ul.no-bullet ng-show="show_nested"
+                li ng-repeat="area in area.areas | filter:{sale:true}"
+                  = link_to "{{area.name}}", '', "ng-click" => "filters.area_id = area.id; enable_districts(area)"
+
+      / TODO: DRY villas and sales views and rewrite through ng-repeat or directive
+      ' {{parent}} asd
+      .filter ng-show="show_districts && parent == 'Phuket'"
+        #filter-map.phuket
+          label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
+            input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="filter_areas(district)"
+            span.tail ng-show="district.left_tail" style="top: 100%; left: {{district.left_tail}}%"
+            | {{district.name}}
+
+      .filter ng-show="show_districts && parent == 'Koh Samui'"
+        #filter-map.samui
+          label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
+            input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="filter_areas(district)"
+            span.tail ng-show="district.left_tail" style="top: 100%; left: {{district.left_tail}}%"
+            | {{district.name}}
+
+      .filter ng-show="show_districts && parent == 'Bali'"
+        #filter-map.bali
+          label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
+            input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="filter_areas(district)"
+            span.tail ng-show="district.left_tail" style="top: 100%; left: {{district.left_tail}}%"
+            | {{district.name}}
+
       .filter
         span Bedrooms
         p
           select ng-model="filters.bedrooms" ng-options="room as (room + ' Bedrooms') for room in [1,2,3,4,5,6,7,8,9]" placeholder="123"
+            option style="display:none" value="" Any Bedrooms
       .filter
         span Price Range
         p
@@ -29,7 +53,7 @@ br
 
   .large-9.columns
     .row
-      p LUXURY RENTALS
+      p LUXURY SALES
       .villas-list ng-repeat="villa in villas" ng-animate="'animate'"
         .large-4.small-8.columns.villa-row
           .shadow

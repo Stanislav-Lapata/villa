@@ -1,11 +1,32 @@
 App.controller 'SalesCtrl', ['$scope', '$http', ($scope, $http) ->
   $scope.filters = { }
+  $scope.filters.districts = []
+
+  $scope.enable_districts = (area) ->
+    $scope.show_districts = true
+    $scope.districts = area.areas
+    $scope.parent = area.name
+
+  $scope.disable_districts = ->
+    $scope.parent = null
+
+  $scope.filter_areas = (district) ->
+    if district.checked
+      $scope.filters.districts.push(district.id)
+    else
+      $scope.filters.districts = jQuery.grep $scope.filters.districts, (value) ->
+        value isnt district.id
 
   $scope.$watch "filters", ( (filters) ->
+    if filters.districts.length
+      areas = filters.districts
+    else
+      areas = filters.area_id
+
     search =
       q:
         name_cont: filters.query
-        area_id_place_eq: filters.area_id
+        area_id_place_eq: areas
         area_sale_eq: true
         sale_eq: true
         bedrooms_eq: filters.bedrooms
@@ -22,7 +43,6 @@ App.controller 'SalesCtrl', ['$scope', '$http', ($scope, $http) ->
       $scope.villas = data
       $scope.$apply
     )
-
 
   ), true
 ]

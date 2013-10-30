@@ -14,8 +14,6 @@ br
                 li ng-repeat="area in area.areas | filter:{rental:true}"
                   = link_to "{{area.name}}", '', "ng-click" => "filters.area_id = area.id; enable_districts(area)"
 
-
-
       / TODO: DRY villas and sales views and rewrite through ng-repeat or directive
       .filter ng-show="show_districts && parent == 'Phuket'"
         #filter-map.phuket

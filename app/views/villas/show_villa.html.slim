@@ -11,7 +11,7 @@ br
           ul#villa-orbit.orbit data-orbit="" data-options="bullets:false; slide_number:false; timer:false;"
             li ng-repeat="image in villa.images"
               a.preview colorbox="" href="{{image.original_image_url}}"
-              img disable-context="" ng-src="{{ image.image_url }}"
+              img width="560" height="310" disable-context="" ng-src="{{ image.image_url }}"
 
       .large-5.columns
         .panel

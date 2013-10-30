@@ -7,7 +7,7 @@ class Area < ActiveRecord::Base
   scope :for_home_page, -> { where(show_on_home_page: true) }
 
   def self_and_descendants_villas
-    self_and_descendants.map(&:villas).flatten
+    self_and_descendants.map(&:villas).flatten[0..7]
   end
 
   def pretty_name
