@@ -56,28 +56,28 @@ ActiveAdmin.register Villa do
       f.input :domain
       f.input :area_id, input_html: {class: 'admin-villa-area'}
       f.input :rental
-      f.input :price_from
-      f.input :price_to
+      f.input :price_from, as: :string
+      f.input :price_to, as: :string
       f.input :sale
-      f.input :sale_price
+      f.input :sale_price, as: :string
       f.input :location
-      f.input :bedrooms
-      f.input :bathrooms
-      f.input :sleeps_up_to
+      f.input :bedrooms, as: :string
+      f.input :bathrooms, as: :string
+      f.input :sleeps_up_to, as: :string
     end
 
     f.inputs "Seasonal Prices" do
-      f.input :low_month, label: 'Low Season', placeholder: 'Per Month'
-      f.input :low_week, label: false, placeholder: 'Per Week'
-      f.input :low_night, label: false, placeholder: 'Per Night'
+      f.input :low_month, label: 'Low Season', placeholder: 'Per Month', as: :string
+      f.input :low_week, label: false, placeholder: 'Per Week', as: :string
+      f.input :low_night, label: false, placeholder: 'Per Night', as: :string
 
-      f.input :high_month, label: 'High Season', placeholder: 'Per Month'
-      f.input :high_week, label: false, placeholder: 'Per Week'
-      f.input :high_night, label: false, placeholder: 'Per Night'
+      f.input :high_month, label: 'High Season', placeholder: 'Per Month', as: :string
+      f.input :high_week, label: false, placeholder: 'Per Week', as: :string
+      f.input :high_night, label: false, placeholder: 'Per Night', as: :string
 
-      f.input :peak_month, label: 'Peak Season', placeholder: 'Per Month'
-      f.input :peak_week, label: false, placeholder: 'Per Week'
-      f.input :peak_night, label: false, placeholder: 'Per Night'
+      f.input :peak_month, label: 'Peak Season', placeholder: 'Per Month', as: :string
+      f.input :peak_week, label: false, placeholder: 'Per Week', as: :string
+      f.input :peak_night, label: false, placeholder: 'Per Night', as: :string
     end
 
     f.inputs "Description" do
