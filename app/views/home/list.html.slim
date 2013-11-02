@@ -16,20 +16,30 @@ br
 
 .row
   .large-12.columns
-    .row
+    ul#da-thumbs.da-thumbs.row
       .villas-list
         .area-group ng-repeat="area in areas"
           .area-name
             | {{area.name}}
           .clear
-          .villas-list ng-repeat="villa in area.villas" ng-animate="'animate'"
-            .large-3.small-6.columns.villa-row
-              .shadow
-                a href="/villas/{{villa.id}}"
-                  img disable-context="" ng-src="{{villa.image_url}}"
-              p.title-link
-                a href="/villas/{{villa.id}}" {{villa.name}}
-              span.price From ${{villa.price_from | number:0}}
+          li.large-3.small-6.columns.villas-list ng-repeat="villa in area.villas" ng-animate="'animate'"
+            .shadow hoverdir=""
+              a href="/villas/{{villa.id}}"
+                img disable-context="" ng-src="{{villa.image_url}}"
+                div
+                  span.title
+                    | {{villa.name}}
+                  span.price_from
+                    | From ${{villa.price_from | number:0}}
+                  span.location
+                    | {{villa.location}}
+                  span.bedtooms
+                    | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
+                  span.price_range
+                    | Price Range: From {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
+            p.title-link
+              a href="/villas/{{villa.id}}" {{villa.name}}
+            span.price From ${{villa.price_from | number:0}}
 
 
 .row

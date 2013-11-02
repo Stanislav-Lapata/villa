@@ -29,7 +29,7 @@ li.name {
     display: inline-block;
     padding-left: 5px;
     width: 215px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 
     a {
       color: #000;
@@ -394,5 +394,48 @@ footer {
   .side-nav li a {
     display: inline-block;
     color: #777;
+  }
+}
+
+
+.da-thumbs {
+  list-style: none;
+  position: relative;
+}
+.da-thumbs li {
+  float: left !important;
+  padding: 8px;
+  position: relative;
+}
+.da-thumbs li a,
+.da-thumbs li a img {
+  display: block;
+  position: relative;
+}
+.da-thumbs li a {
+  overflow: hidden;
+}
+.da-thumbs li a div {
+  position: absolute;
+  background: #333;
+  background: rgba(75,75,75,0.7);
+  width: 100%;
+  height: 100%;
+}
+.da-thumbs li a div {
+  span {
+    display: block;
+    font-weight: normal;
+    color: rgba(255,255,255,0.9);
+    font-size: 12px;
+    margin: 5px;
+
+    &.title {
+      text-transform: uppercase;
+    }
+
+    &.price_from {
+      margin-top: 15px;
+    }
   }
 }

@@ -14,6 +14,7 @@
 //= require jquery.ui.datepicker
 //= require jquery_ujs
 //= require jquery.gmap
+//= require jquery.hoverdir
 //= require foundation
 //= require unstable/angular
 //= require unstable/angular-resource
