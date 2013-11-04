@@ -15,7 +15,7 @@ gem 'jstree-rails', :git => 'git://github.com/tristanm/jstree-rails.git'
 
 gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 'rails4'
 gem 'active_admin-awesome_nested_set', path: '../active_admin-awesome_nested_set'
-gem 'angularjs-rails', git: 'git@github.com:hiravgandhi/angularjs-rails.git', branch: 'master'
+gem 'angularjs-rails', git: 'git://github.com/hiravgandhi/angularjs-rails.git', branch: 'master'
 gem 'awesome_nested_set'
 gem 'carrierwave'
 gem "enumerize", "~> 0.7.0"
