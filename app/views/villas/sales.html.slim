@@ -62,13 +62,13 @@ br
               span.title
                 | {{villa.name}}
               span.price_from
-                | From ${{villa.price_from | number:0}}
+                | From ${{villa.sale_price | number:0}}
               span.location
                 | {{villa.location}}
               span.bedtooms
                 | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
               span.price_range
-                | Price Range: From {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
+                | Price Guide {{villa.sale_price | number:0}}
         p.title-link
           a href="/villas/{{villa.id}}" {{villa.name}}
         span.price From ${{villa.price_from | number:0}}
