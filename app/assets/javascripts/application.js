@@ -12,12 +12,14 @@
 //
 //= require jquery
 //= require jquery.ui.datepicker
+//= require jquery.ui.accordion
 //= require jquery_ujs
 //= require jquery.gmap
 //= require jquery.hoverdir
 //= require foundation
-//= require unstable/angular
-//= require unstable/angular-resource
+//= require angular
+//= require angular-resource
+//= require angular-route
 //= require angular-google-maps
 //= require jquery.colorbox-min
 //= require fotorama

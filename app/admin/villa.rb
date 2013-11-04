@@ -64,6 +64,7 @@ ActiveAdmin.register Villa do
       f.input :bedrooms, as: :string
       f.input :bathrooms, as: :string
       f.input :sleeps_up_to, as: :string
+      f.input :price_guide
     end
 
     f.inputs "Seasonal Prices" do
@@ -131,13 +132,18 @@ ActiveAdmin.register Villa do
   end
 
   controller do
+    def new
+      @villa = Villa.new
+      @villa.price_guide = I18n.t(:price_guide, scope: 'villa_info')
+    end
+
     def permitted_params
       params.permit villa: [
                             :name, :domain, :description, :price_from, :price_to, :location,
                             :area_id, :facilities, :services, :bedrooms, :sleeps_up_to,
                             :sale_price, :bathrooms, :rental, :sale, :position, :latitude,
                             :longitude, :zoom, :low_month, :peak_month, :low_week, :low_night,
-                            :high_week, :high_night, :peak_week, :peak_night, :high_month,
+                            :high_week, :high_night, :peak_week, :peak_night, :high_month, :price_guide,
                             images_attributes: [:id, :image, :_destroy, :url]
                            ]
     end

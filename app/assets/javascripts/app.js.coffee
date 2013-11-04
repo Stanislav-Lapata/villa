@@ -1,4 +1,4 @@
-window.App = angular.module('Villa', ['ngResource', 'SharedServices', 'google-maps', 'ap.fotorama'])
+window.App = angular.module('Villa', ['ngResource', 'ngRoute', 'SharedServices', 'google-maps', 'ap.fotorama'])
 
 App.config ["$routeProvider", "$locationProvider", "$httpProvider", ($routeProvider, $locationProvider, $httpProvider) ->
   $httpProvider.defaults.headers.post['Content-Type'] = 'application/json'
@@ -26,6 +26,9 @@ App.config ["$routeProvider", "$locationProvider", "$httpProvider", ($routeProvi
   ).when("/sales/:villaId",
     templateUrl: "/villas/show_sales_villa.html"
     controller: 'VillaCtrl'
+  ).when("/faq",
+    templateUrl: "faq.html"
+    controller: 'FaqCtrl'
   ).when("/contact",
     templateUrl: "contact.html"
     controller: 'ContactCtrl'

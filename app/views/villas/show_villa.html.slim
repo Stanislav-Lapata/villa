@@ -67,15 +67,8 @@ br
                 span.month ng-hide="!(villa.low_month != 0) && !(villa.high_month) && !(villa.peak_month)"
                   span ng-show="villa.peak_month != 0" US$ {{villa.peak_month}} per month
 
-              p Unless otherwise stated:
-                All prices are in US$ and include all taxes
-                Prices quoted are for full villa occupancy and maximum 2 adults per double bedroom
-                Some villas can be rented at a reduced rate for lower occupancy, please ask for details
-                Check-in 3pm / Check-out prior to noon, early check-in or late check-out can be arranged for an additional fee
-                No smoking inside the villa
-                A refundable security deposit is payable on arrival
-                To make a booking or booking enquiry please click on the ‘ENQUIRE NOW’ tab on the left
-                For general villa and booking information please see our FAQ page, if you have any questions regarding this particular villa please contact us
+              p
+                | {{villa.price_guide}}
           section
             p.title data-section-title=""
               a href="" Enquire now

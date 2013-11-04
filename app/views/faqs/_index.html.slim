@@ -1,0 +1,6 @@
+script id="faq.html" type="text/ng-template"
+  .row
+    .large-12.columns
+      div accordion=""
+        h3 ng-repeat-start="faq in faqs" {{faq.question}}
+        div ng-repeat-end="" my-post-repeat-directive="" {{faq.answer}}
