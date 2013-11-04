@@ -68,7 +68,7 @@ br
               span.bedtooms
                 | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
               span.price_range
-                | Price Range: From {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
+                | Price Range: From ${{villa.price_from | number:0}} - ${{villa.price_to | number:0}}
         p.title-link
           a href="/villas/{{villa.id}}" {{villa.name}}
         span.price From ${{villa.price_from | number:0}}
