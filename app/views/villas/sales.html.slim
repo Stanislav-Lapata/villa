@@ -15,7 +15,6 @@ br
                   = link_to "{{area.name}}", '', "ng-click" => "filters.area_id = area.id; enable_districts(area)"
 
       / TODO: DRY villas and sales views and rewrite through ng-repeat or directive
-      ' {{parent}} asd
       .filter ng-show="show_districts && parent == 'Phuket'"
         #filter-map.phuket
           label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
