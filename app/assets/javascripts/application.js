@@ -23,6 +23,7 @@
 //= require angular-google-maps
 //= require jquery.colorbox-min
 //= require fotorama
+//= require jquery.backstretch.min
 
 //= require app
 //= require jquery.throttle_debounce_plugin
