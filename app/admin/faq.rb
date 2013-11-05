@@ -20,6 +20,11 @@ ActiveAdmin.register Faq do
 
     f.actions
   end
+
+  action_item :only => :show do
+    link_to 'New FAQ', new_admin_faq_path
+  end
+
   controller do
     def permitted_params
       params.permit faq: [ :question, :answer ]
