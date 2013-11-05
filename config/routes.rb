@@ -50,6 +50,7 @@ Newvilla::Application.routes.draw do
     resources :contacts
     resources :subscribes
     resources :faqs
+    resources :home_photos, only: :index
   end
 
   namespace :snapshots do
