@@ -1,4 +1,4 @@
-window.App = angular.module('Villa', ['ngResource', 'ngRoute', 'SharedServices', 'google-maps', 'ap.fotorama'])
+window.App = angular.module('Villa', ['ngResource', 'ngRoute', 'ngSanitize', 'SharedServices', 'google-maps', 'ap.fotorama'])
 
 App.config ["$routeProvider", "$locationProvider", "$httpProvider", ($routeProvider, $locationProvider, $httpProvider) ->
   $httpProvider.defaults.headers.post['Content-Type'] = 'application/json'

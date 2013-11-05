@@ -20,6 +20,7 @@
 //= require angular
 //= require angular-resource
 //= require angular-route
+//= require angular-sanitize
 //= require angular-google-maps
 //= require jquery.colorbox-min
 //= require fotorama
