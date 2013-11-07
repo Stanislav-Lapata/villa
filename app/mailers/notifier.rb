@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default from: "ez@luxuryrentalsandsales.asia"
+  default from: "Luxury Rentals And Sales <ez@luxuryrentalsandsales.asia>"
 
   def new_contact_notification(contact)
     body = ''.tap do |out|
