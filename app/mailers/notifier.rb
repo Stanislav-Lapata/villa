@@ -9,6 +9,6 @@ class Notifier < ActionMailer::Base
       out << "Message: #{contact.message} \n"
     end.html_safe
 
-    mail to: "ez@luxuryrentalsandsales.asia", subject: "New Contact", body: body
+    mail to: "info@luxuryrentalsandsales.asia", subject: "New Contact", body: body
   end
 end
