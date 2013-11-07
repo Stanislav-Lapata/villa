@@ -4,6 +4,7 @@ App.directive 'accordion', ->
       $(element).accordion
         collapsible: true
         active: 1000
+        heightStyle: "content"
         icons:
           header: "ui-icon-circle-arrow-e"
           activeHeader: "ui-icon-circle-arrow-s"
