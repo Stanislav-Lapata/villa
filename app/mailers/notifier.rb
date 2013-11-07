@@ -3,7 +3,7 @@ class Notifier < ActionMailer::Base
 
   def new_contact_notification(contact)
     body = ''.tap do |out|
-      out << "Full name: #{contact.first_name} #{contact.last_name} \n"
+      out << "Full name: #{contact.full_name} \n"
       out << "Phone: #{contact.phone} \n"
       out << "Email: #{contact.email} \n"
       out << "Message: #{contact.message} \n"

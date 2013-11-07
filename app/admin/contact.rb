@@ -1,7 +1,7 @@
 ActiveAdmin.register Contact do
   index do
     column "Full Name" do |contact|
-      "#{contact.first_name} #{contact.last_name}"
+      contact.full_name
     end
     column :phone
     column :email
