@@ -3,13 +3,10 @@ class Notifier < ActionMailer::Base
 
   def new_contact_notification(contact)
     body = ''.tap do |out|
-      out << "Full name: #{contact.first_name} #{contact.last_name}"
-      out << "<br>"
-      out << "Phone: #{contact.phone}"
-      out << "<br>"
-      out << "Email: #{contact.email}"
-      out << "<br>"
-      out << "Message: #{contact.message}"
+      out << "Full name: #{contact.first_name} #{contact.last_name} \n"
+      out << "Phone: #{contact.phone} \n"
+      out << "Email: #{contact.email} \n"
+      out << "Message: #{contact.message} \n"
     end.html_safe
 
     mail to: "oleghaidul@gmail.com", subject: "New Contact", body: body
