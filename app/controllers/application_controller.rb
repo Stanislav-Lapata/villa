@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def set_locale
-    locale = request.domain == "phuketrenthouse.ru" ? :ru : :ru
+    locale = request.domain == "phuketrenthouse.ru" ? :ru : :en
     I18n.locale = locale
   end
 end
