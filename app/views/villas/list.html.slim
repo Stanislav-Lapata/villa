@@ -3,9 +3,9 @@ br
   .large-3.columns
     .row.collapse ng-controller="AreasCtrl"
       .filter
-        input type="text" placeholder="Villa Name or ID" ng-model="filters.query" ng-ampere-debounce=""
+        input type="text" placeholder="#{t('villas.villa_name_or_id')}" ng-model="filters.query" ng-ampere-debounce=""
       .filter
-        span Location
+        span= t('villas.location')
         p
           ul.no-bullet.areas-list
             li ng-repeat="area in areas | filter:{rental:true}"
@@ -38,22 +38,22 @@ br
 
 
       .filter
-        span Bedrooms
+        span= t('villas.bedrooms')
         p
           select ng-model="filters.bedrooms" ng-options="room as (room + ' Bedrooms') for room in [1,2,3,4,5,6,7,8,9]" placeholder="123"
-            option style="display:none" value="" Any Bedrooms
+            option style="display:none" value=""= t('villas.any_bedrooms')
       .filter
-        span Price Range
+        span= t('villas.price_range')
         p
-          span.from From:
+          span.from= t('villas.from')
           input.price-from type="text" ng-model="filters.price_from" ng-ampere-debounce=""
-          span.to to:
+          span.to= t('villas.to')
           input.price-to type="text" ng-model="filters.price_to" ng-ampere-debounce=""
 
 
   .large-9.columns
     ul#da-thumbs.da-thumbs.row
-      p LUXURY RENTALS
+      p= t('villas.luxury_rentals')
       li.large-4.small-8.columns.villas-list ng-repeat="villa in villas" ng-animate="'animate'"
         .shadow hoverdir=""
           a href="/villas/{{villa.id}}"
@@ -62,13 +62,13 @@ br
               span.title
                 | {{villa.name}}
               span.price_from
-                | From ${{villa.price_from | number:0}}
+                | #{t('villas.from')} ${{villa.price_from | number:0}}
               span.location
                 | {{villa.location}}
               span.bedtooms
-                | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
+                | {{villa.bedrooms}} #{t('villas.bedrooms')} (#{t('villas.sleeps_up_to')} {{villa.sleeps_up_to}})
               span.price_range
-                | Price Range: From ${{villa.price_from | number:0}} - ${{villa.price_to | number:0}}
+                | #{t('villas.price_range')}: #{t('villas.from')} ${{villa.price_from | number:0}} - ${{villa.price_to | number:0}}
         p.title-link
           a href="/villas/{{villa.id}}" {{villa.name}}
-        span.price From ${{villa.price_from | number:0}}
+        span.price #{t('villas.from')} ${{villa.price_from | number:0}}

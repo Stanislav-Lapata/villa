@@ -3,29 +3,29 @@ script id="contact.html" type="text/ng-template"
     .large-6.columns
       form name="contactForm" ng-submit="send_contact()" ng-controller="ContactCtrl" novalidate=""
         fieldset
-          legend Contact Form
+          legend= t('contact.contact_form')
 
           .request-form ng-hide="success_contact"
             .row
               .large-6.columns
-                label * First Name
-                input ng-class="{error: contactForm.firstName.$error.required && show_errors}" name="firstName" type="text" ng-model="first_name" required="" placeholder="First Name"
+                label * #{t('contact.first_name')}
+                input ng-class="{error: contactForm.firstName.$error.required && show_errors}" name="firstName" type="text" ng-model="first_name" required="" placeholder="#{t('contact.first_name')}"
               .large-6.columns
-                label * Last Name
-                input ng-class="{error: contactForm.lastName.$error.required && show_errors}" name="lastName" type="text" ng-model="last_name" required="" placeholder="Last Name"
+                label * #{t('contact.last_name')}
+                input ng-class="{error: contactForm.lastName.$error.required && show_errors}" name="lastName" type="text" ng-model="last_name" required="" placeholder="#{t('contact.last_name')}"
             .row
               .large-6.columns
-                label * Email
+                label * #{t('contact.email')}
                 input ng-class="{error: contactForm.email.$error.required && show_errors}" name="email" type="email" ng-model="email" required="" placeholder="user@domain.com"
               .large-6.columns
-                label * Phone
-                input ng-class="{error: contactForm.phone.$error.required && show_errors}" name="phone" type="text" ng-model="phone" required="" placeholder="Your Telephone Number"
+                label * #{t('contact.phone')}
+                input ng-class="{error: contactForm.phone.$error.required && show_errors}" name="phone" type="text" ng-model="phone" required="" placeholder="#{t('contact.phone')}"
             .row
               .large-12.columns
-                textarea ng-model="message" placeholder="Leave your message here"
+                textarea ng-model="message" placeholder="#{t('contact.message_placeholder')}"
 
-            button type="submit" Submit
+            button type="submit"= t('contact.submit')
 
           .row
             .success-request ng-show="success_contact"
-              .alert-box.success Your message has been sent successfully
+              .alert-box.success= t('contact.message')

@@ -24,3 +24,64 @@ en:
 
   villa_info:
     price_guide: "Unless otherwise stated: All prices are in US$ and include all taxes. Prices quoted are for full villa occupancy and maximum 2 adults per double bedroom. Some villas can be rented at a reduced rate for lower occupancy, please ask for details. Check-in 3pm / Check-out prior to noon, early check-in or late check-out can be arranged for an additional fee. No smoking inside the villa. A refundable security deposit is payable on arrival. To make a booking or booking enquiry please click on the ‘ENQUIRE NOW’ tab on the left. For general villa and booking information please see our FAQ page, if you have any questions regarding this particular villa please contact us."
+
+  navigation:
+    home: "Home"
+    rentals: "Luxury Rentals"
+    sales: "Luxury Sales"
+    faq: "FAQ"
+    contact: "Contact"
+
+  villas:
+    location: "Location"
+    bedrooms: "Bedrooms"
+    any_bedrooms: "Any bedrooms"
+    price_range: "Price Range"
+    from: "From"
+    to: "To"
+    luxury_rentals: "LUXURY RENTALS"
+    sleeps_up_to: "sleeps up to"
+    villa_name_or_id: "Villa Name or ID"
+    price: "Price"
+
+  contact:
+    contact_form: "Contact Form"
+    first_name: "First Name"
+    last_name: "Last Name"
+    email: "Email"
+    phone: "Phone"
+    submit: "Submit"
+    message: "Your message has been sent successfully"
+    message_placeholder: "Leave your message here"
+
+  villa_show:
+    description: "Villa description"
+    facilities_and_services: "Facilities & Services"
+    facilities: "Facilities"
+    services: "Services"
+    price_guide: "Price Guide"
+    low_season: "Low Season:"
+    high_season: "High Season:"
+    peak_season: "Peak Season:"
+    per_night: "per night"
+    per_week: "per week"
+    per_month: "per month"
+    enquire_now: "Enquire now"
+    information_request: "Villa Information Request"
+    for_more_information: "For more information, prices and availability of this villa, please submit a request and a villa specialist will contact you as soon as possible."
+    guest_name: "Guest Name"
+    first_name: "First Name"
+    last_name: "Last Name"
+    email: "Email"
+    check_in: "Check In"
+    check_out: "Check Out"
+    submit: "Submit"
+    request_message: "Your request has been sent successfully"
+    request_message_placeholder: "Leave your comments here"
+
+  home:
+    from: "From"
+    bedrooms: "bedrooms"
+    sleeps_up_to: "sleep up to"
+    price_range: "Price Range"
+

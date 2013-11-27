@@ -7,15 +7,15 @@ div home-slider="" ng-style="style()"
       #menu
         ul
           li
-            a href="/home" Home
+            a href="/home"= t('navigation.home')
           li
-            a href="/villas" Luxury Rentals
+            a href="/villas"= t('navigation.rentals')
           li
-            a href="/sales" Luxury Sales
+            a href="/sales"= t('navigation.sales')
           li
-            a href="/faq" FAQ
+            a href="/faq"= t('navigation.faq')
           li
-            a href="/contact" Contact
+            a href="/contact"= t('navigation.contact')
 
 
 br
@@ -38,16 +38,16 @@ br
                   span.title
                     | {{villa.name}}
                   span.price_from
-                    | From ${{villa.price_from | number:0}}
+                    | #{t('home.from')} ${{villa.price_from | number:0}}
                   span.location
                     | {{villa.location}}
                   span.bedtooms
-                    | {{villa.bedrooms}} bedrooms (sleeps up to {{villa.sleeps_up_to}})
+                    | {{villa.bedrooms}} #{t('home.bedrooms')} (#{t('home.sleeps_up_to')} {{villa.sleeps_up_to}})
                   span.price_range
-                    | Price Range: From {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
+                    | #{t('home.price_range')}: #{t('home.from')} {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
             p.title-link
               a href="/villas/{{villa.id}}" {{villa.name}}
-            span.price From ${{villa.price_from | number:0}}
+            span.price #{t('home.from')} ${{villa.price_from | number:0}}
 
 
 .row

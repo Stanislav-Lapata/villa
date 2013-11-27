@@ -12,23 +12,23 @@ br
         .section-container.vertical-tabs data-section="vertical-tabs"
           section
             p.title data-section-title=""
-              a href="" Villa description
+              a href=""= t('show_villa.description')
             .content data-section-content=""
               div ng-bind-html="villa.description"
               br
               #map gmap="{{villa}}"
           section
             p.title data-section-title=""
-              a href="" Facilities & Services
+              a href=""= t('show_villa.facilities_and_services')
             .content data-section-content=""
-              p Facilities
+              p= t('show_villa.facilities')
               div ng-repeat="facility in villa.facilities"
                 span.facility
                   | {{facility}}
 
               br
               br
-              p Services
+              p= t('show_villa.services')
               div ng-repeat="service in villa.services"
                 span.service
                   | {{service}}
@@ -36,74 +36,74 @@ br
 
           section
             p.title data-section-title=""
-              a href="" Price guide
+              a href=""= t('show_villa.price_guide')
             .content data-section-content=""
               p
-                span.season-title Low Season:
+                span.season-title= t('show_villa.low_season')
                 span.night
-                  | US$ {{villa.low_night}} per night
+                  | US$ {{villa.low_night}} #{t('show_villa.per_night')}
                 span.week ng-hide="!(villa.low_week != 0) && !(villa.high_week) && !(villa.peak_week)"
-                  span ng-show="villa.low_week != 0"  US$ {{villa.low_week}} per week
+                  span ng-show="villa.low_week != 0"  US$ {{villa.low_week}} #{t('show_villa.per_week')}
                 span.month ng-hide="!(villa.low_month != 0) && !(villa.high_month) && !(villa.peak_month)"
-                  span ng-show="villa.low_month != 0" US$ {{villa.low_month}} per month
+                  span ng-show="villa.low_month != 0" US$ {{villa.low_month}} #{t('show_villa.per_month')}
 
                 br
 
-                span.season-title High Season:
+                span.season-title= t('show_villa.high_season')
                 span.night
-                  | US$ {{villa.high_night}} per night
+                  | US$ {{villa.high_night}} #{t('show_villa.per_night')}
                 span.week ng-hide="!(villa.low_week != 0) && !(villa.high_week) && !(villa.peak_week)"
-                  span ng-show="villa.high_week != 0" US$ {{villa.high_week}} per week
+                  span ng-show="villa.high_week != 0" US$ {{villa.high_week}} #{t('show_villa.per_week')}
                 span.month ng-hide="!(villa.low_month != 0) && !(villa.high_month) && !(villa.peak_month)"
-                  span ng-show="villa.high_month != 0" US$ {{villa.high_month}} per month
+                  span ng-show="villa.high_month != 0" US$ {{villa.high_month}} #{t('show_villa.per_month')}
 
                 br
 
-                span.season-title Peak Season:
+                span.season-title= t('show_villa.peak_season')
                 span.night
-                  | US$ {{villa.peak_night}} per night
+                  | US$ {{villa.peak_night}} #{t('show_villa.per_night')}
                 span.week ng-hide="!(villa.low_week != 0) && !(villa.high_week) && !(villa.peak_week)"
-                  span ng-show="villa.peak_week != 0" US$ {{villa.peak_week}} per week
+                  span ng-show="villa.peak_week != 0" US$ {{villa.peak_week}} #{t('show_villa.per_week')}
                 span.month ng-hide="!(villa.low_month != 0) && !(villa.high_month) && !(villa.peak_month)"
-                  span ng-show="villa.peak_month != 0" US$ {{villa.peak_month}} per month
+                  span ng-show="villa.peak_month != 0" US$ {{villa.peak_month}} #{t('show_villa.per_month')}
 
               p
                 | {{villa.price_guide}}
           section
             p.title data-section-title=""
-              a href="" Enquire now
+              a href=""= t('show_villa.enquire_now')
             .content data-section-content=""
-              h3 Villa Information Request
-              p For more information, prices and availability of this villa, please submit a request and a villa specialist will contact you as soon as possible.
+              h3= t('show_villa.information_request')
+              p= t('show_villa.for_more_information')
 
               form name="requestForm" ng-submit="send_request()" ng-controller="RequestCtrl" novalidate=""
                 .request-form ng-hide="success_request"
                   .row
                     .large-12.columns
-                      label * Guest Name
+                      label * #{t('show_villa.guest_name')}
                     .large-6.columns
-                      input ng-class="{error: requestForm.firstName.$error.required && show_errors}" name="firstName" type="text" ng-model="first_name" required="" placeholder="First Name"
+                      input ng-class="{error: requestForm.firstName.$error.required && show_errors}" name="firstName" type="text" ng-model="first_name" required="" placeholder="#{t('show_villa.first_name')}"
                     .large-6.columns
-                      input ng-class="{error: requestForm.lastName.$error.required && show_errors}" name="lastName" type="text" ng-model="last_name" required="" placeholder="Last Name"
+                      input ng-class="{error: requestForm.lastName.$error.required && show_errors}" name="lastName" type="text" ng-model="last_name" required="" placeholder="#{t('show_villa.last_name')}"
                   .row
                     .large-6.columns
-                      label * Email
+                      label * #{t('show_villa.email')}
                       input ng-class="{error: requestForm.email.$error.required && show_errors}" name="email" type="email" ng-model="email" required="" placeholder="user@domain.com"
                     .large-3.columns
-                      label * Check In
+                      label * #{t('show_villa.check_in')}
                       input ng-class="{error: requestForm.checkIn.$error.required && show_errors}" datepicker="" name="checkIn" type="text" ng-model="check_in" required=""
                     .large-3.columns
-                      label * Check Out
+                      label * #{t('show_villa.check_out')}
                       input ng-class="{error: requestForm.checkOut.$error.required && show_errors}" datepicker="" name="checkOut" type="text" ng-model="check_out" required=""
 
                   .row
                     .large-12.columns
-                      textarea ng-model="comments" placeholder="Leave your comments here"
+                      textarea ng-model="comments" placeholder="#{t('show_villa.request_message_placeholder')}"
 
-                  button type="submit" Submit
+                  button type="submit"= t('show_villa.submit')
 
                 .row
                   .success-request ng-show="success_request"
-                    .alert-box.success Your request has been sent successfully
+                    .alert-box.success= t('show_villa.request_message')
 
 
