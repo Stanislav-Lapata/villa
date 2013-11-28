@@ -1,61 +1,122 @@
+- if @phuket
+  div home-slider="" ng-style="style()"
+    #nav-outer
+      #navigation
+        .logo Luxury Rentals And Sales
+        #menu
+          ul
+            li
+              a href="/home"= t('navigation.home')
+            li
+              a href="/house_rentals"= t('navigation.house_rentals')
+            li
+              a href="/house_sales"= t('navigation.house_sales')
+            li
+              a href="/yacht_rentals"= t('navigation.yacht_rentals')
+            li
+              a href="/car_rentals"= t('navigation.car_rentals')
+            li
+              a href="/real_estate"= t('navigation.real_estate')
+            li
+              a href="/contact"= t('navigation.contact')
 
 
-div home-slider="" ng-style="style()"
-  #nav-outer
-    #navigation
-      .logo Luxury Rentals And Sales
-      #menu
-        ul
-          li
-            a href="/home"= t('navigation.home')
-          li
-            a href="/villas"= t('navigation.rentals')
-          li
-            a href="/sales"= t('navigation.sales')
-          li
-            a href="/faq"= t('navigation.faq')
-          li
-            a href="/contact"= t('navigation.contact')
+    br
+    br
+    br
 
 
-br
-br
-br
+  br
+  .row ng-controller="AreasCtrl"
+    .large-3.columns
+      .row.collapse
+        .filter
+          #filter-map.phuket
+            label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
+              input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="filter_areas(district)"
+              span.tail ng-show="district.left_tail" style="top: 100%; left: {{district.left_tail}}%"
+              | {{district.name}}
 
-.row
-  .large-12.columns
-    ul#da-thumbs.da-thumbs.row
-      .villas-list
-        .area-group ng-repeat="area in areas"
-          .area-name
-            | {{area.name}}
-          .clear
-          li.large-3.small-6.columns.villas-list ng-repeat="villa in area.villas" ng-animate="'animate'"
-            .shadow hoverdir=""
-              a href="/villas/{{villa.id}}"
-                img disable-context="" ng-src="{{villa.image_url}}"
-                div
-                  span.title
-                    | {{villa.name}}
-                  span.price_from
-                    | #{t('home.from')} ${{villa.price_from | number:0}}
-                  span.location
-                    | {{villa.location}}
-                  span.bedtooms
-                    | {{villa.bedrooms}} #{t('home.bedrooms')} (#{t('home.sleeps_up_to')} {{villa.sleeps_up_to}})
-                  span.price_range
-                    | #{t('home.price_range')}: #{t('home.from')} {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
-            p.title-link
-              a href="/villas/{{villa.id}}" {{villa.name}}
-            span.price #{t('home.from')} ${{villa.price_from | number:0}}
+    .large-9.columns
+      ul#da-thumbs.da-thumbs.row
+        li.large-4.small-8.columns.villas-list ng-repeat="villa in villas" ng-animate="'animate'"
+          .shadow hoverdir=""
+            a href="/villas/{{villa.id}}"
+              img disable-context="" ng-src="{{villa.image_url}}"
+              div
+                span.title
+                  | {{villa.name}}
+                span.price_from
+                  | #{t('villas.from')} ${{villa.price_from | number:0}}
+                span.location
+                  | {{villa.location}}
+                span.bedtooms
+                  | {{villa.bedrooms}} #{t('villas.bedrooms')} (#{t('villas.sleeps_up_to')} {{villa.sleeps_up_to}})
+                span.price_range
+                  | #{t('villas.price_range')}: #{t('villas.from')} ${{villa.price_from | number:0}} - ${{villa.price_to | number:0}}
+          p.title-link
+            a href="/villas/{{villa.id}}" {{villa.name}}
+          span.price #{t('villas.from')} ${{villa.price_from | number:0}}
 
 
-.row
-  .large-6.small-3.columns
-    a href="/villas"
-      .panel.radius.ads
-        h3 Luxury Villas For Rent
-  .large-6.small-3.columns
-    a href="/sales"
-      .panel.radius.ads
-        h3 Luxury Villas For Sale
+- else
+  div home-slider="" ng-style="style()"
+    #nav-outer
+      #navigation
+        .logo Luxury Rentals And Sales
+        #menu
+          ul
+            li
+              a href="/home"= t('navigation.home')
+            li
+              a href="/villas"= t('navigation.rentals')
+            li
+              a href="/sales"= t('navigation.sales')
+            li
+              a href="/faq"= t('navigation.faq')
+            li
+              a href="/contact"= t('navigation.contact')
+
+
+    br
+    br
+    br
+
+
+  .row
+    .large-12.columns
+      ul#da-thumbs.da-thumbs.row
+        .villas-list
+          .area-group ng-repeat="area in areas"
+            .area-name
+              | {{area.name}}
+            .clear
+            li.large-3.small-6.columns.villas-list ng-repeat="villa in area.villas" ng-animate="'animate'"
+              .shadow hoverdir=""
+                a href="/villas/{{villa.id}}"
+                  img disable-context="" ng-src="{{villa.image_url}}"
+                  div
+                    span.title
+                      | {{villa.name}}
+                    span.price_from
+                      | #{t('home.from')} ${{villa.price_from | number:0}}
+                    span.location
+                      | {{villa.location}}
+                    span.bedtooms
+                      | {{villa.bedrooms}} #{t('home.bedrooms')} (#{t('home.sleeps_up_to')} {{villa.sleeps_up_to}})
+                    span.price_range
+                      | #{t('home.price_range')}: #{t('home.from')} {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
+              p.title-link
+                a href="/villas/{{villa.id}}" {{villa.name}}
+              span.price #{t('home.from')} ${{villa.price_from | number:0}}
+
+
+  .row
+    .large-6.small-3.columns
+      a href="/villas"
+        .panel.radius.ads
+          h3 Luxury Villas For Rent
+    .large-6.small-3.columns
+      a href="/sales"
+        .panel.radius.ads
+          h3 Luxury Villas For Sale

@@ -11,6 +11,11 @@ Newvilla::Application.routes.draw do
   get '/contact_us', to: 'home#contact', as: :villa_contact_us
 
   get '/villas', to: 'home#index'
+  get '/house_rentals', to: 'home#index'
+  get '/house_sales', to: 'home#index'
+  get '/yacht_rentals', to: 'home#index'
+  get '/car_rentals', to: 'home#index'
+  get '/real_estate', to: 'home#index'
   get '/sales', to: 'home#index'
   get '/faq', to: 'home#index'
   get '/contact', to: 'home#index'
@@ -26,6 +31,12 @@ Newvilla::Application.routes.draw do
   namespace :admin do
     resources :images do
       post :update_positions, on: :collection
+    end
+  end
+
+  resources :phuket do
+    collection do
+      get :house_rentals
     end
   end
 
@@ -45,6 +56,7 @@ Newvilla::Application.routes.draw do
     resources :areas do
       get :home, on: :collection
       get :for_admin, on: :collection
+      get :phuket, on: :collection
     end
     resources :requests
     resources :contacts

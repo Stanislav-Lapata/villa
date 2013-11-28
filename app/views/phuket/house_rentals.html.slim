@@ -1,0 +1,50 @@
+br
+.row
+  .large-3.columns
+    .row.collapse ng-controller="AreasCtrl"
+      .filter
+        input type="text" placeholder="#{t('villas.villa_name_or_id')}" ng-model="filters.query" ng-ampere-debounce=""
+
+      / TODO: DRY villas and sales views and rewrite through ng-repeat or directive
+      .filter
+        #filter-map.phuket
+          label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
+            input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="$parent.$parent.filter_areas(district)"
+            span.tail ng-show="district.left_tail" style="top: 100%; left: {{district.left_tail}}%"
+            | {{district.name}}
+
+      .filter
+        span= t('villas.bedrooms')
+        p
+          select ng-model="filters.bedrooms" ng-options="room as (room + ' Bedrooms') for room in [1,2,3,4,5,6,7,8,9]" placeholder="123"
+            option style="display:none" value=""= t('villas.any_bedrooms')
+      .filter
+        span= t('villas.price_range')
+        p
+          span.from= t('villas.from')
+          input.price-from type="text" ng-model="filters.price_from" ng-ampere-debounce=""
+          span.to= t('villas.to')
+          input.price-to type="text" ng-model="filters.price_to" ng-ampere-debounce=""
+
+
+  .large-9.columns
+    ul#da-thumbs.da-thumbs.row
+      p= t('villas.luxury_rentals')
+      li.large-4.small-8.columns.villas-list ng-repeat="villa in villas" ng-animate="'animate'"
+        .shadow hoverdir=""
+          a href="/villas/{{villa.id}}"
+            img disable-context="" ng-src="{{villa.image_url}}"
+            div
+              span.title
+                | {{villa.name}}
+              span.price_from
+                | #{t('villas.from')} ${{villa.price_from | number:0}}
+              span.location
+                | {{villa.location}}
+              span.bedtooms
+                | {{villa.bedrooms}} #{t('villas.bedrooms')} (#{t('villas.sleeps_up_to')} {{villa.sleeps_up_to}})
+              span.price_range
+                | #{t('villas.price_range')}: #{t('villas.from')} ${{villa.price_from | number:0}} - ${{villa.price_to | number:0}}
+        p.title-link
+          a href="/villas/{{villa.id}}" {{villa.name}}
+        span.price #{t('villas.from')} ${{villa.price_from | number:0}}

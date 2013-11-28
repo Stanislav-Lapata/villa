@@ -32,6 +32,14 @@ ActiveAdmin.register Villa do
       row :bathrooms
       row :sleeps_up_to
       row :description
+      row :description_ru
+      row :price_guide
+      row :price_guide_ru
+      row :house_rentals
+      row :house_sales
+      row :yacht_rentals
+      row :car_rentals
+      row :real_estate
       row :created_at
       row :updated_at
     end
@@ -51,20 +59,29 @@ ActiveAdmin.register Villa do
   end
 
   form(:html => { multipart: true }) do |f|
-    f.inputs "Admin Details" do
-      f.input :name
-      f.input :domain
-      f.input :area_id, input_html: {class: 'admin-villa-area'}
+    f.inputs "Type" do
       f.input :rental
       f.input :price_from, as: :string
       f.input :price_to, as: :string
       f.input :sale
       f.input :sale_price, as: :string
+      f.input :house_rentals
+      f.input :house_sales
+      f.input :yacht_rentals
+      f.input :car_rentals
+      f.input :real_estate
+    end
+
+    f.inputs "Admin Details" do
+      f.input :name
+      f.input :domain
+      f.input :area_id, input_html: {class: 'admin-villa-area'}
       f.input :location
       f.input :bedrooms, as: :string
       f.input :bathrooms, as: :string
       f.input :sleeps_up_to, as: :string
       f.input :price_guide
+      f.input :price_guide_ru
     end
 
     f.inputs "Seasonal Prices" do
@@ -83,6 +100,7 @@ ActiveAdmin.register Villa do
 
     f.inputs "Description" do
       f.input :description
+      f.input :description_ru
     end
 
     f.inputs "Photos" do
@@ -139,11 +157,12 @@ ActiveAdmin.register Villa do
 
     def permitted_params
       params.permit villa: [
-                            :name, :domain, :description, :price_from, :price_to, :location,
+                            :name, :domain, :description, :description_ru, :price_from, :price_to, :location,
                             :area_id, :facilities, :services, :bedrooms, :sleeps_up_to,
                             :sale_price, :bathrooms, :rental, :sale, :position, :latitude,
                             :longitude, :zoom, :low_month, :peak_month, :low_week, :low_night,
                             :high_week, :high_night, :peak_week, :peak_night, :high_month, :price_guide,
+                            :price_guide_ru, :house_rentals, :house_sales, :yacht_rentals, :car_rentals, :real_estate,
                             images_attributes: [:id, :image, :_destroy, :url]
                            ]
     end

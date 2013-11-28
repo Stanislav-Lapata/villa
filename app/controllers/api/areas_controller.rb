@@ -15,5 +15,10 @@ module Api
     def for_admin
       @areas = Area.ransack(params[:q]).result
     end
+
+    def phuket
+      @areas = Area.phuket
+      render :index
+    end
   end
 end

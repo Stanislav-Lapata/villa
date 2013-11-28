@@ -26,6 +26,21 @@ App.config ["$routeProvider", "$locationProvider", "$httpProvider", ($routeProvi
   ).when("/sales/:villaId",
     templateUrl: "/villas/show_sales_villa.html"
     controller: 'VillaCtrl'
+  ).when("/house_rentals",
+    templateUrl: "/phuket/house_rentals.html"
+    controller: 'PhuketRentalsCtrl'
+  ).when("/house_sales",
+    templateUrl: "/phuket/house_rentals.html"
+    controller: 'PhuketRentalsCtrl'
+  ).when("/yacht_rentals",
+    templateUrl: "/phuket/house_rentals.html"
+    controller: 'PhuketRentalsCtrl'
+  ).when("/car_rentals",
+    templateUrl: "/phuket/house_rentals.html"
+    controller: 'PhuketRentalsCtrl'
+  ).when("/real_estate",
+    templateUrl: "/phuket/house_rentals.html"
+    controller: 'PhuketRentalsCtrl'
   ).when("/faq",
     templateUrl: "faq.html"
     controller: 'FaqCtrl'

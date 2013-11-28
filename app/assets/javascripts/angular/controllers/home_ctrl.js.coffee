@@ -6,4 +6,12 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
     $scope.areas = data
     $scope.$apply
   )
+
+  $http(
+    method: "GET"
+    url: "/api/areas/phuket"
+  ).success((data, status, headers, config) ->
+    $scope.districts = data
+    $scope.$apply
+  )
 ]

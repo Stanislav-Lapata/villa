@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131105073028) do
+ActiveRecord::Schema.define(version: 20131128171948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -157,8 +157,8 @@ ActiveRecord::Schema.define(version: 20131105073028) do
     t.integer  "bedrooms"
     t.integer  "sleeps_up_to"
     t.string   "location"
-    t.boolean  "rental",       default: true
-    t.boolean  "sale",         default: false
+    t.boolean  "rental",         default: true
+    t.boolean  "sale",           default: false
     t.integer  "bathrooms"
     t.decimal  "sale_price"
     t.string   "latitude"
@@ -175,6 +175,13 @@ ActiveRecord::Schema.define(version: 20131105073028) do
     t.decimal  "peak_night"
     t.string   "domain"
     t.text     "price_guide"
+    t.boolean  "house_rentals"
+    t.boolean  "house_sales"
+    t.boolean  "yacht_rentals"
+    t.boolean  "car_rentals"
+    t.boolean  "real_estate"
+    t.text     "price_guide_ru"
+    t.text     "description_ru"
   end
 
 end
