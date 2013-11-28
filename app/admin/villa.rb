@@ -35,8 +35,6 @@ ActiveAdmin.register Villa do
       row :description_ru
       row :price_guide
       row :price_guide_ru
-      row :house_rentals
-      row :house_sales
       row :yacht_rentals
       row :car_rentals
       row :real_estate
@@ -65,8 +63,6 @@ ActiveAdmin.register Villa do
       f.input :price_to, as: :string
       f.input :sale
       f.input :sale_price, as: :string
-      f.input :house_rentals
-      f.input :house_sales
       f.input :yacht_rentals
       f.input :car_rentals
       f.input :real_estate
