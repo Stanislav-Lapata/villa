@@ -13,11 +13,11 @@
   <section class="top-bar-section">
     <!-- Left Nav Section -->
     <ul class="left">
-      <li class="active"><a href="/"><%= t('navigation.home') %></a></li>
-      <li>
-        <a href="/villas"><%= t('navigation.rentals') %></a>
-      </li>
-      <li><a href="/sales"><%= t('navigation.sales') %></a></li>
+      <% unless @phuket %>
+        <li class="active"><a href="/"><%= t('navigation.home') %></a></li>
+        <li><a href="/villas"><%= t('navigation.rentals') %></a></li>
+        <li><a href="/sales"><%= t('navigation.sales') %></a></li>
+      <% end %>
       <% if @phuket %>
         <li><a href="/house_rentals"><%= t('navigation.house_rentals') %></a></li>
         <li><a href="/house_sales"><%= t('navigation.house_sales') %></a></li>
