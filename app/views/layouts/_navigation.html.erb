@@ -18,7 +18,14 @@
         <a href="/villas"><%= t('navigation.rentals') %></a>
       </li>
       <li><a href="/sales"><%= t('navigation.sales') %></a></li>
-      <li><a href="/faq"><%= t('navigation.faq') %></a></li>
+      <% if @phuket %>
+        <li><a href="/house_rentals"><%= t('navigation.house_rentals') %></a></li>
+        <li><a href="/house_sales"><%= t('navigation.house_sales') %></a></li>
+        <li><a href="/yacht_rentals"><%= t('navigation.yacht_rentals') %></a></li>
+        <li><a href="/car_rentals"><%= t('navigation.car_rentals') %></a></li>
+        <li><a href="/real_estate"><%= t('navigation.real_estate') %></a></li>
+      <% end %>
+      <% unless @phuket %><li><a href="/faq"><%= t('navigation.faq') %></a></li><% end %>
       <li><a href="/contact"><%= t('navigation.contact') %></a></li>
     </ul>
   </section>

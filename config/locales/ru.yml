@@ -13,6 +13,8 @@ ru:
     yacht_rentals: "Аренда яхт"
     car_rentals: "Аренда машин"
     real_estate: "Недвижимость азии"
+    cars: "Машины"
+    yacht: "Яхты"
 
   villas:
     location: "Местоположение"
