@@ -8,6 +8,11 @@ ru:
     sales: "Продажа вилл"
     faq: "FAQ"
     contact: "Контакты"
+    house_rentals: "Аренда домов"
+    house_sales: "Продажа домов"
+    yacht_rentals: "Аренда яхт"
+    car_rentals: "Аренда машин"
+    real_estate: "Недвижимость азии"
 
   villas:
     location: "Местоположение"
