@@ -18,9 +18,13 @@ App.controller 'AreasCtrl', ['$scope', '$http', 'Area', ($scope, $http, Area) ->
 
     search =
       q:
+        name_cont: filters.query
         area_id_place_eq: areas
         area_rental_eq: true
         rental_eq: true
+        bedrooms_eq: filters.bedrooms
+        price_from_gteq: filters.price_from
+        price_from_lteq: filters.price_to
 
     params = $.param(search)
 

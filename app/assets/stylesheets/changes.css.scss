@@ -451,7 +451,8 @@ footer {
 }
 
 
-#nav-outer { height:110px; padding-top:11px; position:initial; top:24px; background-color: #e4eef0; opacity: 0.75; }
+#nav-outer { height:110px; padding-top:11px; position:relative; top:24px; background-color: #fff; opacity: 0.75; }
+
 #navigation {
   height:100px;
   width:960px;
@@ -463,8 +464,31 @@ footer {
     font-size: 30px;
     font-weight: bold;
     color: #888;
-    float: left;
-    width: 25%;
+  }
+}
+
+#nav-outer-phuket {
+  height:110px;
+  padding-top:11px;
+  position:initial;
+  top:24px;
+  background-color: #e4eef0;
+  opacity: 0.75;
+
+  #navigation {
+    height:100px;
+    width:960px;
+    margin:0 auto;
+    background-size: 20%;
+    // background-image:image-url("logo.png"); background-position:top left; background-repeat:no-repeat;
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #888;
+      float: left;
+      width: 25%;
+    }
   }
 }
 #menu { position:relative; top:30px; }
