@@ -489,6 +489,11 @@ footer {
       float: left;
       width: 25%;
     }
+
+    #menu ul {
+      position: absolute;
+      left: 260px;
+    }
   }
 }
 #menu { position:relative; top:30px; }
