@@ -128,10 +128,6 @@
                       | {{villa.bedrooms}} #{t('home.bedrooms')} (#{t('home.sleeps_up_to')} {{villa.sleeps_up_to}})
                     span.price_range
                       | #{t('home.price_range')}: #{t('home.from')} {{villa.price_from | number:0}} - {{villa.price_to | number:0}}
-              p.title-link
-                a href="/villas/{{villa.id}}" {{villa.name}}
-              span.price #{t('home.from')} ${{villa.price_from | number:0}}
-
 
   .row
     .large-6.small-3.columns
