@@ -27,6 +27,8 @@ module ApplicationHelper
   def logo
     if request.host == 'jqvillas.com'
       link_to image_tag('logo.png', size: '150x57'), root_url
+    elsif @phuket
+      link_to "ZAP estate", root_url
     else
       link_to "Luxury Rentals & Sales", root_url
     end

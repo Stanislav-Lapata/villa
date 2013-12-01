@@ -219,6 +219,10 @@ nav.top-bar {
       }
     }
   }
+
+  &.phuket {
+    background-color: #aebdbe !important;
+  }
 }
 
 .areas-list {
@@ -378,6 +382,8 @@ span.season-title {
   }
 }
 
+
+
 footer {
   background: -moz-linear-gradient(bottom,  rgba(175,178,181,1) 0%, rgba(175,178,181,0.45) 55%, rgba(125,185,232,0) 100%) !important; /* FF3.6+ */
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,rgba(175,178,181,1)), color-stop(55%,rgba(175,178,181,0.45)), color-stop(100%,rgba(125,185,232,0))) !important; /* Chrome,Safari4+ */
@@ -394,6 +400,10 @@ footer {
   .side-nav li a {
     display: inline-block;
     color: #777;
+  }
+
+  &.phuket {
+    background-color: #aebdbe !important;
   }
 }
 
@@ -441,7 +451,7 @@ footer {
 }
 
 
-#nav-outer { height:110px; padding-top:11px; position:relative; top:24px; background-color: #fff; opacity: 0.75; }
+#nav-outer { height:110px; padding-top:11px; position:initial; top:24px; background-color: #e4eef0; opacity: 0.75; }
 #navigation {
   height:100px;
   width:960px;
@@ -453,10 +463,35 @@ footer {
     font-size: 30px;
     font-weight: bold;
     color: #888;
+    float: left;
+    width: 25%;
   }
 }
-#menu { position:relative; top:40px; }
+#menu { position:relative; top:30px; }
 #menu ul { list-style:none; }
 #menu ul li { display:inline; font-size:12px; }
 #menu ul li a { color:black; text-decoration:none; font-weight:bold; padding-right:20px; }
 #menu ul li a:hover { text-decoration:underline; }
+
+#nav-locale {
+  height:30px;
+  padding-top:0;
+  position:relative;
+  top:0;
+  background-color: #aebdbe;
+  opacity: 0.9;
+  color: white;
+
+  #navigation {
+    height:15px;
+    width:960px;
+    margin:0 auto;
+    background-size: 20%;
+
+    #menu {
+      position:relative;
+      top:0;
+      float:right;
+    }
+  }
+}
