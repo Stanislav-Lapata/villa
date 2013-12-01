@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
   def check_for_phuket
-    @phuket = request.domain.include?('phuketrenthouse')
+    @phuket = request.domain(2).include?('phuketrenthouse')
   end
 end

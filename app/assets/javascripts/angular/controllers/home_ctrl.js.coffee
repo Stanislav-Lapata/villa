@@ -33,6 +33,10 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
 
     search =
       q:
+        name_cont: filters.query
+        bedrooms_eq: filters.bedrooms
+        price_from_gteq: filters.price_from
+        price_from_lteq: filters.price_to
         area_id_place_eq: areas
         area_rental_eq: true
         rental_eq: true
