@@ -31,6 +31,14 @@ en:
     sales: "Luxury Sales"
     faq: "FAQ"
     contact: "Contact"
+    house_rentals: "House rentals"
+    house_sales: "House sales"
+    yacht_rentals: "Yacht rentals"
+    car_rentals: "Car rentals"
+    real_estate: "Real estate"
+    cars: "Car rentals"
+    yacht: "Yachts rentals"
+    show_more: "Show more"
 
   villas:
     location: "Location"

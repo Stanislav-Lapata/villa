@@ -26,6 +26,8 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
         value isnt district.id
 
   $scope.$watch "filters", ( (filters) ->
+    $scope.nextPage()
+    $scope.show_more = true
     if filters.districts.length
       areas = filters.districts
     else
@@ -57,17 +59,20 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
     $scope.page ||= 1
     $scope.page = $scope.page + 1
 
-    search =
-      page: ($scope.page)
+    if $scope.page != 1
+      search =
+        page: ($scope.page)
 
-    params = $.param(search)
+      params = $.param(search)
 
-    $http(
-      method: "GET"
-      url: "/api/villas?#{params}"
-    ).success((data, status, headers, config) ->
-      $scope.villas = $.merge($scope.villas, data)
-      $scope.$apply
-    )
+      $http(
+        method: "GET"
+        url: "/api/villas?#{params}"
+      ).success((data, status, headers, config) ->
+        if data.length != 30
+          $scope.show_more = false
+        $scope.villas = $.merge($scope.villas, data)
+        $scope.$apply
+      )
 
 ]

@@ -77,7 +77,9 @@
                 span.price_range
                   | #{t('villas.price_range')}: #{t('villas.from')} ${{villa.price_from | number:0}} - ${{villa.price_to | number:0}}
 
-        li ng-click="nextPage()" Add
+        li.large-12.columns
+          | {{show_more}}
+          .button.large.large-12.columns.add-more ng-show="show_more" ng-click="nextPage()"= t('navigation.show_more')
 
 - else
   div home-slider="" ng-style="style()"
