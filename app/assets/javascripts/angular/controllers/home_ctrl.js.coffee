@@ -25,9 +25,8 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
       $scope.filters.districts = jQuery.grep $scope.filters.districts, (value) ->
         value isnt district.id
 
-  $scope.$watch "filters", ( (filters) ->
-    $scope.nextPage()
-    $scope.show_more = true
+  $scope.$watch "filters", ( (filters, old_filters) ->
+    $scope.filters.page ||= 1
     if filters.districts.length
       areas = filters.districts
     else
@@ -42,6 +41,7 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
         area_id_place_eq: areas
         area_rental_eq: true
         rental_eq: true
+      page: filters.page
 
     params = $.param(search)
 
@@ -49,7 +49,13 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
       method: "GET"
       url: "/api/villas?#{params}"
     ).success((data, status, headers, config) ->
-      $scope.villas = data
+      console.log old_filters.page, filters.page
+      if old_filters.page < filters.page
+        $scope.villas = $.merge($scope.villas, data)
+      else
+        $scope.filters.page = 1
+        $scope.villas = data
+
       $scope.$apply
     )
 
@@ -59,20 +65,17 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
     $scope.page ||= 1
     $scope.page = $scope.page + 1
 
-    if $scope.page != 1
-      search =
-        page: ($scope.page)
+    search =
+      page: ($scope.page)
 
-      params = $.param(search)
+    params = $.param(search)
 
-      $http(
-        method: "GET"
-        url: "/api/villas?#{params}"
-      ).success((data, status, headers, config) ->
-        if data.length != 30
-          $scope.show_more = false
-        $scope.villas = $.merge($scope.villas, data)
-        $scope.$apply
-      )
+    $http(
+      method: "GET"
+      url: "/api/villas?#{params}"
+    ).success((data, status, headers, config) ->
+      $scope.villas = $.merge($scope.villas, data)
+      $scope.$apply
+    )
 
 ]
