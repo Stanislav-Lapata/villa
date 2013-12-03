@@ -2,7 +2,7 @@ module Api
   class VillasController < BaseController
     def index
       @villas = Villa.search(params[:q])
-      @villas = @villas.result(distinct: true)
+      @villas = @villas.result(distinct: true).page(params[:page]).per(30)
     end
 
     def show

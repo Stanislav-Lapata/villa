@@ -53,4 +53,21 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
 
   ), true
 
+  $scope.nextPage = () ->
+    $scope.page ||= 1
+    $scope.page = $scope.page + 1
+
+    search =
+      page: ($scope.page)
+
+    params = $.param(search)
+
+    $http(
+      method: "GET"
+      url: "/api/villas?#{params}"
+    ).success((data, status, headers, config) ->
+      $scope.villas = $.merge($scope.villas, data)
+      $scope.$apply
+    )
+
 ]

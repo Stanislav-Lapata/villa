@@ -35,13 +35,13 @@
 
 
   br
-  .row ng-controller="AreasCtrl"
+  .row
     .large-3.columns
       .row.collapse
         .filter
           input type="text" placeholder="#{t('villas.villa_name_or_id')}" ng-model="filters.query" ng-ampere-debounce=""
         .filter
-          #filter-map.phuket
+          #filter-map.phuket ng-controller="AreasCtrl"
             label ng-repeat="district in districts" style="top: {{district.top}}px; left: {{district.left}}px;"
               input type="checkbox" name="districts[]" ng-model="district.checked" ng-change="filter_areas(district)"
               span.tail ng-show="district.left_tail" style="top: 100%; left: {{district.left_tail}}%"
@@ -76,6 +76,8 @@
                   | {{villa.bedrooms}} #{t('villas.bedrooms')} (#{t('villas.sleeps_up_to')} {{villa.sleeps_up_to}})
                 span.price_range
                   | #{t('villas.price_range')}: #{t('villas.from')} ${{villa.price_from | number:0}} - ${{villa.price_to | number:0}}
+
+        li ng-click="nextPage()" Add
 
 - else
   div home-slider="" ng-style="style()"
