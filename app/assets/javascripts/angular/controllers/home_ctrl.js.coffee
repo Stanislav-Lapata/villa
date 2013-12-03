@@ -53,7 +53,7 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
       console.log old_filters.page, filters.page
       if old_filters.page < filters.page
         console.log $scope.villas.length
-        $scope.hide_show_more = true if $scope.villas.length != 30
+        $scope.hide_show_more = true if $scope.villas.length < 30
         $scope.villas = $.merge($scope.villas, data)
       else
         $scope.filters.page = 1
