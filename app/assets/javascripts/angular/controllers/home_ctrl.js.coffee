@@ -26,6 +26,7 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
         value isnt district.id
 
   $scope.$watch "filters", ( (filters, old_filters) ->
+    $scope.hide_show_more = false
     $scope.filters.page ||= 1
     if filters.districts.length
       areas = filters.districts
@@ -51,6 +52,8 @@ App.controller 'HomeCtrl', ['$scope', '$http', ($scope, $http) ->
     ).success((data, status, headers, config) ->
       console.log old_filters.page, filters.page
       if old_filters.page < filters.page
+        console.log $scope.villas.length
+        $scope.hide_show_more = true if $scope.villas.length != 30
         $scope.villas = $.merge($scope.villas, data)
       else
         $scope.filters.page = 1
