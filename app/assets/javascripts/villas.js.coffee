@@ -1,0 +1,34 @@
+$ ->
+  bedrooms_label = $('label[for="q_bedrooms_eq"]')
+  bedrooms_label_text = bedrooms_label.text()
+  q_bedrooms_gteq = $('#q_bedrooms_gteq').val() || 3
+  q_bedrooms_lteq = $('#q_bedrooms_lteq').val() || 8
+
+  $("#bedrooms-slider-range").slider
+    range: true
+    min: 1
+    max: 10
+    values: [q_bedrooms_gteq, q_bedrooms_lteq]
+    slide: (event, ui) ->
+      $("#q_bedrooms_gteq").val(ui.values[0])
+      $("#q_bedrooms_lteq").val(ui.values[1])
+      bedrooms_label.text("#{bedrooms_label_text}: #{ui.values[0]} - #{ui.values[1]}")
+
+  bedrooms_label.text("#{bedrooms_label_text}: #{q_bedrooms_gteq} - #{q_bedrooms_lteq}")
+
+  price_label = $('label[for="q_price_from_gteq"]')
+  price_label_text = price_label.text()
+  q_price_gteq = $('#q_price_from_gteq').val() || 1000
+  q_price_lteq = $('#q_price_from_lteq').val() || 3000
+
+  $("#price-slider-range").slider
+    range: true
+    min: 0
+    max: 4000
+    values: [q_price_gteq, q_price_lteq]
+    slide: (event, ui) ->
+      $("#q_price_from_gteq").val(ui.values[0])
+      $("#q_price_from_lteq").val(ui.values[1])
+      price_label.text("#{price_label_text}: $#{ui.values[0]} - $#{ui.values[1]}")
+
+  price_label.text("#{price_label_text}: $#{q_price_gteq} - $#{q_price_lteq}")

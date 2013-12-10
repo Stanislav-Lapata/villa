@@ -1,0 +1,97 @@
+= content_for :breadcrumbs do
+  h1.color-green.pull-left Luxury Villas
+  ul.pull-right.breadcrumb
+    li
+      = link_to t('navigation.home'), root_path
+      span.divider
+        | /
+    li.active= t('navigation.sales')
+
+.container
+  .row-fluid
+    .span3
+      /! Our Mission
+      .margin-bottom-20
+        .headline
+          h3 Filter
+        = render 'filter'
+      /! Posts
+      .posts.margin-bottom-20
+        .headline
+          h3 Recent Blog Entries
+        - @recent_villas.each do |villa|
+          dl.dl-horizontal
+            dt
+              = link_to villa do
+                = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
+            dd
+              p
+                = link_to villa do
+                  = truncate villa.description, length: 50
+    /! /span3
+    .span9
+      .row-fluid
+        .headline
+          h3 Luxury Sales
+        ul.thumbnails
+          - @villas.each_with_index do |villa, index|
+            li.span4 class="#{'first' if index % 3 == 0}"
+              .thumbnail-style.thumbnail-kenburn
+                .thumbnail-img
+                  .overflow-hidden
+                    = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
+                  a.btn-more.hover-effect href="#" read more +
+                h5
+                  a href="#"= villa.name
+                p= truncate villa.description, length: 100
+
+      /! Our Services
+      .row-fluid
+        .headline
+          h3 Our Services
+        .row-fluid.servive-block.servive-block-in
+          .span4
+            h4
+              a href="#"
+            p
+              i.icon-bell
+            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
+          .span4
+            h4
+              a href="#"
+            p
+              i.icon-bullhorn
+            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
+          .span4
+            h4
+              a href="#"
+            p
+              i.icon-lightbulb
+            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
+        /! /welcome-block
+      /! /row-fluid
+      /! Recent Works
+
+      .headline
+        h3 About Us
+      p
+        img.pull-left.lft-img-margin.img-width-200 alt="" src="assets/img/carousel/2.jpg"
+        | Fusce condimentum eleifend enim a feugiat. Pellentesque viverra ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
+      ul.unstyled
+        li
+          i.icon-ok.color-green
+          | Consectetur adipiscing elit
+        li
+          i.icon-ok.color-green
+          | Ipsum dolor sit amet
+        li
+          i.icon-ok.color-green
+          | Personal and effective approach
+        li
+          i.icon-ok.color-green
+          | Ut non libero magna sedot
+      br/
+      /! Blockquotes
+      blockquote.hero-unify
+        p Award winning digital agency. We bring a personal and effective consectetur and effective approach adipiscing elit approach to every project we work on, which is why our clients love us and why they.
+        small CEO, Jack Baur

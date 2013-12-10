@@ -1,0 +1,30 @@
+- url = action_name == 'sales' ? sales_path : villas_path
+= search_form_for @q, url: url do |f|
+  .margin-bottom-20
+    = f.text_field :name_cont, placeholder: t('villas.villa_name_or_id'), class: 'span12'
+
+  = f.label :area_id_place_eq, t('villas.location')
+  .margin-bottom-20
+    - @areas.each do |area|
+      - selected = area.id.to_s == params[:q][:area_id_place_eq]
+      = link_to area.name, villas_url(params: params.merge(q: {area_id_place_eq: area.id})), class: "#{'selected' if selected}"
+      br
+      .margin-left-20
+        - if selected || area.children.pluck(:id).include?(params[:q][:area_id_place_eq].to_i)
+          - area.children.each do |children_area|
+            = link_to children_area.name, villas_url(params: params.merge(q: {area_id_place_eq: children_area.id})), class: "#{'selected' if children_area.id.to_s == params[:q][:area_id_place_eq]}"
+            br
+
+  = f.label :bedrooms_eq, t('villas.bedrooms')
+  .hidden= f.text_field :bedrooms_gteq
+  .hidden= f.text_field :bedrooms_lteq
+  #bedrooms-slider-range.margin-bottom-20
+
+  = f.label :price_from_gteq, t('villas.price_range')
+  .hidden= f.text_field :price_from_gteq
+  .hidden= f.text_field :price_from_lteq
+  #price-slider-range.margin-bottom-20
+
+
+
+  = f.submit class: 'btn-u'
