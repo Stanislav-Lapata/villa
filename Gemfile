@@ -10,7 +10,7 @@ gem 'jquery-ui-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
-gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git', branch: 'rails4'
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin-awesome_nested_set', path: '../active_admin-awesome_nested_set'
 gem 'awesome_nested_set'
 gem 'carrierwave'
