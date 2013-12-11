@@ -14,7 +14,7 @@ class Villa < ActiveRecord::Base
   private
 
     def set_phuket_rentals
-      self.house_rentals = rentals
-      self.house_sales = sales
+      self.house_rentals = rental
+      self.house_sales = sale
     end
 end
