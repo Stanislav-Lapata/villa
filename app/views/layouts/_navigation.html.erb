@@ -7,11 +7,21 @@
     </a><!-- /nav-collapse -->
     <div class="nav-collapse collapse">
       <ul class="nav top-2">
-        <li class="active"><%= link_to t('navigation.home'), '#' %></li>
-        <li><%= link_to t('navigation.rentals'), villas_path %></li>
-        <li><%= link_to t('navigation.sales'), sales_path %></li>
-        <li><%= link_to t('navigation.faq'), '#' %></li>
-        <li><%= link_to t('navigation.contact'), '#' %></li>
+        <li class="<%= 'active' if controller_name == 'home' && action_name == 'index' %>">
+          <%= link_to t('navigation.home'), root_path %>
+        </li>
+        <li class="<%= 'active' if controller_name == 'villas' && action_name == 'index' %>">
+          <%= link_to t('navigation.rentals'), villas_path %>
+        </li>
+        <li class="<%= 'active' if action_name == 'sales' %>">
+          <%= link_to t('navigation.sales'), sales_path %>
+        </li>
+        <li class="<%= 'active' if action_name == 'faq' %>">
+          <%= link_to t('navigation.faq'), faq_path %>
+        </li>
+        <li class="<%= 'active' if action_name == 'contact' %>">
+          <%= link_to t('navigation.contact'), contact_path %>
+        </li>
         <li><a class="search"><i class="icon-search search-btn"></i></a></li>
       </ul>
       <div class="search-open">

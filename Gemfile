@@ -9,16 +9,22 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
+
+gem 'jstree-rails', :git => 'git://github.com/tristanm/jstree-rails.git'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin-awesome_nested_set', path: '../active_admin-awesome_nested_set'
+gem 'angularjs-rails', git: 'git://github.com/hiravgandhi/angularjs-rails.git', branch: 'master'
 gem 'awesome_nested_set'
 gem 'carrierwave'
 gem "enumerize", "~> 0.7.0"
+gem 'rabl'
 gem 'ransack'
 gem 'rmagick'
 gem 'slim-rails'
+gem "select2-rails"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

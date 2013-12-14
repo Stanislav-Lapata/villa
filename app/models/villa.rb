@@ -9,16 +9,7 @@ class Villa < ActiveRecord::Base
   validates :name, presence: true
   validates :low_night, :high_night, :peak_night, presence: true
 
-  before_create :set_phuket_rentals
-
   scope :for_rent, -> { where(rental: true) }
   scope :for_sale, -> { where(sale: true) }
   scope :recent, -> { order('created_at desc') }
-
-  private
-
-    def set_phuket_rentals
-      self.house_rentals = rentals
-      self.house_sales = sales
-    end
 end

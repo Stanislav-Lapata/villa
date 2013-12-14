@@ -3,7 +3,7 @@
   .margin-bottom-20
     = f.text_field :name_cont, placeholder: t('villas.villa_name_or_id'), class: 'span12'
 
-  = f.label :area_id_place_eq, t('villas.location')
+  h4= t('villas.location')
   .margin-bottom-20
     - @areas.each do |area|
       - selected = area.id.to_s == params[:q][:area_id_place_eq]
@@ -15,12 +15,12 @@
             = link_to children_area.name, villas_url(params: params.merge(q: {area_id_place_eq: children_area.id})), class: "#{'selected' if children_area.id.to_s == params[:q][:area_id_place_eq]}"
             br
 
-  = f.label :bedrooms_eq, t('villas.bedrooms')
+  h4= t('villas.bedrooms')
   .hidden= f.text_field :bedrooms_gteq
   .hidden= f.text_field :bedrooms_lteq
   #bedrooms-slider-range.margin-bottom-20
 
-  = f.label :price_from_gteq, t('villas.price_range')
+  h4= t('villas.price_range')
   .hidden= f.text_field :price_from_gteq
   .hidden= f.text_field :price_from_lteq
   #price-slider-range.margin-bottom-20

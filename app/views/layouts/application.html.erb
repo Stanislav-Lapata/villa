@@ -13,7 +13,7 @@
   <meta name="author" content="" />
 
   <!-- CSS Global Compulsory-->
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
   <%= csrf_meta_tags %>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -58,9 +58,7 @@
   <div class="header">
     <div class="container">
       <div class="logo">
-        <a href="index.html">
-          <img id="logo-header" src="assets/img/logo1-default.png" alt="Logo" />
-        </a>
+        <%= link_to image_tag('img/logo1-default.png', id: 'logo-header'), root_path %>
       </div>
       <%= render 'layouts/navigation' %>
     </div>
@@ -91,7 +89,7 @@
 <!--=== End Copyright ===-->
 
 <!-- JS Global Compulsory -->
-<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => false %>
 <!-- <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script> -->
 <!-- <script type="text/javascript" src="assets/js/modernizr.custom.js"></script> -->
 <!-- <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> -->
@@ -111,7 +109,7 @@
     });
 </script>
 <!--[if lt IE 9]>
-  <%= javascript_include_tag "respond", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "respond", "data-turbolinks-track" => false %>
 <![endif]-->
 </body>
 </html>

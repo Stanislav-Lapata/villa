@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.slider
-//= require turbolinks
 //= require modernizr.custom
 //= require bootstrap.min
 //= require flexslider/jquery.flexslider-min

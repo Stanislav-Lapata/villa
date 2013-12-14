@@ -18,15 +18,16 @@
       /! Posts
       .posts.margin-bottom-20
         .headline
-          h3 Recent Blog Entries
+          h3 Recent Villas
         - @recent_villas.each do |villa|
           dl.dl-horizontal
             dt
-              a href="#"
+              = link_to villa do
                 = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
             dd
               p
-                a href="#"= truncate villa.description, length: 50
+                = link_to villa do
+                  = truncate villa.description, length: 50
     /! /span3
     .span9
       .row-fluid
@@ -39,9 +40,10 @@
                 .thumbnail-img
                   .overflow-hidden
                     = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
-                  a.btn-more.hover-effect href="#" read more +
+                    = link_to 'read more +', villa, class: 'btn-more hover-effect'
                 h5
-                  a href="#"= villa.name
+                  = link_to villa do
+                    = villa.name
                 p= truncate villa.description, length: 100
 
       /! Our Services
