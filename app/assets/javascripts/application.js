@@ -23,5 +23,5 @@
 //= require app
 //= require pages/index
 //= require villas
-//= require_tree .
+//= require jquery-browser.min
 
