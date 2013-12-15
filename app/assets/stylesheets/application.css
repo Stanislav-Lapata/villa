@@ -16,6 +16,7 @@
  *= require bootstrap-responsive.min
  *= require style_responsive
  *= require font-awesome/css/font-awesome
+ *= require font-awesome
  *= require flexslider/flexslider
  *= require bxslider/jquery.bxslider
  *= require revolution-slider/rs-style

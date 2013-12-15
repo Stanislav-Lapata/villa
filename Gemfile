@@ -20,6 +20,7 @@ gem 'angularjs-rails', git: 'git://github.com/hiravgandhi/angularjs-rails.git', 
 gem 'awesome_nested_set'
 gem 'carrierwave'
 gem "enumerize", "~> 0.7.0"
+gem "font-awesome-rails"
 gem 'rabl'
 gem 'ransack'
 gem 'rmagick'
