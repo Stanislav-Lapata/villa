@@ -1,5 +1,5 @@
 $ ->
-  bedrooms_label = $('label[for="q_bedrooms_eq"]')
+  bedrooms_label = $('h4#bedrooms')
   bedrooms_label_text = bedrooms_label.text()
   q_bedrooms_gteq = $('#q_bedrooms_gteq').val() || 3
   q_bedrooms_lteq = $('#q_bedrooms_lteq').val() || 8
@@ -16,7 +16,7 @@ $ ->
 
   bedrooms_label.text("#{bedrooms_label_text}: #{q_bedrooms_gteq} - #{q_bedrooms_lteq}")
 
-  price_label = $('label[for="q_price_from_gteq"]')
+  price_label = $('h4#price_range')
   price_label_text = price_label.text()
   q_price_gteq = $('#q_price_from_gteq').val() || 1000
   q_price_lteq = $('#q_price_from_lteq').val() || 3000
