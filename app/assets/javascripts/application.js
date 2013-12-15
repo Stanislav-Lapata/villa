@@ -24,4 +24,5 @@
 //= require pages/index
 //= require villas
 //= require jquery-browser.min
+//= require villas
 
