@@ -16,11 +16,26 @@
         <li class="<%= 'active' if action_name == 'sales' %>">
           <%= link_to t('navigation.sales'), sales_path %>
         </li>
-        <li class="<%= 'active' if action_name == 'faq' %>">
-          <%= link_to t('navigation.faq'), faq_path %>
+        <li class="<%= 'active' if action_name == 'yacht_rentals' %>">
+          <%= link_to t('navigation.yacht_rentals'), sales_path %>
         </li>
-        <li class="<%= 'active' if action_name == 'contact' %>">
-          <%= link_to t('navigation.contact'), contact_path %>
+        <li class="<%= 'active' if action_name == 'car_rentals' %>">
+          <%= link_to t('navigation.car_rentals'), sales_path %>
+        </li>
+        <li class="active">
+          <%= link_to '#', "data-toggle" => "dropdown" do %>
+            Addition
+            <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li class="<%= 'active' if action_name == 'faq' %>">
+              <%= link_to t('navigation.faq'), faq_path %>
+            </li>
+            <li class="<%= 'active' if action_name == 'contact' %>">
+              <%= link_to t('navigation.contact'), contact_path %>
+            </li>
+          </ul>
+          <b class="caret-out"></b>
         </li>
         <li><a class="search"><i class="icon-search search-btn"></i></a></li>
       </ul>
