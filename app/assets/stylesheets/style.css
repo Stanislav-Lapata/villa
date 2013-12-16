@@ -1851,7 +1851,7 @@ i.style-switcher-btn-option:hover {
 
 /*Revolution Slider*/
 .bg-black-opacity {
-	background: url(/assets/img/sliders/revolution/bg-text.png) repeat;
+	background: image-url('img/sliders/revolution/bg-text.png') repeat;
 	padding: 7px;
 	text-shadow: none !important;
 }

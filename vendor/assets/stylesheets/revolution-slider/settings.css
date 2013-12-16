@@ -411,9 +411,9 @@ website:   	http://www.themepunch.com
         -o-user-select: none;
 	}
 
-.tp-bannershadow.tp-shadow1 {	background:url(/assets/shadow1.png) no-repeat; background-size:100%; width:890px; height:30px; bottom:-30px;}
-.tp-bannershadow.tp-shadow2 {	background:url(/assets/shadow2.png) no-repeat; background-size:100%; width:890px; height:60px;bottom:-60px;}
-.tp-bannershadow.tp-shadow3 {	background:url(/assets/shadow3.png) no-repeat; background-size:100%; width:890px; height:60px;bottom:-60px;}
+.tp-bannershadow.tp-shadow1 {	background:image-url('shadow1.png') no-repeat; background-size:100%; width:890px; height:30px; bottom:-30px;}
+.tp-bannershadow.tp-shadow2 {	background:image-url('shadow2.png') no-repeat; background-size:100%; width:890px; height:60px;bottom:-60px;}
+.tp-bannershadow.tp-shadow3 {	background:image-url('shadow3.png') no-repeat; background-size:100%; width:890px; height:60px;bottom:-60px;}
 
 
 /********************************
@@ -609,7 +609,7 @@ website:   	http://www.themepunch.com
 /************************************
 		-	TP BANNER TIMER		-
 *************************************/
-.tp-bannertimer								{	width:100%; height:10px; background:url(/assets/timer.png);position:absolute; z-index:200;}
+.tp-bannertimer								{	width:100%; height:10px; background:image-url('timer.png');position:absolute; z-index:200;}
 .tp-bannertimer.tp-bottom					{	bottom:0px !important;height:5px;}
 
 
@@ -674,7 +674,7 @@ website:   	http://www.themepunch.com
 .caption.slidelink a div,
 .tp-caption.slidelink a div {	width:10000px; height:10000px;  background:url(/assets/coloredbg.png) repeat;}
 
-.tp-loader 	{	background:url(/assets/loader.gif) no-repeat 10px 10px; background-color:#fff;  margin:-22px -22px; top:50%; left:50%; z-index:10000; position:absolute;width:44px;height:44px;
+.tp-loader 	{	background:image-url('loader.gif') no-repeat 10px 10px; background-color:#fff;  margin:-22px -22px; top:50%; left:50%; z-index:10000; position:absolute;width:44px;height:44px;
 				border-radius: 3px;
 				-moz-border-radius: 3px;
 				-webkit-border-radius: 3px;
