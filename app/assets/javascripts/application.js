@@ -12,17 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-browser.min
 //= require jquery.ui.slider
 //= require modernizr.custom
 //= require bootstrap.min
 //= require flexslider/jquery.flexslider-min
 //= require back-to-top
 //= require bxslider/jquery.bxslider
+//= require fancybox/jquery.fancybox.pack
 //= require revolution-slider/jquery.themepunch.plugins.min
 //= require revolution-slider/jquery.themepunch.revolution.min
 //= require app
 //= require pages/index
 //= require villas
-//= require jquery-browser.min
 //= require villas
 

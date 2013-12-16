@@ -26,5 +26,7 @@ module JqVilla
     # config.i18n.default_locale = :de
     require 'app_config'
     config.action_mailer.default_url_options = {protocol: 'http', host: AppConfig.host}
+
+    config.middleware.use(::Rack::Static, :urls => ["/externals"], :root => 'public')
   end
 end
