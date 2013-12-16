@@ -511,40 +511,40 @@ website:   	http://www.themepunch.com
 															-khtml-opacity: 0;
 															opacity: 0;
 														}
-.tp-leftarrow											{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/large_left.png) no-Repeat top left;	width:40px;	height:40px;   }
-.tp-rightarrow											{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/large_right.png) no-Repeat top left;	width:40px;	height:40px;   }
+.tp-leftarrow											{	z-index:100;cursor:pointer; position:relative;	background:image-url('large_left.png') no-Repeat top left;	width:40px;	height:40px;   }
+.tp-rightarrow											{	z-index:100;cursor:pointer; position:relative;	background:image-url('large_right.png') no-Repeat top left;	width:40px;	height:40px;   }
 
 
-.tp-leftarrow.round										{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/small_left.png) no-Repeat top left;	width:19px;	height:14px;  margin-right:0px; float:left; margin-top:-7px;	}
-.tp-rightarrow.round									{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/small_right.png) no-Repeat top left;	width:19px;	height:14px;  margin-right:0px; float:left;	margin-top:-7px;}
+.tp-leftarrow.round										{	z-index:100;cursor:pointer; position:relative;	background:image-url('small_left.png') no-Repeat top left;	width:19px;	height:14px;  margin-right:0px; float:left; margin-top:-7px;	}
+.tp-rightarrow.round									{	z-index:100;cursor:pointer; position:relative;	background:image-url('small_right.png') no-Repeat top left;	width:19px;	height:14px;  margin-right:0px; float:left;	margin-top:-7px;}
 
 
-.tp-leftarrow.round-old									{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/arrow_left.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left; margin-top:-13px;	}
-.tp-rightarrow.round-old								{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/arrow_right.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left;	margin-top:-13px;}
+.tp-leftarrow.round-old									{	z-index:100;cursor:pointer; position:relative;	background:image-url('arrow_left.png') no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left; margin-top:-13px;	}
+.tp-rightarrow.round-old								{	z-index:100;cursor:pointer; position:relative;	background:image-url('arrow_right.png') no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left;	margin-top:-13px;}
 
 
-.tp-leftarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/small_left_boxed.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-right:6px; margin-top:12px;}
-.tp-rightarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/small_right_boxed.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-left:6px; margin-top:12px;}
+.tp-leftarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:image-url('small_left_boxed.png') no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-right:6px; margin-top:12px;}
+.tp-rightarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:image-url('small_right_boxed.png') no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-left:6px; margin-top:12px;}
 
 
-.tp-leftarrow.navbar-old								{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/arrowleft.png) no-Repeat top left;		width:9px;	height:16px;   float:left;	margin-right:6px; margin-top:10px;}
-.tp-rightarrow.navbar-old								{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/arrowright.png) no-Repeat top left;	width:9px;	height:16px;   float:left;	margin-left:6px; margin-top:10px;}
+.tp-leftarrow.navbar-old								{	z-index:100;cursor:pointer; position:relative;	background:image-url('arrowleft.png') no-Repeat top left;		width:9px;	height:16px;   float:left;	margin-right:6px; margin-top:10px;}
+.tp-rightarrow.navbar-old								{	z-index:100;cursor:pointer; position:relative;	background:image-url('arrowright.png') no-Repeat top left;	width:9px;	height:16px;   float:left;	margin-left:6px; margin-top:10px;}
 
 .tp-leftarrow.navbar-old.thumbswitharrow				{	margin-right:10px; }
 .tp-rightarrow.navbar-old.thumbswitharrow				{	margin-left:0px; }
 
-.tp-leftarrow.square									{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/arrow_left2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-right:0px; margin-top:-9px;}
-.tp-rightarrow.square									{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/arrow_right2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-left:0px; margin-top:-9px;}
+.tp-leftarrow.square									{	z-index:100;cursor:pointer; position:relative;	background:image-url('arrow_left2.png') no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-right:0px; margin-top:-9px;}
+.tp-rightarrow.square									{	z-index:100;cursor:pointer; position:relative;	background:image-url('arrow_right2.png') no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-left:0px; margin-top:-9px;}
 
 
-.tp-leftarrow.square-old								{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/arrow_left2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-right:0px; margin-top:-9px;}
-.tp-rightarrow.square-old								{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/arrow_right2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-left:0px; margin-top:-9px;}
+.tp-leftarrow.square-old								{	z-index:100;cursor:pointer; position:relative;	background:image-url('arrow_left2.png') no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-right:0px; margin-top:-9px;}
+.tp-rightarrow.square-old								{	z-index:100;cursor:pointer; position:relative;	background:image-url('arrow_right2.png') no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-left:0px; margin-top:-9px;}
 
 
-.tp-leftarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/large_left.png) no-Repeat 0 0;	width:40px;	height:40px;
+.tp-leftarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:image-url('large_left.png') no-Repeat 0 0;	width:40px;	height:40px;
 
 														}
-.tp-rightarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url(/assets/large_right.png) no-Repeat 0 0;	width:40px;	height:40px;
+.tp-rightarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:image-url('large_right.png') no-Repeat 0 0;	width:40px;	height:40px;
 
 														}
 
@@ -672,7 +672,7 @@ website:   	http://www.themepunch.com
 }
 /*  CAPTION SLIDELINK   **/
 .caption.slidelink a div,
-.tp-caption.slidelink a div {	width:10000px; height:10000px;  background:url(/assets/coloredbg.png) repeat;}
+.tp-caption.slidelink a div {	width:10000px; height:10000px;  background:image-url('coloredbg.png') repeat;}
 
 .tp-loader 	{	background:image-url('loader.gif') no-repeat 10px 10px; background-color:#fff;  margin:-22px -22px; top:50%; left:50%; z-index:10000; position:absolute;width:44px;height:44px;
 				border-radius: 3px;
