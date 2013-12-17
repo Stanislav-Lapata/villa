@@ -23,7 +23,24 @@
                     <a class="btn-u btn-u-large btn-u-green one-page-btn"><i class="icon-bolt"></i> libero adipiscing</a>
                 </div>
                 <div class="span6">
-                  <%= image_tag 'img/new/img5.jpg', class: 'margin-bottom-10' %>
+                  <div id="myCarousel" class="carousel slide">
+                    <div class="carousel-inner">
+                      <% [1, 5, 10].each do |i| %>
+                        <div class="item <%= 'active' if i == 1 %>">
+                          <%= image_tag "img/new/img#{i}.jpg", class: 'span12' %>
+                          <div class="carousel-caption">
+                            <h4>First Thumbnail label</h4>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta.</p>
+                            </div>
+                        </div>
+                      <% end %>
+                    </div>
+                    <div class="carousel-arrow">
+                      <a data-slide="prev" href="#myCarousel" class="left carousel-control"><i class="icon-angle-left"></i></a>
+                      <a data-slide="next" href="#myCarousel" class="right carousel-control"><i class="icon-angle-right"></i></a>
+                    </div>
+                  </div>
+                  <%#= image_tag 'img/new/img5.jpg', class: 'margin-bottom-10' %>
                 </div>
             </div>
         </div>
