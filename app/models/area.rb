@@ -19,4 +19,8 @@ class Area < ActiveRecord::Base
     end
     ancestor_chain + "#{name}"
   end
+
+  def left_position
+    read_attribute(:left)
+  end
 end
