@@ -1,4 +1,4 @@
-- url = action_name == 'sales' ? sales_path : villas_path
+- url = action_name == 'real_estate_sales' ? real_estate_sales_path : real_estate_rentals_path
 = search_form_for @q, url: url do |f|
   .margin-bottom-20
     = f.text_field :name_cont, placeholder: t('villas.villa_name_or_id'), class: 'span12'
@@ -7,13 +7,29 @@
   .margin-bottom-20
     - @areas.each do |area|
       - selected = area.id.to_s == params[:q][:area_id_place_eq]
-      = link_to area.name, villas_url(params: params.merge(q: {area_id_place_eq: area.id})), class: "#{'selected' if selected}"
+      - if action_name == 'real_estate_sales'
+        = link_to area.name, real_estate_sales_path(params: params.merge(q: {area_id_place_eq: area.id})), class: "#{'selected' if selected}"
+      - else
+        = link_to area.name, real_estate_rentals_path(params: params.merge(q: {area_id_place_eq: area.id})), class: "#{'selected' if selected}"
       br
       .margin-left-20
         - if selected || area.children.pluck(:id).include?(params[:q][:area_id_place_eq].to_i)
           - area.children.each do |children_area|
-            = link_to children_area.name, villas_url(params: params.merge(q: {area_id_place_eq: children_area.id})), class: "#{'selected' if children_area.id.to_s == params[:q][:area_id_place_eq]}"
+            - if action_name == 'real_estate_sales'
+              = link_to children_area.name, real_estate_sales_path(params: params.merge(q: {area_id_place_eq: children_area.id})), class: "#{'selected' if children_area.id.to_s == params[:q][:area_id_place_eq]}"
+            - else
+              = link_to children_area.name, real_estate_rentals_path(params: params.merge(q: {area_id_place_eq: children_area.id})), class: "#{'selected' if children_area.id.to_s == params[:q][:area_id_place_eq]}"
             br
+
+            - area_name = children_area.name.split(" ").join("_").downcase
+            - if %w[bali phuket koh_samui].include?(area_name) && params[:q][:area_id_place_eq].to_i == children_area.id
+              .filter-map
+                div class="#{area_name}"
+                  - children_area.children.each do |area|
+                    label style="top: #{area.top}px; left: #{area.left}px;"
+                      = check_box_tag 'q[area_id_eq_any][]', area.id, params[:q][:area_id_eq_any] && params[:q][:area_id_eq_any].include?(area.id.to_s)
+                      span.tail style="top: 100%; left: #{area.left_tail}%"
+                      = area.name
 
   h4#bedrooms= t('villas.bedrooms')
   .hidden= f.text_field :bedrooms_gteq

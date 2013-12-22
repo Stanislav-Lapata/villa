@@ -36,6 +36,8 @@ en:
     yacht_rentals: "Yacht rentals"
     car_rentals: "Car rentals"
     real_estate: "Real estate"
+    real_estate_sales: "Sales"
+    real_estate_rentals: "Rentals"
     cars: "Car rentals"
     yacht: "Yachts rentals"
     show_more: "Show more"
@@ -92,4 +94,8 @@ en:
     bedrooms: "bedrooms"
     sleeps_up_to: "sleep up to"
     price_range: "Price Range"
+
+  requests:
+    success: 'Success'
+    error: 'Error'
 

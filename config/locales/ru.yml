@@ -69,3 +69,7 @@ ru:
     bedrooms: "спальни"
     sleeps_up_to: "спальных мест до"
     price_range: "Цена"
+
+  requests:
+    success: 'Заявка успешно отправлена'
+    error: 'Обнаружены следующие ошибки'

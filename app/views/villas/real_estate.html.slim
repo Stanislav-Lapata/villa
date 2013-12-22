@@ -5,7 +5,7 @@
       = link_to t('navigation.home'), root_path
       span.divider
         | /
-    li.active= t('navigation.sales')
+    li.active= t('navigation.rentals')
 
 .container
   .row-fluid
@@ -32,7 +32,7 @@
     .span9
       .row-fluid
         .headline
-          h3 Luxury Sales
+          h3 Luxury Rentals
         ul.thumbnails
           - @villas.each_with_index do |villa, index|
             li.span4 class="#{'first' if index % 3 == 0}"
@@ -40,9 +40,10 @@
                 .thumbnail-img
                   .overflow-hidden
                     = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
-                  a.btn-more.hover-effect href="#" read more +
+                    = link_to 'read more +', villa, class: 'btn-more hover-effect'
                 h5
-                  a href="#"= villa.name
+                  = link_to villa do
+                    = villa.name
                 p= truncate villa.description, length: 100
 
       /! Our Services

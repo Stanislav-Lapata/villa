@@ -1,0 +1,11 @@
+- if @request.errors.any?
+  .alert.alert-error
+    a.close data-dismiss="alert" ×
+    h4= t('requests.error')
+    - @request.errors.full_messages.each do |error|
+      = error
+      br
+- else
+  .alert.alert-success
+    a.close data-dismiss="alert" ×
+    h4= t('requests.success')

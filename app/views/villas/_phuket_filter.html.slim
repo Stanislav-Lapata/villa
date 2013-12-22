@@ -1,0 +1,29 @@
+- url = action_name == 'sales' ? sales_path : villas_path
+= search_form_for @q, url: url do |f|
+  .margin-bottom-20
+    = f.text_field :name_cont, placeholder: t('villas.villa_name_or_id'), class: 'span12'
+
+  h4= t('villas.location')
+  .margin-bottom-20
+
+  .filter-map
+    .phuket
+      - @phuket_areas.each do |area|
+        label style="top: #{area.top}px; left: #{area.left}px;"
+          = check_box_tag 'q[area_id_eq_any][]', area.id, params[:q][:area_id_eq_any] && params[:q][:area_id_eq_any].include?(area.id.to_s)
+          span.tail style="top: 100%; left: #{area.left_tail}%"
+          = area.name
+
+  h4#bedrooms= t('villas.bedrooms')
+  .hidden= f.text_field :bedrooms_gteq
+  .hidden= f.text_field :bedrooms_lteq
+  #bedrooms-slider-range.margin-bottom-20
+
+  h4#price_range= t('villas.price_range')
+  .hidden= f.text_field :price_from_gteq
+  .hidden= f.text_field :price_from_lteq
+  #price-slider-range.margin-bottom-20
+
+
+
+  = f.submit class: 'btn-u'

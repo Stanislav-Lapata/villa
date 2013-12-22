@@ -11,18 +11,33 @@
           <%= link_to t('navigation.home'), root_path %>
         </li>
         <li class="<%= 'active' if controller_name == 'villas' && action_name == 'index' %>">
-          <%= link_to t('navigation.rentals'), villas_path %>
+          <%= link_to t('navigation.house_rentals'), villas_path %>
         </li>
         <li class="<%= 'active' if action_name == 'sales' %>">
-          <%= link_to t('navigation.sales'), sales_path %>
+          <%= link_to t('navigation.house_sales'), sales_path %>
         </li>
         <li class="<%= 'active' if action_name == 'yacht_rentals' %>">
-          <%= link_to t('navigation.yacht_rentals'), sales_path %>
+          <%= link_to t('navigation.yacht_rentals'), yacht_rentals_path %>
         </li>
         <li class="<%= 'active' if action_name == 'car_rentals' %>">
-          <%= link_to t('navigation.car_rentals'), sales_path %>
+          <%= link_to t('navigation.car_rentals'), car_rentals_path %>
         </li>
-        <li class="active">
+        <li class="<%= 'active' if action_name == 'real_estate_sales' || action_name == 'real_estate_rentals' %>">
+          <%= link_to '#', "data-toggle" => "dropdown" do %>
+            <%= t('navigation.real_estate') %>
+            <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li class="<%= 'active' if action_name == 'real_estate_rentals' %>">
+              <%= link_to t('navigation.real_estate_rentals'), real_estate_rentals_path %>
+            </li>
+            <li class="<%= 'active' if action_name == 'real_estate_sales' %>">
+              <%= link_to t('navigation.real_estate_sales'), real_estate_sales_path %>
+            </li>
+          </ul>
+          <b class="caret-out"></b>
+        </li>
+        <li class="<%= 'active' if action_name == 'faq' || action_name == 'contact' %>">
           <%= link_to '#', "data-toggle" => "dropdown" do %>
             Addition
             <b class="caret"></b>

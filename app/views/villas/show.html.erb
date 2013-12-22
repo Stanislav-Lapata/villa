@@ -15,40 +15,15 @@
 
 <div class="container portfolio-item">
   <div class="row-fluid margin-bottom-20">
-    <!-- Carousel -->
-        <div class="span7">
-            <div id="myCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                  <% @villa.images.each_with_index do |image, index| %>
-                    <div class="item <%= 'active' if index == 0 %>">
-                        <%= image_tag image.image.url %>
-                        <div class="carousel-caption">
-                            <h4>First Thumbnail label</h4>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta.</p>
-                        </div>
-                    </div>
-                  <% end %>
-                </div>
-                <div class="carousel-arrow">
-                    <a data-slide="prev" href="#myCarousel" class="left carousel-control"><i class="icon-angle-left"></i></a>
-                    <a data-slide="next" href="#myCarousel" class="right carousel-control"><i class="icon-angle-right"></i></a>
-                </div>
-            </div>
-        </div><!--/span7-->
-        <!-- //End Tabs and Carousel -->
-
-        <div class="span5">
-          <h3><%= @villa.name %></h3>
-            <%== @villa.description %>
-            <ul class="unstyled">
-              <li><i class="icon-user color-green"></i> Jack Baur</li>
-              <li><i class="icon-calendar color-green"></i> 14,2003 February</li>
-              <li><i class="icon-tags color-green"></i> Websites, Google, HTML5/CSS3</li>
-            </ul>
-            <p><a class="btn-u btn-u-large" href="#">VISIT THE PROJECT</a></p>
-        </div>
-    </div>
-
+    <div class="span10 offset1">
+      <div class="fotorama" data-nav="thumbs">
+        <% @villa.images.each do |image| %>
+          <%= link_to asset_path(image.image.url) do %>
+            <%= image_tag image.image.url(:thumb) %>
+          <% end %>
+        <% end %>
+      </div>
+    </div><!--/span7-->
     <!-- Tabs -->
     <div class="headline"><h3>Content Tabs</h3></div>
     <ul class="nav nav-tabs tabs">
@@ -60,11 +35,17 @@
     <div class="tab-content margin-bottom-20">
       <div class="tab-pane active" id="home">
         <%= image_tag @villa.images.sample.image.url(:thumb), alt: '', class: 'pull-left lft-img-margin img-width-200' %>
-        <h4>Description</h4>
-        <%== @villa.description %>
+        <div class="headline">
+          <h3>Description</h3>
+        </div>
+        <p class="lead">
+          <%== @villa.description %>
+        </p>
       </div>
       <div class="tab-pane" id="profile">
-        <h4>Price Guide</h4>
+        <div class="headline">
+          <h3>Price Giude</h3>
+        </div>
         <div class="span6">
           <table class="table">
             <thead>
@@ -99,39 +80,50 @@
         </div>
       </div>
       <div class="tab-pane" id="messages">
-        <h4>Enquire Now</h4>
+        <div class="headline">
+          <h3>Enquire Now</h3>
+        </div>
         <div class="span10">
-          <form>
-            <div class="span4">
-              <label>Your Name</label>
-              <input class="span4 border-radius-none" type="text" placeholder="Text input" />
+          <div id="result"></div>
+          <%= form_for [@villa, @request], remote: true do |f| %>
+            <div class="row">
+              <div class="span4">
+                <%= f.label :first_name %>
+                <%= f.text_field :first_name, class: 'span12', placeholder: 'John' %>
+              </div>
+              <div class="span4">
+                <%= f.label :last_name %>
+                <%= f.text_field :last_name, class: 'span12', placeholder: 'Doe' %>
+              </div>
             </div>
-            <div class="span4">
-              <label>Your Name</label>
-              <input class="span4 border-radius-none" type="text" placeholder="Text input" />
-            </div>
-            <div class="span4">
-              <label>Your Name</label>
-              <input class="span4 border-radius-none" type="text" placeholder="Text input" />
-            </div>
-            <div class="span2">
-              <label>Your Name</label>
-              <input class="span2 border-radius-none" type="text" placeholder="Text input" />
-            </div>
-            <div class="span2">
-              <label>Your Name</label>
-              <input class="span2 border-radius-none" type="text" placeholder="Text input" />
+            <div class="row">
+              <div class="span4">
+                <%= f.label :email %>
+                <%= f.text_field :email, class: 'span12', placeholder: 'john.doe@email.com' %>
+              </div>
+              <div class="span2">
+                <%= f.label :check_in %>
+                <%= f.text_field :check_in, class: 'span12 datepicker' %>
+              </div>
+              <div class="span2">
+                <%= f.label :check_out %>
+                <%= f.text_field :check_out, class: 'span12 datepicker' %>
+              </div>
             </div>
             <div class="clearfix"></div>
-            <div class="span8">
-              <label>Please write here your text</label>
-              <textarea class="span8 border-radius-none" rows="8"></textarea>
+            <div class="row">
+              <div class="span8">
+                <%= f.label :comments, 'Please write here your text' %>
+                <%= f.text_area :comments, class: 'span12', rows: 8 %>
+              </div>
             </div>
             <div class="clearfix"></div>
-            <div class="span4">
-              <button type="submit" class="btn-u">Submit</button>
+            <div class="row">
+              <div class="span4">
+                <button type="submit" class="btn-u">Submit</button>
+              </div>
             </div>
-          </form>
+          <% end %>
         </div>
       </div>
     </div>
