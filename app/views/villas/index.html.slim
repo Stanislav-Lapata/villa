@@ -44,7 +44,7 @@
               h5= villa.name
               h4 Price: #{number_to_currency(villa.price_from, precision: 0)}
               h4 Location: #{villa.location}
-              = link_to 'Read more', '#', class: 'info'
+              = link_to 'Read more', villa, class: 'info'
 
       /! Our Services
       .row-fluid
