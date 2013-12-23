@@ -1,0 +1,22 @@
+li.locale
+  i.icon-globe
+  a
+    = t('languages')
+    i.icon-sort-up
+  ul.nav-list
+    li class="#{'active' if I18n.locale == :en}"
+      = link_to "English", set_locale_path(locale: 'en')
+      - if I18n.locale == :en
+        i.icon-ok
+    li class="#{'active' if I18n.locale == :ru}"
+      = link_to "Russian", set_locale_path(locale: 'ru')
+      - if I18n.locale == :ru
+        i.icon-ok
+li.devider
+  | &nbsp;
+li class="#{'active' if action_name == 'faq'}"
+  = link_to t('navigation.faq'), faq_path
+li.devider
+  | &nbsp;
+li class="#{'active' if action_name == 'contact'}"
+  = link_to t('navigation.contact'), contact_path

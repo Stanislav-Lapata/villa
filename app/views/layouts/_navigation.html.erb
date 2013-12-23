@@ -7,9 +7,6 @@
     </a><!-- /nav-collapse -->
     <div class="nav-collapse collapse">
       <ul class="nav top-2">
-        <li class="<%= 'active' if controller_name == 'home' && action_name == 'index' %>">
-          <%= link_to t('navigation.home'), root_path %>
-        </li>
         <li class="<%= 'active' if controller_name == 'villas' && action_name == 'index' %>">
           <%= link_to t('navigation.house_rentals'), villas_path %>
         </li>
@@ -33,21 +30,6 @@
             </li>
             <li class="<%= 'active' if action_name == 'real_estate_sales' %>">
               <%= link_to t('navigation.real_estate_sales'), real_estate_sales_path %>
-            </li>
-          </ul>
-          <b class="caret-out"></b>
-        </li>
-        <li class="<%= 'active' if action_name == 'faq' || action_name == 'contact' %>">
-          <%= link_to '#', "data-toggle" => "dropdown" do %>
-            Addition
-            <b class="caret"></b>
-          <% end %>
-          <ul class="dropdown-menu">
-            <li class="<%= 'active' if action_name == 'faq' %>">
-              <%= link_to t('navigation.faq'), faq_path %>
-            </li>
-            <li class="<%= 'active' if action_name == 'contact' %>">
-              <%= link_to t('navigation.contact'), contact_path %>
             </li>
           </ul>
           <b class="caret-out"></b>

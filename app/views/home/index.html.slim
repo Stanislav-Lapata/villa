@@ -1,0 +1,144 @@
+= render 'layouts/slider'
+.row-fluid.purchase.margin-bottom-30
+  .container
+    .span9
+      span Unify is a clean and fully responsive incredible Template.
+      p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat.
+    a.btn-buy.hover-effect href="#" Purchase Now
+/! /row-fluid
+/! End Purchase Block
+/! === Content Part ===
+.container-fluid.one-page
+  .one-page-inner.one-default
+    .container
+      h1 Аренда
+      .row-fluid
+        .span6
+          p Остров Пхукет – жемчужина Андаманского моря, признан самым популярным островом-курортом Юго-Восточной Азии. Пхукет располагает множеством потрясающих песчаных пляжей и на весь мир известен своими роскошными отелями, виллами и ресторанами. Хотите провести свой отпуск на шикарной вилле с бассейном? Мы предлагаем большой выбор вилл, домов и кондоминиумов от владельцев и агентств по всему острову. Выберите свой идеальный дом уже сегодня!.
+          = link_to villas_path, class: %w(btn-u btn-u-large btn-u-green one-page-btn) do
+            i.icon-bell
+            |  Аренда
+        .span6
+          #myCarousel1.carousel.slide
+            .carousel-inner
+              - Villa.for_rent.sample.images.limit(3).each_with_index do |image, index|
+                div class="item #{'active' if index == 1}"
+                  = image_tag image.image.url(:large), class: 'span12'
+            .carousel-arrow
+              a.left.carousel-control data-slide="prev" href="#myCarousel1"
+                i.icon-angle-left
+              a.right.carousel-control data-slide="next" href="#myCarousel1"
+                i.icon-angle-right
+  .one-page-inner.one-blue
+    .container
+      h1 Продажа
+      .row-fluid
+        .span6
+          #myCarousel2.carousel.slide
+            .carousel-inner
+              - Villa.for_sale.sample.images.limit(3).each_with_index do |image, index|
+                div class="item #{'active' if index == 1}"
+                  = image_tag image.image.url(:large), class: 'span12'
+            .carousel-arrow
+              a.left.carousel-control data-slide="prev" href="#myCarousel2"
+                i.icon-angle-left
+              a.right.carousel-control data-slide="next" href="#myCarousel2"
+                i.icon-angle-right
+        .span6
+          p Эксклюзивные виллы от известных дизайнеров и архитекторов с потрясающим панорамным видом на море и собственным бассейном, стильные частные виллы для всей семьи в составе резиденции, уютные тропические дома вдали от шумных туристических мест — мы предложим Вам весь спектр возможностей от недорогих до фешенебельных вариантов. Обратитесь к нам, и получите профессиональную консультацию наших квалифицированных специалистов. Вилла на Пхукете — это не только новые стандарты Вашего роскошного образа жизни, но еще и прекрасная инвестиция.
+          = link_to sales_path, class: %w(btn-u btn-u-large btn-u-red one-page-btn) do
+              i.icon-bell
+              |  Продажа
+  .one-page-inner.one-grey
+    .container
+      h1 Аренда яхт
+      .row-fluid.margin-bottom-40
+        .span6
+          p Аренда яхты на Пхукете - это отличное сочетание спорта и отдыха на воде с высочайшим уровнем комфорта.. Развитая туристическая инфраструктура позволяет не только взять в аренду яхту, но и, например, снаряжение для рыбалки в океане или доску для серфинга. Способов отдохнуть в этом прекрасном месте превеликое множество, но самым интересным и запоминающимся будет, конечно же, круиз на яхте вдоль берега или посещение соседних островов. На нашем сайте Вы можете забронировать яхты , катера ,катамараны.
+          = link_to yacht_rentals_path, class: %w(btn-u btn-u-large btn-u-blue one-page-btn) do
+              i.icon-bell
+              |  Аренда яхт
+        .span6
+          #myCarousel3.carousel.slide
+            .carousel-inner
+              - Villa.for_rent.sample.images.limit(3).each_with_index do |image, index|
+                div class="item #{'active' if index == 1}"
+                  = image_tag image.image.url(:large), class: 'span12'
+            .carousel-arrow
+              a.left.carousel-control data-slide="prev" href="#myCarousel3"
+                i.icon-angle-left
+              a.right.carousel-control data-slide="next" href="#myCarousel3"
+                i.icon-angle-right
+  .one-page-inner.one-red
+    .container
+      h1 Аренда машин
+      .row-fluid
+        .span6
+          p Для тех, кто любит путешествовать и самостоятельно прокладывать маршрут, для тех, кто любит делать остановки там, где захочется, для тех, кого интересуют самые необычные уголки Пхукета, мы предлагаем услуги по аренде автомобилей.  В нашем автопарке представлены самые разные авто; от эконом класса до класса люкс
+          = link_to car_rentals_path, class: %w(btn-u btn-u-large btn-u-green one-page-btn) do
+              i.icon-comments-alt
+              |  Аренда машин
+        .span6
+          #myCarousel4.carousel.slide
+            .carousel-inner
+              - Villa.for_rent.sample.images.limit(3).each_with_index do |image, index|
+                div class="item #{'active' if index == 1}"
+                  = image_tag image.image.url(:large), class: 'span12'
+            .carousel-arrow
+              a.left.carousel-control data-slide="prev" href="#myCarousel4"
+                i.icon-angle-left
+              a.right.carousel-control data-slide="next" href="#myCarousel4"
+                i.icon-angle-right
+  .one-page-inner.one-default
+    .container
+      h1 At vero eos et accusamus et iusto odio dignissimos
+      .row-fluid
+        .span6
+          = image_tag 'img/carousel/8.jpg', class: 'margin-bottom-10'
+        .span6
+          p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus..
+          p Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
+          ul.thumbnails
+            li.span3
+              = link_to asset_path('img/carousel/1.jpg'), class: 'fancybox-button zoomer', "data-rel" => 'fancybox-button' do
+                .overlay-zoom
+                  = image_tag 'img/carousel/1.jpg'
+                  .zoom-icon
+            li.span3
+              = link_to asset_path('img/carousel/2.jpg'), class: 'fancybox-button zoomer', "data-rel" => 'fancybox-button' do
+                .overlay-zoom
+                  = image_tag 'img/carousel/2.jpg'
+                  .zoom-icon
+            li.span3
+              = link_to asset_path('img/carousel/3.jpg'), class: 'fancybox-button zoomer', "data-rel" => 'fancybox-button' do
+                .overlay-zoom
+                  = image_tag 'img/carousel/3.jpg'
+                  .zoom-icon
+            li.span3
+              = link_to asset_path('img/carousel/4.jpg'), class: 'fancybox-button zoomer', "data-rel" => 'fancybox-button' do
+                .overlay-zoom
+                  = image_tag 'img/carousel/4.jpg'
+                  .zoom-icon
+          a.btn-u.btn-u-large.btn-u-red.one-page-btn
+            i.icon-thumbs-up
+            | libero adipiscing
+      hr/
+      .row-fluid
+        .span3
+          h3
+            a href="#"
+          p Pellentesque viverra vehicula sem ut volutpat dosum molor sit amet, consectetur adipiscing elit
+        .span3
+          h3
+            a href="#"
+          p Lunt in lpa qui officia deserunt mollitia mo animi, asdid leoff iscia est labor le harum quidem rerum facilis
+        .span3
+          h3
+            a href="#"
+          p Volutpat dosum esque viverra ved et quam lacusehicula sem ut  molorviverra sit amet, consetetur edipiscin la
+        .span3
+          h3
+            a href="#"
+          p Deleniti atque corrupa vehicula sem ut volutpat dosum molor sit amet, consectetur adipiscing praesentium
+/! /container-fluid
+/! End Content Part

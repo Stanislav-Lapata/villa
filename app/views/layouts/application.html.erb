@@ -4,7 +4,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-  <title>Unify | Welcome...</title>
+  <title><%= content_for?(:title) ? yield(:title) : "Luxury Villas for Sale and Rent" %></title>
 
   <!-- Meta -->
   <meta charset="utf-8" />
@@ -38,19 +38,8 @@
   <div class="top">
       <div class="container">
           <ul class="loginbar pull-right">
-              <li><i class="icon-globe"></i><a>Languages <i class="icon-sort-up"></i></a>
-                  <ul class="nav-list">
-                      <li class="active"><a href="#">English</a> <i class="icon-ok"></i></li>
-                      <li><a href="#">Spanish</a></li>
-                      <li><a href="#">Russian</a></li>
-                      <li><a href="#">German</a></li>
-                  </ul>
-              </li>
-              <li class="devider">&nbsp;</li>
-              <li><a href="page_faq.html" class="login-btn">Help</a></li>
-              <li class="devider">&nbsp;</li>
-              <li><a href="page_login.html" class="login-btn">Login</a></li>
-          </ul>
+              <%= render 'layouts/top_nav' %>
+                        </ul>
       </div>
   </div><!--/top-->
   <!--=== End Top ===-->
@@ -58,7 +47,7 @@
   <div class="header">
     <div class="container">
       <div class="logo">
-        <%= link_to image_tag('img/logo1-default.png', id: 'logo-header'), root_path %>
+        <%= link_to image_tag('full_logo.png', id: 'logo-header', size: '200x200'), root_path %>
       </div>
       <%= render 'layouts/navigation' %>
     </div>

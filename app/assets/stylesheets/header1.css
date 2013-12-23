@@ -18,7 +18,7 @@
 	padding-bottom:15px;
 }
 
-.loginbar li a, 
+.loginbar li a,
 .loginbar li a:hover {
 	color:#7c8082;
 	font-size:11px;
@@ -26,7 +26,7 @@
 	font-family:'Open Sans', sans-serif;
 }
 
-.loginbar li.devider { 
+.loginbar li.devider {
 	top:-1px;
 	padding:0;
 	font-size:8px;
@@ -44,40 +44,40 @@
 }
 
 /*Lenguages*/
-.loginbar li ul { 
-	top:30px; 
+.loginbar li ul {
+	top:30px;
 	margin:0;
 	left:-6px;
-	display:none; 
+	display:none;
 	padding-top:4px;
-	position:absolute; 
+	position:absolute;
 	border-radius:3px;
 	padding-bottom:4px;
 	background:#f0f0f0;
 }
 
-.loginbar li:hover ul { 
-	display:block; 
+.loginbar li:hover ul {
+	display:block;
 }
 
-.loginbar li ul li { 
+.loginbar li ul li {
 	padding-bottom:0;
 	display:list-item;
 	position:relative;
 	margin-bottom:1px;
 }
 
-.loginbar li ul li a { 
+.loginbar li ul li a {
 	color:#555;
 	display:block;
-	min-width:85px; 
+	min-width:85px;
 	font-size:10px;
 	padding:2px 12px;
 	background:#f0f0f0;
 	text-decoration:none;
 }
 
-.loginbar li ul li a:hover, 
+.loginbar li ul li a:hover,
 .loginbar li ul li.active a {
 	opacity:1 !important;
 	color:#555 !important;
@@ -87,7 +87,7 @@
 }
 
 .loginbar li ul li.active i {
-	top:2px; 
+	top:2px;
 	right:-5px;
 	font-size:14px;
 	cursor:default;
@@ -102,7 +102,7 @@
 }
 
 .loginbar li i.icon-sort-up {
-	top:21px; 
+	top:21px;
 	left:-1px;
 	color:#eee;
 	display:none;
@@ -134,13 +134,13 @@
 
 .logo {
 	position:absolute;
-	top:-5px;
+	top:-48px;
 	left:0;
 }
 
 /*Menu*/
-.navbar, 
-.navbar-inner, 
+.navbar,
+.navbar-inner,
 .nav,
 .navbar-inverse {
 	background:#fff;
@@ -153,8 +153,8 @@
             box-shadow: none;
 }
 
-.nav i.icon-sort-up { 
-	position:absolute; 
+.nav i.icon-sort-up {
+	position:absolute;
 	font-size:13px;
 	bottom:-6px;
 }
@@ -164,8 +164,8 @@
 	padding-right: 0px !important;
 }
 
-.navbar .nav > li { 
-	display:block; 
+.navbar .nav > li {
+	display:block;
 	position:relative;
 }
 .navbar .nav > li > a {
@@ -184,18 +184,18 @@
     transition:all 0.4s ease-in-out;
 }
 
-.collapse.in ul { 
+.collapse.in ul {
 	margin-top:10px !important;
 }
 
-.collapse.in li a { 
+.collapse.in li a {
 	padding:0 10px;
 	border-bottom:solid 1px #eee;
 	background:none;
 }
 
 .collapse.in li a:hover,
-.collapse.in li a.dropdown-toggle { 
+.collapse.in li a.dropdown-toggle {
 	border-bottom:solid 1px #72c02c !important;
 	background:none;
 }
@@ -206,7 +206,7 @@
 
 .collapse.in ul.dropdown-menu a {
 	padding:5px;
-	border-bottom:solid 1px #bbb; 
+	border-bottom:solid 1px #bbb;
 }
 
 .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
@@ -222,18 +222,18 @@
 
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:focus {
-  	color:#72c02c;	
+  	color:#72c02c;
   	text-decoration:none;
 	border-bottom:solid 2px #72c02c;
-  	background:none;	
+  	background:none;
   	-webkit-box-shadow:none;
        -moz-box-shadow:none;
           	box-shadow:none;
 }
 
-.navbar .nav > .active > a:hover {	
-  	color:#72c02c;	
-	background:none;		
+.navbar .nav > .active > a:hover {
+  	color:#72c02c;
+	background:none;
 	border-bottom:solid 2px #72c02c;
   	-webkit-box-shadow:none;
        -moz-box-shadow:none;
@@ -242,27 +242,27 @@
 
 /*Arrow for menu*/
 .navbar .nav > li > a .caret {
-  margin:9px 0 0 3px !important;	
-  border-top-color: #72c02c!important;	
+  margin:9px 0 0 3px !important;
+  border-top-color: #72c02c!important;
   border-bottom-color: #72c02c !important;
 }
 
 /*Dropdown Menu*/
-.dropdown-menu { 
+.dropdown-menu {
 	padding:0;
 	border:none;
-	margin-top:-2px; 
+	margin-top:-2px;
 	min-width:200px;
-	border-radius:0; 
-	border-top:solid 2px #72c02c; 
-	border-bottom:solid 2px #687074; 
+	border-radius:0;
+	border-top:solid 2px #72c02c;
+	border-bottom:solid 2px #687074;
 	z-index: 9999 !important;
 }
-.dropdown-menu li a { 
-	color:#687074; 
-	font-size:13px; 
-	font-weight:400; 
-	padding:6px 15px; 
+.dropdown-menu li a {
+	color:#687074;
+	font-size:13px;
+	font-weight:400;
+	padding:6px 15px;
 	border-bottom:solid 1px #eee;
 }
 .dropdown-menu li > a:hover,
@@ -288,13 +288,13 @@
 	margin-top:1px;
 	margin-right:0;
 	background:#72c02c;
-	border:none !important;	
+	border:none !important;
 }
 .navbar .btn-navbar:hover {
 	background:#5fb611;
 }
-.navbar .btn-navbar span, 
-.navbar .btn-navbar:hover span { 
+.navbar .btn-navbar span,
+.navbar .btn-navbar:hover span {
 	background:#fff !important;
 	box-shadow:none !important;
 }
@@ -314,18 +314,18 @@
 
 /*Serach*/
 .navbar .search-open {
-	right:0; 
-	top:44px; 
+	right:0;
+	top:44px;
 	display:none;
-	padding:15px; 
-	position:absolute; 
-	background:#fcfcfc; 
-	border-top:solid 2px #eee; 
+	padding:15px;
+	position:absolute;
+	background:#fcfcfc;
+	border-top:solid 2px #eee;
 }
 
 .navbar .search-open form,
 .navbar .search-open .input-append {
-	margin:0 !important;	
+	margin:0 !important;
 }
 
 .navbar a.search i.icon-remove {
