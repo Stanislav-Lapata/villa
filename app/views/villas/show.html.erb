@@ -26,104 +26,96 @@
     </div><!--/span7-->
     <!-- Tabs -->
     <div class="headline"><h3>Content Tabs</h3></div>
-    <ul class="nav nav-tabs tabs">
-      <li class="active"><a href="#home" data-toggle="tab">Description</a></li>
-      <li><a href="#profile" data-toggle="tab">Price Guide</a></li>
-      <li><a href="#messages" data-toggle="tab">Enquire Now</a></li>
-    </ul><!--/tabs-->
+    <div class="span3">
+      <ul class="nav nav-tabs tabs nav-stacked">
+        <li class="active"><a href="#home" data-toggle="tab">Description</a></li>
+        <li><a href="#profile" data-toggle="tab">Price Guide</a></li>
+        <li><a href="#messages" data-toggle="tab">Enquire Now</a></li>
+      </ul><!--/tabs-->
+    </div>
 
-    <div class="tab-content margin-bottom-20">
-      <div class="tab-pane active" id="home">
-        <%= image_tag @villa.images.sample.image.url(:thumb), alt: '', class: 'pull-left lft-img-margin img-width-200' %>
-        <div class="headline">
-          <h3>Description</h3>
+    <div class="span8">
+      <div class="tab-content margin-bottom-20">
+        <div class="tab-pane active" id="home">
+          <%= simple_format @villa.description %>
         </div>
-        <p class="lead">
-          <%== @villa.description %>
-        </p>
-      </div>
-      <div class="tab-pane" id="profile">
-        <div class="headline">
-          <h3>Price Giude</h3>
+        <div class="tab-pane" id="profile">
+          <div class="span12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Per Month, US$</td>
+                  <td>Per Week, US$</td>
+                  <td>Per Night, US$</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="success">
+                  <td>Low Season</td>
+                  <td><%= @villa.low_month %></td>
+                  <td><%= @villa.low_week %></td>
+                  <td><%= @villa.low_night %></td>
+                </tr>
+                <tr class="error">
+                  <td>High Season</td>
+                  <td><%= @villa.high_month %></td>
+                  <td><%= @villa.high_week %></td>
+                  <td><%= @villa.high_night %></td>
+                </tr>
+                <tr class="warning">
+                  <td>Peak Season</td>
+                  <td><%= @villa.peak_month %></td>
+                  <td><%= @villa.peak_week %></td>
+                  <td><%= @villa.peak_night %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="span6">
-          <table class="table">
-            <thead>
-              <tr>
-                <td></td>
-                <td>Per Month, US$</td>
-                <td>Per Week, US$</td>
-                <td>Per Night, US$</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="success">
-                <td>Low Season</td>
-                <td><%= @villa.low_month %></td>
-                <td><%= @villa.low_week %></td>
-                <td><%= @villa.low_night %></td>
-              </tr>
-              <tr class="error">
-                <td>High Season</td>
-                <td><%= @villa.high_month %></td>
-                <td><%= @villa.high_week %></td>
-                <td><%= @villa.high_night %></td>
-              </tr>
-              <tr class="warning">
-                <td>Peak Season</td>
-                <td><%= @villa.peak_month %></td>
-                <td><%= @villa.peak_week %></td>
-                <td><%= @villa.peak_night %></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="tab-pane" id="messages">
-        <div class="headline">
-          <h3>Enquire Now</h3>
-        </div>
-        <div class="span10">
-          <div id="result"></div>
-          <%= form_for [@villa, @request], remote: true do |f| %>
-            <div class="row">
-              <div class="span4">
-                <%= f.label :first_name %>
-                <%= f.text_field :first_name, class: 'span12', placeholder: 'John' %>
+        <div class="tab-pane" id="messages">
+          <div class="span12">
+            <div id="result"></div>
+            <%= form_for [@villa, @request], remote: true do |f| %>
+              <div class="row">
+                <div class="span4">
+                  <%= f.label :first_name %>
+                  <%= f.text_field :first_name, class: 'span12', placeholder: 'John' %>
+                </div>
+                <div class="span4">
+                  <%= f.label :last_name %>
+                  <%= f.text_field :last_name, class: 'span12', placeholder: 'Doe' %>
+                </div>
               </div>
-              <div class="span4">
-                <%= f.label :last_name %>
-                <%= f.text_field :last_name, class: 'span12', placeholder: 'Doe' %>
+              <div class="row">
+                <div class="span4">
+                  <%= f.label :email %>
+                  <%= f.text_field :email, class: 'span12', placeholder: 'john.doe@email.com' %>
+                </div>
+                <div class="span2">
+                  <%= f.label :check_in %>
+                  <%= f.text_field :check_in, class: 'span12 datepicker' %>
+                </div>
+                <div class="span2">
+                  <%= f.label :check_out %>
+                  <%= f.text_field :check_out, class: 'span12 datepicker' %>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="span4">
-                <%= f.label :email %>
-                <%= f.text_field :email, class: 'span12', placeholder: 'john.doe@email.com' %>
+              <div class="clearfix"></div>
+              <div class="row">
+                <div class="span8">
+                  <%= f.label :comments, 'Please write here your text' %>
+                  <%= f.text_area :comments, class: 'span12', rows: 8 %>
+                </div>
               </div>
-              <div class="span2">
-                <%= f.label :check_in %>
-                <%= f.text_field :check_in, class: 'span12 datepicker' %>
+              <div class="clearfix"></div>
+              <div class="row">
+                <div class="span4">
+                  <button type="submit" class="btn-u">Submit</button>
+                </div>
               </div>
-              <div class="span2">
-                <%= f.label :check_out %>
-                <%= f.text_field :check_out, class: 'span12 datepicker' %>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="row">
-              <div class="span8">
-                <%= f.label :comments, 'Please write here your text' %>
-                <%= f.text_area :comments, class: 'span12', rows: 8 %>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="row">
-              <div class="span4">
-                <button type="submit" class="btn-u">Submit</button>
-              </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
