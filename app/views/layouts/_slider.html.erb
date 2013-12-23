@@ -6,7 +6,7 @@
             <li data-transition="slideleft" data-slotamount="1" data-masterspeed="300" data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
 
                 <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
-                <%= image_tag "img/sliders/revolution/bg3.jpg", alt: '' %>
+                <%= image_tag HomePhoto.all[0].try(:image).try(:url) %>
 
                 <div class="caption large_text sft" data-x="10" data-y="44" data-speed="300" data-start="800" data-easing="easeOutExpo">
                      TOUCH ENABLED
@@ -41,7 +41,7 @@
             <li data-transition="papercut" data-slotamount="15" data-masterspeed="300" data-delay="9400" data-thumb="assets/img/sliders/revolution/thumbs/thumb2.jpg">
 
                 <!-- THE MAIN IMAGE IN THE SECOND SLIDE -->
-                <%= image_tag "img/sliders/revolution/bg2.jpg", alt: '' %>
+                <%= image_tag HomePhoto.all[1].try(:image).try(:url) %>
 
                 <div class="caption very_big_white lfl stl" data-x="18" data-y="343" data-speed="300" data-start="500" data-easing="easeOutExpo" data-end="8800" data-endspeed="300" data-endeasing="easeInSine">
                      TIMELINED CAPTIONS
@@ -92,7 +92,7 @@
             <li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="300" data-thumb="assets/img/sliders/revolution/thumbs/thumb1.jpg">
 
                 <!-- THE MAIN IMAGE IN THE THIRD SLIDE -->
-                <%= image_tag "img/sliders/revolution/bg1.jpg", alt: '' %>
+                <%= image_tag HomePhoto.all[2].try(:image).try(:url) %>
 
                 <div class="caption large_text sfb" data-x="176" data-y="15" data-speed="300" data-start="800" data-easing="easeOutExpo">
                      OVER
@@ -153,7 +153,7 @@
             <li data-transition="flyin" data-slotamount="1" data-masterspeed="300" data-thumb="assets/img/sliders/revolution/thumbs/thumb4.jpg">
 
                 <!-- THE MAIN IMAGE IN THE THIRD SLIDE -->
-                <%= image_tag 'img/sliders/revolution/bg4.jpg' %>
+                <%= image_tag HomePhoto.all[3].try(:image).try(:url) %>
 
                 <div class="caption lfb boxshadow" data-x="0" data-y="120" data-speed="900" data-start="500" data-easing="easeOutBack">
                      <iframe src="http://player.vimeo.com/video/54035990?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
