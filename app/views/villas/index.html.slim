@@ -34,21 +34,17 @@
                   = truncate villa.description, length: 50
     /! /span3
     .span9
-      .row-fluid
+      #villas.row-fluid
         .headline
           h3 Luxury Rentals
-        ul.thumbnails
-          - @villas.each_with_index do |villa, index|
-            li.span4 class="#{'first' if index % 3 == 0}"
-              .thumbnail-style.thumbnail-kenburn
-                .thumbnail-img
-                  .overflow-hidden
-                    = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
-                    = link_to 'read more +', villa, class: 'btn-more hover-effect'
-                h5
-                  = link_to villa do
-                    = villa.name
-                p= truncate villa.description, length: 100
+        - @villas.each_with_index do |villa, index|
+          .view.view-tenth.span4 class="#{'first' if index % 3 == 0}"
+            = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
+            .mask
+              h5= villa.name
+              h4 Price: #{number_to_currency(villa.price_from, precision: 0)}
+              h4 Location: #{villa.location}
+              = link_to 'Read more', '#', class: 'info'
 
       /! Our Services
       .row-fluid

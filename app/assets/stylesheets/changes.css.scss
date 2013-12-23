@@ -96,3 +96,20 @@ li.locale {
     cursor: pointer;
   }
 }
+
+.hoverdir {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #ccc;
+  display: none;
+}
+
+#villas .view {
+  margin-top: 20px;
+
+  .mask {
+    color: black !important;
+    font-weight: bold !important;
+  }
+}
