@@ -1,0 +1,21 @@
+= simple_form_for [@villa, @request], remote: true do |f|
+  .row
+    .span4
+      = f.input :first_name, input_html: {class: 'span12'}, placeholder: 'John'
+    .span4
+      = f.input :last_name, input_html: {class: 'span12'}, placeholder: 'Doe'
+  .row
+    .span4
+      = f.input :email, input_html: {class: 'span12'}, placeholder: 'john.doe@email.com'
+    .span2
+      = f.input :check_in, as: :string, input_html: {class: 'span12 datepicker'}
+    .span2
+      = f.input :check_out, as: :string, input_html: {class: 'span12 datepicker'}
+  .clearfix
+  .row
+    .span8
+      = f.input :comments, input_html: {class: 'span12', rows: 8}, label: 'Please write here your text'
+  .clearfix
+  .row
+    .span4
+      button.btn-u type="submit" Submit

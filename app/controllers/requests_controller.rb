@@ -1,8 +1,11 @@
 class RequestsController < ApplicationController
+  respond_to :js, only: :create
+
   def create
     @villa = Villa.find(params[:villa_id])
     @request = @villa.requests.build(request_params)
     @request.save
+    respond_with @request
   end
 
   private

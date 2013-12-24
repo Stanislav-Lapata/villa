@@ -24,6 +24,7 @@ gem "font-awesome-rails"
 gem 'rabl'
 gem 'ransack'
 gem 'rmagick'
+gem 'simple_form'
 gem 'slim-rails'
 gem "select2-rails"
 
@@ -37,6 +38,7 @@ gem 'unicorn'
 
 group :development do
   gem 'quiet_assets'
+  gem 'letter_opener'
   gem 'capistrano-deploy', :require => nil
 end
 

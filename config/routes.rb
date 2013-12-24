@@ -10,6 +10,8 @@ JqVilla::Application.routes.draw do
     get :for_admin, on: :collection
   end
 
+  resources :contacts, only: :create
+
   namespace :admin do
     resources :images do
       post :update_positions, on: :collection

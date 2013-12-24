@@ -1,0 +1,68 @@
+.breadcrumbs.margin-bottom-20
+  .container
+    h1.color-green.pull-left Luxury Villas
+    ul.pull-right.breadcrumb
+      li
+        = link_to t('navigation.home'), root_path
+        span.divider
+          | /
+      li.active
+        - if action_name == 'index'
+          = t('navigation.rentals')
+        - else
+          = t('navigation.sales')
+
+.container.portfolio-item
+  .row-fluid.margin-bottom-20
+    .span10.offset1
+      .fotorama data-nav="thumbs"
+        - @villa.images.each do |image|
+          = link_to asset_path(image.image.url) do
+            = image_tag image.image.url(:thumb)
+    /! /span7
+    /! Tabs
+    .headline
+      h3 Content Tabs
+    .span3
+      ul.nav.nav-tabs.tabs.nav-stacked
+        li.active
+          a data-toggle="tab" href="#description" Description
+        li
+          a data-toggle="tab" href="#price_guide" Price Guide
+        li
+          a data-toggle="tab" href="#enquire_now" Enquire Now
+      /! /tabs
+    .span8
+      .tab-content.margin-bottom-20
+        #description.tab-pane.active
+          = simple_format @villa.description
+        #price_guide.tab-pane
+          .span12
+            table.table
+              thead
+                tr
+                  td
+                  td Per Month, US$
+                  td Per Week, US$
+                  td Per Night, US$
+              tbody
+                tr.success
+                  td Low Season
+                  td= @villa.low_month
+                  td= @villa.low_week
+                  td= @villa.low_night
+                tr.error
+                  td High Season
+                  td= @villa.high_month
+                  td= @villa.high_week
+                  td= @villa.high_night
+                tr.warning
+                  td Peak Season
+                  td= @villa.peak_month
+                  td= @villa.peak_week
+                  td= @villa.peak_night
+        #enquire_now.tab-pane
+          .span11
+            #request
+              = render 'requests/form'
+

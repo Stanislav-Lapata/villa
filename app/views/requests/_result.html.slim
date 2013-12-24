@@ -2,10 +2,18 @@
   .alert.alert-error
     a.close data-dismiss="alert" ×
     h4= t('requests.error')
-    - @request.errors.full_messages.each do |error|
-      = error
-      br
 - else
-  .alert.alert-success
-    a.close data-dismiss="alert" ×
-    h4= t('requests.success')
+  .span11
+    .alert.alert-success
+      a.close data-dismiss="alert" ×
+      h4= t('requests.success')
+    .headline
+      h3 Information
+    dl.dl-horizontal
+      - %w[first_name last_name email check_in check_out].each do |field|
+        dt= Request.human_attribute_name(field)
+        dd= @request.send(field)
+      dt= Request.human_attribute_name(:comments)
+      dd= simple_format @request.comments
+
+

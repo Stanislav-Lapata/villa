@@ -63,6 +63,7 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    addressable (2.3.5)
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (4.0.1)
@@ -133,6 +134,10 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.8.0)
+    launchy (2.4.2)
+      addressable (~> 2.3)
+    letter_opener (1.2.0)
+      launchy (~> 2.2)
     libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -202,6 +207,7 @@ GEM
     select2-rails (3.4.8)
       sass-rails
       thor (~> 0.14)
+    simple_form (1.4.1)
     slim (2.0.1)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -262,6 +268,7 @@ DEPENDENCIES
   jquery-turbolinks
   jquery-ui-rails
   jstree-rails!
+  letter_opener
   pg
   pry-rails
   quiet_assets
@@ -272,6 +279,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   select2-rails
+  simple_form
   slim-rails
   therubyracer
   turbolinks

@@ -11,10 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require jquery.ui.datepicker
 //= require jquery-browser.min
 //= require jquery.ui.slider
+//= require jquery.ui.datepicker
+//= require turbolinks
+//= require jquery.turbolinks
+//= require jquery_ujs
 //= require modernizr.custom
 //= require bootstrap.min
 //= require flexslider/jquery.flexslider-min
@@ -28,9 +30,3 @@
 //= require villas
 //= require fotorama
 
-$('.datepicker').datepicker({
-  showOtherMonths: true,
-  selectOtherMonths: true,
-  dateFormat: 'dd/mm/yy',
-  yearRange: '-3:0'
-});

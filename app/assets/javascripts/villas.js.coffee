@@ -1,4 +1,10 @@
 $ ->
+  $('.datepicker').datepicker
+    showOtherMonths: true
+    selectOtherMonths: true
+    dateFormat: 'dd/mm/yy'
+    yearRange: '-3:0'
+
   bedrooms_label = $('h4#bedrooms')
   bedrooms_label_text = bedrooms_label.text()
   q_bedrooms_gteq = $('#q_bedrooms_gteq').val() || 3

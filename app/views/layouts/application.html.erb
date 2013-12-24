@@ -13,7 +13,19 @@
   <meta name="author" content="" />
 
   <!-- CSS Global Compulsory-->
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <script type="text/javascript">
+      jQuery(document).ready(function() {
+          App.init();
+          App.initFancybox();
+          App.initSliders();
+          Index.initRevolutionSlider();
+      });
+  </script>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag "respond", "data-turbolinks-track" => true %>
+  <![endif]-->
   <%= csrf_meta_tags %>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -52,12 +64,6 @@
       <%= render 'layouts/navigation' %>
     </div>
   </div>
-
-  <div class="breadcrumbs margin-bottom-20">
-    <div class="container">
-    <%= yield(:breadcrumbs) %>
-  </div>
-
   <%= yield %>
 <!--=== Footer ===-->
 <%= render 'layouts/footer' %>
@@ -78,19 +84,5 @@
   </div><!--/container-->
 </div><!--/copyright-->
 <!--=== End Copyright ===-->
-
-<!-- JS Global Compulsory -->
-<%= javascript_include_tag "application", "data-turbolinks-track" => false %>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        App.init();
-        App.initFancybox();
-        App.initSliders();
-        Index.initRevolutionSlider();
-    });
-</script>
-<!--[if lt IE 9]>
-  <%= javascript_include_tag "respond", "data-turbolinks-track" => false %>
-<![endif]-->
 </body>
 </html>

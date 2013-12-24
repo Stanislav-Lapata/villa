@@ -1,15 +1,16 @@
-= content_for :breadcrumbs do
-  h1.color-green.pull-left Luxury Villas
-  ul.pull-right.breadcrumb
-    li
-      = link_to t('navigation.home'), root_path
-      span.divider
-        | /
-    li.active
-      - if action_name == 'index'
-        = t('navigation.rentals')
-      - else
-        = t('navigation.sales')
+.breadcrumbs.margin-bottom-20
+  .container
+    h1.color-green.pull-left Luxury Villas
+    ul.pull-right.breadcrumb
+      li
+        = link_to t('navigation.home'), root_path
+        span.divider
+          | /
+      li.active
+        - if action_name == 'index'
+          = t('navigation.rentals')
+        - else
+          = t('navigation.sales')
 
 .container
   .row-fluid
@@ -41,9 +42,10 @@
           .view.view-tenth.span4 class="#{'first' if index % 3 == 0}"
             = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
             .mask
-              h5= villa.name
-              h4 Price: #{number_to_currency(villa.price_from, precision: 0)}
-              h4 Location: #{villa.location}
+              h6= villa.name
+              h5 #{villa.bedrooms} bedrooms
+              h5 Price: #{number_to_currency(villa.low_night, precision: 0)} - #{number_to_currency(villa.peak_night, precision: 0)} (per night)
+              h5 Location: #{villa.location}
               = link_to 'Read more', villa, class: 'info'
 
       /! Our Services

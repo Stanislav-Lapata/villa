@@ -1,18 +1,10 @@
 .container
   .row-fluid
-    .span9
-      form
-        label Name
-        input.span7 type="text"
-        label
-          | Email
-          span.color-red *
-        input.span7 type="text"
-        label Message
-        textarea.span10 rows="8"
-        p
-          button.btn-u type="submit" Submit
-    /! /span9
+    .span8.offset1
+      .margin-bottom-10
+
+      #contact-form= render 'contacts/form'
+
     .span3
       /! Contacts
       .headline
@@ -20,20 +12,19 @@
       ul.unstyled.who.margin-bottom-20
         li
           a href="#"
-            i.icon-home>
+            i.icon-home
             | 5B Streat, City 50987 New Town US
         li
-          a href="#"
-            i.icon-envelope-alt>
-            | info@example.com
+          i.icon-envelope-alt
+          = link_to "info@phuketrenthouse.ru", 'mailto:info@phuketrenthouse.ru'
         li
           a href="#"
-            i.icon-phone-sign>
+            i.icon-phone-sign
             | 1(222) 5x86 x97x
         li
           a href="#"
-            i.icon-globe>
-            | http://www.example.com
+            i.icon-globe
+            | http://phuketrenthouse.ru
       /! Business Hours
       .headline
         h3 Business Hours
@@ -61,78 +52,3 @@
         li
           i.icon-ok.color-green
           | Eos et accusamus
-    /! /span3
-  /! /row-fluid
-  /! Our Clients
-  #clients-flexslider.flexslider.home.clients
-    .headline
-      h3 Our Clients
-    ul.slides
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/hp_grey.png"
-          img.color-img alt="" src="assets/img/clients/hp.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/igneus_grey.png"
-          img.color-img alt="" src="assets/img/clients/igneus.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/vadafone_grey.png"
-          img.color-img alt="" src="assets/img/clients/vadafone.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/walmart_grey.png"
-          img.color-img alt="" src="assets/img/clients/walmart.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/shell_grey.png"
-          img.color-img alt="" src="assets/img/clients/shell.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/natural_grey.png"
-          img.color-img alt="" src="assets/img/clients/natural.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/aztec_grey.png"
-          img.color-img alt="" src="assets/img/clients/aztec.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/gamescast_grey.png"
-          img.color-img alt="" src="assets/img/clients/gamescast.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/cisco_grey.png"
-          img.color-img alt="" src="assets/img/clients/cisco.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/everyday_grey.png"
-          img.color-img alt="" src="assets/img/clients/everyday.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/cocacola_grey.png"
-          img.color-img alt="" src="assets/img/clients/cocacola.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/spinworkx_grey.png"
-          img.color-img alt="" src="assets/img/clients/spinworkx.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/shell_grey.png"
-          img.color-img alt="" src="assets/img/clients/shell.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/natural_grey.png"
-          img.color-img alt="" src="assets/img/clients/natural.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/gamescast_grey.png"
-          img.color-img alt="" src="assets/img/clients/gamescast.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/everyday_grey.png"
-          img.color-img alt="" src="assets/img/clients/everyday.png"
-      li
-        a href="#"
-          img alt="" src="assets/img/clients/spinworkx_grey.png"
-          img.color-img alt="" src="assets/img/clients/spinworkx.png"

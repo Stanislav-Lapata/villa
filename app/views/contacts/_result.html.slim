@@ -1,0 +1,19 @@
+- if @contact.errors.any?
+  .alert.alert-error
+    a.close data-dismiss="alert" ×
+    h4= t('contacts.error')
+- else
+  .span11
+    .alert.alert-success
+      a.close data-dismiss="alert" ×
+      h4= t('contacts.success')
+    .headline
+      h3 Information
+    dl.dl-horizontal
+      - %w[first_name last_name email phone].each do |field|
+        dt= Contact.human_attribute_name(field)
+        dd= @contact.send(field)
+      dt= Contact.human_attribute_name(:message)
+      dd= simple_format @contact.message
+
+
