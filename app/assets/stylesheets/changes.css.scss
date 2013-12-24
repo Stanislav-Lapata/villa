@@ -107,6 +107,9 @@ li.locale {
 
 #villas .view {
   margin-top: 20px;
+  -webkit-box-shadow: 0 0 20px #888;
+  box-shadow: 0 0 20px #888;
+  border: none;
 
   .mask {
     color: black !important;
