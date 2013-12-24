@@ -116,3 +116,17 @@ li.locale {
     font-weight: bold !important;
   }
 }
+
+#spinner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+  height: 100px;
+  width: 100px;
+  background-image: image-url('spinner.gif');
+  display: none;
+  z-index: 100;
+}

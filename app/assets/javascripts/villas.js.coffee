@@ -5,6 +5,11 @@ $ ->
     dateFormat: 'dd/mm/yy'
     yearRange: '-3:0'
 
+  $(document).on "page:fetch", ->
+    $("#spinner").show()
+  $(document).on "page:change", ->
+    $("#spinner").hide()
+
   bedrooms_label = $('h4#bedrooms')
   bedrooms_label_text = bedrooms_label.text()
   q_bedrooms_gteq = $('#q_bedrooms_gteq').val() || 3
