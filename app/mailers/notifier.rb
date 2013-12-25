@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default from: "Luxury Rentals And Sales <info@phuketrenthouse.ru>"
+  default from: "Luxury Rentals And Sales <info@zapestate.com>"
 
   def new_contact_notification(contact)
     body = ''.tap do |out|
@@ -9,7 +9,7 @@ class Notifier < ActionMailer::Base
       out << "Message: #{contact.message} \n"
     end.html_safe
 
-    mail to: "info@phuketrenthouse.ru", subject: "New Contact", body: body
+    mail to: "info@zapestate.com", subject: "New Contact", body: body
   end
 
   def new_request_notification(request)
@@ -22,6 +22,6 @@ class Notifier < ActionMailer::Base
       out << "Comments: #{request.comments} \n"
     end.html_safe
 
-    mail to: "info@phuketrenthouse.ru", subject: "New Request", body: body
+    mail to: "info@zapestate.com", subject: "New Request", body: body
   end
 end
