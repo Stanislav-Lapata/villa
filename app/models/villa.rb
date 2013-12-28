@@ -15,4 +15,20 @@ class Villa < ActiveRecord::Base
 
   scope :yacht_rentals, -> { where(yacht_rentals: true) }
   scope :car_rentals, -> { where(car_rentals: true) }
+
+  def price_guide
+    if I18n.locale == 'ru'
+      price_guide_ru
+    else
+      read_attribute('price_guide')
+    end
+  end
+
+  def description
+    if I18n.locale == 'ru'
+      description_ru
+    else
+      read_attribute('description')
+    end
+  end
 end
