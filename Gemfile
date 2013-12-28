@@ -25,6 +25,7 @@ gem 'rabl'
 gem 'ransack'
 gem 'rmagick'
 gem 'simple_form'
+gem 'simple-navigation'
 gem 'slim-rails'
 gem "select2-rails"
 

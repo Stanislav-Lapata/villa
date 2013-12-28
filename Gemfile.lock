@@ -207,6 +207,8 @@ GEM
     select2-rails (3.4.8)
       sass-rails
       thor (~> 0.14)
+    simple-navigation (3.11.0)
+      activesupport (>= 2.3.2)
     simple_form (1.4.1)
     slim (2.0.1)
       temple (~> 0.6.6)
@@ -279,6 +281,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   select2-rails
+  simple-navigation
   simple_form
   slim-rails
   therubyracer

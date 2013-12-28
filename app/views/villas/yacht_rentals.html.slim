@@ -1,23 +1,17 @@
 .breadcrumbs.margin-bottom-20
   .container
-    h1.color-green.pull-left Luxury Villas
+    h1.color-green.pull-left Luxury Yachts
     ul.pull-right.breadcrumb
       li
         = link_to t('navigation.home'), root_path
         span.divider
           | /
       li.active
-        = t('navigation.rentals')
+        = t('navigation.yacht_rentals')
 
 .container
   .row-fluid
     .span3
-      /! Our Mission
-      .margin-bottom-20
-        .headline
-          h3 Filter
-        = render 'phuket_filter'
-      /! Posts
       .posts.margin-bottom-20
         .headline
           h3 Recent Villas
@@ -34,7 +28,7 @@
     .span9
       #villas.row-fluid
         .headline
-          h3 Luxury Rentals
+          h3 Luxury Yacht Rentals
         - @villas.each_with_index do |villa, index|
           .view.view-tenth.span4 class="#{'first' if index % 3 == 0}"
             = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first

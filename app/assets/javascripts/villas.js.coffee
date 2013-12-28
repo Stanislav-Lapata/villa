@@ -12,8 +12,8 @@ $ ->
 
   bedrooms_label = $('h4#bedrooms')
   bedrooms_label_text = bedrooms_label.text()
-  q_bedrooms_gteq = $('#q_bedrooms_gteq').val() || 3
-  q_bedrooms_lteq = $('#q_bedrooms_lteq').val() || 8
+  q_bedrooms_gteq = $('#q_bedrooms_gteq').val() || 1
+  q_bedrooms_lteq = $('#q_bedrooms_lteq').val() || 10
 
   $("#bedrooms-slider-range").slider
     range: true
@@ -29,13 +29,13 @@ $ ->
 
   price_label = $('h4#price_range')
   price_label_text = price_label.text()
-  q_price_gteq = $('#q_price_from_gteq').val() || 1000
-  q_price_lteq = $('#q_price_from_lteq').val() || 3000
+  q_price_gteq = $('#q_price_from_gteq').val() || 0
+  q_price_lteq = $('#q_price_from_lteq').val() || 7000
 
   $("#price-slider-range").slider
     range: true
     min: 0
-    max: 4000
+    max: 7000
     values: [q_price_gteq, q_price_lteq]
     slide: (event, ui) ->
       $("#q_price_from_gteq").val(ui.values[0])

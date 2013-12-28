@@ -7,7 +7,7 @@
         span.divider
           | /
       li.active
-        = t('navigation.rentals')
+        = t('navigation.sales')
 
 .container
   .row-fluid
@@ -16,7 +16,7 @@
       .margin-bottom-20
         .headline
           h3 Filter
-        = render 'phuket_filter'
+        = render 'filter'
       /! Posts
       .posts.margin-bottom-20
         .headline
@@ -34,7 +34,7 @@
     .span9
       #villas.row-fluid
         .headline
-          h3 Luxury Rentals
+          h3 Luxury Sales
         - @villas.each_with_index do |villa, index|
           .view.view-tenth.span4 class="#{'first' if index % 3 == 0}"
             = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first

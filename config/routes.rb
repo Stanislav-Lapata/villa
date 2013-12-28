@@ -19,6 +19,8 @@ JqVilla::Application.routes.draw do
   end
 
   get '/sales', to: 'villas#sales', as: :sales
+  get '/sales/:id', to: 'villas#show', as: :sale
+
   get '/real_estate_rentals', to: 'villas#real_estate_rentals', as: :real_estate_rentals
   get '/real_estate_sales', to: 'villas#real_estate_sales', as: :real_estate_sales
   get '/yacht_rentals', to: 'villas#yacht_rentals', as: :yacht_rentals

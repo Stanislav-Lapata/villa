@@ -67,10 +67,7 @@ ru:
     request_message_placeholder: "Оставьте здесь свой комментарий"
 
   home:
-    from: "От"
-    bedrooms: "спальни"
-    sleeps_up_to: "спальных мест до"
-    price_range: "Цена"
+    contact_us: 'Контакты'
 
   requests:
     success: 'Заявка успешно отправлена'
