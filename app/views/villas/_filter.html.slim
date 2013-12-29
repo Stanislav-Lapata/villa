@@ -28,7 +28,8 @@
                   - children_area.children.each do |area|
                     label style="top: #{area.top}px; left: #{area.left_position}px;"
                       = check_box_tag 'q[area_id_eq_any][]', area.id, params[:q][:area_id_eq_any] && params[:q][:area_id_eq_any].include?(area.id.to_s)
-                      span.tail style="top: 100%; left: #{area.left_tail}%"
+                      - if area.left_tail.present?
+                        span.tail style="top: 100%; left: #{area.left_tail}%"
                       = area.name
 
   h4#bedrooms= t('villas.bedrooms')
