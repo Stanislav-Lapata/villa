@@ -1,0 +1,17 @@
+.container
+  .row-fluid
+    .span9
+      /! Other Questions
+      .headline
+        h3 General Questions
+      /! Accardion
+      #accordion2.accordion.acc-home.margin-bottom-40
+        - Faq.all.each do |faq|
+          .accordion-group
+            .accordion-heading
+              a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapse#{faq.id}"
+                = faq.question
+            .accordion-body.collapse id="collapse#{faq.id}"
+              .accordion-inner
+                p= faq.answer
+

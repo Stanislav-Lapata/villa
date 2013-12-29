@@ -46,6 +46,7 @@ ru:
     submit: "Отправить"
     message: "Ваше сообщение успешно отправлено"
     message_placeholder: "Оставьте здесь свое сообщение"
+    submit: 'Отправить'
 
   show_villa:
     description: "Описание"
@@ -90,3 +91,9 @@ ru:
         check_in: 'Дата заезда'
         check_out: 'Дата выезда'
         comments: 'Оставьте здесь свой комментарий'
+      contact:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        email: 'Email'
+        phone: 'Телефон'
+        message: 'Оставьте здесь свое сообщение'

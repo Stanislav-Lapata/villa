@@ -72,6 +72,7 @@ en:
     submit: "Submit"
     message: "Your message has been sent successfully"
     message_placeholder: "Leave your message here"
+    submit: 'Submit'
 
   villa_show:
     description: "Villa description"
@@ -117,3 +118,9 @@ en:
         check_in: 'Check In'
         check_out: 'Check Out'
         comments: 'Please write here your text'
+      contact:
+        first_name: 'First Name'
+        last_name: 'Last Name'
+        email: 'Email'
+        phone: 'Phone'
+        message: 'Please write here your text'
