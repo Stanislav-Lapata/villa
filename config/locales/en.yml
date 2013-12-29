@@ -52,10 +52,16 @@ en:
     price_range: "Price Range"
     from: "From"
     to: "To"
-    luxury_rentals: "LUXURY RENTALS"
+    luxury_rentals: "Luxury Rentals"
+    luxury_sales: "Luxury Sales"
     sleeps_up_to: "sleeps up to"
     villa_name_or_id: "Villa Name or ID"
     price: "Price"
+    filter: "Filter"
+    recent: 'Recent'
+    search: 'Search'
+    per_night: "per night"
+    read_more: 'Read More'
 
   contact:
     contact_form: "Contact Form"
@@ -91,6 +97,8 @@ en:
     submit: "Submit"
     request_message: "Your request has been sent successfully"
     request_message_placeholder: "Leave your comments here"
+    content_tabs: "Details"
+    submit: 'Submit'
 
   home:
     contact_us: "Contact Us"
@@ -99,3 +107,13 @@ en:
     success: 'Success'
     error: 'Error'
 
+
+  simple_form:
+    labels:
+      request:
+        first_name: 'First Name'
+        last_name: 'Last Name'
+        email: 'Email'
+        check_in: 'Check In'
+        check_out: 'Check Out'
+        comments: 'Please write here your text'

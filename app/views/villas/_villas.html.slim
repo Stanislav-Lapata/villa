@@ -1,0 +1,9 @@
+- @villas.each_with_index do |villa, index|
+  .view.view-tenth.span4 class="#{'first' if index % 3 == 0}"
+    = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
+    .mask
+      h6= villa.name
+      h5 #{t('villas.bedrooms')}: #{villa.bedrooms}
+      h5 #{t('villas.price_range')}: #{number_to_currency(villa.low_night, precision: 0)} - #{number_to_currency(villa.peak_night, precision: 0)} (#{t('villas.per_night')})
+      h5 #{villa.location}
+      = link_to t('villas.read_more'), villa, class: 'info'

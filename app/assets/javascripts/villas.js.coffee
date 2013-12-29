@@ -4,6 +4,7 @@ $ ->
     selectOtherMonths: true
     dateFormat: 'dd/mm/yy'
     yearRange: '-3:0'
+    firstDay: 1
 
   $(document).on "page:fetch", ->
     $("#spinner").show()

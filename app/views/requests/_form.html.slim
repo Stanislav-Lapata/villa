@@ -14,8 +14,8 @@
   .clearfix
   .row
     .span8
-      = f.input :comments, input_html: {class: 'span12', rows: 8}, label: 'Please write here your text'
+      = f.input :comments, input_html: {class: 'span12', rows: 8}
   .clearfix
   .row
     .span4
-      button.btn-u type="submit" Submit
+      button.btn-u type="submit"= t('show_villa.submit')

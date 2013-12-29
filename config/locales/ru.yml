@@ -26,10 +26,16 @@ ru:
     price_range: "Цена"
     from: "От"
     to: "До"
-    luxury_rentals: "АРЕНДА ВИЛЛ"
+    luxury_rentals: "Аренда Вилл"
+    luxury_sales: "Продажа Вилл"
     sleeps_up_to: "спальных мест до"
     villa_name_or_id: "Название или ID Виллы"
     price: "Цена"
+    filter: "Фильтр"
+    recent: 'Последние'
+    search: 'Поиск'
+    per_night: "за ночь"
+    read_more: 'Подробнее'
 
   contact:
     contact_form: "Контактная форма"
@@ -47,8 +53,8 @@ ru:
     facilities: "Услуги"
     services: "Сервис"
     price_guide: "Цена"
-    low_season: "Мертвый сезон:"
-    high_season: "Разгар сезона:"
+    low_season: "Низкий сезон:"
+    high_season: "Высокий сезон:"
     peak_season: "Пик сезона:"
     per_night: "за ночь"
     per_week: "за неделю"
@@ -65,6 +71,8 @@ ru:
     submit: "Отправить"
     request_message: "Ваша заявка была успешно отправлена"
     request_message_placeholder: "Оставьте здесь свой комментарий"
+    content_tabs: "Подробнее"
+    submit: 'Отправить'
 
   home:
     contact_us: 'Контакты'
@@ -72,3 +80,13 @@ ru:
   requests:
     success: 'Заявка успешно отправлена'
     error: 'Обнаружены следующие ошибки'
+
+  simple_form:
+    labels:
+      request:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        email: 'Email'
+        check_in: 'Дата заезда'
+        check_out: 'Дата выезда'
+        comments: 'Оставьте здесь свой комментарий'

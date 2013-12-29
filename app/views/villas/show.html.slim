@@ -1,6 +1,6 @@
 .breadcrumbs.margin-bottom-20
   .container
-    h1.color-green.pull-left Luxury Villas
+    h1.color-green.pull-left
     ul.pull-right.breadcrumb
       li
         = link_to t('navigation.home'), root_path
@@ -22,15 +22,15 @@
     /! /span7
     /! Tabs
     .headline
-      h3 Content Tabs
+      h3= t('show_villa.content_tabs')
     .span3
       ul.nav.nav-tabs.tabs.nav-stacked
         li.active
-          a data-toggle="tab" href="#description" Description
+          a data-toggle="tab" href="#description"= t('show_villa.description')
         li
-          a data-toggle="tab" href="#price_guide" Price Guide
+          a data-toggle="tab" href="#price_guide"= t('show_villa.price_guide')
         li
-          a data-toggle="tab" href="#enquire_now" Enquire Now
+          a data-toggle="tab" href="#enquire_now"= t('show_villa.enquire_now')
       /! /tabs
     .span8
       .tab-content.margin-bottom-20
@@ -42,25 +42,25 @@
               thead
                 tr
                   td
-                  td Per Month, US$
-                  td Per Week, US$
-                  td Per Night, US$
+                  td #{t('show_villa.per_month')}
+                  td #{t('show_villa.per_week')}
+                  td #{t('show_villa.per_night')}
               tbody
                 tr.success
-                  td Low Season
-                  td= @villa.low_month
-                  td= @villa.low_week
-                  td= @villa.low_night
+                  td= t('show_villa.low_season')
+                  td= number_to_currency(@villa.low_month, precision: 0)
+                  td= number_to_currency(@villa.low_week, precision: 0)
+                  td= number_to_currency(@villa.low_night, precision: 0)
                 tr.error
-                  td High Season
-                  td= @villa.high_month
-                  td= @villa.high_week
-                  td= @villa.high_night
+                  td= t('show_villa.high_season')
+                  td= number_to_currency(@villa.high_month, precision: 0)
+                  td= number_to_currency(@villa.high_week, precision: 0)
+                  td= number_to_currency(@villa.high_night, precision: 0)
                 tr.warning
-                  td Peak Season
-                  td= @villa.peak_month
-                  td= @villa.peak_week
-                  td= @villa.peak_night
+                  td= t('show_villa.peak_season')
+                  td= number_to_currency(@villa.peak_month, precision: 0)
+                  td= number_to_currency(@villa.peak_week, precision: 0)
+                  td= number_to_currency(@villa.peak_night, precision: 0)
         #enquire_now.tab-pane
           .span11
             #request

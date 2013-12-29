@@ -1,6 +1,6 @@
 .breadcrumbs.margin-bottom-20
   .container
-    h1.color-green.pull-left Luxury Villas
+    h1.color-green.pull-left= t('navigation.house_sales')
     ul.pull-right.breadcrumb
       li
         = link_to t('navigation.home'), root_path
@@ -15,12 +15,12 @@
       /! Our Mission
       .margin-bottom-20
         .headline
-          h3 Filter
+          h3= t('villas.filter')
         = render 'filter'
       /! Posts
       .posts.margin-bottom-20
         .headline
-          h3 Recent Villas
+          h3= t('villas.recent')
         - @recent_villas.each do |villa|
           dl.dl-horizontal
             dt
@@ -34,16 +34,8 @@
     .span9
       #villas.row-fluid
         .headline
-          h3 Luxury Sales
-        - @villas.each_with_index do |villa, index|
-          .view.view-tenth.span4 class="#{'first' if index % 3 == 0}"
-            = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
-            .mask
-              h6= villa.name
-              h5 #{villa.bedrooms} bedrooms
-              h5 Price: #{number_to_currency(villa.low_night, precision: 0)} - #{number_to_currency(villa.peak_night, precision: 0)} (per night)
-              h5 Location: #{villa.location}
-              = link_to 'Read more', villa, class: 'info'
+          h3= t('villas.luxury_sales')
+        = render partial: 'villas'
 
       /! Our Services
       .row-fluid
