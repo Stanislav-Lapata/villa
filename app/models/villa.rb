@@ -11,7 +11,7 @@ class Villa < ActiveRecord::Base
 
   scope :for_rent, -> { where(rental: true) }
   scope :for_sale, -> { where(sale: true) }
-  scope :recent, -> { order('created_at desc') }
+  scope :recent, -> { where('(description is not null) and (description_ru is not null)').order('created_at desc') }
 
   scope :yacht_rentals, -> { where(yacht_rentals: true) }
   scope :car_rentals, -> { where(car_rentals: true) }
