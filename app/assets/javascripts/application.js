@@ -29,4 +29,6 @@
 //= require pages/index
 //= require villas
 //= require fotorama
+//= require underscore
+//= require gmaps/google
 

@@ -1,5 +1,6 @@
 class VillasController < ApplicationController
   before_action :set_filters
+  before_action :find_villa, only: [:show, :show_sale]
 
   def index
     params[:q][:area_id_place_eq] ||= Area.where(name: 'Phuket').first.id
@@ -49,9 +50,8 @@ class VillasController < ApplicationController
     @recent_villas = Villa.recent.for_sale.limit(4)
   end
 
-  def show
-    @villa = Villa.find(params[:id])
-    @request = @villa.requests.build
+  def show_sale
+    @sale = true
   end
 
   private
@@ -62,5 +62,14 @@ class VillasController < ApplicationController
       params[:q][:bedrooms_gteq] ||= 10
       params[:q][:price_from_gteq] ||= 0
       params[:q][:price_from_lteq] ||= 7000
+    end
+
+    def find_villa
+      @villa = Villa.find(params[:id])
+      @request = @villa.requests.build
+      @hash = Gmaps4rails.build_markers([@villa]) do |villa, marker|
+        marker.lat villa.latitude
+        marker.lng villa.longitude
+      end
     end
 end

@@ -21,6 +21,7 @@ gem 'awesome_nested_set'
 gem 'carrierwave'
 gem "enumerize", "~> 0.7.0"
 gem "font-awesome-rails"
+gem "gmaps4rails", "~> 2.1.1"
 gem 'rabl'
 gem 'ransack'
 gem 'rmagick'

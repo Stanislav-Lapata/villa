@@ -35,6 +35,18 @@
     .span8
       .tab-content.margin-bottom-20
         #description.tab-pane.active
+
+          .span11
+            #map style='height: 400px;'
+            javascript:
+              handler = Gmaps.build('Google');
+              handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+                markers = handler.addMarkers(#{raw(@hash.to_json)})
+                handler.bounds.extendWith(markers);
+                handler.fitMapToBounds();
+                handler.getMap().setZoom(#{@villa.zoom});
+              });
+
           = simple_format @villa.description
         #price_guide.tab-pane
           .span12

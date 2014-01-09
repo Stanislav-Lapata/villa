@@ -109,6 +109,7 @@ GEM
       railties (>= 3.2, < 5.0)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
+    gmaps4rails (2.1.1)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -265,6 +266,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   enumerize (~> 0.7.0)
   font-awesome-rails
+  gmaps4rails (~> 2.1.1)
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
