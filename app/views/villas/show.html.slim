@@ -28,6 +28,8 @@
         li.active
           a data-toggle="tab" href="#description"= t('show_villa.description')
         li
+          a data-toggle="tab" href="#location"= t('show_villa.location')
+        li
           a data-toggle="tab" href="#price_guide"= t('show_villa.price_guide')
         li
           a data-toggle="tab" href="#enquire_now"= t('show_villa.enquire_now')
@@ -35,19 +37,11 @@
     .span8
       .tab-content.margin-bottom-20
         #description.tab-pane.active
-
-          .span11
-            #map style='height: 400px;'
-            javascript:
-              handler = Gmaps.build('Google');
-              handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-                markers = handler.addMarkers(#{raw(@hash.to_json)})
-                handler.bounds.extendWith(markers);
-                handler.fitMapToBounds();
-                handler.getMap().setZoom(#{@villa.zoom});
-              });
-
           = simple_format @villa.description
+
+        #location.tab-pane
+          .span11
+            #map style='height: 400px;' data-hash="#{raw(@hash.to_json)}" data-zoom="#{@villa.zoom}"
         #price_guide.tab-pane
           .span12
             table.table

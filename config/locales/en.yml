@@ -103,6 +103,16 @@ en:
 
   home:
     contact_us: "Contact Us"
+    phuket_rentals: "Phuket island - pearl of the Andaman Sea, voted the most popular resort island Southeast Asia. Phuket has many stunning sandy beaches and world-famous for its luxury hotels, villas and restaurants. Do you want to spend your vacation at a luxurious villa with a swimming pool? We offer a large selection of villas, houses and condominium from owners and agencies from all over the island. Choose your perfect home today!"
+    phuket_sales: "Exclusive villas of famous designers and architects with stunning panoramic sea views and a private pool, a stylish private villa for the whole family, cozy tropical home away from noisy tourist spots - we will offer you a full range of options from budget to luxury options. Contact us and get professional advice from our qualified professionals. Villa on Phuket - it is not only new standards for your luxury lifestyle, but also a great investment."
+    yachts_rentals: "Yacht Charter in Phuket - it's a great combination of sports and recreation on the water with the highest level of comfort. With developed tourist infrastructure, not only you can rent a yacht, but for example, equipment for fishing in the ocean or a surfboard. Many ways to relax in this beautiful place, but the most interesting and memorable is, of course, a yacht cruise along the beaches or visit the neighboring islands. On our site you can book a yacht, speed boat, catamaran."
+    cars_rentals: "For those who love to travel and set their own route, for those who love to make stops where they want, for those who are interested in the most unusual places in Phuket, we offer car rental services. Our car fleet has a variety of cars, from economy class to luxury class"
+    title:
+      rentals: "Rentals"
+      sales: "Sales"
+      yachts: "Yacht Rentals"
+      cars: "Car Rentals"
+      additional_services: "Additional Services"
 
   requests:
     success: 'Success'
