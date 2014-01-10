@@ -46,7 +46,7 @@ $ ->
   price_label.text("#{price_label_text}: $#{q_price_gteq} - $#{q_price_lteq}")
 
 
-  $('a[href="#location"]').click ->
+  $(document).on 'click', $('a[href="#location"]'), ->
     hash = $('#map').data('hash')
     zoom = $('#map').data('zoom')
     handler = Gmaps.build('Google')
