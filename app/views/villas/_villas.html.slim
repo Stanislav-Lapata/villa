@@ -7,4 +7,7 @@
       h5 #{t('villas.bedrooms')}: #{villa.bedrooms}
       h5= price_range(villa, type)
       h5 #{villa.location}
-      = link_to t('villas.read_more'), villa, class: 'info'
+      - if type == 'rentals'
+        = link_to t('villas.read_more'), villa, class: 'info'
+      - else
+        = link_to t('villas.read_more'), sale_path(villa), class: 'info'

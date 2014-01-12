@@ -52,6 +52,7 @@ class VillasController < ApplicationController
 
   def show_sale
     @sale = true
+    render :show
   end
 
   private

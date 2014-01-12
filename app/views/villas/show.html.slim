@@ -6,11 +6,16 @@
         = link_to t('navigation.home'), root_path
         span.divider
           | /
-      li.active
-        - if action_name == 'index'
-          = t('navigation.rentals')
+      li
+        - if @sale
+          = link_to t('navigation.sales'), sales_path
         - else
-          = t('navigation.sales')
+          = link_to t('navigation.rentals'), villas_path
+        span.divider
+          | /
+      li.active
+        = @villa.name
+
 
 .container.portfolio-item
   .row-fluid.margin-bottom-20
@@ -40,8 +45,8 @@
           = simple_format @villa.description
 
         #location.tab-pane
-          .span11
-            #map style='height: 400px;' data-hash="#{raw(@hash.to_json)}" data-zoom="#{@villa.zoom}"
+          #map.span11 data-hash="#{raw(@hash.to_json)}" data-zoom="#{@villa.zoom}"
+
         #price_guide.tab-pane
           .span11= simple_format @villa.price_guide
           .span11
