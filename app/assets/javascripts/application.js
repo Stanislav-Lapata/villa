@@ -11,24 +11,24 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery-browser.min
 //= require jquery.ui.slider
 //= require jquery.ui.datepicker
-//= require turbolinks
-//= require jquery.turbolinks
+
+
 //= require jquery_ujs
 //= require modernizr.custom
 //= require bootstrap.min
 //= require flexslider/jquery.flexslider-min
 //= require back-to-top
 //= require bxslider/jquery.bxslider
-//= require fancybox/jquery.fancybox.pack
+
 //= require revolution-slider/jquery.themepunch.plugins.min
 //= require revolution-slider/jquery.themepunch.revolution.min
+//= require fancybox/jquery.fancybox.pack
 //= require app
 //= require pages/index
 //= require villas
 //= require fotorama
-//= require underscore
-//= require gmaps/google
-
+//= require turbolinks

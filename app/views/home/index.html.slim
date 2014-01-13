@@ -15,9 +15,9 @@
         .span6
           #myCarousel1.carousel.slide
             .carousel-inner
-              - Villa.for_rent.sample.images.limit(3).each_with_index do |image, index|
-                div class="item #{'active' if index == 1}"
-                  = image_tag image.image.url(:large), class: 'span12'
+              - HomePhoto.for_rent.each_with_index do |image, index|
+                div class="item #{'active' if index == 0}"
+                  = image_tag image.image.thumb.url, class: 'span12'
             .carousel-arrow
               a.left.carousel-control data-slide="prev" href="#myCarousel1"
                 i.icon-angle-left
@@ -30,9 +30,9 @@
         .span6
           #myCarousel2.carousel.slide
             .carousel-inner
-              - Villa.for_sale.sample.images.limit(3).each_with_index do |image, index|
-                div class="item #{'active' if index == 1}"
-                  = image_tag image.image.url(:large), class: 'span12'
+              - HomePhoto.for_sale.each_with_index do |image, index|
+                div class="item #{'active' if index == 0}"
+                  = image_tag image.image.thumb.url, class: 'span12'
             .carousel-arrow
               a.left.carousel-control data-slide="prev" href="#myCarousel2"
                 i.icon-angle-left

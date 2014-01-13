@@ -44,18 +44,3 @@ $ ->
       price_label.text("#{price_label_text}: $#{ui.values[0]} - $#{ui.values[1]}")
 
   price_label.text("#{price_label_text}: $#{q_price_gteq} - $#{q_price_lteq}")
-
-
-  $(document).on 'click', $('a[href="#location"]'), ->
-    hash = $('#map').data('hash')
-    zoom = $('#map').data('zoom')
-    handler = Gmaps.build('Google')
-    handler.buildMap({ provider: {}, internal: {id: 'map'}}, ->
-      markers = handler.addMarkers(hash)
-      handler.bounds.extendWith(markers)
-      handler.fitMapToBounds()
-      handler.getMap().setZoom(zoom)
-    )
-
-
-

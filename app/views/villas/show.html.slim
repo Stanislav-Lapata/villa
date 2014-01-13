@@ -1,3 +1,10 @@
+= javascript_include_tag "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry"
+= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"
+= javascript_include_tag "underscore"
+= javascript_include_tag "gmaps/google"
+= javascript_include_tag "gmaps_init"
+
+
 .breadcrumbs.margin-bottom-20
   .container
     h1.color-green.pull-left
@@ -32,7 +39,7 @@
       ul.nav.nav-tabs.tabs.nav-stacked
         li.active
           a data-toggle="tab" href="#description"= t('show_villa.description')
-        li
+        li#location-map
           a data-toggle="tab" href="#location"= t('show_villa.location')
         li
           a data-toggle="tab" href="#price_guide"= t('show_villa.price_guide')
@@ -77,4 +84,3 @@
           .span11
             #request
               = render 'requests/form'
-

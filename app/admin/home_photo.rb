@@ -1,11 +1,15 @@
 ActiveAdmin.register HomePhoto do
   index do
-    column :image
+    column :image do |image|
+      image_tag image.image, height: 100
+    end
     default_actions
   end
 
   form(:html => { multipart: true }) do |f|
-    f.inputs "Admin Details" do
+    f.inputs "Home Photos" do
+      f.input :rentals
+      f.input :sales
       f.input :image, as: :file
     end
 
@@ -14,7 +18,7 @@ ActiveAdmin.register HomePhoto do
 
   controller do
     def permitted_params
-      params.permit home_photo: [:image, :_destroy]
+      params.permit home_photo: [:rentals, :sales, :image, :_destroy]
     end
   end
 end

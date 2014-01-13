@@ -3,14 +3,14 @@
     ul
       /! THE FIRST SLIDE
       li data-masterspeed="300" data-slotamount="1" data-transition="slideleft"
-        = image_tag HomePhoto.all[0].try(:image).try(:url)
+        = image_tag HomePhoto.for_home[0].try(:image).try(:url)
       /! THE SECOND SLIDE
       li data-delay="9400" data-masterspeed="300" data-slotamount="15" data-transition="papercut"
-        = image_tag HomePhoto.all[1].try(:image).try(:url)
+        = image_tag HomePhoto.for_home[1].try(:image).try(:url)
       /! THE THIRD SLIDE
       li data-masterspeed="300" data-slotamount="10" data-transition="3dcurtain-vertical"
-        = image_tag HomePhoto.all[2].try(:image).try(:url)
+        = image_tag HomePhoto.for_home[2].try(:image).try(:url)
       /! THE FOURTH SLIDE
       li data-masterspeed="300" data-slotamount="1" data-transition="flyin"
-        = image_tag HomePhoto.all[3].try(:image).try(:url)
+        = image_tag HomePhoto.for_home[3].try(:image).try(:url)
     .tp-bannertimer.tp-bottom
