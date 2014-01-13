@@ -1,4 +1,8 @@
 ActiveAdmin.register HomePhoto do
+  scope :for_home
+  scope :for_rent
+  scope :for_sale
+
   index do
     column :image do |image|
       image_tag image.image, height: 100
