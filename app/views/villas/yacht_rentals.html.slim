@@ -29,7 +29,7 @@
       #villas.row-fluid
         .headline
           h3= t('navigation.yacht_rentals')
-        = render partial: 'villas'
+        = render partial: 'villas', locals: {type: 'yachts'}
 
       /! Our Services
       .row-fluid

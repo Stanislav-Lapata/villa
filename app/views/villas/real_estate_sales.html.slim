@@ -35,7 +35,7 @@
       #villas.row-fluid
         .headline
           h3= t('villas.luxury_sales')
-        = render partial: 'villas'
+        = render partial: 'villas', locals: {type: 'estate_sales'}
 
       /! Our Services
       .row-fluid

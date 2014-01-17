@@ -29,7 +29,7 @@
       #villas.row-fluid
         .headline
           h3= t('navigation.car_rentals')
-        = render partial: 'villas'
+        = render partial: 'villas', locals: {type: 'cars'}
 
       /! Our Services
       .row-fluid

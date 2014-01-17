@@ -18,8 +18,11 @@ JqVilla::Application.routes.draw do
     end
   end
 
+  %w[sale yacht car estate_rental estate_sale].each do |action|
+    get "/#{action}s/:id", to: "villas#show_#{action}", as: action
+  end
+
   get '/sales', to: 'villas#sales', as: :sales
-  get '/sales/:id', to: 'villas#show_sale', as: :sale
 
   get '/real_estate_rentals', to: 'villas#real_estate_rentals', as: :real_estate_rentals
   get '/real_estate_sales', to: 'villas#real_estate_sales', as: :real_estate_sales

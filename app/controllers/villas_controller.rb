@@ -1,6 +1,6 @@
 class VillasController < ApplicationController
   before_action :set_filters
-  before_action :find_villa, only: [:show, :show_sale]
+  before_action :find_villa, only: [:show, :show_sale, :show_yacht, :show_car, :show_estate_rental, :show_estate_sale]
 
   def index
     params[:q][:area_id_place_eq] ||= Area.where(name: 'Phuket').first.id
@@ -50,9 +50,15 @@ class VillasController < ApplicationController
     @recent_villas = Villa.recent.for_sale.limit(4)
   end
 
-  def show_sale
-    @sale = true
-    render :show
+  def show
+    @rental = true
+  end
+
+  %w[sale yacht car estate_rental estate_sale].each do |action|
+    define_method "show_#{action}" do
+      instance_variable_set("@#{action}", true)
+      render :show
+    end
   end
 
   private
