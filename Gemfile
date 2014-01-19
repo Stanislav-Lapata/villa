@@ -28,6 +28,7 @@ gem 'ransack'
 gem 'rmagick'
 gem 'simple_form'
 gem 'simple-navigation'
+gem 'sitemap_generator'
 gem 'slim-rails'
 gem "select2-rails"
 
