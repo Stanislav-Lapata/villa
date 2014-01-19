@@ -75,6 +75,7 @@ ru:
     request_message_placeholder: "Оставьте здесь свой комментарий"
     content_tabs: "Подробнее"
     submit: 'Отправить'
+    location: 'Местоположение'
 
   home:
     contact_us: 'Контакты'

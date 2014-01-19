@@ -7,10 +7,11 @@
   .row
     .span4
       = f.input :email, input_html: {class: 'span12'}, placeholder: 'john.doe@email.com'
-    .span2
-      = f.input :check_in, as: :string, input_html: {class: 'span12 datepicker'}
-    .span2
-      = f.input :check_out, as: :string, input_html: {class: 'span12 datepicker'}
+    - unless @sale
+      .span2
+        = f.input :check_in, as: :string, input_html: {class: 'span12 datepicker'}
+      .span2
+        = f.input :check_out, as: :string, input_html: {class: 'span12 datepicker'}
   .clearfix
   .row
     .span8

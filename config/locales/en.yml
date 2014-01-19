@@ -101,6 +101,7 @@ en:
     request_message_placeholder: "Leave your comments here"
     content_tabs: "Details"
     submit: 'Submit'
+    location: 'Location'
 
   home:
     contact_us: "Contact Us"
