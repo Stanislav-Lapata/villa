@@ -16,6 +16,10 @@ class Villa < ActiveRecord::Base
   scope :yacht_rentals, -> { where(yacht_rentals: true) }
   scope :car_rentals, -> { where(car_rentals: true) }
 
+  def to_param
+    "#{id} #{name}".parameterize
+  end
+
   def price_guide
     if I18n.locale == :ru
       price_guide_ru

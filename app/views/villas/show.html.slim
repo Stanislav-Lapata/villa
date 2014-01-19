@@ -4,6 +4,9 @@
 = javascript_include_tag "gmaps/google"
 = javascript_include_tag "gmaps_init"
 
+- description truncate(@villa.description, length: 160)
+- title @villa.name
+
 
 .breadcrumbs.margin-bottom-20
   .container
