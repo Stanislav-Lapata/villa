@@ -7,7 +7,6 @@ class Villa < ActiveRecord::Base
   accepts_nested_attributes_for :images, reject_if: proc { |el| el[:image].blank? }, allow_destroy: true
 
   validates :name, presence: true
-  validates :low_night, :high_night, :peak_night, presence: true
 
   scope :for_rent, -> { where(rental: true) }
   scope :for_sale, -> { where(sale: true) }

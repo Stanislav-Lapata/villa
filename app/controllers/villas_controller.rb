@@ -65,10 +65,6 @@ class VillasController < ApplicationController
 
     def set_filters
       params[:q] ||= {}
-      params[:q][:bedrooms_gteq] ||= 1
-      params[:q][:bedrooms_gteq] ||= 10
-      params[:q][:price_from_gteq] ||= 0
-      params[:q][:price_from_lteq] ||= 7000
     end
 
     def find_villa
