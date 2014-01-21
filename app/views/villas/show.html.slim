@@ -52,7 +52,10 @@
     .span8
       .tab-content.margin-bottom-20
         #description.tab-pane.active
-          = simple_format @villa.description
+          - if @sale || @estate_sale
+            = simple_format @villa.description_sale
+          - else
+            = simple_format @villa.description
 
         #location.tab-pane
           #map.span11 data-hash="#{raw(@hash.to_json)}" data-zoom="#{@villa.zoom}"

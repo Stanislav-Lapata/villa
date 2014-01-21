@@ -34,4 +34,20 @@ class Villa < ActiveRecord::Base
       read_attribute('description')
     end
   end
+
+  def price_guide_sale
+    if I18n.locale == :ru
+      price_guide_sale_ru
+    else
+      read_attribute('price_guide_sale')
+    end
+  end
+
+  def description_sale
+    if I18n.locale == :ru
+      description_sale_ru
+    else
+      read_attribute('description_sale')
+    end
+  end
 end
