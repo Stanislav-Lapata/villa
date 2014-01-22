@@ -31,7 +31,5 @@ JqVilla::Application.routes.draw do
   get '/faq', to: 'home#faq', as: :faq
   get '/contact', to: 'home#contact', as: :contact
 
-  get '/set_locale/:locale', to: 'home#setup_locale', as: :set_locale
-
   root 'home#index'
 end

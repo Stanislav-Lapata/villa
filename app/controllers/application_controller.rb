@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     I18n.locale = if request.domain == "phuketrenthouse.ru"
                   :ru
                 else
-                  session[:locale] || I18n.default_locale
+                  :en
                 end
   end
 end
