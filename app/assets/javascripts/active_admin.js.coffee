@@ -152,17 +152,18 @@ $ ->
       window.test = $(@)
       $(this).jstree("core").toggle_node($('.jstree-icon'))
 
+  # TODO: refactor this 'awfull'
   toggle_rental_show = ->
     if $('#villa_rental').is(':checked')
-      $('#villa_price_from_input, #villa_price_to_input').show('300')
+      $('#villa_price_from_input, #villa_price_to_input, #villa_price_guide_input, #villa_price_guide_ru_input, #villa_description_input, #villa_description_ru_input, #seasonal_prices').show('300')
     else
-      $('#villa_price_from_input, #villa_price_to_input').hide('300')
+      $('#villa_price_from_input, #villa_price_to_input, #villa_price_guide_input, #villa_price_guide_ru_input, #villa_description_input, #villa_description_ru_input, #seasonal_prices').hide('300')
 
   toggle_sale_show = ->
     if $('#villa_sale').is(':checked')
-      $('#villa_sale_price_input').show('300')
+      $('#villa_sale_price_input, #villa_price_guide_sale_input, #villa_price_guide_sale_ru_input, #villa_description_sale_input, #villa_description_sale_ru_input').show('300')
     else
-      $('#villa_sale_price_input').hide('300')
+      $('#villa_sale_price_input, #villa_price_guide_sale_input, #villa_price_guide_sale_ru_input, #villa_description_sale_input, #villa_description_sale_ru_input').hide('300')
 
   toggle_rental_show()
   toggle_sale_show()

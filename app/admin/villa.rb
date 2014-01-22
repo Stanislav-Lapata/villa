@@ -65,7 +65,6 @@ ActiveAdmin.register Villa do
       f.input :sale_price, as: :string
       f.input :yacht_rentals
       f.input :car_rentals
-      f.input :real_estate
     end
 
     f.inputs "Admin Details" do
@@ -78,9 +77,11 @@ ActiveAdmin.register Villa do
       f.input :sleeps_up_to, as: :string
       f.input :price_guide
       f.input :price_guide_ru
+      f.input :price_guide_sale
+      f.input :price_guide_sale_ru
     end
 
-    f.inputs "Seasonal Prices" do
+    f.inputs "Seasonal Prices", id: 'seasonal_prices' do
       f.input :low_month, label: 'Low Season', placeholder: 'Per Month', as: :string
       f.input :low_week, label: false, placeholder: 'Per Week', as: :string
       f.input :low_night, label: false, placeholder: 'Per Night', as: :string
@@ -97,6 +98,8 @@ ActiveAdmin.register Villa do
     f.inputs "Description" do
       f.input :description
       f.input :description_ru
+      f.input :description_sale
+      f.input :description_sale_ru
     end
 
     f.inputs "Photos" do
@@ -158,7 +161,7 @@ ActiveAdmin.register Villa do
                             :sale_price, :bathrooms, :rental, :sale, :position, :latitude,
                             :longitude, :zoom, :low_month, :peak_month, :low_week, :low_night,
                             :high_week, :high_night, :peak_week, :peak_night, :high_month, :price_guide,
-                            :price_guide_ru, :house_rentals, :house_sales, :yacht_rentals, :car_rentals, :real_estate,
+                            :price_guide_ru, :house_rentals, :house_sales, :yacht_rentals, :car_rentals,
                             images_attributes: [:id, :image, :_destroy, :url]
                            ]
     end
