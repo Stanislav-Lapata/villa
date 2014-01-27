@@ -156,12 +156,14 @@ ActiveAdmin.register Villa do
 
     def permitted_params
       params.permit villa: [
-                            :name, :domain, :description, :description_ru, :price_from, :price_to, :location,
+                            :name, :domain, :description, :description_ru, :description_sale,
+                            :description_sale_ru, :price_from, :price_to, :location,
                             :area_id, :facilities, :services, :bedrooms, :sleeps_up_to,
                             :sale_price, :bathrooms, :rental, :sale, :position, :latitude,
                             :longitude, :zoom, :low_month, :peak_month, :low_week, :low_night,
                             :high_week, :high_night, :peak_week, :peak_night, :high_month, :price_guide,
-                            :price_guide_ru, :house_rentals, :house_sales, :yacht_rentals, :car_rentals,
+                            :price_guide_ru, :price_guide_sale, :price_guide_sale_ru, :house_rentals,
+                            :house_sales, :yacht_rentals, :car_rentals,
                             images_attributes: [:id, :image, :_destroy, :url]
                            ]
     end
