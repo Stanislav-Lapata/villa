@@ -1,5 +1,6 @@
-- keywords 'island, phuket, villas, most, popular, restaurants, resort, owners, selection, swimming pool, large selection, swimming pool offer, offer large, pool offer, condominium, voted, choose, villa, large, swimming, offer, pool, luxurious, vacation, today, agencies, home, perfect, houses, spend'
-- description 'Phuket island - pearl of the Andaman Sea, voted the most popular resort island Southeast Asia. Phuket has many stunning sandy beaches and world-famous'
+- keywords Content.rentals_keywords
+- description Content.rentals_description
+- title 'Rentals'
 
 .breadcrumbs.margin-bottom-20
   .container
@@ -42,4 +43,4 @@
 
       br
       .row-fluid
-        = simple_format(t('villas.text'))
+        = simple_format(t('villas.text') || Content.rentals)

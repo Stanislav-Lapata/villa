@@ -1,3 +1,7 @@
+- keywords Content.estate_sales_keywords
+- description Content.estate_sales_description
+- title 'Real Estate Sales'
+
 .breadcrumbs.margin-bottom-20
   .container
     h1.color-green.pull-left= t('navigation.house_sales')
@@ -37,26 +41,6 @@
           h3= t('villas.luxury_sales')
         = render partial: 'villas', locals: {type: 'estate_sales'}
 
-      /! Our Services
+      br
       .row-fluid
-        .headline
-          h3 Our Services
-        .row-fluid.servive-block.servive-block-in
-          .span4
-            h4
-              a href="#"
-            p
-              i.icon-bell
-            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
-          .span4
-            h4
-              a href="#"
-            p
-              i.icon-bullhorn
-            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
-          .span4
-            h4
-              a href="#"
-            p
-              i.icon-lightbulb
-            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
+        = simple_format(t('villas.text') || Content.estate_sales)

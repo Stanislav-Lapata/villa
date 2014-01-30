@@ -1,5 +1,6 @@
-- keywords 'yacht, surfboard, recreation, ways, islands, neighboring, water, highest, cruise along, interesting memorable course, yacht cruise, course yacht, sports, memorable course, visit, book, place, relax, interesting, cruise, memorable, course, beautiful, along, boat, catamaran, speed, beaches, most, site'
-- description "Yacht Charter in Phuket - it's a great combination of sports and recreation on the water with the highest level of comfort. With developed tourist infrastructur"
+- keywords Content.yachts_keywords
+- description Content.yachts_description
+- title 'Yachts'
 
 .breadcrumbs.margin-bottom-20
   .container
@@ -34,26 +35,6 @@
           h3= t('navigation.yacht_rentals')
         = render partial: 'villas', locals: {type: 'yachts'}
 
-      /! Our Services
+      br
       .row-fluid
-        .headline
-          h3 Our Services
-        .row-fluid.servive-block.servive-block-in
-          .span4
-            h4
-              a href="#"
-            p
-              i.icon-bell
-            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
-          .span4
-            h4
-              a href="#"
-            p
-              i.icon-bullhorn
-            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
-          .span4
-            h4
-              a href="#"
-            p
-              i.icon-lightbulb
-            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
+        = simple_format(t('villas.text') || Content.yachts)

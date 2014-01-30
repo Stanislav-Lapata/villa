@@ -173,3 +173,19 @@ $ ->
 
   $('#villa_sale').click (e) ->
     toggle_sale_show()
+
+
+  toggle_content = ->
+    if $('#content_kind').val() == 'home'
+      $('#meta').show()
+      $('#text').hide()
+    else if $('#content_kind').val().match(/home_/)
+      $('#meta').hide()
+      $('#text').show()
+    else
+      $('#meta, #text').show()
+
+  toggle_content()
+
+  $('#content_kind').change (e) ->
+    toggle_content()

@@ -1,5 +1,6 @@
-- keywords 'Phuket, Rent, Rentals, Vacation, Holiday, long-term, short-term, Villa, Condominium, Apartment, Home, Accommodation, Resort, Property, Bungalow, townhouse, Cars, Yachts'
-- description 'List of houses and villas, cars, yachts for rent and sale'
+- keywords Content.home_keywords
+- description Content.home_description
+- title 'Home'
 
 = render 'layouts/slider'
 /! /row-fluid
@@ -11,7 +12,7 @@
       h1= t('home.title.rentals')
       .row-fluid
         .span6
-          p= t('home.phuket_rentals')
+          p= Content.home_rentals || t('home.phuket_rentals')
           = link_to villas_path, class: %w(btn-u btn-u-large btn-u-green one-page-btn) do
             i.icon-bell
             |  #{t('home.title.rentals')}
@@ -42,7 +43,7 @@
               a.right.carousel-control data-slide="next" href="#myCarousel2"
                 i.icon-angle-right
         .span6
-          p= t('home.phuket_sales')
+          p= Content.home_sales || t('home.phuket_sales')
           = link_to sales_path, class: %w(btn-u btn-u-large btn-u-red one-page-btn) do
             i.icon-bell
             |  #{t('home.title.sales')}
@@ -51,7 +52,7 @@
       h1= t('home.title.yachts')
       .row-fluid.margin-bottom-40
         .span6
-          p= t('home.yachts_rentals')
+          p= Content.home_yachts || t('home.yachts_rentals')
           = link_to yacht_rentals_path, class: %w(btn-u btn-u-large btn-u-blue one-page-btn) do
             i.icon-bell
             |  #{t('home.title.yachts')}
@@ -71,7 +72,7 @@
       h1= t('home.title.cars')
       .row-fluid
         .span6
-          p= t('home.cars_rentals')
+          p= Content.home_cars || t('home.cars_rentals')
           = link_to car_rentals_path, class: %w(btn-u btn-u-large btn-u-green one-page-btn) do
               i.icon-comments-alt
               |  #{t('home.title.cars')}

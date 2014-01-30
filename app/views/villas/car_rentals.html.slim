@@ -1,5 +1,6 @@
-- keywords 'those, those love, love, car, class, interested, most, stops, want, where, services car, rental services car, rental services, car fleet, travel, places, route, variety, luxury, services, offer, rental, economy, cars, own, unusual, fleet, phuket, set'
-- description "For those who love to travel and set their own route, for those who love to make stops where they want, for those who are interested in the most unusual places"
+- keywords Content.cars_keywords
+- description Content.cars_description
+- title 'Cars'
 
 .breadcrumbs.margin-bottom-20
   .container
@@ -34,26 +35,6 @@
           h3= t('navigation.car_rentals')
         = render partial: 'villas', locals: {type: 'cars'}
 
-      /! Our Services
+      br
       .row-fluid
-        .headline
-          h3 Our Services
-        .row-fluid.servive-block.servive-block-in
-          .span4
-            h4
-              a href="#"
-            p
-              i.icon-bell
-            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
-          .span4
-            h4
-              a href="#"
-            p
-              i.icon-bullhorn
-            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
-          .span4
-            h4
-              a href="#"
-            p
-              i.icon-lightbulb
-            p Donec id elit non mi porta gravida at eget metus id elit mi egetine.
+        = simple_format(t('villas.text') || Content.cars)
