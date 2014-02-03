@@ -64,7 +64,9 @@ ActiveAdmin.register Villa do
       f.input :sale
       f.input :sale_price, as: :string
       f.input :yacht_rentals
+      f.input :yacht_price
       f.input :car_rentals
+      f.input :car_price
     end
 
     f.inputs "Admin Details" do

@@ -4,7 +4,8 @@
     = image_tag(villa.images.first.image.url(:thumb), alt: '') if villa.images.first
     .mask data-no-turbolink=""
       h6= villa.name
-      h5 #{t('villas.bedrooms')}: #{villa.bedrooms}
+      - unless type == 'cars'
+        h5 #{t('villas.bedrooms')}: #{villa.bedrooms}
       h5= price_range(villa, type)
       h5 #{villa.location}
       - if type == 'sales'

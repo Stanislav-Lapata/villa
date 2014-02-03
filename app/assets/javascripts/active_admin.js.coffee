@@ -165,14 +165,34 @@ $ ->
     else
       $('#villa_sale_price_input, #villa_price_guide_sale_input, #villa_price_guide_sale_ru_input, #villa_description_sale_input, #villa_description_sale_ru_input').hide('300')
 
+  toggle_yachts = ->
+    if $('#villa_yacht_rentals').is(':checked')
+      $('#villa_yacht_price_input, #villa_price_guide_input, #villa_price_guide_ru_input, #villa_description_input, #villa_description_ru_input').show('300')
+    else
+      $('#villa_yacht_price_input, #villa_price_guide_input, #villa_price_guide_ru_input, #villa_description_input, #villa_description_ru_input').hide('300')
+
+  toggle_cars = ->
+    if $('#villa_car_rentals').is(':checked')
+      $('#villa_car_price_input, #villa_price_guide_input, #villa_price_guide_ru_input, #villa_description_input, #villa_description_ru_input').show('300')
+    else
+      $('#villa_car_price_input, #villa_price_guide_input, #villa_price_guide_ru_input, #villa_description_input, #villa_description_ru_input').hide('300')
+
   toggle_rental_show()
   toggle_sale_show()
+  toggle_yachts()
+  toggle_cars()
 
   $('#villa_rental').click (e) ->
     toggle_rental_show()
 
   $('#villa_sale').click (e) ->
     toggle_sale_show()
+
+  $('#villa_yacht_rentals').click (e) ->
+    toggle_yachts()
+
+  $('#villa_car_rentals').click (e) ->
+    toggle_cars()
 
 
   toggle_content = ->
