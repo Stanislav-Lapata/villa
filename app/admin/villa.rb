@@ -19,6 +19,7 @@ ActiveAdmin.register Villa do
     h1 villa.name
     attributes_table do
       row :name
+      row :owner_email
       row :domain
       row :rental
       row :price_from
@@ -68,6 +69,10 @@ ActiveAdmin.register Villa do
       f.input :yacht_price
       f.input :car_rentals
       f.input :car_price
+    end
+
+    f.inputs "Owner" do
+      f.input :owner_email
     end
 
     f.inputs "Admin Details" do
@@ -180,7 +185,7 @@ ActiveAdmin.register Villa do
     def permitted_params
       params.permit villa: [
                             :name, :domain, :description, :description_ru, :description_sale,
-                            :description_sale_ru, :price_from, :price_to, :location,
+                            :description_sale_ru, :price_from, :price_to, :location, :owner_email,
                             :area_id, :facilities, :services, :bedrooms, :sleeps_up_to,
                             :sale_price, :bathrooms, :rental, :sale, :position, :latitude,
                             :longitude, :zoom, :low_month, :peak_month, :low_week, :low_night,
