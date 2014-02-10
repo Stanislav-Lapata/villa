@@ -1,0 +1,50 @@
+.panel
+  .panel_contents
+    .attributes_table
+      div
+        table
+          tbody
+            tr.row
+              th Area
+              td= @request_params[:area_id_place_eq]
+            tr.row
+              th Bedrooms
+              td= @request_params[:bedrooms_eq]
+            tr.row
+              th Price from
+              td= @request_params[:price_from_gteq]
+            tr.row
+              th Price to
+              td= @request_params[:price_from_lteq]
+            tr.row
+              th Info
+              td= @request_params[:info]
+
+table.index_table.index ng-show="addonService.costs.length"
+  thead
+    tr
+      th ID
+      th Name
+      th Owner email
+      th Bedrooms
+      th Price from
+      th Price to
+  tbody
+    - @villas.each do |villa|
+      tr
+        td= villa.id
+        td= villa.name
+        td= villa.owner_email
+        td= villa.bedrooms
+        td= villa.price_from
+        td= villa.price_to
+
+.panel
+  .panel_contents
+    = semantic_form_for :info, url: send_request_admin_villas_path do |f|
+
+      = f.inputs do
+        = f.input :villa_ids, as: :hidden, input_html: {value: @villas.pluck(:id).join(',')}
+        = f.input :info, as: :hidden, input_html: {value: @request_params[:info]}
+
+      = f.actions

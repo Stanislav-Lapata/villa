@@ -24,4 +24,12 @@ class Notifier < ActionMailer::Base
 
     mail to: "info@zapestate.com", subject: "New Request", body: body
   end
+
+  def new_owner_request_notification(villa)
+    body = ''.tap do |out|
+      out << "Test #{villa.request_info}"
+    end.html_safe
+
+    mail to: villa.owner_email, subject: "New Request", body: body
+  end
 end

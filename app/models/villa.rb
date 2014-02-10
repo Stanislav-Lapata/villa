@@ -1,5 +1,6 @@
 class Villa < ActiveRecord::Base
   extend Enumerize
+  attr_accessor :request_info
 
   belongs_to :area
   has_many :images, dependent: :destroy
@@ -17,6 +18,11 @@ class Villa < ActiveRecord::Base
 
   def to_param
     "#{id} #{name}".parameterize
+  end
+
+  def send_info(info)
+    self.request_info = info
+    # Notifier.new_owner_request_notification(self).deliver
   end
 
   def price_guide

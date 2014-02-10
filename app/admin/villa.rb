@@ -1,5 +1,6 @@
 ActiveAdmin.register Villa do
   index do
+    column :id
     column :name
     column :domain
     column :area
@@ -148,6 +149,26 @@ ActiveAdmin.register Villa do
 
   action_item :only => :show do
     link_to 'New Villa', new_admin_villa_path
+  end
+
+  action_item do
+    link_to 'New Info Request', info_request_admin_villas_path
+  end
+
+  collection_action :info_request do
+  end
+
+  collection_action :send_info_request, method: :post do
+    @request_params = params[:info_request]
+    @villas = Villa.ransack(@request_params).result(distinct: true)
+  end
+
+  collection_action :send_request, method: :post do
+    info_params = params[:info]
+    villa_ids = info_params[:villa_ids].split(',')
+    villas = Villa.find(villa_ids)
+    villas.each { |villa| villa.send_info(info_params[:info]) }
+    redirect_to [:admin, Villa], notice: 'Success'
   end
 
   controller do

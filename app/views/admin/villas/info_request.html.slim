@@ -1,0 +1,11 @@
+= semantic_form_for :info_request, url: send_info_request_admin_villas_path do |f|
+  = f.inputs do
+    = f.input :area_id_place_eq, collection: Area.all
+    = f.input :bedrooms_eq
+    = f.input :price_from_gteq
+    = f.input :price_from_lteq
+    = f.input :rental_eq, as: :hidden, input_html: {value: true}
+
+    = f.input :info, as: :text
+
+  = f.actions
