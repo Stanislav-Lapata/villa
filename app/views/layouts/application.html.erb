@@ -10,6 +10,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <% if request.domain == "phuketrenthouse.ru" %>
+    <link rel="alternate" hreflang="ru-ru" href="http://phuketrenthouse.ru/contact">
+  <% else %>
+    <link rel="alternate" hreflang="en-us" href="http://phuketrenthouse.co.uk/contact">
+  <% end %>
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
