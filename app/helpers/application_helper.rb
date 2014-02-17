@@ -1,3 +1,4 @@
+# encoding: utf-8
 module ApplicationHelper
   def price_range(villa, type)
     case type
