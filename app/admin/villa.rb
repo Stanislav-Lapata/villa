@@ -19,7 +19,7 @@ ActiveAdmin.register Villa do
     h1 villa.name
     attributes_table do
       row :name
-      row :owner_email
+      row :owner_email if current_admin_user.admin?
       row :domain
       row :rental
       row :price_from
@@ -71,8 +71,10 @@ ActiveAdmin.register Villa do
       f.input :car_price
     end
 
-    f.inputs "Owner" do
-      f.input :owner_email
+    if current_admin_user.admin?
+      f.inputs "Owner" do
+        f.input :owner_email
+      end
     end
 
     f.inputs "Admin Details" do
@@ -172,7 +174,7 @@ ActiveAdmin.register Villa do
     info_params = params[:info]
     villa_ids = info_params[:villa_ids].split(',')
     villas = Villa.find(villa_ids)
-    villas.each { |villa| villa.send_info(info_params[:info]) }
+    villas.each { |villa| villa.send_info(info_params) }
     redirect_to [:admin, Villa], notice: 'Success'
   end
 

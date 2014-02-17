@@ -6,6 +6,11 @@
       = f.input :last_name, input_html: {class: 'span12'}, placeholder: 'Doe'
   .row
     .span4
+      = f.input :budget_per_night, input_html: {class: 'span12'}, placeholder: '$'
+    .span4
+      = f.input :phone, input_html: {class: 'span12'}, placeholder: '+1234567890'
+  .row
+    .span4
       = f.input :email, input_html: {class: 'span12'}, placeholder: 'john.doe@email.com'
     - unless @sale
       .span2

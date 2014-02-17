@@ -34,7 +34,7 @@ table.index_table.index ng-show="addonService.costs.length"
       tr
         td= villa.id
         td= villa.name
-        td= villa.owner_email
+        td= villa.owner_email if current_admin_user.admin?
         td= villa.bedrooms
         td= villa.price_from
         td= villa.price_to
@@ -44,7 +44,9 @@ table.index_table.index ng-show="addonService.costs.length"
     = semantic_form_for :info, url: send_request_admin_villas_path do |f|
 
       = f.inputs do
+        = f.input :sender_email, collection: EmailList.all
+        = f.input :subject
+        = f.input :info, as: :text, input_html: {value: @request_params[:info]}
         = f.input :villa_ids, as: :hidden, input_html: {value: @villas.pluck(:id).join(',')}
-        = f.input :info, as: :hidden, input_html: {value: @request_params[:info]}
 
       = f.actions

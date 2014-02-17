@@ -25,11 +25,13 @@ class Notifier < ActionMailer::Base
     mail to: "info@zapestate.com", subject: "New Request", body: body
   end
 
-  def new_owner_request_notification(villa)
+  def new_owner_request_notification(villa, info)
     body = ''.tap do |out|
-      out << "Test #{villa.request_info}"
+      out << info[:info]
     end.html_safe
 
-    mail to: villa.owner_email, subject: "New Request", body: body
+    from = EmailList.find(info[:sender_email]).try(:email)
+
+    mail to: villa.owner_email, subject: info[:subject], body: body, from: from
   end
 end
