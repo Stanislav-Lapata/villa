@@ -51,4 +51,28 @@ module ApplicationHelper
       'Аренда яхт на Пхукете'
     end
   end
+
+  def contact
+    if I18n.locale == :en
+      'Contact'
+    else
+      'Контакты'
+    end
+  end
+
+  def faq
+    if I18n.locale == :en
+      'FAQ'
+    else
+      'Часто задаваемые вопросы'
+    end
+  end
+
+  def home
+    if I18n.locale == :en
+      'Home'
+    else
+      'Главная'
+    end
+  end
 end
