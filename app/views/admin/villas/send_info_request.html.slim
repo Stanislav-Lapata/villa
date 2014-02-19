@@ -33,7 +33,7 @@ table.index_table.index ng-show="addonService.costs.length"
     - @villas.each do |villa|
       tr
         td= villa.id
-        td= villa.name
+        td= link_to villa.name, [:admin, villa], target: :_blank
         td= villa.owner_email if current_admin_user.admin?
         td= villa.bedrooms
         td= villa.price_from
