@@ -10,8 +10,8 @@
  *
  *= require_self
  *= require bootstrap.min
- *= require jquery.ui.slider
- *= require jquery.ui.datepicker
+ *= require jquery.ui/slider
+ *= require jquery.ui/datepicker
  *= require style
  *= require img-hover-effect
  *= require header1
