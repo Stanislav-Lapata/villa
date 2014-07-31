@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery-browser.min
-//= require jquery.ui/slider
-//= require jquery.ui/datepicker
+//= require jquery-ui/slider
+//= require jquery-ui/datepicker
 
 
 //= require jquery_ujs
