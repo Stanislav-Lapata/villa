@@ -1,7 +1,7 @@
 ActiveAdmin.register HomePhoto do
   index do
     column :image
-    default_actions
+    actions
   end
 
   form(:html => { multipart: true }) do |f|

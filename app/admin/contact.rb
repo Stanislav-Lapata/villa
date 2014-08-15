@@ -6,7 +6,7 @@ ActiveAdmin.register Contact do
     column :phone
     column :email
     column :message
-    default_actions
+    actions
   end
 
   actions :index, :show, :destroy

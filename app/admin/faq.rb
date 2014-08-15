@@ -2,7 +2,7 @@ ActiveAdmin.register Faq do
   index do
     column :question
     column :answer
-    default_actions
+    actions
   end
 
   show do

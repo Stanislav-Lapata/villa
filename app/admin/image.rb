@@ -1,7 +1,7 @@
 ActiveAdmin.register Image do
   index do
     column :image
-    default_actions
+    actions
   end
 
   controller do
