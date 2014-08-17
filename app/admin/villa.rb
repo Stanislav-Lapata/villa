@@ -12,7 +12,7 @@ ActiveAdmin.register Villa do
     column :location
     column :bedrooms
     column :sleeps_up_to
-    default_actions
+    actions
   end
 
   show do |villa|

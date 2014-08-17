@@ -1,7 +1,7 @@
 ActiveAdmin.register Content do
   index do
     column :kind
-    default_actions
+    actions
   end
 
   show do

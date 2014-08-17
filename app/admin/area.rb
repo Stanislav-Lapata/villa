@@ -23,7 +23,7 @@ ActiveAdmin.register Area do
     end
     column :rental
     column :sale
-    default_actions
+    actions
   end
 
 

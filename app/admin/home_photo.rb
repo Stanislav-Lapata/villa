@@ -7,7 +7,7 @@ ActiveAdmin.register HomePhoto do
     column :image do |image|
       image_tag image.image, height: 100
     end
-    default_actions
+    actions
   end
 
   form(:html => { multipart: true }) do |f|

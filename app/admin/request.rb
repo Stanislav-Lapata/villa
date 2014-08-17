@@ -10,7 +10,7 @@ ActiveAdmin.register Request do
     column :check_in
     column :check_out
     column :comments
-    default_actions
+    actions
   end
 
   filter :name

@@ -4,7 +4,7 @@ ActiveAdmin.register Image do
       image_tag image.image.thumb.url, height: 100
     end
     column :villa
-    default_actions
+    actions
   end
 
   controller do
