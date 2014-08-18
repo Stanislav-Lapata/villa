@@ -60,10 +60,7 @@
     <div id="spinner"></div>
     <div class="row-fluid">
       <div class="span8">
-        <% if I18n.locale == :ru %>
-          <p>2013 &copy; Zateya Co., Ltd. ALL Rights Reserved.</p>
-        <% else %>
-          <p>2013 &copy; Paloma Co., Ltd. ALL Rights Reserved.</p>
+          <p><%= "#{Date.today.year}" %> &copy; Paloma Co., Ltd. ALL Rights Reserved.</p>
         <% end %>
       </div>
     </div><!--/row-fluid-->
