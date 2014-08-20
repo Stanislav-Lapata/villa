@@ -44,6 +44,7 @@ en:
     cars: "Car rentals"
     yacht: "Yachts rentals"
     show_more: "Show more"
+    phone_number: '+44 208 144 55 64'
 
   villas:
     location: "Location"

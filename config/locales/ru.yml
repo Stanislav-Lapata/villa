@@ -20,6 +20,7 @@ ru:
     cars: "Машины"
     yacht: "Яхты"
     show_more: "Показать еще 30 объектов"
+    phone_number: '+7 495 973 52 73'
 
   villas:
     location: "Местоположение"

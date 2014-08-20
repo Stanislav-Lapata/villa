@@ -58,7 +58,6 @@
 
 .loginbar li:hover ul {
 	display:block;
-	margin-left: 500px;
 }
 
 .loginbar li ul li {
@@ -104,7 +103,7 @@
 
 .loginbar li i.icon-sort-up {
 	top:21px;
-	left:500px;
+	left:-1px;
 	color:#eee;
 	display:none;
 	font-size:14px;
@@ -119,10 +118,6 @@
 .loginbar li:hover i.icon-ok {
 	top:-2px;
 	color:#aaa;
-}
-
-.loginbar li.top_phone a {
-	text-decoration: none;
 }
 
 /*Header (logo and menu)
@@ -243,6 +238,16 @@
   	-webkit-box-shadow:none;
        -moz-box-shadow:none;
           	box-shadow:none;
+}
+
+.navbar a.phone_number {
+  pointer-events: none;
+  cursor: default;
+}
+
+.navbar li img {
+  width: 20px;
+  padding-right: 5px;
 }
 
 /*Arrow for menu*/
