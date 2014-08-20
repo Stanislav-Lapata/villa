@@ -33,7 +33,7 @@ PATH
   remote: ../active_admin-awesome_nested_set
   specs:
     active_admin-awesome_nested_set (0.0.5)
-      rails (>= 3.2.5)
+      rails (~> 4.0.0)
 
 GEM
   remote: https://rubygems.org/
