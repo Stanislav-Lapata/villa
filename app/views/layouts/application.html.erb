@@ -38,17 +38,13 @@
   <!--=== Top ===-->
   <div class="top">
       <div class="container">
-        <% if I18n.locale == :ru %>
-          <ul class="loginbar" style="text-align: right">
-            <h3>
-              <li style="padding-right: 400px;">
-                  <i class="icon-phone-sign"></i>
-                  +7 495 973 52 73
-              </li>
-            </h3>
-          </ul>
-        <% end %>  
           <ul class="loginbar pull-right">
+            <% if I18n.locale == :ru %>
+              <li class="top_phone" style="padding-right: 300px;">
+                    <i class="icon-phone-sign"></i>
+                    <a href="#" style="font-size: 20px;">+7 495 973 52 73</a> 
+              </li>
+            <% end %>  
               <%= render 'layouts/top_nav' %>
                         </ul>
       </div>
