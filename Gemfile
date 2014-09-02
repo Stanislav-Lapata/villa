@@ -24,7 +24,7 @@ gem "font-awesome-rails"
 gem "gmaps4rails", "~> 2.1.1"
 gem 'meta-tags', :require => 'meta_tags'
 gem 'rabl'
-gem 'ransack'
+gem 'ransack', '~> 1.3'
 gem 'rmagick'
 gem 'simple_form'
 gem 'simple-navigation'
