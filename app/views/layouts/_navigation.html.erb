@@ -10,8 +10,20 @@
         <li>
           <%= link_to image_tag('phone_img.png') + t('navigation.phone_number'), '#', class: 'phone_number' %>
         </li>
-        <li class="<%= 'active' if controller_name == 'villas' && action_name == 'index' %>">
-          <%= link_to t('navigation.house_rentals'), villas_path %>
+        <li class="dropdown1 <%= 'active' if controller_name == 'villas' && action_name == 'index' %>">
+          <%= link_to '#', "data-toggle" => "dropdown" do %>
+            <%= t('navigation.house_rentals') %>
+            <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to t('navigation.house_rentals_phuket'), villas_path %>
+            </li>
+            <li>
+              <%= link_to t('navigation.house_rentals_bali'), bali_path %>
+            </li>
+          </ul>
+          <b class="caret-out"></b>
         </li>
         <li class="<%= 'active' if action_name == 'sales' %>">
           <%= link_to t('navigation.house_sales'), sales_path %>

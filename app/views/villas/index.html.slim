@@ -20,7 +20,10 @@
       .margin-bottom-20
         .headline
           h3= t('villas.filter')
-        = render 'phuket_filter'
+        - if @bali
+          = render 'bali_filter'
+        - else
+          = render 'phuket_filter'
       /! Posts
       .posts.margin-bottom-20
         .headline

@@ -10,6 +10,18 @@ class VillasController < ApplicationController
     @recent_villas = Villa.recent.for_rent.limit(4)
     @phuket = true
     @phuket_areas = Area.phuket
+    @bali_areas = Area.bali
+  end
+
+  def bali
+    @bali = true
+    params[:q][:area_id_place_eq] ||= Area.where(name: 'Bali').first.id
+    @q = Villa.for_rent.search(params[:q])
+    @villas = @q.result(distinct: true)
+    @areas = Area.for_rent.roots
+    @recent_villas = Villa.recent.for_rent.limit(4)
+    @bali_areas = Area.bali
+    render :index
   end
 
   def sales

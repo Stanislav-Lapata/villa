@@ -3,6 +3,7 @@ JqVilla::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  get 'villas/bali', to: 'villas#bali', as: :bali
   resources :villas do
     resources :requests, only: :create
   end
