@@ -24,6 +24,17 @@ class VillasController < ApplicationController
     render :index
   end
 
+  def samui
+    @samui = true
+    params[:q][:area_id_place_eq] ||= Area.where(name: 'Koh Samui').first.id
+    @q = Villa.for_rent.search(params[:q])
+    @villas = @q.result(distinct: true)
+    @areas = Area.for_rent.roots
+    @recent_villas = Villa.recent.for_rent.limit(4)
+    @samui_areas = Area.samui
+    render :index
+  end
+
   def sales
     params[:q][:area_id_place_eq] ||= Area.where(name: 'Phuket').first.id
     @q = Villa.for_sale.search(params[:q])

@@ -174,7 +174,11 @@ ActiveAdmin.register Villa do
     info_params = params[:info]
     villa_ids = info_params[:villa_ids].split(',')
     villas = Villa.find(villa_ids)
-    villas.each { |villa| villa.send_info(info_params) }
+
+    villas.map(&:owner_email).uniq.each do |email|
+      Notifier.new_owner_request_notification(email, info).deliver
+    end
+
     redirect_to [:admin, Villa], notice: 'Success'
   end
 

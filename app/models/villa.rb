@@ -18,10 +18,6 @@ class Villa < ActiveRecord::Base
     "#{id} #{name}".parameterize
   end
 
-  def send_info(info)
-    Notifier.new_owner_request_notification(self, info).deliver
-  end
-
   def price_guide
     if I18n.locale == :ru
       price_guide_ru

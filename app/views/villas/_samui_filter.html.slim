@@ -1,0 +1,28 @@
+= search_form_for @q, url: samui_path do |f|
+  .margin-bottom-20
+    = f.text_field :name_cont, placeholder: t('villas.villa_name_or_id'), class: 'span12'
+
+  h4= t('villas.location')
+  .margin-bottom-20
+
+  .filter-map
+    .koh_samui
+      - @samui_areas.each do |area|
+        label style="top: #{area.top}px; left: #{area.left_position}px;"
+          = check_box_tag 'q[area_id_eq_any][]', area.id, params[:q][:area_id_eq_any] && params[:q][:area_id_eq_any].include?(area.id.to_s)
+          span.tail style="top: 100%; left: #{area.left_tail}%"
+          = area.name
+
+  h4#bedrooms= t('villas.bedrooms')
+  .hidden= f.text_field :bedrooms_gteq
+  .hidden= f.text_field :bedrooms_lteq
+  #bedrooms-slider-range.margin-bottom-20
+
+  h4#price_range= t('villas.price_range')
+  .hidden= f.text_field :price_from_gteq
+  .hidden= f.text_field :price_from_lteq
+  #price-slider-range.margin-bottom-20
+
+
+
+  = f.submit t('villas.search'), class: 'btn-u'

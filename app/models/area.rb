@@ -7,6 +7,7 @@ class Area < ActiveRecord::Base
   scope :for_home_page, -> { where(show_on_home_page: true) }
   scope :phuket, -> { where(name: "Phuket").first.children }
   scope :bali, -> { where(name: "Bali").first.children }
+  scope :samui, -> { where(name: "Koh Samui").first.children }
   scope :for_rent, -> { where(rental: true) }
   scope :for_sale, -> { where(sale: true) }
 

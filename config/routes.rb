@@ -4,6 +4,7 @@ JqVilla::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   get 'villas/bali', to: 'villas#bali', as: :bali
+  get 'villas/samui', to: 'villas#samui', as: :samui
   resources :villas do
     resources :requests, only: :create
   end

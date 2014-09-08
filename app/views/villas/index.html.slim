@@ -22,6 +22,8 @@
           h3= t('villas.filter')
         - if @bali
           = render 'bali_filter'
+        - elsif @samui
+          = render 'samui_filter'
         - else
           = render 'phuket_filter'
       /! Posts
