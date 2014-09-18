@@ -58,7 +58,7 @@
             = simple_format @villa.description
 
         #location.tab-pane
-          #map.span11 data-hash="#{raw(@hash.to_json)}" data-zoom="#{@villa.zoom}"
+          #map.span11 data-hash="#{@hash.to_json}" data-zoom="#{@villa.zoom}"
 
         #price_guide.tab-pane
           - if @sale || @estate_sale
