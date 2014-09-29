@@ -144,8 +144,11 @@ li.locale {
 #map {
   height: 400px;
   min-width: 500px;
-}
 
+  img {
+    max-width: initial;
+  }
+}
 
 .dropdown1:hover .dropdown-menu {
   display: block;
