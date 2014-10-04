@@ -14,7 +14,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'jstree-rails', :git => 'git://github.com/tristanm/jstree-rails.git'
 
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', github: 'gregbell/active_admin', ref: '7a2a31067e99e8e484942a3cddc44be1980b1ae6'
 gem 'active_admin-awesome_nested_set', path: '../active_admin-awesome_nested_set'
 gem 'angularjs-rails', git: 'git://github.com/hiravgandhi/angularjs-rails.git', branch: 'master'
 gem 'awesome_nested_set'
