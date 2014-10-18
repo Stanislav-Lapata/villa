@@ -9,23 +9,5 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap.min
- *= require jquery-ui/slider
- *= require jquery-ui/datepicker
- *= require style
- *= require img-hover-effect
- *= require header1
- *= require bootstrap-responsive.min
- *= require style_responsive
- *= require font-awesome/css/font-awesome
- *= require font-awesome
- *= require effects
- *= require fancybox/jquery.fancybox
- *= require flexslider/flexslider
- *= require bxslider/jquery.bxslider
- *= require revolution-slider/rs-style
- *= require revolution-slider/settings
- *= require default
- *= require fotorama
- *= require changes
+ *= require styles
  */

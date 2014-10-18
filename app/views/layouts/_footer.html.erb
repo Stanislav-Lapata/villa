@@ -1,24 +1,86 @@
-<div class="footer">
-  <div class="container">
-    <div class="row-fluid">
-      <div class="span4">
-      </div><!--/span4-->
+<footer>
+  <div id="footer">
+    <div id="footerLinkWrapper">
+      <div id="footerLinkContainer">
+        <div class="top">
+          <div class="right">
+            <div class="inlineLinks">
+              <ul>
+                <li><a href="/Content/About/">About Us</a></li>
+                <li><a href="/Content/Contact/">Contact Us</a></li>
+                <li><a href="http://magazine.luxuryretreats.com" target="_blank">Magazine</a></li>
+                <li><a href="/Content/Press/">Press</a></li>
+                <li><a href="/Content/PrivacyTerms/">Privacy & Terms</a></li>
+                <li><a href="http://fr.luxuryretreats.com/">Français</a></li>
+                <li><a href="https://itunes.apple.com/ca/app/luxury-retreats/id855259308?mt=8&ign-mpt=uo%3D4" class="iPadApp" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="topMsg">Get more from Luxury Retreats</div>
 
-      <div class="span4">
-      </div><!--/span4-->
+        </div>
+        <div class="bottom">
+          <div class="blockWrapper">
+            <div class="block left">
+                <div class="inlineBlock">
+                    <div class="sectionTitle">Let’s Socialize</div>
+                    <div>
+                        Follow us:
+                    </div>
+                    <div class="connect">
+                        <ul>
+                            <li><a class="facebook" href="https://www.facebook.com/luxuryretreats" target="_blank"></a></li>
+                            <li><a class="twitter" href="https://twitter.com/luxuryretreats" target="_blank"></a></li>
+                            <li><a class="pinterest" href="http://pinterest.com/luxuryretreats/" target="_blank"></a></li>
+                            <li><a class="plusone" href="https://plus.google.com/+Luxuryretreats" rel="publisher" target="_blank"></a></li>
+                            <li><a class="linkedin" href="http://www.linkedin.com/company/luxury-retreats" target="_blank"></a></li>
+                            <li><a class="instagram" href="http://instagram.com/luxuryretreats" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-      <div class="span4">
-              <!-- Monthly Newsletter -->
-            <div class="headline"><h3><%= t('home.contact_us') %></h3></div>
-                <address>
-          96 Park Street, London, <br />
-          W1K 6NY, United Kingdom <br />
-          Tel.: +66 910 43 43 10 <br />
-          Tel.: +44 208 144 55 64 <br />
-          Email: <a href="mailto:info@phuketrenthouse.ru" class="">info@phuketrenthouse.ru</a>
-                </address>
-      </div><!--/span4-->
-    </div><!--/row-fluid-->
-  </div><!--/container-->
-</div><!--/footer-->
-<!--=== End Footer ===-->
+            <div class="block right">
+
+                <div class="inlineBlock">
+                    <div class="sectionTitle">Quick Search </div>
+                    <div>
+                        Know which villa you want to go to?
+                    </div>
+                    <div class="ftInputWrapper">
+                        <div class="ui-widget">
+                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                            <input type="text" class="tbAutocomplete ui-autocomplete-input ftInput" id="tags" autocomplete="off">
+                            <span class="iSearch"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block center">
+
+              <div class="inlineBlock">
+                <div class="sectionTitle">Stay in the Know</div>
+                <div>
+                    Exclusive news & offers straight to your inbox:
+                </div>
+                <div class="ftInputWrapper">
+                    <form id="signupForm" name="subscribe">
+                        <input type="text" id="tbSignUpEmailAddress" class="ftInput" />
+                        <input id="emailSubscriptionSubmit" type="submit" name="profile_go" value="SIGN UP" class="submit" />
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="copyright">Copyright &copy; 2014 Luxury Retreats. All rights reserved. 1.2.2.0</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <%= render 'shared/analytics' %>
+</footer>

@@ -1,0 +1,858 @@
+body {
+  &#search {
+    width: 100%;
+    position: relative;
+  }
+  &#destinationSearch section {
+    width: 100%;
+    position: relative;
+    background: url(/images/bgSection.gif) repeat-x top transparent;
+    margin-bottom: 39px;
+  }
+}
+
+section {
+  #bannerWrapper {
+    width: 1500px;
+    height: 350px;
+    margin: -264px -264px 0 -264px;
+    position: relative;
+    display: block;
+  }
+  #bannerHeading {
+    position: absolute;
+    right: 258px;
+    bottom: 58px;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: 'Lucida Grande','Lucida Sans Unicode',Helvetica,Arial,Verdana,sans-serif;
+    width: 800px;
+  }
+  #bannerWrapper {
+    h1 {
+      width: 800px;
+      .tltHeader {
+        font-size: 55px;
+        padding: 0;
+        margin-right: 5px;
+        color: #fff;
+        font-weight: normal;
+        text-shadow: 1px 1px #000;
+      }
+    }
+    span.txtHeader {
+      font-size: 20px;
+      width: 408px;
+      display: block;
+      font-weight: normal;
+      line-height: 20px;
+      float: right;
+      color: #fff;
+      margin-right: 12px;
+      text-shadow: 1px 1px #000;
+    }
+  }
+  header #bannerWrapper .destinationBanner {
+    height: 350px;
+  }
+  #bannerWrapper {
+    #bannerLeftFade {
+      position: absolute;
+      width: 207px;
+      height: 350px;
+      left: 0;
+      top: 0;
+      background: url(/images/bgBannerFade.png) repeat-y 0 0;
+    }
+    #bannerRightFade {
+      position: absolute;
+      width: 207px;
+      height: 350px;
+      right: 0;
+      top: 0;
+      background: url(/images/bgBannerFade.png) repeat-y -207px 0;
+    }
+  }
+}
+
+#schema-videoobject embed {
+  width: 462px;
+  height: 260px;
+}
+
+body {
+  &#search article {
+    min-height: 700px;
+    width: 974px;
+    margin: auto;
+    position: relative;
+    margin-top: 0;
+  }
+  &#destinationSearch article {
+    min-height: 700px;
+    width: 974px;
+    margin: auto;
+    position: relative;
+    margin-top: 350px;
+  }
+  &#search article #searchContainer {
+    width: 161px;
+    position: fixed;
+    top: 89px;
+    right: auto;
+    z-index: 1;
+  }
+  &#destinationSearch article #searchContainer {
+    width: 161px;
+    position: fixed;
+    top: 183px;
+    right: auto;
+    z-index: 1;
+  }
+}
+
+#contentBlock {
+  width: 800px;
+  min-height: 500px;
+  margin-left: 173px;
+  padding: 0 0 60px 0;
+}
+
+.noContentBlock #btnShowHide {
+  display: none;
+}
+
+#btnShowHide {
+  width: 242px;
+  height: 31px;
+  background: url(/images/btnThingsToDo.gif) no-repeat 0 0;
+  z-index: 49;
+  position: absolute;
+  top: 319px;
+  right: 0;
+  cursor: pointer;
+  &.selected {
+    width: 242px;
+    height: 31px;
+    background: url(/images/btnThingsToDo.gif) 0 31px;
+    position: absolute;
+    top: 319px;
+    right: 0;
+    cursor: pointer;
+  }
+}
+
+.noContentBlock #contentBlock #blurbBlock {
+  display: none;
+}
+
+#contentBlock {
+  #blurbBlock {
+    background: #fff;
+    min-height: 315px;
+    display: none;
+    padding: 32px 0 43px 32px;
+    font-size: 12px;
+    #infoBlock {
+      width: 463px;
+      min-height: 248px;
+      padding: 0 32px 0 0;
+      color: #000;
+      float: left;
+      position: relative;
+      background: url(/images/ContentBlockVerticalSplitter.gif) repeat-y right 0 white;
+      h2 {
+        &:first-child {
+          padding: 0;
+        }
+        margin: 0;
+        padding: 26px 0 0 0;
+      }
+      span {
+        padding-bottom: 15px;
+        display: block;
+        line-height: 16px;
+      }
+      p {
+        padding-top: 15px;
+        display: block;
+        line-height: 16px;
+      }
+      a {
+        color: #099;
+        text-decoration: underline;
+        &:hover {
+          color: #066;
+          text-decoration: none;
+        }
+      }
+    }
+    ul {
+      padding: 23px 0 0 54px;
+      li {
+        display: inline;
+      }
+    }
+    h2 {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: normal;
+      padding-bottom: 21px;
+    }
+  }
+  #rssWrapper {
+    margin: 0 0 0 32px;
+    float: left;
+    width: 209px;
+    position: relative;
+  }
+  #rssBlock {
+    color: #606060;
+    text-align: center;
+    .rssImg {
+      width: 209px;
+      height: auto;
+      margin-bottom: -6px;
+      display: block;
+    }
+    .rssTitle {
+      font-family: 'Lucida Grande','Lucida Sans Unicode',Helvetica,Arial,Verdana,sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #000;
+      font-weight: bold;
+    }
+    .rssSplitter {
+      padding: 12px 0 8px 0;
+    }
+    a {
+      &.rssText {
+        font-size: 11px;
+        color: #606060;
+      }
+      &.rssUrl {
+        &:hover {
+          color: #13c9e4;
+        }
+        color: #4cb7cd;
+        margin-top: 5px;
+        display: inline;
+        font-size: 11px;
+      }
+    }
+  }
+  .rssMoreBtn {
+    padding: 16px 11px 16px 11px;
+    background: #e1e1e1;
+    position: absolute;
+    right: 0;
+    color: #000;
+    width: 186px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    display: none;
+    img {
+      margin: 0 0 1px 3px;
+    }
+    &.oneRSS, &.twoRSS {
+      position: absolute;
+      bottom: -65px;
+    }
+  }
+  .rssMoreBtnFullLength {
+    padding: 16px 11px 16px 11px;
+    background: #e1e1e1;
+    position: absolute;
+    right: -262px;
+    color: #000;
+    width: 186px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    display: none;
+    img {
+      margin: 0 0 1px 3px;
+    }
+    position: absolute;
+    bottom: 0;
+  }
+  #rssBlock ul {
+    padding: 0;
+    text-decoration: none;
+    li {
+      padding-bottom: 15px;
+      display: block;
+    }
+  }
+}
+
+.villaRegionTitle {
+  width: 540px;
+}
+
+#contentBlock #rssBlock {
+  .rssTitleWrapper {
+    width: 209px;
+    p {
+      line-height: 14px;
+    }
+  }
+  .rssTextWrapper {
+    width: 209px;
+    height: 30px;
+  }
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  &.multiline {
+    white-space: normal;
+  }
+}
+
+#searchHeadContainer {
+  position: relative;
+  height: 42px;
+  width: 800px;
+  visibility: hidden;
+  .tltWrapper {
+    margin-top: 11px;
+    font-size: 20px;
+    display: inline-block;
+  }
+  h1, h2 {
+    margin: 0;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    padding: 0;
+  }
+  h1 span, h2 span {
+    text-transform: uppercase;
+    display: block;
+    float: left;
+    font-weight: normal;
+  }
+  #villaTotalCount {
+    margin: -2px 5px 0 5px;
+    font-size: 22px;
+    padding: 0;
+    font-weight: bold;
+  }
+  #hdrDestination {
+    padding-left: 6px;
+    width: 340px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+#relaxedVillaCountContainer {
+  position: relative;
+  height: 42px;
+  width: 800px;
+}
+
+.villaBlockContainer {
+  width: 800px;
+  height: 468px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  visibility: hidden;
+  background: #eee;
+}
+
+.villaPhotoUrl {
+  display: block;
+  width: 800px;
+  height: 332px;
+  overflow: hidden;
+}
+
+.villaPhoto {
+  height: 533px;
+  width: 800px;
+  margin-top: -105px;
+}
+
+.villaSpecsContainer {
+  height: 135px;
+  position: relative;
+  z-index: 49;
+  background: #fff;
+  border-width: 0 1px 1px 1px;
+  border-color: #e2e2e2;
+  border-style: solid;
+}
+
+.villaAvailabilityWrapper {
+  position: absolute;
+  top: -51px;
+  left: 0;
+  background: url(https://resources.luxuryretreats.com/images/button_sprite.png) repeat-x 0 -305px;
+  height: 51px;
+  width: 800px;
+  .rightArrow {
+    visibility: hidden;
+    background: url(https://resources.luxuryretreats.com/images/button_sprite.png) repeat-x 0 -371px;
+    height: 51px;
+    width: 51px;
+  }
+  .leftArrow {
+    visibility: hidden;
+    background: url(https://resources.luxuryretreats.com/images/button_sprite.png) repeat-x -10px -432px;
+    height: 51px;
+    width: 51px;
+  }
+  .daysWrapper {
+    width: 690px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+  }
+  .day {
+    list-style: none;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    height: 41px;
+    padding-top: 10px;
+    display: table-cell;
+    min-width: 41px;
+    .number {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    &.unavailable {
+      color: #717173;
+      .number {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+.villaRegionTitle {
+  position: absolute;
+  top: 20px;
+  left: 17px;
+  h2 {
+    font-size: 20px;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    color: #000;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.villaRegionSubTitle {
+  position: absolute;
+  left: 17px;
+  top: 52px;
+  color: #434343;
+  font-family: Verdana,Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  h3 {
+    font: normal 14px / 16px Verdana, Helvetica, Arial, sans-serif;
+    color: #4f4f4f;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.villaFeatures {
+  position: absolute;
+  left: 17px;
+  top: 72px;
+  text-align: left;
+  font: normal 14px / 16px Verdana, Helvetica, Arial, sans-serif;
+  color: #4f4f4f;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      .featureCount {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.userInput {
+  position: absolute;
+  left: 17px;
+  top: 94px;
+  text-align: left;
+  font: normal 14px / 16px Verdana, Helvetica, Arial, sans-serif;
+  color: #4f4f4f;
+  ul li {
+    float: left;
+  }
+}
+
+.starRating {
+  float: right;
+  padding: 0 14px 0 10px;
+}
+
+.comments {
+  float: left;
+  padding-top: 3px;
+}
+
+.iComments {
+  background: url('../../../images/iComments.png') no-repeat;
+  width: 13px;
+  height: 15px;
+  display: inline;
+  float: right;
+  margin-left: 2px;
+}
+
+.villaPrice {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  font-size: 16px;
+  color: #000;
+  font-family: Verdana,Helvetica,Arial,sans-serif;
+  text-align: right;
+  .dollarSymbol {
+    color: #000;
+    font-size: 20px;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    font-style: normal;
+  }
+  .vpMin, .vpMax {
+    color: #000;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    font-style: normal;
+  }
+}
+
+.villaDetailsLink {
+  position: absolute;
+  text-align: right;
+  right: 17px;
+  bottom: 36px;
+  a {
+    background: url("https://static.luxuryretreats.com/images/viw_details_arr_wht.png") no-repeat 170px 13px #4cb7cd;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 40px 5px 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    width: 158px;
+    height: 24px;
+    display: block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+}
+
+.addWishlist {
+  position: absolute;
+  left: 350px;
+  bottom: 34px;
+  font-size: 10px;
+  a {
+    color: #505050;
+    padding: 0 8px 0 18px;
+    background: url(/images/DestinationIcons.png) no-repeat 0 5px;
+    font-size: 12px;
+  }
+}
+
+.nightlyRates, .villaPhotoShadow {
+  display: none;
+}
+
+#loadMoreResults, #noneFound, #noMoreResults {
+  display: none;
+  text-align: center;
+  padding: 10px;
+}
+
+#loadMoreResults a {
+  color: #000;
+}
+
+#searchContainer {
+  #searchNavContainer {
+    margin-bottom: 8px;
+    background: #fff;
+    font-size: 12px;
+    font-family: 'Lucida Grande','Lucida Sans Unicode',Helvetica,Arial,Verdana,sans-serif;
+    line-height: 18px;
+    #btnBack {
+      border-bottom: 2px solid #d8d8d8;
+      padding: 4px 15px;
+      background: url("https://static.luxuryretreats.com/images/backtoresult.png") no-repeat 6px -6px;
+      cursor: pointer;
+      color: #000;
+      font-size: 14px;
+    }
+    ul {
+      margin: 0;
+    }
+    li {
+      margin: 0;
+      background: url(/images/snNavSplit.gif) no-repeat 9px bottom;
+      &:last-child {
+        background: none;
+      }
+      a {
+        width: 131px;
+        display: block;
+        padding: 4px 15px;
+        color: #b4b4b4;
+        span.snName {
+          color: #000;
+        }
+        &:hover {
+          background: #000;
+          color: #fff;
+          width: 131px;
+          background: url(/images/DestinationIcons.png) black no-repeat 140px -24px;
+          span {
+            color: #b4b4b4;
+          }
+        }
+      }
+    }
+  }
+  .snTlt {
+    background: #000;
+    color: #fff;
+    padding: 9px 0;
+    text-align: center;
+    font-size: 12px;
+  }
+  #searchNavContainer .navPromoBlock {
+    a {
+      color: #1c1c1c;
+    }
+    li {
+      background: none;
+    }
+  }
+}
+
+#filterMobiContainer {
+  display: none;
+}
+
+#searchContainer #filterContainer {
+  display: none;
+  margin-bottom: 8px;
+  background: #fff;
+  font-size: 12px;
+  font-family: 'Lucida Grande','Lucida Sans Unicode',Helvetica,Arial,Verdana,sans-serif;
+  line-height: 18px;
+}
+
+.navPromoBlock {
+  background: #fff;
+  border: solid 3px #f0f0f0;
+  margin-top: 15px;
+  text-align: center;
+  padding: 13px 17px 15px 17px;
+  line-height: 18px;
+}
+
+.navPromoBlock-title {
+  font: 700 12px 'Lucida Grande','Lucida Sans Unicode',Helvetica,Arial,Verdana,sans-serif;
+  color: #000;
+}
+
+.navPromoBlock-phone {
+  font: normal 11px 'Lucida Grande','Lucida Sans Unicode',Helvetica,Arial,Verdana,sans-serif;
+  padding-top: 22px;
+  margin-top: 5px;
+  background: url(/images/phoneIcon.png) no-repeat 50% top;
+}
+
+.navPromoBlock-phoneNumber {
+  padding-top: 5px;
+}
+
+.paging {
+  position: absolute;
+  left: -9999px;
+}
+
+.nextLink {
+  text-align: center;
+  color: #000;
+}
+
+.LoadMoreResults {
+  margin: 0 0 15px 0;
+  display: block;
+  color: #000;
+  text-align: center;
+}
+
+.itemsId {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+}
+
+#scrollTop {
+  position: fixed;
+  bottom: 39px;
+}
+
+#noFilterResults {
+  text-align: center;
+  display: none;
+  margin-top: 25px;
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+.singularBedroom, .singularBath {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+#scrollFooter {
+  width: 977px;
+}
+
+.promoWrapper, .promoWrapperFull {
+  background: #000;
+  position: absolute;
+  top: 0;
+  display: none;
+  -webkit-transition: opacity .3s linear;
+  -moz-transition: opacity .3s linear;
+  -o-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+}
+
+.promoWrapper {
+  width: 200px;
+  max-height: 137px;
+  right: 0;
+  text-align: center;
+  cursor: pointer;
+  padding: 15px;
+  overflow-y: hidden;
+  opacity: .7;
+  filter: alpha(opacity = 70);
+  z-index: 10000000;
+  &:hover {
+    opacity: 1;
+    filter: alpha(opacity = 100);
+  }
+}
+
+.promoWrapperFull {
+  width: 100%;
+  height: 332px;
+  left: 0;
+  z-index: 10000;
+  opacity: .9;
+  filter: alpha(opacity = 9);
+}
+
+.promoWrapper h2, .promoDialogDetail h2 {
+  font-size: 24px;
+}
+
+.promoSeeDetails a, .morePromotions a {
+  color: #13c9e4;
+}
+
+.promoSeeDetails a:hover, .morePromotions a:hover {
+  text-decoration: underline;
+}
+
+.promoShortDescription {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.promoSeeDetails {
+  margin-top: 2px;
+}
+
+.promoName, .promoCloseDialog, .promoShortDescription, .promoWrapperFull {
+  color: #fff;
+}
+
+.promoDialogDetail {
+  display: none;
+  margin-top: 10px;
+}
+
+.promoLongDescription {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.promoDisclaimer {
+  font-style: italic;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.morePromotions {
+  height: 20px;
+  margin-top: 10px;
+  display: none;
+}
+
+.promoDisclaimerSeperator {
+  background: #717173;
+  height: 1px;
+  border: 0;
+  margin: 3px -2px 3px 0;
+}
+
+.promoDialogContents {
+  margin: 20px 45px 30px 45px;
+}
+
+.promoDialogDetailsContainer {
+  height: 195px;
+}
+
+.promoDialogPromoDetails {
+  max-height: 180px;
+  overflow-y: hidden;
+}
+
+.promoCloseDialog {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 10px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.initialPromo {
+  display: block;
+}

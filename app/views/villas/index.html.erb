@@ -1,0 +1,125 @@
+<%= stylesheet_link_tag "destination", "data-turbolinks-track" => true %>
+<%= stylesheet_link_tag "destination-page", "data-turbolinks-track" => true %>
+<body id="destinationSearch">
+    <section>
+
+        <article>
+            <div id="bannerWrapper" itemscope itemtype="https://schema.org/Place">
+                <div id="bannerLeftFade">
+                </div>
+                <div id="bannerRightFade">
+                </div>
+                <div id="bannerHeading">
+                    <h1>
+                        <label class="tltHeader"><span id="tltHeader" itemprop="name">Caribbean</span></label>
+                    </h1>
+                            <span class="txtHeader"><label class="txtSubTitle"><span itemprop="description">Set your watch
+             to island time and unwind in Caribbean villas.</span></label></span>
+
+                </div>
+                <img class="destinationBanner" alt="Caribbean" itemprop="photo" src="https://static.luxuryretreats.com/images/banners/caribbean.jpg"/>
+            </div>
+
+
+            <div id="btnShowHide"></div>
+
+            <div id="contentBlock">
+                <div id="searchHeadContainer">
+                    <div id="tltWrapper">
+                        <h2>
+                            <span>BROWSE</span> <span id="villaTotalCount">798</span> <span>VILLAS IN </span><span id="hdrDestination">The Caribbean</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div id="ajaxResult">
+                    <%= render @villas %>
+                </div>
+            </div>
+
+            <!-- searchFilter Control -->
+            <nav id="searchContainer">
+
+                <div id="searchNavContainer">
+
+                    <div id="btnBack">BACK</div>
+                    <ul id="ajaxSearchNav">
+                        <li id="snItemTemplate" style="display: none"><a href="#" class="snUrl"><span class="snName"></span> (<span class="snCount"></span>)</a></li>
+                    </ul>
+
+                </div>
+                <div id="filterContainer">
+                    <div class="snTlt">
+                        FILTER RESULTS
+                    </div>
+                    <div id="filterSettingContainer">
+                        Price range:
+                        <div>
+                            <span id="sminPrice"></span><span id="plus">+</span> <span id="smaxPrice"></span>
+                            <div class="clearer">
+                            </div>
+                        </div>
+                        <div id="sliderPrice">
+                        </div>
+
+                        <div>
+                            Bedrooms: <span id="bMinBed"></span><span id="bedPlus">+</span>
+                            <div class="clearer">
+                            </div>
+                        </div>
+                        <div id="sliderBed">
+                        </div>
+                        <div class="hSplit">
+                        </div>
+                        Amenities:
+                        <ul id="amenities">
+                            <li>
+                                <input type="checkbox" id="chkPool" />
+                                Pool</li>
+                            <li>
+                                <input type="checkbox" id="chkBeach" />
+                                Beachfront</li>
+                        </ul>
+                        <div id="clearFilterContainer">
+                            <a href="javascript:;" class="clearFilter">CLEAR FILTER</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navPromoBlock">
+                    <div class="uppercase navPromoBlock-title">Got a question?<br />Give us a call!</div>
+                    <div class="navPromoBlock-phone">
+                        <div class="navPromoBlock-phoneNumber">
+                            <strong>North America:</strong> <br />1-877-993-0100
+                        </div>
+                        <div class="navPromoBlock-phoneNumber">
+                            <strong>International:</strong> <br />+1-514-393-8844
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!--end of search Nav -->
+            <div id="scrollTop" class="scrollTop">
+                <div class="scrollTopImg"></div>
+            </div>
+        </article>
+    </section>
+        <%= render 'layouts/header' %>
+
+    <footer>
+        <div id="scrollFooter">
+            <div class="copyRight">Copyright &copy; 2014 Luxury Retreats. All rights reserved.</div>
+
+            <div class="autoCompleteWrapper" class="ui-widget">
+            <input type="text" id="tags" class="tbAutocomplete" />
+            <span class="iSearch"></span>
+            </div>
+            <div class="langWrapper">
+            <a href="http://fr.luxuryretreats.com/">Version française</a>
+
+            </div>
+            <div class="iPadAppWrapper"><a href="https://itunes.apple.com/ca/app/luxury-retreats/id855259308?mt=8&ign-mpt=uo%3D4" class="iPadApp" target="_blank"></a></div>
+            <div class="clearer"></div>
+        </div>
+    </footer>
+</body>

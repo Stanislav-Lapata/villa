@@ -3,14 +3,8 @@ class VillasController < ApplicationController
   before_action :find_villa, only: [:show, :show_sale, :show_yacht, :show_car, :show_estate_rental, :show_estate_sale]
 
   def index
-    params[:q][:area_id_place_eq] ||= Area.where(name: 'Phuket').first.id
-    @q = Villa.for_rent.search(params[:q])
+    @q = Villa.search(params[:q])
     @villas = @q.result(distinct: true)
-    @areas = Area.for_rent.roots
-    @recent_villas = Villa.recent.for_rent.limit(4)
-    @phuket = true
-    @phuket_areas = Area.phuket
-    @bali_areas = Area.bali
   end
 
   def bali

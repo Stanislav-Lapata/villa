@@ -1,0 +1,47 @@
+<div class="villaBlockContainer" itemscope="http://schema.org/LodgingBusiness" id="item0" style="position: relative; visibility: visible;">
+
+    <%= link_to image_tag('https://pictures.luxuryretreats.com/111635/turksandcaicos-amazinggrace-01.jpg', class: 'villaPhoto', itemprop: 'photo', alt: villa.name), villa, class: 'villaPhotoUrl', itemprop: 'url' %>
+    <div class="villaSpecsContainer">
+        <div class="villaRegionTitle ellipsis">
+            <h2 itemprop="name"><%= villa.name %></h2>
+        </div>
+        <div class="villaRegionSubTitle">
+            <h3><span class="locationName">Grace Bay</span>, <span class="regionName" itemprop="addressRegion">Turks and Caicos</span>, <span class="destinationName" itemprop="addressCountry">Caribbean</span></h3>
+        </div>
+        <div class="villaFeatures">
+            <ul class="clear-fix">
+                <li><span class="bedCount"><%= villa.bedrooms %></span> Bedrooms<span></span></li>
+
+                <li>, <span class="bathCount"><%= villa.bathrooms %> </span>Bathrooms</li>
+                <li class="poolFeature">, Pool<span class="pool"></span></li>
+                <li class="beachFeature">, Beachfront<span class="beachfront"></span></li>
+            </ul>
+        </div>
+
+        <div class="userInput">
+            <ul>
+                <li class="comments"><a href="javascript:;" data-villainfo="111635/4.90" class="openReview">10<span class="iComments"></span></a></li>
+                                                <li class="starRating">
+                    <a href="javascript:;" data-villainfo="111635/4.90" class="openReview">
+                        <span class="stars">4.90</span><span style="display: none" itemprop="aggregateRating">4.90</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="villaPrice" itemprop="priceRange">
+            <div class="nightlyRates">NIGHTLY RATE</div>
+            <span class="vpMin"><%= number_to_currency(villa.price_from, precision: 0) %></span>
+            <span class="dollarSymbol">- </span>
+            <span class="vpMax"><%= number_to_currency(villa.price_to, precision: 0) %></span>
+            <span class="nightly">/night</span>
+        </div>
+
+        <div class="villaDetailsLink">
+            <%= link_to "View Villa Details", villa %>
+        </div>
+        <div class="addWishlist">
+            <a id="wishlist_111635" href="javascript:;" class="iAddFavorite">Add to Favorites:</a>
+        </div>
+    </div>
+</div>
