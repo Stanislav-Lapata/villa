@@ -1,6 +1,6 @@
 <div class="villaBlockContainer" itemscope="http://schema.org/LodgingBusiness" id="item0" style="position: relative; visibility: visible;">
 
-    <%= link_to image_tag(villa.images.first, class: 'villaPhoto', itemprop: 'photo', alt: villa.name), villa, class: 'villaPhotoUrl', itemprop: 'url' %>
+    <%= link_to image_tag(villa.images.first.image.url, class: 'villaPhoto', itemprop: 'photo', alt: villa.name), villa, class: 'villaPhotoUrl', itemprop: 'url' %>
     <div class="villaSpecsContainer">
         <div class="villaRegionTitle ellipsis">
             <h2 itemprop="name"><%= villa.name %></h2>
