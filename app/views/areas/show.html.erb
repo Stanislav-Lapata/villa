@@ -1,0 +1,62 @@
+<%= stylesheet_link_tag "destination-page", "data-turbolinks-track" => true %>
+<body id="destinationSearch">
+    <section>
+
+        <article>
+            <div id="bannerWrapper" itemscope itemtype="https://schema.org/Place">
+                <div id="bannerLeftFade">
+                </div>
+                <div id="bannerRightFade">
+                </div>
+                <div id="bannerHeading">
+                    <h1>
+                        <label class="tltHeader"><span id="tltHeader" itemprop="name"><%= @area.name %></span></label>
+                    </h1>
+                            <span class="txtHeader"><label class="txtSubTitle"><span itemprop="description">Set your watch
+             to island time and unwind in Caribbean villas.</span></label></span>
+
+                </div>
+                <%= image_tag 'caribbean.jpg', alt: 'Caribbean', class: 'destinationBanner', itemprop: 'photo' %>
+            </div>
+
+
+            <div id="btnShowHide"></div>
+
+            <div id="contentBlock">
+                <div id="searchHeadContainer">
+                    <div id="tltWrapper">
+                        <h2>
+                            <span><%= t(:browse, scope: 'villas') %></span><span style="padding-left:8px;"><%= t(:browse_villas, scope: 'villas') %></span><span id="villaTotalCount"><%= @villas.total_count %></span><span id="hdrDestination"><%= @area.name %></span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div id="ajaxResult">
+                    <%= render @villas %>
+                </div>
+
+                <div id="infinite-scrolling" style="margin-bottom: 100px;">
+                  <%= paginate @villas %>
+                </div>
+            </div>
+
+            <!--end of search Nav -->
+            <div id="scrollTop" class="scrollTop">
+                <div class="scrollTopImg"></div>
+            </div>
+        </article>
+    </section>
+        <%= render 'layouts/header' %>
+
+    <footer>
+        <div id="scrollFooter">
+            <div class="copyRight">Copyright &copy; <%= Time.now.year %> Paloma Co., Ltd. ALL Rights Reserved.</div>
+
+            <div class="autoCompleteWrapper" class="ui-widget">
+            <input type="text" id="tags" class="tbAutocomplete" />
+            <span class="iSearch"></span>
+            </div>
+            <div class="clearer"></div>
+        </div>
+    </footer>
+</body>

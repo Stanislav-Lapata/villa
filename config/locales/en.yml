@@ -30,6 +30,18 @@ en:
 
   navigation:
     home: "Home"
+    destinations: 'Destinations'
+    about: 'About'
+    speak: 'SPEAK WITH A VILLA SPECIALIST NOW'
+    search: 'Search'
+    favorites: 'Favorites'
+    nightly_rate: 'Nightly rate'
+    filters: 'Filters'
+    hide_filters: 'Hide Filters'
+    more_filters: 'Filter More'
+    select_all: 'Select All'
+    check_in: 'Check-In'
+    check_out: 'Check-Out'
     rentals: "Luxury Rentals"
     sales: "Luxury Sales"
     faq: "FAQ"
@@ -52,6 +64,7 @@ en:
   villas:
     location: "Location"
     bedrooms: "Bedrooms"
+    иферкщщьы: "Bathrooms"
     any_bedrooms: "Any bedrooms"
     price_range: "Price Range"
     from: "From"
@@ -66,8 +79,28 @@ en:
     search: 'Search'
     per_night: "per night"
     per_day: "per day"
-    read_more: 'Read More'
+    read_more: 'Show More Details'
+    read_less: 'Show Less Details'
     text: "Renting a villa in Phuket with us is easy! <br />A wide selection of villas and apartments in Phuket - we will find you a beachfront villa or in the mountains with views of the island and the sea, in a secluded location, with private pool and beach. <br />Our staff will help you rent or buy a villa for all occasions : for parties or corporate-out, for vacation of the whole family or for the winter break of wife and kids, weddings or romantic getaways .<br />When deciding to rent a villa or a house in Phuket through our agency, you can count on expert assistance in resolving all sorts of issues. You just need to make an inquiry on our website and our staff will find the right option for you in the shortest time possible. Will answer all questions related to accommodation and arranging activities for you and your family, renting or buying a car or even a yacht. We will help you choose the perfect beach .<br />Our company is an official agent of such companies in Phuket as LAGUNA, THE REGENT, THE RESIDENCE, KRIS, and many others. When buying and renting a property with us, can get you an exclusive discount, which our partners provide us."
+    type: 'Type'
+    sort_by: 'Sort By'
+    rent: 'Rent'
+    sale: 'Sale'
+    price_low: 'Price (low)'
+    price_high: 'Price (high)'
+    bedrooms_min: 'Bedrooms (min)'
+    bedrooms_max: 'Bedrooms (max)'
+    browse: 'BROWSE'
+    browse_villas: 'VILLAS'
+    detail: 'View Villa Details'
+    add_to_favorites: 'Add to Favorites'
+    back: 'Back'
+    overview: 'Overview'
+    area_map: 'Area Map'
+    your_trip: 'Your Trip'
+    area_map_desc: 'Area maps: villa locations are approximate.'
+    overview_and_features: 'Overview &amp; Features'
+    inquire: 'Inquire'
 
   contact:
     contact_form: "Contact Form"

@@ -182,6 +182,12 @@ ActiveAdmin.register Villa do
     redirect_to [:admin, Villa], notice: 'Success'
   end
 
+  collection_action :index, :method => :get do
+    scope = Villa.scoped
+    @collection = scope.page() if params[:q].blank?
+    @search = scope.ransack(clean_search_params(params[:q]))
+  end
+
   controller do
     def new
       @villa = Villa.new

@@ -8,37 +8,14 @@
               <ul>
                 <li><a href="/Content/About/">About Us</a></li>
                 <li><a href="/Content/Contact/">Contact Us</a></li>
-                <li><a href="http://magazine.luxuryretreats.com" target="_blank">Magazine</a></li>
-                <li><a href="/Content/Press/">Press</a></li>
-                <li><a href="/Content/PrivacyTerms/">Privacy & Terms</a></li>
-                <li><a href="http://fr.luxuryretreats.com/">Français</a></li>
-                <li><a href="https://itunes.apple.com/ca/app/luxury-retreats/id855259308?mt=8&ign-mpt=uo%3D4" class="iPadApp" target="_blank"></a></li>
               </ul>
             </div>
           </div>
-          <div class="topMsg">Get more from Luxury Retreats</div>
+          <div class="topMsg">Get more</div>
 
         </div>
         <div class="bottom">
           <div class="blockWrapper">
-            <div class="block left">
-                <div class="inlineBlock">
-                    <div class="sectionTitle">Let’s Socialize</div>
-                    <div>
-                        Follow us:
-                    </div>
-                    <div class="connect">
-                        <ul>
-                            <li><a class="facebook" href="https://www.facebook.com/luxuryretreats" target="_blank"></a></li>
-                            <li><a class="twitter" href="https://twitter.com/luxuryretreats" target="_blank"></a></li>
-                            <li><a class="pinterest" href="http://pinterest.com/luxuryretreats/" target="_blank"></a></li>
-                            <li><a class="plusone" href="https://plus.google.com/+Luxuryretreats" rel="publisher" target="_blank"></a></li>
-                            <li><a class="linkedin" href="http://www.linkedin.com/company/luxury-retreats" target="_blank"></a></li>
-                            <li><a class="instagram" href="http://instagram.com/luxuryretreats" target="_blank"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
 
             <div class="block right">
 
@@ -48,11 +25,13 @@
                         Know which villa you want to go to?
                     </div>
                     <div class="ftInputWrapper">
-                        <div class="ui-widget">
-                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-                            <input type="text" class="tbAutocomplete ui-autocomplete-input ftInput" id="tags" autocomplete="off">
-                            <span class="iSearch"></span>
-                        </div>
+                        <%= search_form_for @q do |f| %>
+                            <div class="ui-widget">
+                                <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                                <%= f.text_field :name_cont, class: 'tbAutocomplete ui-autocomplete-input ftInput', id: 'tags', autocomplete: 'off' %>
+                                <span class="iSearch"></span>
+                            </div>
+                        <% end %>
                     </div>
                 </div>
             </div>
@@ -74,7 +53,7 @@
             </div>
           </div>
 
-          <div class="copyright">Copyright &copy; 2014 Luxury Retreats. All rights reserved. 1.2.2.0</div>
+          <div class="copyright">Copyright &copy; <%= Time.now.year %> Paloma Co., Ltd. ALL Rights Reserved.</div>
         </div>
 
       </div>

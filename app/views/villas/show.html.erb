@@ -1,859 +1,231 @@
 <%= stylesheet_link_tag "villa", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry" %>
+<%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
+<%= javascript_include_tag "underscore" %>
+<%= javascript_include_tag "gmaps/google" %>
+<%= javascript_include_tag "gmaps_init" %>
+
 <body id="VillaPage">
-
-    <!-- Google Tag Manager -->
-    <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-2ZLV"
-            height="0" width="0" style="display: none; visibility: hidden"></iframe>
-    </noscript>
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-2ZLV');
-    </script>
-    <!-- End Google Tag Manager -->
-
-
-
-
     <section>
+        <input type="hidden" id="pageF" />
 
+        <div class="bodyLength mainWrapper clearfix">
 
-
-
-
-
-<script type="text/javascript">
-    //for event tracking UA
-    var UAsessionID = 's5jxvzhiitsfxs3ii42psnxi';
-</script>
-
-<input type="hidden" id="villaUrl" value="http://www.luxuryretreats.com/destinations/europe/portugal/northern-portugal/douro-valley/casa-dos-esteios-112912" />
-<input type="hidden" id="Agent" name="Agent" value="" />
-<input type="hidden" id="InstantBook" name="InstantBook" value="False" />
-<input type="hidden" id="globalId" value="2&#255;13&#255;229&#255;1460" />
-<input type="hidden" id="tripAdvisorId" value="4060759" />
-
-<input type="hidden" id="navPrefix" value="/destinations" />
-
-<input type="hidden" id="villaPhotoUrl" value="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-01.jpg" />
-<input type="hidden" class="summaryCleanlinessRating" value="5.00" />
-<input type="hidden" class="summaryLocationRating" value="4.50" />
-<input type="hidden" class="summaryServiceRating" value="5.00" />
-
-<input type="hidden" id="tbReviewCount" value="2"/>
-<input  type="hidden" class="RssCount" value="0"/>
-
-<input type="hidden" id="villaCurrency" value="€"/>
-<input type="hidden" id="villaCurrencyName" value="EUR"/>
-<input type="hidden" id="promotion" value="False"/>
-<input type="hidden" id="instantBook" value="False"/>
-<input type="hidden" id="isCalendarOnline" value="False"/>
-<input type="hidden" id="calendarUpdated" value="" />
-<input type="hidden" id="villaId" value="112912" />
-
-<input type="hidden" id="villaRegion2" value="Portugal" />
-<input type="hidden" id="villaRegion3" value="Northern Portugal" />
-<input type="hidden" id="villaRegion4" value="Douro Valley" />
-<input type="hidden" id="trackingSessionId" value="s5jxvzhiitsfxs3ii42psnxi" />
-
-
-<input type="hidden" id="pageF" />
-
-<div class="bodyLength mainWrapper clearfix">
-
-    <article class="villaContentWrapper" itemscope="http://schema.org/LodgingBusiness">
-        <div id="carrousel" class="carrousel">
-                <img src="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-01.jpg" itemprop="photo" style="display: none" />
-
-
-<div class="rsTopContent">
-    <div class="rsTopContentWrapper">
-        <a class="btnFullscreenClose hidden" href="javascript:;">CLOSE X</a>
-    </div>
-</div>
-
-<div id="gallery-1" class="royalSlider rsDefault">
-
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-01.jpg" title="Casa dos Esteios Northern Portugal 1"></a>
-
-                </div>
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-02.jpg" title="Casa dos Esteios Northern Portugal 2"></a>
-
-                </div>
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-03.jpg" title="Casa dos Esteios Northern Portugal 3"></a>
-
-                </div>
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-04.jpg" title="Casa dos Esteios Northern Portugal 4"></a>
-
-                </div>
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-05.jpg" title="Casa dos Esteios Northern Portugal 5"></a>
-
-                </div>
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-06.jpg" title="Casa dos Esteios Northern Portugal 6"></a>
-
-                </div>
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-07.jpg" title="Casa dos Esteios Northern Portugal 7"></a>
-
-                </div>
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-08.jpg" title="Casa dos Esteios Northern Portugal 8"></a>
-
-                </div>
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-09.jpg" title="Casa dos Esteios Northern Portugal 9"></a>
-
-                </div>
-                <div>
-                    <a itemprop="photo" class="rsImg" href="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-10.jpg" title="Casa dos Esteios Northern Portugal 10"></a>
-
-                </div>
-
-
-
-
-</div>
-<a class="fullscreenIcon" href="javascript:;">
-    </a>
-<span class="rsImageNumber"></span>
-
-<div class="rsBottomContent">
-    <div class="rsBottomContentWrapper">
-        <div class="rsCaption"><span class="captionVillaName" id="captionVillaName">Casa dos Esteios</span> <span class="captionVillaRegion" id="captionVillaRegion">Northern Portugal</span></div>
-        <div class="shareImage">
-            <div class="addthis_toolbox addthis_default_style">
-                <ul class="share-list clearfix">
-
-                     <li class="share-item" id="gallery-pin-it"><a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" ><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></li>
-                    <li class="share-item"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none" target="_blank"><i class="lnkTwitter"><i></i>Tweet</i></a></li>
-                    <li class="share-item"><div class="g-plusone" data-size="medium"></div></li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-
-
-
-
-
-
-        </div>
-        <div class="content">
-
-            <div id="villaAnchorMenu" class="villaAnchorMenu makeFixed">
-                <ul>
-                    <li><a class="linksToOverview" href="javascript:;"><span>Overview</span></a></li>
-                    <li><a class="linksToAreaMap" href="javascript:;"><span>Area Map</span></a></li>
-                    <li><a class="linksToAvailability" href="javascript:;"><span>Nightly Rates</span></a></li>
-                    <li id="reviewsAnchorWrapper"><a class="linksToReviews" href="javascript:;"><span>Guest Reviews (2)</span></a></li>
-
-                </ul>
-            </div>
-            <div class="villa-reservation makeFixed">
-                <div class="rateCalculatorBoxWrapper">
-                    <div id="calWrapper" style="display: none;">
-                        <span class="clear-fix" style="width: 100%; display: block; padding: 13px 0; font-size: 16px">Click and drag to select your dates</span>
-                        <div class="pointerArrow"></div>
-                        <div id="availabilityCalendarWrapper-beta" class="availabilityCalendarWrapper-beta">
+            <article class="villaContentWrapper" itemscope="http://schema.org/LodgingBusiness">
+                <div id="carrousel" class="carrousel">
+                    <div class="rsTopContent">
+                        <div class="rsTopContentWrapper">
+                            <a class="btnFullscreenClose hidden" href="javascript:;">CLOSE X</a>
                         </div>
-                        <div class="legendWrapper">
-                            <div class="legendNA"></div>
-                            Not Available
-                        </div>
-                        <div class="legendWrapper">
-                            <div class="legendA"></div>
-                            Available
-                        </div>
-                        <div class="legendWrapper">
-                            <div class="legendSelected"></div>
-                            Your selected dates
-                        </div>
-
-                        <span id="seasonalRates">View Seasonal Rates</span>
                     </div>
-                    <div class="rateCalculatorBox">
-                        <div class="rateCalculatorBox-title">Your Trip</div>
-                        <form class="rateCalculatorForm beta" id="rateCalculatorFormVp" method="post" name="rateCalculator_form" data-propertyid="112912">
-                            <input id="hDepartDate" name="hDepartDate" type="hidden" value="CHECK-IN" />
-                            <input id="hReturnDate" name="hReturnDate" type="hidden" value="CHECK-OUT" />
-                            <input id="foundUs" name="foundUs" type="hidden" />
-                            <div>
 
-                                <input id="departDate" type="text" value="CHECK-IN" name="txtDepart" readonly="readonly" />
-                            </div>
-
-                            <div>
-
-                                <input id="returnDate" type="text" value="CHECK-OUT" name="txtReturn" readonly="readonly" />
-                            </div>
-
-                            <div>
-
-                                <div class="villa-select-wrapper">
-                                    <select id="bedrooms" name="ddlBedrooms">
-                                            <option value="0|22285">7 BEDROOMS - UP TO 8 GUESTS </option>
-
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div>
-
-                                <div class="villa-select-wrapper">
-                                    <select id="currency" name="ddlCurrency">
-                                        <option value="1" selected="selected">USD $</option>
-                                        <option value="2">CAD C$</option>
-                                        <option value="3">GBP £</option>
-                                        <option value="4">EUR €</option>
-                                        <option value="5">JPY ¥</option>
-                                        <option value="7">ZAR R</option>
-                                        <option value="8">NZD NZ$</option>
-                                        <option value="9">AUD AU$</option>
-                                        <option value="10">THB THB</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div id="estimatedPrice" class="estimatedPrice hidden">
-                                <div class="calculatorSubtotal">Subtotal:</div>
-                                <span id="calculatedPrice" class="calculatedPrice">$0</span> <span class="asterisk"></span>
-                            </div>
-                            <div id="promoPriceWrapper" class="promoPriceWrapper hidden">
-                                <div class="comparisonPriceWrapper">Subtotal:<span id="comparisonPrice"></span></div>
-                                <div class="promoCalculatorSubtotal">Sale Price:</div>
-                                <span id="promoCalculatedPrice" class="promoCalculatedPrice">$0</span>
-                            </div>
-                            <div id="estimatedPriceNote" class="estimatedPriceNote hidden">(Subject to taxes &amp; fees)</div>
-                            <div id="selectDateMessage" class="selectDateMessage">
-                                Select your dates above for pricing.
-                            </div>
-                            <div id="noPricingMessage" class="noPricingMessage hidden">
-                                We’ll need to confirm these dates for you – please inquire below.
-                            </div>
-                            <div id="priceRangeMessage" class="priceRangeMessage hidden">
-                                We’ll need to confirm these dates for you – please inquire below.
-                            </div>
-                            <div id="minNightsMessage" class="minNightsMessage hidden">
-                                Minimum night stay not met. To book direct, you can change your check-in/out date OR inquire below and we’ll see what we can do.
-                            </div>
-
-                            <div id="promotionMessage" class="promotionMessage hidden">
-                                Special offers may apply! Inquire now for exact pricing.
-                            </div>
-                            <div id="yearAwayMessage" class="yearAwayMessage hidden">
-                                We’ll need to confirm these dates for you – please inquire below.
-                            </div>
-                            <div id="inquireMessage" class="inquireMessage hidden">
-                                We’ll need to confirm these dates for you – please inquire below.
-                            </div>
-                            <div id="selectedDateUnavailableMessage" class="selectedDateUnavailableMessage hidden">
-                                Selected dates are unavailable.
-                            </div>
-
-
-
-                            <div class="inquiryNowCalculatorWrapper align-center">
-                                <a id="inquiryNowCalculator" class="inquiryNowCalculator inquireNow" href="javascript:;">Inquire</a>
-                            </div>
-                            <div class="bookNowBtnWrapper align-center">
-                                <a id="bookNow" class="bookNow disabled" href="javascript:;">Book Now!</a>
-                            </div>
-
-
-
-                            <div class="villaPhoneWrapper">
-                                <span class="iPhone"></span>
-                                <div class="villaPhone">
-                                    <div>1-877-993-0100</div>
-                                    <a class="international"><span>Not in the USA</span><i class="iDownMiniArrow"></i></a>
-                                    <div class="internationalPhone">
-                                        +1-514-393-8844<br />
-                                        UK: 020 7101 9219
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </form>
-                        <form action="/booknow" method="POST" id="bookNowForm">
-                            <input type="hidden" id="bookingSessionId" name="bookingSessionId" />
-                            <input type="hidden" id="bookingVillaId" name="bookingVillaId" />
-                            <input type="hidden" id="bookingVillaName" name="bookingVillaName" />
-                            <input type="hidden" id="bookingArrivalDate" name="bookingArrivalDate" />
-                            <input type="hidden" id="bookingDepartureDate" name="bookingDepartureDate" />
-                            <input type="hidden" id="bookingBedrooms" name="bookingBedrooms" />
-                            <input type="hidden" id="bookingCalculatedPrice" name="bookingCalculatedPrice" />
-                            <input type="hidden" id="bookingPriceRuleId" name="bookingPriceRuleId" />
-                            <input type="hidden" id="bookingBedroomString" name="bookingBedroomString" />
-                        </form>
+                    <div id="gallery-1" class="royalSlider rsDefault">
+                        <div class="fotorama" data-nav="thumbs" data-width="800" data-height="530" data-allowfullscreen="true" data-autoplay="true">
+                            <%- @villa.images.each do |image| %>
+                              <%= link_to asset_path(image.image.url) do %>
+                                <%= image_tag image.image.url(:thumb) %>
+                              <% end %>
+                            <% end %>
+                        </div>
                     </div>
                 </div>
-                <div class="lrStandardBox">
-                    <div class="lrStandardTlt">
-                        Every Trip Includes:
-                    </div>
-                    <ul class="noBullet">
-                        <li class="lrStandard-item"><i class="iQuality"></i>100+ Point Inspected Home</li>
-                        <li class="lrStandard-item"><i class="iAdvice"></i>Property Advice</li>
-                        <li class="lrStandard-item"><i class="iConcierge"></i>Personal Concierge</li>
-                        <li class="lrStandard-item"><i class="i24hrs"></i>Guest Support</li>
-                        <li class="lrStandard-item"><i class="iSuggestions"></i>Local Expertise</li>
-                    </ul>
-
-                </div>
-
-            </div>
-            <div class="topContent villaMainContent clearfix">
-
-                <h1 id="villaName" class="villa-name" itemprop="name">Casa dos Esteios</h1>
-                <div class="villaPrice">
-
-                        <span class="uppercase price" itemprop="priceRange">$294 - $586</span>
-
-
-                    <span class="perNight">
-                            <span class="asterisk">*</span>
-
-                        /night
-                    </span>
-                </div>
-                <div class="villa-specs">
-
-                    <div id="villa-region" class="villa-region" itemprop="address">Douro Valley, <span itemprop="addressRegion">Northern Portugal</span>, <span itemprop="addressCountry">Portugal</span></div>
-                    <div id="villa-vitals" class="villa-vitals">7&#160;Bedrooms, 8.5&#160;Bathrooms (8 Ensuite), Pool</div>
-                </div>
-
-                <div class="share">
-                    <div class="addthis_toolbox addthis_default_style">
-                        <ul class="villaUtils-list clearfix">
-                            <li>
-                                <a  title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.luxuryretreats.com%2Fdestinations%2Feurope%2Fportugal%2Fnorthern-portugal%2Fdouro-valley%2Fcasa-dos-esteios-112912" target="_blank">
-                                    <i class="shareImage iFacebook"></i>
-                                </a>
-
-                            </li>
-
-
-
-
-
-                            <li class="share-item facebook">
-                                <fb:like href="https://www.luxuryretreats.com/destinations/europe/portugal/northern-portugal/douro-valley/casa-dos-esteios-112912" send="false" layout="button" width="60" show_faces="false" action="like" font=""></fb:like>
-                                <fb:send style="margin-left:-20px" data-width="60px" data-height="30" href="https://www.luxuryretreats.com/destinations/europe/portugal/northern-portugal/douro-valley/casa-dos-esteios-112912">
-                              </fb:send>
-                            </li>
-                            <li class="share-item tweet">
-                                <a target="_blank" title="Share on Twitter" href="https://twitter.com/home?status=Casa%20dos%20Esteios%20%7C%20Northern%20Portugal%2C%20Portugal%20via%20%40LuxuryRetreats">
-                                    <i class="shareImage lnkTwitter"><i></i>Tweet</i>
-                                </a>
-                            </li>
-
-                            <li class="share-item plusone">
-                                <div class="g-plusone" data-size="medium" data-annotation="none"></div>
-
-                            </li>
-
-                            <li class="share-item pinit">
-                                <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.luxuryretreats.com%2Fdestinations%2Feurope%2Fportugal%2Fnorthern-portugal%2Fdouro-valley%2Fcasa-dos-esteios-112912&media=https%3A%2F%2Fpictures.luxuryretreats.com%2F112912%2Falgarve-casadosesteios-01.jpg&description=Luxury%20Retreats%20%7CCasa%20dos%20Esteios" data-pin-do="buttonPin" data-pin-config="none">
-                                    <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
-
-                            </li>
-                            <li class="share-item plainoldemail">
-                                <div class="lnkEmailFriendWrapper"><a id="lnkEmailFriend" class="lnkEmailFriend" title="Email a friend" href="javascript:;"><i class="iEnvelope"></i>Share</a></div>
-                            </li>
-                            <li class="share-item">
-                                <div class="lnkWishlistWrapper"><a class="lnkWishlist" id="addWishListVp" href="javascript:;" onclick="wl.addToCart(112912)">Favorites</a></div>
-                            </li>
-
+                <div class="content">
+                    <div id="villaAnchorMenu" class="villaAnchorMenu normal">
+                        <ul>
+                            <li><a class="linksToOverview" href="#anchorOverview"><span><%= t(:overview, scope: 'villas') %></span></a></li>
+                            <li><a class="linksToAreaMap" href="#anchorAreaMap"><span><%= t(:area_map, scope: 'villas') %></span></a></li>
                         </ul>
                     </div>
-                </div>
+                    <div class="villa-reservation normal">
+                        <div class="rateCalculatorBoxWrapper">
+                            <div class="rateCalculatorBox">
+                                <div class="rateCalculatorBox-title"><%= t(:your_trip, scope: 'villas') %></div>
+                                <form class="rateCalculatorForm beta" id="rateCalculatorFormVp" method="post" name="rateCalculator_form" data-propertyid="112912">
+                                    <input id="hDepartDate" name="hDepartDate" type="hidden" value="CHECK-IN" />
+                                    <input id="hReturnDate" name="hReturnDate" type="hidden" value="CHECK-OUT" />
+                                    <input id="foundUs" name="foundUs" type="hidden" />
+                                    <div>
+
+                                        <input id="departDate" type="text" value="CHECK-IN" name="txtDepart" readonly="readonly" />
+                                    </div>
+
+                                    <div>
+
+                                        <input id="returnDate" type="text" value="CHECK-OUT" name="txtReturn" readonly="readonly" />
+                                    </div>
+
+                                    <div id="estimatedPrice" class="estimatedPrice hidden">
+                                        <div class="calculatorSubtotal">Subtotal:</div>
+                                        <span id="calculatedPrice" class="calculatedPrice">$0</span> <span class="asterisk"></span>
+                                    </div>
+                                    <div id="promoPriceWrapper" class="promoPriceWrapper hidden">
+                                        <div class="comparisonPriceWrapper">Subtotal:<span id="comparisonPrice"></span></div>
+                                        <div class="promoCalculatorSubtotal">Sale Price:</div>
+                                        <span id="promoCalculatedPrice" class="promoCalculatedPrice">$0</span>
+                                    </div>
+                                    <div id="estimatedPriceNote" class="estimatedPriceNote hidden">(Subject to taxes &amp; fees)</div>
+                                    <div id="noPricingMessage" class="noPricingMessage hidden">
+                                        We’ll need to confirm these dates for you – please inquire below.
+                                    </div>
+                                    <div id="priceRangeMessage" class="priceRangeMessage hidden">
+                                        We’ll need to confirm these dates for you – please inquire below.
+                                    </div>
+                                    <div id="minNightsMessage" class="minNightsMessage hidden">
+                                        Minimum night stay not met. To book direct, you can change your check-in/out date OR inquire below and we’ll see what we can do.
+                                    </div>
+
+                                    <div id="promotionMessage" class="promotionMessage hidden">
+                                        Special offers may apply! Inquire now for exact pricing.
+                                    </div>
+                                    <div id="yearAwayMessage" class="yearAwayMessage hidden">
+                                        We’ll need to confirm these dates for you – please inquire below.
+                                    </div>
+                                    <div id="inquireMessage" class="inquireMessage hidden">
+                                        We’ll need to confirm these dates for you – please inquire below.
+                                    </div>
+                                    <div id="selectedDateUnavailableMessage" class="selectedDateUnavailableMessage hidden">
+                                        Selected dates are unavailable.
+                                    </div>
 
 
-            </div>
-            <div id="anchorOverview" class="bottomContent villaMainContent clearfix">
-
-                <div class="villaMainContent">
-
+                                    <div class="inquiryNowCalculatorWrapper align-center">
+                                        <a id="inquiryNowCalculator" class="inquiryNowCalculator inquireNow" href="javascript:;"><%= t(:inquire, scope: 'villas') %></a>
+                                    </div>
 
 
-                    <div class="villa-description beta">
-                        <div class="villaSectionTitle">Overview &amp; Features</div>
-                        <div id="fullview" class="fullview">
-                            <p>Take a quiet holiday at this restored 19th century farmhouse, one of our most charming villas in Portugal. Renovated in 2001, this spacious vacation rental sits on 20,000 square meters of land, a quarter of which are gardens; and even better, the property is walled for ultimate privacy. Nearby is the Douro Valley, a UNESCO World Heritage Site that is known for exclusively producing port wine.</p>
-<p>Can you think of a better way to spend a lazy afternoon than relaxing in a private swimming pool, or lounging in chair poolside with a cool drink and soaking in the sun? Perhaps the image of you and your loved ones enjoying a backyard barbecue in an exotic locale and then dining al fresco out on the terrace will tempt you. Or maybe knowing that you can hire someone to make your breakfast daily as well as homecooked traditional meals is just the perk you’ve been looking for. Casa dos Esteios offers all of the above.</p>
-<p>The villa’s inside will be just as pleasing—you’ll find views of the nearby mountains as well as stylish, high-end furnishings with rustic accents in the living area. If you feel up to cooking, the kitchen comes fully equipped with all the appliances you’d have at home, including a dishwasher and coffee machine. A housekeeping service is included three times a week.</p>
-<p>Casa dos Esteios can easily accommodate up to 16 guests with its quadruple bedroom, three double bedrooms, and three twin bedrooms. All feature ensuite bathrooms and private cable TV.</p>
-<p>If you’re looking to do something romantic, head to the Douro River, just three kilometers away and take a boat trip at sunset—it will be something you will fondly remember. Feel like hitting the beach? Some of the area’s best are found just 45 minutes away, including Foz do Douro beaches and the city beaches of Porto.</p>
-<em>Copyright © Luxury Retreats. All rights reserved.</em>
-<hr/>
-<strong class="title">Bedroom / Bathroom Description</strong><br />
-<strong>Bedroom 1</strong><br />
-<span>4 Twin beds, En-suite bathroom, TV</span><br /><br />
-<strong>Bedroom 2</strong><br />
-<span>Double bed, En-suite bathroom, TV </span><br /><br />
-<strong>Bedroom 3</strong><br />
-<span>Double bed, En-suite bathroom, TV </span><br /><br />
-<strong>Bedroom 4</strong><br />
-<span>Double bed, En-suite bathroom, TV</span><br /><br />
-<strong>Bedroom 5</strong><br />
-<span>Double bed, En-suite bathroom, TV </span><br /><br />
-<strong>Bedroom 6</strong><br />
-<span>2 Twin beds, En-suite bathroom, TV </span><br /><br />
-<strong>Bedroom 7</strong><br />
-<span>2 Twin beds, En-suite bathroom, TV </span><br /><br />
-<strong>Bedroom 8</strong><br />
-<span>2 Twin beds, En-suite bathroom, TV </span>
-<hr/>
-<strong class="title">Features & Amenities</strong>
-<ul><li>Air conditioning</li><li>Cable TV</li><li>Fully equipped kitchen</li><li>Washing machine</li></ul>
-<strong class="title">Outdoor Features</strong>
-<ul><li>Swimming pool</li><li>Outdoor furniture</li><li>BBQ grill</li><li>Bicycle</li></ul>
-<strong class="title">Staff & Services</strong>
-Included:<ul><li>Trice a week cleaning service</li><li>Weekly linen change</li></ul>
-At Extra Cost – advance notice may be required:<ul><li>Villa pre-stocking</li><li>Activities and excursions</li><li>Cook service</li><li>Daily breakfast</li></ul>
-<strong class="title">Villa Policies</strong>
-<ul><li>Maximum 16 guests</li><li>Children welcome</li><li>Non-smoking villa</li><li>Pets not permitted</li><li>Bedrooms that are not rented will be locked</li><li>Security deposit required upon arrival at the villa in cash</li></ul>
-<strong class="title">Getting There</strong>
-<ul><li>Rental vehicle recommended</li><li>Transport available</li></ul>
-<strong class="title">Location</strong>
-<ul><li>1000 meters to restaurants</li><li>1500 meters to supermarket</li><li>3 km to lake</li><li>13 km to Penafiel</li><li>60 km to beach in Porto</li></ul>
-                        </div>
-                        <div id="shortview" class="shortview" itemprop="description">
-                            <p>Take a quiet holiday at this restored 19th century farmhouse, one of our most charming villas in Portugal. Renovated in 2001, this spacious vacation rental sits on 20,000 square meters of land, a quarter of which are gardens; and even better, the property is walled for ultimate privacy. Nearby is the Douro Valley, a UNESCO World Heritage Site that is known for exclusively producing port wine.</p>
-<p>Can you think of a better way to spend a lazy afternoon than relaxing in a private swimming pool, or lounging in chair poolside with a cool drink and ...
-                        </div>
-                    </div>
-
-                    <div id="readMoreLnk" class='readMoreLnk villa-link'>[ Show More Details + ] </div>
-                    <div id="readLessLnk" class='readLessLnk villa-link'>[ Show Less Details - ] </div>
-
-
-                    <hr id="anchorAreaMap" />
-                    <div class="mapSection">
-                        <div class="villaSectionTitle">Area Map</div>
-                        <div class="mapWrapper">
-                            <div id="map" class="map"></div>
-
-                        </div>
-                        <div>Area maps: villa locations are approximate.</div>
-
-                    </div>
-
-                    <script>
-                        var myStyles = [
-                            {
-                                featureType: "poi",
-                                stylers: [
-                                    { visibility: "off" }
-                                ]
-                            }
-                        ];
-                        var mapOptions = {
-                            center: new google.maps.LatLng("41.1219253540039", "-8.28640174865723"),
-                            mapTypeId: google.maps.MapTypeId.ROADMAP,
-                            enableNewStyle: true,
-                            zoom: 12, //0-19
-                            scaleControl: false,
-                            panControl: false,
-                            streetViewControl: false, //enablesa little man
-                            styles: myStyles, //turns off POIs
-                            scrollwheel: false //wont zoom with scroll
-                        };
-
-                        var map = new google.maps.Map(document.getElementById('map'),
-                            mapOptions);
-
-
-                        if (Boolean("True")) { //showing region not location
-                            var circle = new google.maps.Circle({
-                                center: new google.maps.LatLng("41.1219253540039", "-8.28640174865723"),
-                                radius: 1609,  //1609 meters = 1 mile
-                                strokeColor: '#FF0000',
-                                strokeOpacity: 0.8,
-                                strokeWeight: 0,
-                                fillColor: '#28a7af',
-                                map: map,
-                                fillOpacity: 0.35
-                            });
-                        }
-
-                    </script>
-
-                    <hr id="anchorAvailability" />
-                    <div>
-                        <div class="villaSectionTitle">Rates</div>
-                        <div id="priceTable">
-
-
-
-
-
-<div class="rateWrapper">
-
-
-    <form class="viewAllRatesForm clear-fix" method="post" name="viewAllRates_form">
-        <input type="hidden" id="propertyId" value="112912" />
-        <div class="uppercase left viewAllRates-title">Show me rates for:</div>
-        <div class="left">
-            <label for="viewAllRatesBedrooms" class="visuallyhidden">Rooms</label>
-            <select class="ddlviewAllRatesBedrooms" id="viewAllRatesBedrooms" name="ddlviewAllRatesBedrooms">
-                        <option value="0|22285">7 BEDROOMS - UP TO 8 GUESTS </option>
-
-
-            </select>
-        </div>
-
-        <div class="left">
-            <label for="viewAllRatesCurrency" class="visuallyhidden">Currency</label>
-            <select id="viewAllRatesCurrency" class="viewAllRatesCurrency">
-                <option selected="selected" value="1">USD $ </option>
-                <option value="2">CAD C$</option>
-                <option value="3">GBP £ </option>
-                <option value="4">EUR €</option>
-                <option value="5">JPY ¥ </option>
-                <option value="7">ZAR R</option>
-                <option value="8">NZD NZ$</option>
-                <option value="9">AUD AU$</option>
-                <option value="10">THB THB</option>
-            </select>
-        </div>
-    </form>
-
-    <table class="tbl">
-        <thead>
-            <tr>
-                <th>Nightly rates</th>
-                <th>Minimum night stay</th>
-                <th>Date range</th>
-            </tr>
-        </thead>
-        <tbody class="allprices">
-
-        </tbody>
-    </table>
-
-    <span></span>
-    <ul class="noBullet uppercase viewAllRates-notes">
-<li>Security Deposit €250.00</li>
-    </ul>
-
-</div>
-                        </div>
-                    </div>
-
-
-
-                        <hr id="anchorReviews" />
-                        <div>
-                            <div class="villaSectionTitle titleFont">
-                                What our guests are saying
-                                    <span id="tripAdvisor" class="tripAdvisor">
-                                        <div>
-                                            <img /> &nbsp;TripAdvisor&nbsp;Reviews
+                                    <div class="villaPhoneWrapper">
+                                        <span class="iPhone"></span>
+                                        <div class="villaPhone">
+                                            <div>1-000-000-0000</div>
+                                            <div>1-111-111-1111</div>
                                         </div>
-                                    </span>
+                                    </div>
 
+
+                                </form>
+                                <form action="/booknow" method="POST" id="bookNowForm">
+                                    <input type="hidden" id="bookingSessionId" name="bookingSessionId" />
+                                    <input type="hidden" id="bookingVillaId" name="bookingVillaId" />
+                                    <input type="hidden" id="bookingVillaName" name="bookingVillaName" />
+                                    <input type="hidden" id="bookingArrivalDate" name="bookingArrivalDate" />
+                                    <input type="hidden" id="bookingDepartureDate" name="bookingDepartureDate" />
+                                    <input type="hidden" id="bookingBedrooms" name="bookingBedrooms" />
+                                    <input type="hidden" id="bookingCalculatedPrice" name="bookingCalculatedPrice" />
+                                    <input type="hidden" id="bookingPriceRuleId" name="bookingPriceRuleId" />
+                                    <input type="hidden" id="bookingBedroomString" name="bookingBedroomString" />
+                                </form>
                             </div>
-
-
-                            <div class="reviewSummary">
-                                <span class="ratingSectionTlt left">Average Review Score: </span><span class="stars" itemprop="aggregateRating">5.00</span><span class="reviewComments" itemprop="reviewCount">2</span>
-
+                        </div>
+                        <div class="lrStandardBox">
+                            <div class="lrStandardTlt">
+                                Every Trip Includes:
                             </div>
-
-
-
-<div class="reviews-wrapper">
-        <article class="review">
-                <div class="review-metas">
-                    <div class="reviewerImg"></div>
-                    <div class="details">
-                        <div class="guestName" itemprop="author">Terry K.</div>
-                        <div>
-                            <span style="display:none" itemprop="datePublished">06/09/2014 11:07:36</span>
-                            <time datetime="2014-06-09">4 months ago</time>
-                            <span class="stars" title="5.00 out of 5">5.00</span>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="review-title"></div>
-                <div class="review-content truncateDotDotDot">
-                    <p>We had a very good time -- Casa dos Estios was perfect in every way -- Good accomodation , well kept , clean , excellent Kitchen -- in fact 5 stars and no complaints at all</p>
-                </div>
-                <a class="truncateReadMore hidden" href="#">Read More</a>
-                <a class="truncateReadLess hidden" href="#">Read Less</a>
-        </article>
-        <article class="review">
-                <div class="review-metas">
-                    <div class="reviewerImg"></div>
-                    <div class="details">
-                        <div class="guestName" itemprop="author">Megan H.</div>
-                        <div>
-                            <span style="display:none" itemprop="datePublished">08/19/2013 09:45:10</span>
-                            <time datetime="2013-08-19">1 year 1 month ago</time>
-                            <span class="stars" title="5.00 out of 5">5.00</span>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="review-title">Amazing experience w/ Luxury Retreats at the Luxury villa in Portugal</div>
-                <div class="review-content truncateDotDotDot">
-                    <p>We had an amazing experience with Luxury Retreats at the Luxury villa in Portugal. Everything was perfect from start to finish. The villa was fully equipped and in top condition. Booking the villa, the preparations before arrival and upon arrival and during our stay were perfect! Thank you for making a great vacation possible!</p>
-                </div>
-                <a class="truncateReadMore hidden" href="#">Read More</a>
-                <a class="truncateReadLess hidden" href="#">Read Less</a>
-        </article>
-</div>
-
-
-
-
-
+                            <ul class="noBullet">
+                                <li class="lrStandard-item"><i class="iQuality"></i>100+ Point Inspected Home</li>
+                                <li class="lrStandard-item"><i class="iAdvice"></i>Property Advice</li>
+                                <li class="lrStandard-item"><i class="iConcierge"></i>Personal Concierge</li>
+                                <li class="lrStandard-item"><i class="i24hrs"></i>Guest Support</li>
+                                <li class="lrStandard-item"><i class="iSuggestions"></i>Local Expertise</li>
+                            </ul>
 
                         </div>
 
-                </div>
-            </div>
-            <div class="uppercase villa-Id">ID #112912</div>
+                    </div>
+                    <div class="topContent villaMainContent clearfix">
+
+                        <h1 id="villaName" class="villa-name" itemprop="name"><%= @villa.name %></h1>
+                        <div class="villaPrice">
+
+                                <span class="uppercase price" itemprop="priceRange"><%= number_to_currency(@villa.price_from, precision: 0) %> - <%= number_to_currency(@villa.price_to, precision: 0) %></span>
 
 
-        </div>
-    </article>
-
-
-    <aside class="villaRelatedContent">
-        <div id="searchNavContainer" style="display: block;">
-            <div id="btnBack"><a id='lnBack' class="black-link"><span class="iBack"></span>BACK</a></div>
-        </div>
-
-        <div class="suggestionBox">
-
-            <h2 class="suggestionBox-title uppercase">You may also like</h2>
-            <ul class="noBullet">
-                    <li class="suggestionBox-item">
-                        <a id="suggestionVilla1" href="/destinations/europe/portugal/northern-portugal/douro-valley/the-vineyard-112913">
-                            <div class="suggestionBox-img">
-                                <img src="https://pictures.luxuryretreats.com/112913/mediums/algarve-thevineyard-01.jpg" alt="" />
+                            <span class="perNight">
+                                    <span class="asterisk">*</span>
+                                /<%= t(:per_night, scope: 'villas') %>
+                            </span>
+                        </div>
+                        <div class="villa-specs">
+                            <div>
+                                <span><%= @villa.pretty_location %></span>
                             </div>
-                            <h3 class="suggestionBox-name uppercase">The Vineyard</h3>
-                            <p class="suggestionBox-specs">Northern Portugal, Portugal<br>3&#160;Bedrooms, 3&#160;Bathrooms (3 Ensuite), Pool</p>
-                        </a>
-                    </li>
-                    <li class="suggestionBox-item">
-                        <a id="suggestionVilla2" href="/destinations/europe/portugal/northern-portugal/douro-valley/villa-doc-112914">
-                            <div class="suggestionBox-img">
-                                <img src="https://pictures.luxuryretreats.com/112914/mediums/algarve-villadoc-01.jpg" alt="" />
+                            <div id="villa-vitals" class="villa-vitals"><%= @villa.bedrooms %>&#160;<%= t(:bedrooms, scope: 'villas') %>, <%= @villa.bathrooms %>&#160;<%= t(:bathrooms, scope: 'villas') %></div>
+                        </div>
+
+                    </div>
+                    <div id="anchorOverview" class="bottomContent villaMainContent clearfix">
+
+                        <div class="villaMainContent">
+
+
+
+                            <div class="villa-description beta">
+                                <div class="villaSectionTitle"><%= t(:overview_and_features, scope: 'villas') %></div>
+                                <div id="fullview" class="fullview">
+                                    <%= simple_format(@villa.description) %>
+                                </div>
+                                <div id="shortview" class="shortview" itemprop="description">
+                                    <%= simple_format(truncate @villa.description, length: 300) %>
+                                </div>
                             </div>
-                            <h3 class="suggestionBox-name uppercase">Villa Doc</h3>
-                            <p class="suggestionBox-specs">Northern Portugal, Portugal<br>3&#160;Bedrooms, 2&#160;Bathrooms (1 Ensuite), Pool</p>
-                        </a>
-                    </li>
-                    <li class="suggestionBox-item">
-                        <a id="suggestionVilla3" href="/destinations/europe/portugal/northern-portugal/minho/quinta-do-luar-casa-da-fruta-estate-113296">
-                            <div class="suggestionBox-img">
-                                <img src="https://pictures.luxuryretreats.com/113296/mediums/dourovalley-casadafruta-01.jpg" alt="" />
+
+                            <div id="readMoreLnk" class='readMoreLnk villa-link'>[ <%= t(:read_more, scope: 'villas') %> + ] </div>
+                            <div id="readLessLnk" class='readLessLnk villa-link'>[ <%= t(:read_less, scope: 'villas') %> - ] </div>
+
+
+                            <hr id="anchorAreaMap" />
+                            <div class="mapSection">
+                                <div class="villaSectionTitle"><%= t(:area_map, scope: 'villas') %></div>
+                                <div class="mapWrapper">
+                                    <div id="map" class="map" data-hash="<%= @hash.to_json %>" data-zoom="<%= @villa.zoom %>"></div>
+
+                                </div>
+                                <div><%= t(:area_map_desc, scope: 'villas') %></div>
+
                             </div>
-                            <h3 class="suggestionBox-name uppercase">Quinta do Luar - Casa da Fruta Estate</h3>
-                            <p class="suggestionBox-specs">Northern Portugal, Portugal<br>7&#160;Bedrooms, 6&#160;Bathrooms (5 Ensuite), Pool</p>
-                        </a>
-                    </li>
 
-            </ul>
-        </div>
-
-
-    </aside>
-</div>
-
-
-<div id="scrollTop" class="scrollTop">
-    <div class="scrollTopImg"></div>
-</div>
-
-
-
-
-
-
-
-<div id="viewAllRatesDialog-modal">
-    <a href="javascript:;" id="btnRatesDialogClose" class="btnDialogClose"><span class="iClose"></span></a>
-
-
-
-
-
-<div class="rateWrapper">
-
-
-    <form class="viewAllRatesForm clear-fix" method="post" name="viewAllRates_form">
-        <input type="hidden" id="propertyId" value="112912" />
-        <div class="uppercase left viewAllRates-title">Show me rates for:</div>
-        <div class="left">
-            <label for="viewAllRatesBedrooms" class="visuallyhidden">Rooms</label>
-            <select class="ddlviewAllRatesBedrooms" id="viewAllRatesBedrooms" name="ddlviewAllRatesBedrooms">
-                        <option value="0|22285">7 BEDROOMS - UP TO 8 GUESTS </option>
-
-
-            </select>
-        </div>
-
-        <div class="left">
-            <label for="viewAllRatesCurrency" class="visuallyhidden">Currency</label>
-            <select id="viewAllRatesCurrency" class="viewAllRatesCurrency">
-                <option selected="selected" value="1">USD $ </option>
-                <option value="2">CAD C$</option>
-                <option value="3">GBP £ </option>
-                <option value="4">EUR €</option>
-                <option value="5">JPY ¥ </option>
-                <option value="7">ZAR R</option>
-                <option value="8">NZD NZ$</option>
-                <option value="9">AUD AU$</option>
-                <option value="10">THB THB</option>
-            </select>
-        </div>
-    </form>
-
-    <table class="tbl">
-        <thead>
-            <tr>
-                <th>Nightly rates</th>
-                <th>Minimum night stay</th>
-                <th>Date range</th>
-            </tr>
-        </thead>
-        <tbody class="allprices">
-
-        </tbody>
-    </table>
-
-    <span></span>
-    <ul class="noBullet uppercase viewAllRates-notes">
-<li>Security Deposit €250.00</li>
-    </ul>
-
-</div>
-</div>
-
-<div id="sendFriend-modal">
-    <a href="javascript:;" id="btnSendFriendClose" class="btnDialogClose"><span class="iClose"></span></a>
-
-<form id="sendFriendWrapper" class="modalFormContainer">
-
-    <div id="sendFriendFormWrapper" class="clear-fix">
-        <div class="villaFormPictureLayer">
-            <div class="villaFormImageWrapper">
-                <img id="sendFriendVillaPhotoUrl" class="villaFormPhotoUrl" src="https://pictures.luxuryretreats.com/112912/algarve-casadosesteios-01.jpg" />
-            </div>
-            <div id="sfDescriptionLayer" class="villaFormDescriptionLayer">
-                <h2>Casa dos Esteios</h2>
-                  Douro Valley, Northern Portugal, Portugal
-            </div>
-        </div>
-        <div id="sendFriendVillaInformationLayer" class="villaFormInformationLayer">
-
-            <span class="tltForm">Share this with a friend</span>
-            <p class="formInstructions">Your friend will receive a message with a link to this property.</p>
-
-
-            <form id="fmSendFriend" name="fmSendFriend" class="formWrapper">
-                <div class="villaFormRow">
-                    <div class="villaFormCol">
-                        <label id="lblSendFriendName" for="sendFriendName" class="labelLarge">Your Name*</label>
-                        <input type="text" id="sendFriendName" name="sendFriendName" class="inputLarge" maxlength="50"/>
+                        </div>
                     </div>
-                    <div class="villaFormCol">
-                        <label id="lblSendFriendOwnEmail" for="sendFriendOwnEmail" class="labelLarge">Your Email*</label>
-                        <input type="email" id="sendFriendOwnEmail" name="sendFriendOwnEmail" class="inputLarge" maxlength="50"/>
-                    </div>
-                </div>
-                <div class="villaFormRow">
-                    <div class="villaFormCol">
-                        <label id="lblSendFriendFriendName" for="sendFriendName" class="labelLarge">Your Friend's Name*</label>
-                        <input type="text" id="sendFriendFriendName" name="sendFriendFriendName" class="inputLarge" maxlength="50"/>
-                    </div>
-                    <div class="villaFormCol">
-                        <label id="lblSendFriendFriendEmail" for="sendFriendFriendEmail" class="labelLarge">Your Friend's Email*</label>
-                        <input type="email" id="sendFriendFriendEmail" name="sendFriendFriendEmail" class="inputLarge" maxlength="50"/>
-                    </div>
-                </div>
-                <div class="villaFormRow">
-                    <label id="lblSendFriendMessage" for="sendFriendMessage" class="labelLarge inputModalFullWidth">Personalize Your Message</label>
-                    <textarea id="sendFriendMessage" name="sendFriendMessage" class="tbAdditionalComments" onchange="taLength(this)" onkeyup="taLength(this)" onpaste="taLength(this)" maxlength="1000">Look what I found for our next vacation!</textarea>
-                </div>
-                <div>
-                    <input type="checkbox" name="sendFriendSubscribe" id="sendFriendSubscribe" value="value">
-                    <label id="lblSendFriendSubscribe" class="lightGray" for="sendFriendSubscribe">Send me the latest from Luxury Retreats</label>
-                </div>
-                <div id="sendFriendSubmitWrapper" class="sendFriendSubmitWrapper">
-                    <div>
-                        <input type="button" id="submitSendFriend" name="submitSendFriend" value="SEND TO FRIEND" class="cta" />
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div id="sendFriendThankYou">
-            <div id="sendFriendVillaInformationLayer" class="villaFormInformationLayer">
-                <input type="hidden" id="sendFriendVillaId" value="112912"/>
-                <span class="tltForm">THANK YOU</span>
-                <p class="formInstructions">
-                    Thanks for referring us to a friend.
-                    <br />
-                    Your message has been sent.
-                </p>
+                    <div class="uppercase villa-Id">ID #<%= @villa.id %></div>
 
-                <div class="sendFriendSubmitWrapper">
-                    <div>
-                        <input type="button" id="sendFriendClose" name="sendFriendClose" value="CLOSE" class="cta" />
-                    </div>
 
                 </div>
-            </div>
+            </article>
+
+
+            <aside class="villaRelatedContent">
+                <div id="searchNavContainer" style="display: block;">
+                    <div id="btnBack">
+                        <%= link_to villas_path, class: 'black-link', id: 'lnBack' do %>
+                            <span class="iBack"></span><%= t(:back, scope: 'villas') %>
+                        <% end %>
+                    </div>
+                </div>
+
+                <div class="suggestionBox">
+
+                    <h2 class="suggestionBox-title uppercase">You may also like</h2>
+                    <ul class="noBullet">
+                        <% @villa.featured.each do |villa| %>
+                            <li class="suggestionBox-item">
+                                <%= link_to villa do %>
+                                    <div class="suggestionBox-img">
+                                        <%= image_tag villa.images.first.image.url %>
+                                    </div>
+                                    <h3 class="suggestionBox-name uppercase"><%= villa.name %></h3>
+                                    <p class="suggestionBox-specs"><%= villa.pretty_location %><br><%= villa.bedrooms %>&#160;<%= t(:bedrooms, scope: 'villas') %>, <%= villa.bathrooms %>&#160;<%= t(:bathrooms, scope: 'villas') %></p>
+                                <% end %>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+
+
+            </aside>
         </div>
-        <img src="https://resources.luxuryretreats.com/images/ajax-loaderSmall.gif" id="sendFriendLoading" class="sendFriendLoading" style="display: none;" />
-    </div>
-</form>
 
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-<div id="fb-root"></div>
-
-
-
-
-
+        <div id="scrollTop" class="scrollTop">
+            <div class="scrollTopImg"></div>
+        </div>
     </section>
 
     <%= render 'layouts/header' %>

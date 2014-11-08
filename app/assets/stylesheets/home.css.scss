@@ -613,7 +613,7 @@ img.rsImg {
   .rsPreloader {
     width: 20px;
     height: 20px;
-    background-image: url(https://resources.luxuryretreats.com/images/preloader-white.gif);
+    background-image: image-url('preloader-white.gif');
     left: 50%;
     top: 50%;
     margin-left: -10px;
@@ -937,7 +937,7 @@ section {
     text-align: center;
     width: 100%;
     margin: 150px auto;
-    background: url('../../../images/design_bar.png') no-repeat;
+    background: image-url('design_bar.png') no-repeat;
     width: 44px;
     height: 4px;
   }
@@ -1037,7 +1037,7 @@ section {
 }
 
 .rsArrowIcn {
-  background: url(https://resources.luxuryretreats.com/images/button_sprite.png) no-repeat;
+  background: image-url('button_sprite.png') no-repeat;
   cursor: pointer;
   height: 61px;
   position: absolute;
@@ -1045,7 +1045,7 @@ section {
   top: 50%;
   margin: 0;
   &:hover {
-    background: black url(https://resources.luxuryretreats.com/images/button_sprite.png) no-repeat;
+    background: black image-url('button_sprite.png') no-repeat;
   }
 }
 
@@ -1060,7 +1060,7 @@ section {
 }
 
 .toggleAutoPlayBtn {
-  background: url(https://resources.luxuryretreats.com/images/button_sprite.png) no-repeat;
+  background: image-url('button_sprite.png') no-repeat;
   background-position: 0 -183px;
   cursor: pointer;
   height: 61px;
@@ -1070,12 +1070,12 @@ section {
   margin: 0;
   right: 70px;
   &:hover {
-    background: black url(https://resources.luxuryretreats.com/images/button_sprite.png) no-repeat 0 -183px;
+    background: black image-url('button_sprite.png') no-repeat 0 -183px;
   }
   &.play {
     background-position: 0 -244px;
     &:hover {
-      background: black url(https://resources.luxuryretreats.com/images/button_sprite.png) no-repeat 0 -244px;
+      background: black image-url('button_sprite.png') no-repeat 0 -244px;
     }
   }
 }
@@ -1139,9 +1139,11 @@ section {
 }
 
 .submitInfoHm {
+  border: none;
+  background: none;
   color: #fff;
   font-size: 20px;
-  width: 100%;
+  width: auto;
   padding: 10px 0 10px;
 }
 

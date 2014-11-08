@@ -2,7 +2,6 @@
 #= require angular
 #= require angular-resource
 #= require angular-google-maps
-#= require app
 
 #= require_tree ./angular
 #= require jstree

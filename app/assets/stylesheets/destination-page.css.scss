@@ -6,7 +6,7 @@ body {
   &#destinationSearch section {
     width: 100%;
     position: relative;
-    background: url(/images/bgSection.gif) repeat-x top transparent;
+    background: image-url('bgSection.gif') repeat-x top transparent;
     margin-bottom: 39px;
   }
 }
@@ -62,7 +62,7 @@ section {
       height: 350px;
       left: 0;
       top: 0;
-      background: url(/images/bgBannerFade.png) repeat-y 0 0;
+      background: image-url('bgBannerFade.png') repeat-y 0 0;
     }
     #bannerRightFade {
       position: absolute;
@@ -70,7 +70,7 @@ section {
       height: 350px;
       right: 0;
       top: 0;
-      background: url(/images/bgBannerFade.png) repeat-y -207px 0;
+      background: image-url('bgBannerFade.png') repeat-y -207px 0;
     }
   }
 }
@@ -125,7 +125,7 @@ body {
 #btnShowHide {
   width: 242px;
   height: 31px;
-  background: url(/images/btnThingsToDo.gif) no-repeat 0 0;
+  background: image-url('btnThingsToDo.gif') no-repeat 0 0;
   z-index: 49;
   position: absolute;
   top: 319px;
@@ -134,7 +134,7 @@ body {
   &.selected {
     width: 242px;
     height: 31px;
-    background: url(/images/btnThingsToDo.gif) 0 31px;
+    background: image-url('btnThingsToDo.gif') 0 31px;
     position: absolute;
     top: 319px;
     right: 0;
@@ -160,7 +160,7 @@ body {
       color: #000;
       float: left;
       position: relative;
-      background: url(/images/ContentBlockVerticalSplitter.gif) repeat-y right 0 white;
+      background: image-url('ContentBlockVerticalSplitter.gif') repeat-y right 0 white;
       h2 {
         &:first-child {
           padding: 0;
@@ -395,18 +395,18 @@ body {
   position: absolute;
   top: -51px;
   left: 0;
-  background: url(https://resources.luxuryretreats.com/images/button_sprite.png) repeat-x 0 -305px;
+  background: image-url('button_sprite.png') repeat-x 0 -305px;
   height: 51px;
   width: 800px;
   .rightArrow {
     visibility: hidden;
-    background: url(https://resources.luxuryretreats.com/images/button_sprite.png) repeat-x 0 -371px;
+    background: image-url('button_sprite.png') repeat-x 0 -371px;
     height: 51px;
     width: 51px;
   }
   .leftArrow {
     visibility: hidden;
-    background: url(https://resources.luxuryretreats.com/images/button_sprite.png) repeat-x -10px -432px;
+    background: image-url('button_sprite.png') repeat-x -10px -432px;
     height: 51px;
     width: 51px;
   }
@@ -511,7 +511,7 @@ body {
 }
 
 .iComments {
-  background: url('../../../images/iComments.png') no-repeat;
+  background: image-url('iComments.png') no-repeat;
   width: 13px;
   height: 15px;
   display: inline;
@@ -548,7 +548,7 @@ body {
   right: 17px;
   bottom: 36px;
   a {
-    background: url("https://static.luxuryretreats.com/images/viw_details_arr_wht.png") no-repeat 170px 13px #4cb7cd;
+    background: image-url("viw_details_arr_wht.png") no-repeat 170px 13px #4cb7cd;
     color: #fff;
     font-size: 14px;
     padding: 8px 40px 5px 0;
@@ -571,7 +571,7 @@ body {
   a {
     color: #505050;
     padding: 0 8px 0 18px;
-    background: url(/images/DestinationIcons.png) no-repeat 0 5px;
+    background: image-url('DestinationIcons.png') no-repeat 0 5px;
     font-size: 12px;
   }
 }
@@ -600,7 +600,7 @@ body {
     #btnBack {
       border-bottom: 2px solid #d8d8d8;
       padding: 4px 15px;
-      background: url("https://static.luxuryretreats.com/images/backtoresult.png") no-repeat 6px -6px;
+      background: image-url("backtoresult.png") no-repeat 6px -6px;
       cursor: pointer;
       color: #000;
       font-size: 14px;
@@ -610,7 +610,7 @@ body {
     }
     li {
       margin: 0;
-      background: url(/images/snNavSplit.gif) no-repeat 9px bottom;
+      background: image-url('snNavSplit.gif') no-repeat 9px bottom;
       &:last-child {
         background: none;
       }
@@ -626,7 +626,7 @@ body {
           background: #000;
           color: #fff;
           width: 131px;
-          background: url(/images/DestinationIcons.png) black no-repeat 140px -24px;
+          background: image-url('DestinationIcons.png') black no-repeat 140px -24px;
           span {
             color: #b4b4b4;
           }
@@ -682,7 +682,7 @@ body {
   font: normal 11px 'Lucida Grande','Lucida Sans Unicode',Helvetica,Arial,Verdana,sans-serif;
   padding-top: 22px;
   margin-top: 5px;
-  background: url(/images/phoneIcon.png) no-repeat 50% top;
+  background: image-url('phoneIcon.png') no-repeat 50% top;
 }
 
 .navPromoBlock-phoneNumber {

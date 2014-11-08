@@ -1,46 +1,123 @@
 $ ->
-  $('.datepicker').datepicker
-    showOtherMonths: true
-    selectOtherMonths: true
-    dateFormat: 'dd/mm/yy'
-    yearRange: '-3:0'
-    firstDay: 1
+  initSlider = ->
+    if $('.sfFilterType:checked').val() == 'rent'
+      min_selector = '#sfPriceSliderMin'
+      max_selector = '#sfPriceSliderMax'
+      $('#sfSalePriceSliderMin, #sfSalePriceSliderMax').prop('disabled', true)
+      $('#sfPriceSliderMin, #sfPriceSliderMax').prop('disabled', false)
+    else
+      min_selector = '#sfSalePriceSliderMin'
+      max_selector = '#sfSalePriceSliderMax'
+      $('#sfPriceSliderMin, #sfPriceSliderMax').prop('disabled', true)
+      $('#sfSalePriceSliderMin, #sfSalePriceSliderMax').prop('disabled', false)
 
-  $(document).on "page:fetch", ->
-    $("#spinner").show()
-  $(document).on "page:change", ->
-    $("#spinner").hide()
+    $('#sfAmount').text("$#{$(min_selector).val()} - $#{$(max_selector).val()}")
 
-  bedrooms_label = $('h4#bedrooms')
-  bedrooms_label_text = bedrooms_label.text()
-  q_bedrooms_gteq = $('#q_bedrooms_gteq').val() || 1
-  q_bedrooms_lteq = $('#q_bedrooms_lteq').val() || 10
+    sliderable = $('#sfSlider')
+    sliderable.slider
+      range: true
+      min: $(min_selector).data('min')
+      max: $(max_selector).data('min')
+      values: [
+        $(min_selector).val()
+        $(max_selector).val()
+      ]
+      slide: (event, ui) ->
+        $(min_selector).val(ui.values[0])
+        $(max_selector).val(ui.values[1])
+        $('#sfAmount').text("$#{ui.values[0]} - $#{ui.values[1]}")
+      create: ->
+        $('#sfAmount').text("$#{sliderable.slider("values", 0)} - $#{sliderable.slider("values", 1)}")
 
-  $("#bedrooms-slider-range").slider
-    range: true
-    min: 1
-    max: 10
-    values: [q_bedrooms_gteq, q_bedrooms_lteq]
-    slide: (event, ui) ->
-      $("#q_bedrooms_gteq").val(ui.values[0])
-      $("#q_bedrooms_lteq").val(ui.values[1])
-      bedrooms_label.text("#{bedrooms_label_text}: #{ui.values[0]} - #{ui.values[1]}")
+  initSlider()
 
-  bedrooms_label.text("#{bedrooms_label_text}: #{q_bedrooms_gteq} - #{q_bedrooms_lteq}")
+  $('.sfFilterType').on 'click', ->
+    initSlider()
 
-  price_label = $('h4#price_range')
-  price_label_text = price_label.text()
-  q_price_gteq = $('#q_price_from_gteq').val() || 0
-  q_price_lteq = $('#q_price_from_lteq').val() || 7000
 
-  $("#price-slider-range").slider
-    range: true
-    min: 0
-    max: 7000
-    values: [q_price_gteq, q_price_lteq]
-    slide: (event, ui) ->
-      $("#q_price_from_gteq").val(ui.values[0])
-      $("#q_price_from_lteq").val(ui.values[1])
-      price_label.text("#{price_label_text}: $#{ui.values[0]} - $#{ui.values[1]}")
+  $(document).on 'scroll', ->
+    if 710 < $(window).scrollTop() < 1035
+      $('#villaAnchorMenu, .villa-reservation').removeClass('normal').addClass('makeFixed fixPosition')
+    else
+      $('#villaAnchorMenu, .villa-reservation').removeClass('makeFixed fixPosition').addClass('normal')
 
-  price_label.text("#{price_label_text}: $#{q_price_gteq} - $#{q_price_lteq}")
+  $('#navDestination, #navContact').on 'click', (e) ->
+    if $(@).hasClass('selected')
+      $(@).removeClass('selected')
+      $('.subs > div', @).hide()
+      $('#topNav, #numbers', @).hide()
+    else
+      $(@).addClass('selected')
+      $('.subs > div', @).show()
+      $('#topNav, #numbers', @).show()
+
+
+  $("#infinite-scrolling").infinitescroll
+    navSelector: "nav.pagination" # selector for the paged navigation (it will be hidden)
+    nextSelector: "nav.pagination a[rel=next]" # selector for the NEXT link (to page 2)
+    itemSelector: "#ajaxResult .villaBlockContainer" # selector for all items you'll retrieve
+    extraScrollPx: 100
+    loading:
+      finishedMsg: "<em>Congratulations, you've reached the end.</em>"
+      msgText: "<em>Loading the next set of villas...</em>"
+      speed: 'fast'
+
+  generate_regions = ->
+    regions = []
+    $('.sfSubRegion').each (region) ->
+      checked_regions = $(".selectAll:checked", @)
+      if checked_regions.length
+        parent_region = $('.selectAll', @)
+        regions.push(parent_region.data('label'))
+      else
+        $(".region3Checkbox:checked", @).each ->
+          regions.push($(@).data('label'))
+
+    $('#sfLocation').val(regions.join(', '))
+
+  generate_regions()
+
+  $(".region3Checkbox").on "click", ->
+    block_container = $(@).closest('.sfSubRegionBlock')
+    checked_regions = $(".region3Checkbox:checked", block_container)
+    select_all = $('.selectAll', block_container.parent())
+    select_all.prop('checked', checked_regions.length == select_all.data('count'))
+
+    generate_regions()
+
+  $('.sfShowHideArea').on 'click', ->
+    $('.sfBottom').toggle('show')
+    $('.sfMoreBtn').toggle('hide')
+
+  $('#sfInputSearchContainer').on 'click', ->
+    conteiner = $(@)
+    conteiner.addClass('highlight')
+    $('#sfSearchOptions').addClass('open')
+    $('#sfSearchOptions').on 'mouseleave', ->
+      conteiner.removeClass('highlight')
+      $('#sfSearchOptions').removeClass('open')
+
+  $('.selectAll').on 'click', ->
+    sub_areas = $(".sub#{@id.split('all-')[1]}")
+    checked_sub_areas = $(".sub#{@id.split('all-')[1]}:checked")
+    sub_areas.prop('checked', $(@).is(':checked'))
+    generate_regions()
+
+  $('#sfCheckIn, #sfCheckOut, #departDate, #returnDate').datepicker
+    dateFormat: "yy-mm-dd"
+    beforeShow: (input, inst) ->
+      $('#ui-datepicker-div').addClass('sfDatepicker')
+
+  $('#dpInfoCheckInDateHm, #dpInfoCheckOutDateHm').datepicker
+    dateFormat: "yy-mm-dd"
+
+  $('#readMoreLnk').on 'click', ->
+    $('#readLessLnk, #fullview').show()
+    $('#shortview, #readMoreLnk').hide()
+
+    $('#readLessLnk').on 'click', ->
+      $('#readMoreLnk, #shortview').show()
+      $('#fullview, #readLessLnk').hide()
+
+  $('#openSearchFilter').on 'click', ->
+    $('.headerDropdownWrapper').toggle('show')

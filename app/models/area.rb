@@ -4,16 +4,16 @@ class Area < ActiveRecord::Base
 
   has_many :villas
 
+  scope :phuket_self, -> { where(name: "Phuket").first }
+  scope :bali_self, -> { where(name: "Bali").first }
+  scope :samui_self, -> { where(name: "Koh Samui").first }
+
   scope :for_home_page, -> { where(show_on_home_page: true) }
-  scope :phuket, -> { where(name: "Phuket").first.children }
-  scope :bali, -> { where(name: "Bali").first.children }
-  scope :samui, -> { where(name: "Koh Samui").first.children }
+  scope :phuket, -> { phuket_self.children }
+  scope :bali, -> { bali_self.children }
+  scope :samui, -> { samui_self.children }
   scope :for_rent, -> { where(rental: true) }
   scope :for_sale, -> { where(sale: true) }
-
-  def self_and_descendants_villas
-    self_and_descendants.map(&:villas).flatten[0..7]
-  end
 
   def pretty_name
     ancestor_chain = self.ancestors.inject("") do |name, ancestor|
@@ -24,5 +24,9 @@ class Area < ActiveRecord::Base
 
   def left_position
     read_attribute(:left)
+  end
+
+  def to_param
+    "#{id}-#{name}"
   end
 end

@@ -1,5 +1,6 @@
 <% if @request.errors.any? %>
-  $('#request').html('<%=j render "form" %>')
+  $('#request').html('<%=j render "shared/request_form" %>')
 <% else %>
-  $('#request').html('<%=j render "result" %>');
+  $('#new_request').hide()
+  $('#thankYouWrapperHm').show()
 <% end %>

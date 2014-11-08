@@ -49,4 +49,22 @@ class Villa < ActiveRecord::Base
       read_attribute('description_sale')
     end
   end
+
+  def pretty_location
+    result = []
+    collect_names = proc do |area|
+      result << area.name
+      if parent = area.parent
+        collect_names[parent]
+      end
+
+      result
+    end
+
+    collect_names[area].join(', ')
+  end
+
+  def featured
+    area.villas.where('id != ?', id).order('created_at desc').limit(5)
+  end
 end

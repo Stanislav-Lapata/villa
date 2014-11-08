@@ -14,7 +14,9 @@ class Notifier < ActionMailer::Base
 
   def new_request_notification(request)
     body = ''.tap do |out|
-      out << "Villa: #{request.villa.name} (##{request.villa.id}) \n"
+      if request.villa
+        out << "Villa: #{request.villa.name} (##{request.villa.id}) \n"
+      end
       out << "Full name: #{request.full_name} \n"
       out << "Email: #{request.email} \n"
       out << "Check In: #{request.check_in} \n"

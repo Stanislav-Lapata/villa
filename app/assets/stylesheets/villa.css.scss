@@ -845,7 +845,7 @@ img.rsImg {
   .rsPreloader {
     width: 20px;
     height: 20px;
-    background-image: url(https://resources.luxuryretreats.com/images/preloader-white.gif);
+    background-image: image-url('preloader-white.gif');
     left: 50%;
     top: 50%;
     margin-left: -10px;
@@ -891,7 +891,7 @@ img.rsImg {
 }
 
 .modalClose {
-  background: url(https://resources.luxuryretreats.com/images/iSprites.png) -25px -900px no-repeat;
+  background: image-url('iSprites.png') -25px -900px no-repeat;
   width: 45px;
   height: 40px;
   position: absolute;
@@ -958,7 +958,7 @@ img.rsImg {
 }
 
 .reviewComments {
-  background: url("https://resources.luxuryretreats.com/images/iSprites.png") no-repeat scroll right -135px;
+  background: image-url("iSprites.png") no-repeat scroll right -135px;
   height: 20px;
   margin-left: 10px;
   padding-right: 35px;
@@ -1059,7 +1059,7 @@ img.rsImg {
 }
 
 .reviewerImg {
-  background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat -4px -790px;
+  background: image-url('iSprites.png') no-repeat -4px -790px;
   width: 68px;
   height: 68px;
   float: left;
@@ -1092,7 +1092,7 @@ img.rsImg {
 }
 
 .hasResponseImg.reviewerImg {
-  background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat -2px -720px;
+  background: image-url('iSprites.png') no-repeat -2px -720px;
 }
 
 .hasResponse {
@@ -1119,7 +1119,7 @@ img.rsImg {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat -32px -860px;
+  background: image-url('iSprites.png') no-repeat -32px -860px;
   width: 38px;
   height: 40px;
 }
@@ -1157,7 +1157,7 @@ img.rsImg {
   .pointerArrow {
     width: 26px;
     height: 56px;
-    background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -200px -50px;
+    background: image-url('spritesVillaPage.png') no-repeat -200px -50px;
     position: absolute;
     z-index: 99;
     top: 38px;
@@ -1229,7 +1229,7 @@ img.rsImg {
 }
 
 .iLastArrow {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -150px -50px;
+  background: image-url('spritesVillaPage.png') no-repeat -150px -50px;
   width: 6px;
   height: 10px;
   position: absolute;
@@ -1237,12 +1237,12 @@ img.rsImg {
 }
 
 .iNextArrow {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -150px -50px;
+  background: image-url('spritesVillaPage.png') no-repeat -150px -50px;
   width: 6px;
   height: 10px;
   position: absolute;
   margin: 103px 6px 0 6px;
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -184px -50px;
+  background: image-url('spritesVillaPage.png') no-repeat -184px -50px;
 }
 
 .legendWrapper {
@@ -1280,22 +1280,22 @@ img.rsImg {
 
 .calContainer .ui-onhold-highlight.firstDay {
   .ui-state-default, .ui-widget-content .ui-state-default {
-    background: #d3e5fe url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -250px -50px;
+    background: #d3e5fe image-url('spritesVillaPage.png') no-repeat -250px -50px;
   }
 }
 
 .ui-onhold-highlight.firstDay .calContainer .ui-widget-header .ui-state-default {
-  background: #d3e5fe url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -250px -50px;
+  background: #d3e5fe image-url('spritesVillaPage.png') no-repeat -250px -50px;
 }
 
 .calContainer .ui-onhold-highlight.lastDay {
   .ui-state-default, .ui-widget-content .ui-state-default {
-    background: #d3e5fe url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -300px -50px;
+    background: #d3e5fe image-url('spritesVillaPage.png') no-repeat -300px -50px;
   }
 }
 
 .ui-onhold-highlight.lastDay .calContainer .ui-widget-header .ui-state-default {
-  background: #d3e5fe url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -300px -50px;
+  background: #d3e5fe image-url('spritesVillaPage.png') no-repeat -300px -50px;
 }
 
 .calContainer .ui-unknown-highlight {
@@ -1368,7 +1368,7 @@ img.rsImg {
 }
 
 .pin-it-button {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) 0 -50px no-repeat;
+  background: image-url('spritesVillaPage.png') 0 -50px no-repeat;
   display: block;
   height: 20px;
   width: 39px;
@@ -1401,7 +1401,7 @@ hr {
 }
 
 .villaPromotion {
-  background: #a6a6a6 url(https://resources.luxuryretreats.com/images/spritesGlobal.png) -250px -350px no-repeat;
+  background: #a6a6a6 image-url('spritesGlobal.png') -250px -350px no-repeat;
   width: 115px;
   height: 36px;
   position: absolute;
@@ -1412,6 +1412,10 @@ hr {
   width: 799px!important;
   height: 427px!important;
   overflow: hidden!important;
+}
+
+.carrousel {
+  height: 100% !important;
 }
 
 .promoDialogDetailsContainer {
@@ -1498,27 +1502,27 @@ hr {
   font-size: 11px;
   padding: 1px 8px 2px 20px;
   border-radius: 3px;
-  background: #f9f9f9 url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) -250px -151px no-repeat;
+  background: #f9f9f9 image-url('spritesVillaPage.png') -250px -151px no-repeat;
   border: #ccc solid 1px;
   &:active {
-    background: #bcbcbc url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) -250px -173px no-repeat;
+    background: #bcbcbc image-url('spritesVillaPage.png') -250px -173px no-repeat;
   }
 }
 
 .lnkEmailFriend {
-  background: #f9f9f9 url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) -275px -150px no-repeat;
+  background: #f9f9f9 image-url('spritesVillaPage.png') -275px -150px no-repeat;
   border: 1px solid #ccc;
   border-radius: 3px 3px 3px 3px;
   color: #505050;
   font: 11px Arial,sans-serif;
   padding: 4px 8px 4px 36px;
   &:active {
-    background: #bcbcbc url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) -275px -173px no-repeat;
+    background: #bcbcbc image-url('spritesVillaPage.png') -275px -173px no-repeat;
   }
 }
 
 .lnkTwitter {
-  background: #f9f9f9 url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) -275px -150px no-repeat;
+  background: #f9f9f9 image-url('spritesVillaPage.png') -275px -150px no-repeat;
   border: 1px solid #ccc;
   border-radius: 3px 3px 3px 3px;
   color: #505050;
@@ -1527,7 +1531,7 @@ hr {
   font-weight: bold;
   font-weight: bold;
   i {
-    background: transparent url("https://resources.luxuryretreats.com/images/twitter.gif") 5px 2px no-repeat;
+    background: transparent image-url("twitter.gif") 5px 2px no-repeat;
     display: inline-block;
     height: 16px;
     left: 1px;
@@ -1536,12 +1540,12 @@ hr {
     width: 20px;
   }
   &:active {
-    background: #bcbcbc url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) -275px -173px no-repeat;
+    background: #bcbcbc image-url('spritesVillaPage.png') -275px -173px no-repeat;
   }
 }
 
 .iEnvelope {
-  background: url("https://resources.luxuryretreats.com/images/spritesVillaPage.png") no-repeat scroll 0 0;
+  background: image-url("spritesVillaPage.png") no-repeat scroll 0 0;
   display: inline-block;
   height: 15px;
   left: 14px;
@@ -1588,7 +1592,7 @@ hr {
       border-left: #ccc solid 1px;
     }
     a:active {
-      background: #a6a6a6 url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) 0 -150px no-repeat;
+      background: #a6a6a6 image-url('spritesVillaPage.png') 0 -150px no-repeat;
     }
   }
 }
@@ -1720,7 +1724,7 @@ hr {
     font: normal 13px 'Lucida Grande','Lucida Sans Unicode',Helvetica,Arial,Verdana,sans-serif;
     padding: 3px 4px 3px 4px;
     border: solid 1px #bcbcbc;
-    background: white url(https://resources.luxuryretreats.com/images/villa_arrow_input.png) no-repeat 97% 50%;
+    background: white image-url('villa_arrow_input.png') no-repeat 97% 50%;
   }
   select {
     width: 141px;
@@ -1862,7 +1866,7 @@ hr {
 }
 
 .iPhone {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -50px 0;
+  background: image-url('spritesVillaPage.png') no-repeat -50px 0;
   width: 12px;
   height: 27px;
   float: left;
@@ -1893,7 +1897,7 @@ hr {
 }
 
 .iDownMiniArrow {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -100px -50px;
+  background: image-url('spritesVillaPage.png') no-repeat -100px -50px;
   width: 10px;
   height: 7px;
   display: inline-block;
@@ -1923,7 +1927,7 @@ hr {
     margin-bottom: 13px;
   }
   .iBack {
-    background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat 0 -260px;
+    background: image-url('spritesGlobal.png') no-repeat 0 -260px;
     width: 6px;
     height: 8px;
     display: inline-block;
@@ -1943,7 +1947,7 @@ hr {
     color: #000;
   }
   .iBack {
-    background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat 0 -260px;
+    background: image-url('spritesGlobal.png') no-repeat 0 -260px;
     width: 6px;
     height: 8px;
     display: inline-block;
@@ -2025,49 +2029,49 @@ a img {
 }
 
 .iQuality {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -100px 0;
+  background: image-url('spritesVillaPage.png') no-repeat -100px 0;
   width: 22px;
   height: 25px;
   float: left;
 }
 
 .iAdvice {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -150px 0;
+  background: image-url('spritesVillaPage.png') no-repeat -150px 0;
   width: 22px;
   height: 25px;
   float: left;
 }
 
 .iConcierge {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -200px 0;
+  background: image-url('spritesVillaPage.png') no-repeat -200px 0;
   width: 22px;
   height: 25px;
   float: left;
 }
 
 .i24hrs {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -250px 0;
+  background: image-url('spritesVillaPage.png') no-repeat -250px 0;
   width: 22px;
   height: 25px;
   float: left;
 }
 
 .iSuggestions {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -300px 0;
+  background: image-url('spritesVillaPage.png') no-repeat -300px 0;
   width: 22px;
   height: 25px;
   float: left;
 }
 
 .iTowel {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -350px 0;
+  background: image-url('spritesVillaPage.png') no-repeat -350px 0;
   width: 22px;
   height: 25px;
   float: left;
 }
 
 .iWifi {
-  background: url(https://resources.luxuryretreats.com/images/spritesVillaPage.png) no-repeat -400px 0;
+  background: image-url('spritesVillaPage.png') no-repeat -400px 0;
   width: 22px;
   height: 25px;
   float: left;
@@ -2206,7 +2210,7 @@ a img {
     }
   }
   .rsArrowIcn {
-    background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat 0 -100px transparent;
+    background: image-url('spritesGlobal.png') no-repeat 0 -100px transparent;
     border-radius: 0;
     cursor: pointer;
     height: 60px;
@@ -2236,7 +2240,7 @@ a img {
 .fullscreenIcon {
   display: inline-block;
   position: relative;
-  background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat -100px -100px;
+  background: image-url('spritesGlobal.png') no-repeat -100px -100px;
   width: 20px;
   height: 16px;
   margin-left: 7px;
@@ -2531,7 +2535,7 @@ img.rsImg {
 }
 
 .normal {
-  top: 430px;
+  top: 600px;
 }
 
 .fixPosition {

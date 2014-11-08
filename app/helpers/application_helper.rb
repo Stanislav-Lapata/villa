@@ -76,4 +76,20 @@ module ApplicationHelper
       'Главная'
     end
   end
+
+  def sort_by_select_values
+    [
+      ['Price (low)', 'price asc'],
+      ['Price (high)', 'price desc'],
+      ['Bedrooms (min)', 'bedrooms asc'],
+      ['Bedrooms (max)', 'bedrooms desc'],
+    ]
+
+    [
+      [I18n.t(:price_low, scope: 'villas'), 'price asc'],
+      [I18n.t(:price_high, scope: 'villas'), 'price desc'],
+      [I18n.t(:bedrooms_min, scope: 'villas'), 'bedrooms asc'],
+      [I18n.t(:bedrooms_max, scope: 'villas'), 'bedrooms desc'],
+    ]
+  end
 end

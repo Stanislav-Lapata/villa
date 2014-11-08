@@ -703,7 +703,7 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner {
     height: 100%;
   }
   .ui-progressbar-overlay {
-    background: url(images/animated-overlay.gif);
+    background: image-url('animated-overlay.gif');
     height: 100%;
     filter: alpha(opacity = 25);
     opacity: .25;
@@ -995,7 +995,7 @@ body .ui-tooltip {
 
 .ui-widget-content {
   border: 1px solid #aaa;
-  background: white url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
+  background: white image-url('ui-bg_flat_75_ffffff_40x100.png') 50% 50% repeat-x;
   color: #222;
   a {
     color: #222;
@@ -1004,7 +1004,7 @@ body .ui-tooltip {
 
 .ui-widget-header {
   border: 1px solid #aaa;
-  background: #cccccc url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+  background: #cccccc image-url('ui-bg_highlight-soft_75_cccccc_1x100.png') 50% 50% repeat-x;
   color: #222;
   font-weight: bold;
   a {
@@ -1014,7 +1014,7 @@ body .ui-tooltip {
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   border: 1px solid #d3d3d3;
-  background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+  background: #e6e6e6 image-url('ui-bg_glass_75_e6e6e6_1x400.png') 50% 50% repeat-x;
   font-weight: normal;
   color: #555;
 }
@@ -1030,7 +1030,7 @@ body .ui-tooltip {
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
   border: 1px solid #999;
-  background: #dadada url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+  background: #dadada image-url('ui-bg_glass_75_dadada_1x400.png') 50% 50% repeat-x;
   font-weight: normal;
   color: #212121;
 }
@@ -1046,7 +1046,7 @@ body .ui-tooltip {
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
   border: 1px solid #aaa;
-  background: white url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+  background: white image-url('ui-bg_glass_65_ffffff_1x400.png') 50% 50% repeat-x;
   font-weight: normal;
   color: #212121;
 }
@@ -1062,7 +1062,7 @@ body .ui-tooltip {
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   border: 1px solid #fcefa1;
-  background: #fbf9ee url(images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x;
+  background: #fbf9ee image-url('ui-bg_glass_55_fbf9ee_1x400.png') 50% 50% repeat-x;
   color: #363636;
 }
 
@@ -1072,7 +1072,7 @@ body .ui-tooltip {
 
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
   border: 1px solid #cd0a0a;
-  background: #fef1ec url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x;
+  background: #fef1ec image-url('ui-bg_glass_95_fef1ec_1x400.png') 50% 50% repeat-x;
   color: #cd0a0a;
 }
 
@@ -1103,27 +1103,27 @@ body .ui-tooltip {
 .ui-icon {
   width: 16px;
   height: 16px;
-  background-image: url(images/ui-icons_222222_256x240.png);
+  background-image: image-url('ui-icons_222222_256x240.png');
 }
 
 .ui-widget-content .ui-icon, .ui-widget-header .ui-icon {
-  background-image: url(images/ui-icons_222222_256x240.png);
+  background-image: image-url('ui-icons_222222_256x240.png');
 }
 
 .ui-state-default .ui-icon {
-  background-image: url(images/ui-icons_888888_256x240.png);
+  background-image: image-url('ui-icons_888888_256x240.png');
 }
 
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-active .ui-icon {
-  background-image: url(images/ui-icons_454545_256x240.png);
+  background-image: image-url('ui-icons_454545_256x240.png');
 }
 
 .ui-state-highlight .ui-icon {
-  background-image: url(images/ui-icons_2e83ff_256x240.png);
+  background-image: image-url('ui-icons_2e83ff_256x240.png');
 }
 
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
-  background-image: url(images/ui-icons_cd0a0a_256x240.png);
+  background-image: image-url('ui-icons_cd0a0a_256x240.png');
 }
 
 .ui-icon-blank {
@@ -1839,7 +1839,7 @@ body .ui-tooltip {
 }
 
 .ui-widget-overlay {
-  background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+  background: #aaaaaa image-url('ui-bg_flat_0_aaaaaa_40x100.png') 50% 50% repeat-x;
   opacity: .3;
   filter: Alpha(Opacity = 30);
 }
@@ -1847,7 +1847,7 @@ body .ui-tooltip {
 .ui-widget-shadow {
   margin: -8px 0 0 -8px;
   padding: 8px;
-  background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+  background: #aaaaaa image-url('ui-bg_flat_0_aaaaaa_40x100.png') 50% 50% repeat-x;
   opacity: .3;
   filter: Alpha(Opacity = 30);
   border-radius: 8px;
@@ -1898,7 +1898,7 @@ body .ui-tooltip {
 
 .wlThankYou.ui-widget-content {
   background-image: none;
-  background: url(/images/bgThankYouDialog.gif) repeat-x bottom #f9f9f8;
+  background: image-url('bgThankYouDialog.gif') repeat-x bottom #f9f9f8;
   border: none;
   color: #222;
 }
@@ -2010,7 +2010,7 @@ label.visuallyhidden-with-placeholder {
 }
 
 .iClose {
-  background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat 0 -47px;
+  background: image-url('spritesGlobal.png') no-repeat 0 -47px;
   display: inline-block;
   height: 15px;
   width: 9px;
@@ -2271,7 +2271,7 @@ label.visuallyhidden-with-placeholder {
 }
 
 #dpInfoCheckInDateInq, #dpInfoCheckOutDateInq, #dpInfoCheckInDateWl, #dpInfoCheckOutDateWl, #dpInfoCheckInDateMk, #dpInfoCheckOutDateMk {
-  background: url("/Images/comboboxArrow.png") no-repeat scroll right center #fafafa;
+  background: image-url("comboboxArrow.png") no-repeat scroll right center #fafafa;
 }
 
 .speakNow strong {
@@ -2296,7 +2296,7 @@ label.visuallyhidden-with-placeholder {
 #RequestFormContainer .styled-select, #MarketingRequestFormContainer .styled-select {
   width: 158px;
   height: 20px;
-  background: url(/Images/comboboxArrow.png) no-repeat right #fafafa;
+  background: image-url('comboboxArrow.png') no-repeat right #fafafa;
   border: 1px solid #e4e4e4;
   padding: 0 25px 0 0;
   overflow: hidden;
@@ -2438,7 +2438,7 @@ body {
 }
 
 header {
-  background: url(https://resources.luxuryretreats.com/images/bgHeaderLong.png) repeat-x 0 0;
+  background: image-url('bgHeaderLong.png') repeat-x 0 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -2553,7 +2553,7 @@ option {
     display: block;
     color: #000;
     padding-right: 40px;
-    background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat right -80px;
+    background: image-url('iSprites.png') no-repeat right -80px;
     height: 40px;
     line-height: 37px;
     &.added {
@@ -2676,14 +2676,14 @@ header #ui-datepicker-div {
 }
 
 .ui-datepicker-header .ui-icon {
-  background: url("https://resources.luxuryretreats.com/images/arrow_sprite.png") no-repeat scroll right -180px;
+  background: image-url("arrow_sprite.png") no-repeat scroll right -180px;
   display: inline-table;
   vertical-align: middle;
   min-height: 20px;
 }
 
 .ui-datepicker-prev .ui-icon {
-  background: url("https://resources.luxuryretreats.com/images/arrow_sprite.png") no-repeat scroll right -220px;
+  background: image-url("arrow_sprite.png") no-repeat scroll right -220px;
 }
 
 .searchControls {
@@ -2727,11 +2727,11 @@ a.openSearchFilter {
 }
 
 .openSearchFilter.open .arrowRB {
-  background: transparent url("https://resources.luxuryretreats.com/images/arrow_sprite.png") no-repeat scroll right -197px;
+  background: transparent image-url("arrow_sprite.png") no-repeat scroll right -197px;
 }
 
 .searchFilterBg {
-  background: url(https://resources.luxuryretreats.com/images/bgHeaderLong.png) repeat-x 0 -95px;
+  background: image-url('bgHeaderLong.png') repeat-x 0 -95px;
   margin: 0 auto;
   width: 1080px;
   height: 162px;
@@ -2880,7 +2880,7 @@ a.openSearchFilter {
     }
   }
   .sfInputSearchContainer {
-    background: white url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat right -160px;
+    background: white image-url('iSprites.png') no-repeat right -160px;
     width: 367px;
     height: 40px;
     position: absolute;
@@ -3066,7 +3066,7 @@ b .sfSubRegionBlock {
 
 .sfInputWrapper {
   .sfInputCalendarContainer {
-    background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat scroll right -320px white;
+    background: image-url('iSprites.png') no-repeat scroll right -320px white;
     width: 145px;
     height: 40px;
     position: absolute;
@@ -3081,7 +3081,7 @@ b .sfSubRegionBlock {
     }
   }
   .sfBedroomContainer {
-    background: url("https://resources.luxuryretreats.com/images/iSprites.png") no-repeat scroll right -480px white;
+    background: image-url("iSprites.png") no-repeat scroll right -480px white;
     height: 40px;
     left: 0;
     overflow: hidden;
@@ -3107,7 +3107,7 @@ b .sfSubRegionBlock {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background: #2e2f31 url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat scroll right -640px;
+  background: #2e2f31 image-url('iSprites.png') no-repeat scroll right -640px;
   width: 145px;
   height: 40px;
   overflow: hidden;
@@ -3132,12 +3132,12 @@ header #searchFilterBg .searchFilterWrapper input[type="checkbox"] {
       height: 19px;
       margin: -1px 4px 0 0;
       vertical-align: middle;
-      background: url(../images/check_radio_sheet.png) left top no-repeat;
+      background: image-url('check_radio_sheet.png') left top no-repeat;
       cursor: pointer;
     }
   }
   &:checked + label span {
-    background: url(../images/check_radio_sheet.png) -19px top no-repeat;
+    background: image-url('check_radio_sheet.png') -19px top no-repeat;
   }
 }
 
@@ -3186,14 +3186,14 @@ header #searchFilterBg .searchFilterWrapper input[type="checkbox"] {
 }
 
 .sfMoreArrow {
-  background: transparent url(https://resources.luxuryretreats.com/images/arrow_sprite.png) 0 -122px no-repeat;
+  background: transparent image-url('arrow_sprite.png') 0 -122px no-repeat;
   height: 15px;
   width: 20px;
   float: right;
 }
 
 .sfHideArrow {
-  background: transparent url(https://resources.luxuryretreats.com/images/arrow_sprite.png) 0 -82px no-repeat;
+  background: transparent image-url('arrow_sprite.png') 0 -82px no-repeat;
   height: 15px;
   width: 20px;
   float: right;
@@ -3231,7 +3231,7 @@ header #searchFilterBg .searchFilterWrapper input[type="checkbox"] {
     width: 350px;
     margin-top: 23px;
     .ui-slider-handle.ui-state-default.ui-corner-all {
-      background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat right -680px;
+      background: image-url('iSprites.png') no-repeat right -680px;
       width: 40px;
       height: 40px;
       top: -18px;
@@ -3258,11 +3258,11 @@ header #searchFilterBg .searchFilterWrapper input[type="checkbox"] {
       height: 30px;
       display: inline-block;
       &.map {
-        background: transparent url(../images/sfView.png) 0 0;
+        background: transparent image-url('sfView.png') 0 0;
         background-size: 100px 100px;
       }
       &.list {
-        background: url(../images/sfView.png) 48px 0;
+        background: image-url('sfView.png') 48px 0;
         background-size: 100px 100px;
         position: absolute;
         left: 50px;
@@ -3275,10 +3275,10 @@ header #searchFilterBg .searchFilterWrapper input[type="checkbox"] {
         transition: none;
       }
       &.map:hover {
-        background: transparent url(../images/sfView.png) 0 30px;
+        background: transparent image-url('sfView.png') 0 30px;
       }
       &.list:hover {
-        background: transparent url(../images/sfView.png) 48px 30px;
+        background: transparent image-url('sfView.png') 48px 30px;
       }
     }
     &:checked + label {
@@ -3286,10 +3286,10 @@ header #searchFilterBg .searchFilterWrapper input[type="checkbox"] {
       cursor: default;
       border-color: transparent;
       &.map {
-        background: transparent url(../images/sfView.png) 0 60px;
+        background: transparent image-url('sfView.png') 0 60px;
       }
       &.list {
-        background: transparent url(../images/sfView.png) 48px 60px;
+        background: transparent image-url('sfView.png') 48px 60px;
       }
       &.sfBtn:hover {
         background-color: #2e2f31;
@@ -3299,10 +3299,10 @@ header #searchFilterBg .searchFilterWrapper input[type="checkbox"] {
         transition: none;
       }
       &.map:hover {
-        background: transparent url(../images/sfView.png) 0 60px;
+        background: transparent image-url('sfView.png') 0 60px;
       }
       &.list:hover {
-        background: transparent url(../images/sfView.png) 48px 60px;
+        background: transparent image-url('sfView.png') 48px 60px;
       }
     }
   }
@@ -3327,13 +3327,13 @@ header #searchFilterBg .searchFilterWrapper input[type="checkbox"] {
 
 span.stars {
   display: block;
-  background: url(https://resources.luxuryretreats.com/images/stars.png) 0 -16px repeat-x;
+  background: image-url('stars.png') 0 -16px repeat-x;
   width: 75px;
   height: 16px;
   color: transparent;
   span {
     display: block;
-    background: url(https://resources.luxuryretreats.com/images/stars.png) 0 -16px repeat-x;
+    background: image-url('stars.png') 0 -16px repeat-x;
     width: 75px;
     height: 16px;
     color: transparent;
@@ -3352,14 +3352,14 @@ span.stars {
 }
 
 .scrollTopImg {
-  background: url(https://resources.luxuryretreats.com/images/button_sprite.png) no-repeat;
+  background: image-url('button_sprite.png') no-repeat;
   cursor: pointer;
   height: 61px;
   width: 61px;
   margin: 0;
   display: block;
   &:hover {
-    background: black url(https://resources.luxuryretreats.com/images/button_sprite.png) no-repeat;
+    background: black image-url('button_sprite.png') no-repeat;
   }
 }
 
@@ -3466,27 +3466,27 @@ footer #sslFooter {
     display: block;
     margin-right: 15px;
     height: 30px;
-    background: url(https://resources.luxuryretreats.com/images/sslfooter_sprite.png) 0 0 no-repeat;
+    background: image-url('sslfooter_sprite.png') 0 0 no-repeat;
   }
   .iEnvelope {
     width: 29px;
     display: block;
     margin-right: 15px;
     height: 26px;
-    background: url(https://resources.luxuryretreats.com/images/sslfooter_sprite.png) -40px 0 no-repeat;
+    background: image-url('sslfooter_sprite.png') -40px 0 no-repeat;
   }
   .iLock {
     width: 16px;
     display: block;
     margin-right: 15px;
     height: 26px;
-    background: url(https://resources.luxuryretreats.com/images/sslfooter_sprite.png) -80px 0 no-repeat;
+    background: image-url('sslfooter_sprite.png') -80px 0 no-repeat;
   }
   .iPadApp {
     width: 89px;
     display: block;
     height: 30px;
-    background: url('https://resources.luxuryretreats.com/images/iAppStore.png') 0 0 no-repeat;
+    background: image-url('iAppStore.png') 0 0 no-repeat;
     margin-top: -10px;
     border: 1px solid #515151;
     -webkit-border-radius: 3px;
@@ -3522,7 +3522,7 @@ footer #sslFooter {
       padding: 0 21px 0 5px;
     }
     .iSearch {
-      background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat 0 -70px white;
+      background: image-url('spritesGlobal.png') no-repeat 0 -70px white;
       width: 14px;
       height: 14px;
       position: absolute;
@@ -3552,7 +3552,7 @@ footer #sslFooter {
     width: 75px;
     display: block;
     height: 25px;
-    background: url('https://resources.luxuryretreats.com/images/iAppStore.png') 0 0 no-repeat;
+    background: image-url('iAppStore.png') 0 0 no-repeat;
     background-size: 100%;
     border: 1px solid #515151;
     -webkit-border-radius: 3px;
@@ -3662,7 +3662,7 @@ footer {
     width: 89px;
     display: block;
     height: 30px;
-    background: url('https://resources.luxuryretreats.com/images/iAppStore.png') 0 0 no-repeat;
+    background: image-url('iAppStore.png') 0 0 no-repeat;
     margin-top: -10px;
     border: 1px solid #515151;
     -webkit-border-radius: 3px;
@@ -3680,7 +3680,7 @@ footer .connect {
   a {
     height: 43px;
     display: block;
-    background: url(https://resources.luxuryretreats.com/images/footer_social_sprite.png) no-repeat 0 0;
+    background: image-url('footer_social_sprite.png') no-repeat 0 0;
     width: 39px;
   }
   .twitter {
@@ -3720,7 +3720,7 @@ footer .connect {
     }
   }
   .iSearch {
-    background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat right 0;
+    background: image-url('iSprites.png') no-repeat right 0;
     width: 40px;
     height: 40px;
     display: block;
@@ -3827,7 +3827,7 @@ footer .connect {
 }
 
 .arrowTB, .arrowRB, .arrowDB, .arrowLB {
-  background: url("https://resources.luxuryretreats.com/images/arrow_sprite.png") no-repeat scroll right 0;
+  background: image-url("arrow_sprite.png") no-repeat scroll right 0;
   display: inline-table;
   vertical-align: middle;
   min-height: 20px;
@@ -3898,7 +3898,7 @@ footer .connect {
   }
   li a {
     &:link .iDownArrow, &:visited .iDownArrow {
-      background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat scroll -150px -106px;
+      background: image-url('spritesGlobal.png') no-repeat scroll -150px -106px;
       display: inline-block;
       height: 11px;
       margin: -5px 0 0 3px;
@@ -3981,7 +3981,7 @@ footer .connect {
 }
 
 .iLinkArrow {
-  background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat -150px -50px;
+  background: image-url('spritesGlobal.png') no-repeat -150px -50px;
   width: 4px;
   height: 7px;
   display: inline-block;
@@ -4089,7 +4089,7 @@ footer .connect {
 }
 
 .iAlert {
-  background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat 0 -310px;
+  background: image-url('spritesGlobal.png') no-repeat 0 -310px;
   width: 17px;
   height: 16px;
   position: absolute;
@@ -4135,7 +4135,7 @@ header a .countStyle {
 a.gigyaLogin.iProfile {
   position: relative;
   color: #505050;
-  background: url("https://resources.luxuryretreats.com/images/iGigyaSprite.png") no-repeat scroll left -121px transparent;
+  background: image-url("iGigyaSprite.png") no-repeat scroll left -121px transparent;
   display: block;
   height: 39px;
   padding-left: 45px;
@@ -4143,7 +4143,7 @@ a.gigyaLogin.iProfile {
   &:active {
     position: relative;
     color: #505050;
-    background: url("https://resources.luxuryretreats.com/images/iGigyaSprite.png") no-repeat scroll left -121px transparent;
+    background: image-url("iGigyaSprite.png") no-repeat scroll left -121px transparent;
     display: block;
     height: 39px;
     padding-left: 45px;
@@ -4243,7 +4243,7 @@ a.gigyaLogin:hover #myAccountDropDownWrapper, #myAccountDropDownWrapper:hover, .
       min-width: 150px;
       line-height: 40px;
       padding: 0 10px 0 40px;
-      background: url(https://resources.luxuryretreats.com/images/iGigyaSprite.png) no-repeat left 0;
+      background: image-url('iGigyaSprite.png') no-repeat left 0;
     }
   }
   a {
@@ -4286,7 +4286,7 @@ a.gigyaLogin:hover #myAccountDropDownWrapper, #myAccountDropDownWrapper:hover, .
 }
 
 .modalClose {
-  background: url(https://resources.luxuryretreats.com/images/iSprites.png) -25px -900px no-repeat;
+  background: image-url('iSprites.png') -25px -900px no-repeat;
   width: 45px;
   height: 40px;
   position: absolute;
@@ -4353,7 +4353,7 @@ a.gigyaLogin:hover #myAccountDropDownWrapper, #myAccountDropDownWrapper:hover, .
 }
 
 .reviewComments {
-  background: url("https://resources.luxuryretreats.com/images/iSprites.png") no-repeat scroll right -135px;
+  background: image-url("iSprites.png") no-repeat scroll right -135px;
   height: 20px;
   margin-left: 10px;
   padding-right: 35px;
@@ -4454,7 +4454,7 @@ a.gigyaLogin:hover #myAccountDropDownWrapper, #myAccountDropDownWrapper:hover, .
 }
 
 .reviewerImg {
-  background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat -4px -790px;
+  background: image-url('iSprites.png') no-repeat -4px -790px;
   width: 68px;
   height: 68px;
   float: left;
@@ -4487,7 +4487,7 @@ a.gigyaLogin:hover #myAccountDropDownWrapper, #myAccountDropDownWrapper:hover, .
 }
 
 .hasResponseImg.reviewerImg {
-  background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat -2px -720px;
+  background: image-url('iSprites.png') no-repeat -2px -720px;
 }
 
 .hasResponse {
@@ -4514,7 +4514,7 @@ a.gigyaLogin:hover #myAccountDropDownWrapper, #myAccountDropDownWrapper:hover, .
   position: absolute;
   top: 0;
   left: 0;
-  background: url(https://resources.luxuryretreats.com/images/iSprites.png) no-repeat -32px -860px;
+  background: image-url('iSprites.png') no-repeat -32px -860px;
   width: 38px;
   height: 40px;
 }

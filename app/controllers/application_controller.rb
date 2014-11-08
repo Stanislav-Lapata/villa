@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   respond_to :html
 
-  before_action :set_locale
+  before_action :set_locale, :set_search, :set_destinations
 
   def set_locale
     if params[:locale] && I18n.available_locales.include?(params[:locale].to_sym)
@@ -13,5 +13,17 @@ class ApplicationController < ActionController::Base
     elsif cookies['locale'] && I18n.available_locales.include?(cookies['locale'].to_sym)
       I18n.locale = cookies['locale'].to_sym
     end
+  end
+
+  def set_search
+    params[:q] ||= {}
+    params[:q][:filter_type] ||= 'rent'
+    @q = Villa.search(params[:q])
+    @villas = @q.result(distinct: true)
+    @request = Request.new
+  end
+
+  def set_destinations
+    @phuket_destinations = Area.where(parent_id: [1,2])
   end
 end

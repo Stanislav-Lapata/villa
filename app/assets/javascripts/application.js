@@ -18,4 +18,6 @@
 //= require modernizr.custom
 //= require back-to-top
 //= require villas
+//= require jquery.infinitescroll
+//= require fotorama
 //= require turbolinks
