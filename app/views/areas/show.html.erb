@@ -51,11 +51,12 @@
     <footer>
         <div id="scrollFooter">
             <div class="copyRight">Copyright &copy; <%= Time.now.year %> Paloma Co., Ltd. ALL Rights Reserved.</div>
-
-            <div class="autoCompleteWrapper" class="ui-widget">
-            <input type="text" id="tags" class="tbAutocomplete" />
-            <span class="iSearch"></span>
-            </div>
+            <%= search_form_for @q do |f| %>
+                <div class="autoCompleteWrapper" class="ui-widget">
+                    <%= f.text_field :name_cont, class: 'tbAutocomplete', id: 'tags' %>
+                    <span class="iSearch"></span>
+                </div>
+            <% end %>
             <div class="clearer"></div>
         </div>
     </footer>

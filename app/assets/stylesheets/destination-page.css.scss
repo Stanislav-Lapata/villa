@@ -6,7 +6,6 @@ body {
   &#destinationSearch section {
     width: 100%;
     position: relative;
-    background: image-url('bgSection.gif') repeat-x top transparent;
     margin-bottom: 39px;
   }
 }
@@ -316,7 +315,7 @@ body {
   position: relative;
   height: 42px;
   width: 800px;
-  visibility: hidden;
+  visibility: visible;
   .tltWrapper {
     margin-top: 11px;
     font-size: 20px;

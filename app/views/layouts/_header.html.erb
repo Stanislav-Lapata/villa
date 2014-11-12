@@ -10,48 +10,22 @@
                     <ul class="level1 navDestinationBlock">
                       <li>
                         <div id="topNav" class="clear-fix">
-                          <ul class="topDestinationListBlock">
-                            <li>
-                              <h3 class="topDestinationTlt">
-                                <%= link_to 'Phuket', Area.phuket_self %>
-                              </h3>
-                              <ul>
-                                <% Area.phuket.each do |area| %>
-                                  <li>
-                                    <%= link_to area.name, area %>
-                                  </li>
-                                <% end %>
-                              </ul>
-                            </li>
-                          </ul>
-                          <ul class="topDestinationListBlock">
-                            <li>
-                              <h3 class="topDestinationTlt">
-                                <%= link_to 'Bali', Area.bali_self %>
-                              </h3>
-                              <ul>
-                                <% Area.bali.each do |area| %>
-                                  <li>
-                                    <%= link_to area.name, area %>
-                                  </li>
-                                <% end %>
-                              </ul>
-                            </li>
-                          </ul>
-                          <ul class="topDestinationListBlock">
-                            <li>
-                              <h3 class="topDestinationTlt">
-                                <%= link_to 'Bali', Area.samui_self %>
-                              </h3>
-                              <ul>
-                                <% Area.samui.each do |area| %>
-                                  <li>
-                                    <%= link_to area.name, area %>
-                                  </li>
-                                <% end %>
-                              </ul>
-                            </li>
-                          </ul>
+                          <% Area.roots.each do |root_area| %>
+                            <ul class="topDestinationListBlock">
+                              <li>
+                                <h3 class="topDestinationTlt">
+                                  <%= link_to root_area.name, root_area %>
+                                </h3>
+                                <ul>
+                                  <% root_area.children.each do |area| %>
+                                    <li>
+                                      <%= link_to area.name, area %>
+                                    </li>
+                                  <% end %>
+                                </ul>
+                              </li>
+                            </ul>
+                          <% end %>
                         </div>
                       </li>
                     </ul>
@@ -131,44 +105,41 @@
                       </div>
                       <div id="sfSearchOptionsArrow" class="sfSearchOptionsArrow"></div>
                       <div id="sfSearchOptions" class="sfSearchOptions">
-                        <% Area.roots.each do |root| %>
-                          <p><%= root.name %></p>
-                          <ul>
-                            <% root.children.each do |s_area| %>
-                              <li>
-                                <fieldset>
-                                  <div class="sfSearchOptionsBar"></div>
-                                    <div class="sfRegionName"><%= s_area.name %> <span class="selectCount"></span></div>
-                                    <ul class="sfSubRegion ">
-                                        <li class="sfSubRegionBlock">
-                                          <div class="sfSelectAll">
-                                            <span class="sfRegion2Name"><%= s_area.name %></span>
-                                            <div class="selectWrapper">
-                                              <input id="all-<%= s_area.id %>" data-count="<%= s_area.children.count %>" data-label="<%= s_area.name %>" class="selectAll" name="select_all[]" value="<%= s_area.id %>" type="checkbox" <%= "checked" if (params[:select_all].include?(s_area.id.to_s) rescue false) %> />
-                                              <label for="all-<%= s_area.id %>" class="selectAll"><span></span><%= t(:select_all, scope: 'navigation') %></label>
-                                            </div>
+                        <ul>
+                          <% Area.roots.each do |s_area| %>
+                            <li>
+                              <fieldset>
+                                <div class="sfSearchOptionsBar"></div>
+                                  <div class="sfRegionName"><%= s_area.name %> <span class="selectCount"></span></div>
+                                  <ul class="sfSubRegion ">
+                                      <li class="sfSubRegionBlock">
+                                        <div class="sfSelectAll">
+                                          <span class="sfRegion2Name"><%= s_area.name %></span>
+                                          <div class="selectWrapper">
+                                            <input id="all-<%= s_area.id %>" data-count="<%= s_area.children.count %>" data-label="<%= s_area.name %>" class="selectAll" name="select_all[]" value="<%= s_area.id %>" type="checkbox" <%= "checked" if (params[:select_all].include?(s_area.id.to_s) rescue false) %> />
+                                            <label for="all-<%= s_area.id %>" class="selectAll"><span></span><%= t(:select_all, scope: 'navigation') %></label>
                                           </div>
+                                        </div>
+                                      </li>
+                                      <% s_area.children.each_slice(14) do |slice| %>
+                                        <li class="sfSubRegionBlock slice">
+                                          <ul class="sfSearchRow">
+                                            <% slice.each do |area| %>
+                                              <li>
+                                                <div class="selectWrapper">
+                                                  <input id="villa-<%= area.id %>" class="sub<%= s_area.id %> region3Checkbox" value="<%= area.id %>" name="q[area_id_place_eq][]" data-label="<%= area.name %>" type="checkbox" <%= "checked" if (params[:q][:area_id_place_eq].include?(area.id.to_s) rescue false) %> />
+                                                  <label for="villa-<%= area.id %>"><span></span><%= area.name %></label>
+                                                </div>
+                                              </li>
+                                            <% end %>
+                                          </ul>
                                         </li>
-                                        <% s_area.children.each_slice(14) do |slice| %>
-                                          <li class="sfSubRegionBlock slice">
-                                            <ul class="sfSearchRow">
-                                              <% slice.each do |area| %>
-                                                <li>
-                                                  <div class="selectWrapper">
-                                                    <input id="villa-<%= area.id %>" class="sub<%= s_area.id %> region3Checkbox" value="<%= area.id %>" name="q[area_id_in][]" data-label="<%= area.name %>" type="checkbox" <%= "checked" if (params[:q][:area_id_in].include?(area.id.to_s) rescue false) %> />
-                                                    <label for="villa-<%= area.id %>"><span></span><%= area.name %></label>
-                                                  </div>
-                                                </li>
-                                              <% end %>
-                                            </ul>
-                                          </li>
-                                        <% end %>
-                                    </ul>
-                                </fieldset>
-                              </li>
-                            <% end %>
-                          </ul>
-                        <% end %>
+                                      <% end %>
+                                  </ul>
+                              </fieldset>
+                            </li>
+                          <% end %>
+                        </ul>
                       </div>
                   </div>
                   <div class="sfInputWrapper">
@@ -183,7 +154,7 @@
                   </div>
                   <div class="sfInputWrapper">
                     <div class="sfBedroomContainer rounded">
-                      <%= f.select :bedrooms_gteq, 1.upto(7).map {|e| "#{e} BR+" }, {include_blank: t(:bedrooms, scope: 'villas')}, id: 'sfBedroom' %>
+                      <%= f.select :bedrooms_eq, 1.upto(Villa.max_bedrooms_count).map {|e| "#{e} BR" }, {include_blank: t(:bedrooms, scope: 'villas')}, id: 'sfBedroom' %>
                     </div>
                   </div>
                   <div class="sfInputWrapper sfSubmit">

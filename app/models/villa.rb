@@ -18,6 +18,10 @@ class Villa < ActiveRecord::Base
     "#{id} #{name}".parameterize
   end
 
+  def self.max_bedrooms_count
+    pluck(:bedrooms).compact.max
+  end
+
   def price_guide
     if I18n.locale == :ru
       price_guide_ru

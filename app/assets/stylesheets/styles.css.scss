@@ -3997,11 +3997,11 @@ footer .connect {
 
 .mainMenu li ul.navDestinationBlock {
   background: none repeat scroll 0 0 #222;
-  left: -115px;
+  left: -15px;
   margin: 0;
   padding: 0 16px 14px;
   top: 32px;
-  width: 485px;
+  width: 340px;
   z-index: 9999;
 }
 
@@ -4282,4 +4282,9 @@ a.gigyaLogin:hover #myAccountDropDownWrapper, #myAccountDropDownWrapper:hover, .
   &.iBookings {
     background-position: left -280px;
   }
+}
+
+
+#topcontrol {
+  z-index: 100;
 }
