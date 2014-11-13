@@ -36,6 +36,7 @@ ru:
     yacht: "Яхты"
     show_more: "Показать еще 30 объектов"
     phone_number: '+7 495 973 52 73'
+    more_contacts: 'Еще контакты'
 
   villas:
     location: "Местоположение"

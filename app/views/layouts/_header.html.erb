@@ -39,10 +39,14 @@
                       <div>
                           <ul class="navContactBlock">
                               <li><span class="navContactDesc"><%= t(:speak, scope: 'navigation') %></span>
-                                  <div id="numbers">
-                                      <div>Thailand:&nbsp;<span style="display: inline-block">+66 910 43 43 10 </span></div>
-                                      <div>United Kingdom:&nbsp;<span style="display: inline-block">+44 208 144 55 64 </span></div>
-                                  </div>
+                                <div id="numbers">
+                                  <div>RUSSIA:&nbsp;<span style="display: inline-block">+7 903 978 75 85</span></div>
+                                  <div>THAILAND:&nbsp;<span style="display: inline-block">+66 910 43 43 10 </span></div>
+                                  <div>UNITED KINGDOM:&nbsp;<span style="display: inline-block">+44 208 144 55 64 </span></div>
+                                </div>
+                                <%= link_to contact_path, class: 'navContactPageLink' do %>
+                                  <%= t(:more_contacts) %><span class="iLinkArrow"></span>
+                                <% end %>
                               </li>
                           </ul>
                       </div>
