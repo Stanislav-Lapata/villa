@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
     params[:q] ||= {}
     params[:q][:filter_type] ||= 'rent'
     @q = Villa.search(params[:q])
-    @villas = @q.result(distinct: true)
+    @villas = @q.result(distinct: true).page(params[:page])
   end
 
   def set_destinations
