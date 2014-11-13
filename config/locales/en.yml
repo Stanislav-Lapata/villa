@@ -101,6 +101,8 @@ en:
     area_map_desc: 'Area maps: villa locations are approximate.'
     overview_and_features: 'Overview & Features'
     inquire: 'Inquire'
+    get_started: 'Let’s Get Started!'
+    fill_details: 'Fill in your details to connect with a Villa Specialist and start planning your perfect trip.'
 
   contact:
     contact_form: "Contact Form"
@@ -112,6 +114,13 @@ en:
     message: "Your message has been sent successfully"
     message_placeholder: "Leave your message here"
     submit: 'Submit'
+    email_address: 'Email Address'
+    your_country: 'Your country'
+    country_code: 'COUNTRY TELEPHONE CODE'
+    phone_number: 'Telephone Number'
+    travel_dates: 'Tentative Travel Dates'
+    additional_comments: 'Additional Comments'
+    send_enquiry: 'SEND INQUIRY'
 
   villa_show:
     description: "Villa description"

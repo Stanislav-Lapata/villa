@@ -81,7 +81,7 @@
       </div>
   </div>
 
-  <div class="headerDropdownWrapper" style="<%= 'display: none;' if controller_name == 'villas' && action_name == 'show' %>">
+  <div class="headerDropdownWrapper" style="<%= 'display: none;' if (controller_name == 'villas' && action_name == 'show') || (action_name == 'contact') %>">
 
 
   <div id="searchFilterBg" class="searchFilterBg less" style="display: block;">

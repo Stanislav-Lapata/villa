@@ -4288,3 +4288,14 @@ a.gigyaLogin:hover #myAccountDropDownWrapper, #myAccountDropDownWrapper:hover, .
 #topcontrol {
   z-index: 100;
 }
+
+.ui-dialog {
+  padding: 0px !important;
+}
+
+.ui-datepicker { width: 17em; padding: .2em .2em 0; z-index: 9999 !important; }
+
+
+#wishListdialog-modal {
+  display: none;
+}

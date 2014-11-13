@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery-ui/slider
 //= require jquery-ui/datepicker
+//= require jquery-ui/dialog
 //= require jquery_ujs
 //= require modernizr.custom
 //= require back-to-top

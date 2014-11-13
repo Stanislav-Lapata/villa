@@ -1,4 +1,27 @@
 $ ->
+  $('#submitInfoInq').on 'click', ->
+    if $('#tbInfoEmailAddressInq').val().length > 0 && $('#tbInfoFirstNameInq').val().length > 0
+      $(@).closest('form').submit()
+      alert('Request was successfully sent')
+    else
+      alert('Fill required fields')
+
+  $('#contact_form_submit').on 'click', ->
+    $(@).closest('form').submit()
+    alert('Message was successfully sent')
+
+  $('#inquiryNowCalculator').on 'click', ->
+    $('#wishListdialog-modal').dialog
+      width: 845
+      height: 500
+      modal: true
+      open: ->
+        $('#dpInfoCheckInDateInq, #dpInfoCheckOutDateInq').datepicker
+          dateFormat: "yy-mm-dd"
+
+  $('#btnDialogClose').on 'click', ->
+    $('#wishListdialog-modal').dialog('close')
+
   initSlider = ->
     if $('.sfFilterType:checked').val() == 'rent'
       min_selector = '#sfPriceSliderMin'
@@ -103,7 +126,18 @@ $ ->
     sub_areas.prop('checked', $(@).is(':checked'))
     generate_regions()
 
-  $('#sfCheckIn, #sfCheckOut, #departDate, #returnDate').datepicker
+  $('#returnDate').datepicker
+    dateFormat: "yy-mm-dd"
+    onSelect: (val) ->
+      $('#dpInfoCheckOutDateInq').val(val);
+
+  $('#departDate').datepicker
+    dateFormat: "yy-mm-dd"
+    onSelect: (val) ->
+      $('#dpInfoCheckInDateInq').val(val);
+
+
+  $('#sfCheckIn, #sfCheckOut').datepicker
     dateFormat: "yy-mm-dd"
     beforeShow: (input, inst) ->
       $('#ui-datepicker-div').addClass('sfDatepicker')

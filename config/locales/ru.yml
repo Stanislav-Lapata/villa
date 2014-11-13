@@ -77,6 +77,8 @@ ru:
     area_map_desc: 'Карта: местонахождение приблизительно.'
     overview_and_features: 'Обзор'
     inquire: 'Заказ'
+    get_started: 'Давайте начнем!'
+    fill_details: 'Введите данные и начните планировать свое идеальное путешествие.'
 
   contact:
     contact_form: "Контактная форма"
@@ -88,6 +90,13 @@ ru:
     message: "Ваше сообщение успешно отправлено"
     message_placeholder: "Оставьте здесь свое сообщение"
     submit: 'Отправить'
+    email_address: 'Email адрес'
+    your_country: 'Ваша страна'
+    country_code: 'КОД СТРАНЫ'
+    phone_number: 'Номер Телефона'
+    travel_dates: 'Предварительная дата'
+    additional_comments: 'Комментарии'
+    send_enquiry: 'ОТПРАВИТЬ ЗАПРОС'
 
   show_villa:
     description: "Описание"

@@ -1,0 +1,69 @@
+<div id="wishListdialog-modal" class="wlNoPadding" style="width: auto; min-height: 0px; max-height: none; height: 502px;">
+  <a href="javascript:;" id="btnDialogClose" class="btnDialogClose"><span class="iClose"></span></a>
+
+  <div id="RequestFormContainer" class="modalFormContainer" style="display: block;">
+      <div id="EnquireFormWrapper" class="clear-fix">
+          <div class="villaFormPictureLayer">
+              <div class="villaFormImageWrapper">
+                <%= image_tag villa.images.first.image_url, id: 'enquiryVillaPhotoUrl', class: 'villaFormPhotoUrl' %>
+              </div>
+              <div id="enquiryDescriptionLayer" class="villaFormDescriptionLayer">
+                <h2><%= villa.name %></h2>
+                <%= villa.pretty_location %>
+              </div>
+          </div>
+          <div id="VillaInformationLayer" class="villaFormInformationLayer">
+              <input type="hidden" id="enquiryVillaId" value="112895">
+              <span class="tltForm"><%= t(:get_started, scope: 'villas') %></span>
+              <p class="formInstructions"><%= t(:fill_details, scope: 'villas') %> </p>
+
+  <%= form_for Request.new, remote: true, html: {id: 'fmInformationRequestInq', class: 'formWrapper'} do |f| %>
+      <div class="villaFormRowInline">
+          <label id="lblInfoFirstNameInq" for="tbInfoFirstNameInq" class="labelLargeInline"><%= t(:first_name, scope: 'contact') %>*</label>
+          <input type="text" id="tbInfoFirstNameInq" name="request[first_name]" class="inputLarge" maxlength="50">
+      </div>
+      <div class="villaFormRowInline">
+          <label id="lblInfoLastNameInq" for="tbInfoLastNameInq" class="labelLargeInline"><%= t(:last_name, scope: 'contact') %></label>
+          <input type="text" id="tbInfoLastNameInq" name="request[last_name]" class="inputLarge" maxlength="50">
+      </div>
+      <div class="villaFormRowInline">
+          <label id="lblInfoEmailAddressInq" for="tbInfoEmailAddressInq" class="labelLargeInline"><%= t(:email_address, scope: 'contact') %>*</label>
+          <input type="text" id="tbInfoEmailAddressInq" name="request[email]" class="inputLarge" maxlength="50">
+      </div>
+      <div class="villaFormRowInline">
+          <label id="lblInfoPhoneNumberInq" for="tbInfoPhoneNumberInq" class="labelLargeInline"><%= t(:phone_number, scope: 'contact') %></label>
+          <input type="text" id="tbInfoPhoneNumberInq" name="request[phone]" class="inputLarge" maxlength="20">
+          <input type="hidden" id="phonePlaceholderTextInq" value="Country code + Phone #">
+      </div>
+      <div class="villaFormRowInline">
+          <label id="lblInfoCheckInDateInq" for="dpInfoCheckInDateInq" class="labelLargeInline"><%= t(:travel_dates, scope: 'contact') %></label>
+          <input type="text" id="dpInfoCheckInDateInq" name="request[check_in]" class="inputLarge hasDatepicker" placeholder="CHECK-IN&nbsp;&nbsp; ">
+      </div>
+      <div class="villaFormRowInline">
+          <span class="labelLargeInline"></span>
+          <input type="text" id="dpInfoCheckOutDateInq" name="request[check_out]" class="inputLarge hasDatepicker" placeholder="CHECK-OUT&nbsp;&nbsp; ">
+      </div>
+
+      <div class="villaTextAreaInline">
+          <label id="lblInfoAdditionalCommentsInq" for="tbInfoAdditionalCommentsInq" class="labelLargeInline"><%= t(:additional_comments, scope: 'contact') %></label>
+          <div style="display: inline-block;">
+              <div class="ui-wrapper" style="overflow: hidden; position: relative; width: 186px; height: 56px; top: auto; left: auto; margin: 0px 0px 2px; padding-right: 7px; padding-bottom: 16px;"><textarea id="tbInfoAdditionalCommentsInq" name="request[comments]" class="inputLarge ui-resizable" style="height: 50px; margin: 0px; resize: none; position: static; zoom: 1; display: block; width: 177px;" onchange="taLength(this)" onkeyup="taLength(this)" onpaste="taLength(this)" maxlength="1000"></textarea><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div>
+          </div>
+      </div>
+
+      <div id="divInfoSubmit" class="villaFormFooter">
+          <div class="villaFormQuality">
+              Personally Inspected.<br>
+              Quality Assured.<br>
+              24/7 Guest Support.
+          </div>
+          <%= f.submit t(:send_enquiry, scope: 'contact'), class: 'orangeCta requestFormSubmit', id: 'submitInfoInq', type: 'button' %>
+      </div>
+
+  <% end %>
+
+          </div>
+
+      </div>
+  </div>
+</div>

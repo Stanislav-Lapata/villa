@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require fotorama
+ *= require jquery-ui/dialog
  *= require styles
  */

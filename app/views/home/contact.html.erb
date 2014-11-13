@@ -1,0 +1,76 @@
+<%= stylesheet_link_tag "static", "data-turbolinks-track" => true %>
+
+<body id="Contact">
+    <section>
+    <div class="intro">
+        <div class="wrapper">
+            <h1 class="introTlt">CONTACT DETAILS</h1>
+            <div class="introText">
+                <p>
+                    IF YOU'VE GOT QUESTIONS, SUGGESTIONS OR IDEAS, WE'D LOVE TO HEAR FROM YOU!
+                    <br />
+                    For immediate assistance give us a call, or complete the form below to connect with the appropriate member of our team.
+                </p>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="st_contact_mainContent">
+            <div class="assistBox">
+                <h2 class="st_contact_sectionTlt">HOW MAY WE ASSIST YOU?</h2>
+                <%= form_for Contact.new, remote: true, html: {id: 'contact_form'} do |f| %>
+                    <div class="contact_selectWrapper styled-select">
+                        <select class="subject" name="contact[subject]" id="contact_form_subject">
+                          <option value="" selected="selected">* SUBJECT</option>
+                          <option value="I’d like to rent a property">I’d like to rent a property</option>
+                          <option value="I need more information on a property">I need more information on a property</option>
+                          <option value="I’d like to list my property on Luxury Retreats">I’d like to list my property on Luxury Retreats</option>
+                          <option value="I have feedback about your site">I have feedback about your site</option>
+                          <option value="I’d like to share a business idea">I’d like to share a business idea</option>
+                          <option value="I’d like to discuss advertising">I’d like to discuss advertising</option>
+                          <option value="I have a general comment">I have a general comment</option>
+                          <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <input type="text" class="email" name="contact[email]" id="contact_form_email" placeholder="EMAIL ADDRESS" />
+                    <input type="text" class="firstName" name="contact[first_name]" id="contact_form_firstName" placeholder="FIRST NAME" />
+                    <input type="text" class="lastName" name="contact[last_name]" id="contact_form_lastName" placeholder="LAST NAME" />
+                    <textarea class="comments" name="contact[message]" id="comments_input" placeholder="ADDITIONAL COMMENTS"></textarea>
+
+                    <%= f.submit 'SUBMIT', class: 'submit', id: 'contact_form_submit', type: 'button' %>
+                    <div class="contact_errorContainer">
+                        <div class="requiredErrorMsg" style="display: none;">Please fill in the required field(s).</div>
+                        <div class="invalidEmailMsg" style="display: none;">Please enter a valid email address.</div>
+                    </div>
+
+                    <div id="contact_notSuccessfull" style="display: none;">An error occurred. Please try again.</div>
+                    <img id="contact_loading" src="https://resources.luxuryretreats.com/images/st_contact_loader.gif" />
+                <% end %>
+                <div id="contact_successfullySent" style="display: none;">Your message was sent successfully.</div>
+            </div>
+            <div class="reachUs">
+                <h2 class="st_contact_sectionTlt">MORE WAYS TO REACH US</h2>
+                <div class="phone reachUsSection">
+
+                    <strong>Russia:</strong><div class="fixedSpacing">+7 903 978 75 85</div>
+                    <br />
+                    <strong>Thailand:</strong><div class="fixedSpacing">+66 910 43 43 10</div>
+                    <br />
+                    <strong>United Kingdom:</strong><div class="fixedSpacing">+44 208 144 55 64</div>
+                </div>
+                <div class="email reachUsSection">
+                    <strong>Email:</strong><a class="link fixedSpacing" href="mailto:general@luxuryretreats.com">info@btiestate.com</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/footer' %>
+</body>

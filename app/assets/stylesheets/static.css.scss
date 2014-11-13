@@ -1,0 +1,1199 @@
+section {
+  background: #fff;
+  position: relative;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #efefef;
+}
+
+/* BACKGROUNDS & WRAPPERS
+--------------------------------------------------------------*/
+
+.wrapper {
+  width: 977px;
+  margin: auto;
+  &.paddingBottom {
+    padding-bottom: 65px;
+  }
+}
+
+.grayBg {
+  background: #d8d8d8;
+  &.paddingBottom {
+    padding-bottom: 100px;
+  }
+}
+
+.grayLightBg {
+  background: #fafafa;
+  width: 100%;
+  &.paddingBottom {
+    padding-bottom: 100px;
+  }
+}
+
+.shadowWrapper {
+  width: 1010px;
+  margin: auto;
+  padding: 0 0;
+  background: url(https://resources.luxuryretreats.com/images/st_wrapper_shadow.gif) repeat-y;
+}
+
+/* FONT
+--------------------------------------------------------------*/
+
+a {
+  color: #4cb7cd;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: #4cb7cd;
+  }
+}
+
+p {
+  color: #505050;
+  line-height: 16px;
+  font-size: 12px;
+  margin: 0;
+}
+
+ul {
+  color: #505050;
+  font-size: 12px;
+}
+
+/* BANNER
+--------------------------------------------------------------*/
+
+.bannerWrapper {
+  width: 1920px;
+  height: 350px;
+  position: relative;
+  margin: 0 -471.5px;
+  /*based on width of 1920px in 977px wrapper*/
+  display: block;
+  overflow: hidden;
+}
+
+.bannerTextImg {
+  text-align: center;
+  position: absolute;
+  bottom: 25px;
+  margin: 0 617.5px;
+  /*based on width of 770px in 977px wrapper*/
+  p {
+    margin-top: 0;
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  .whiteLine {
+    background: url(https://resources.luxuryretreats.com/images/st_banner_white_line.png) no-repeat;
+    height: 64px;
+    width: 1px;
+    margin: 0 24px 0 30px;
+    float: left;
+  }
+  .featured {
+    padding-top: 20px;
+    img {
+      float: left;
+      padding-left: 1px;
+    }
+  }
+}
+
+/* STATIC MENU
+--------------------------------------------------------------*/
+
+.staticMenu {
+  text-align: center;
+  ul {
+    margin: 0;
+    list-style: none;
+    display: block;
+    padding: 28px 0 29px 0;
+    li {
+      display: inline;
+      text-transform: uppercase;
+      &.last a {
+        background: none;
+      }
+      a {
+        color: #505050;
+        font-size: 11px;
+        padding: 3px 20px 3px 13px;
+        background: url(https://resources.luxuryretreats.com/images/st_menu_bullet.jpg) no-repeat right 5px;
+        &:hover {
+          color: #4cb7cd;
+        }
+      }
+    }
+  }
+}
+
+#About .about, #Press .press, #PropertyOwners .propertyOwners, #ManagementTeam .leadership, #Careers .careers, #PrivacyTerms .terms, #Contact .contact {
+  color: #4cb7cd;
+  /*makes active page highlighted in menu*/
+}
+
+/* INTRO
+--------------------------------------------------------------*/
+
+.intro {
+  background: #d8d8d8;
+  text-align: center;
+  .zIndex {
+    z-index: 1;
+    /*needed to ensure emblem appears above image in About page and PropertyOwners page*/
+  }
+  .wrapper {
+    position: relative;
+  }
+  .arrow {
+    background: url(https://resources.luxuryretreats.com/images/st_down_arrow.gif) no-repeat;
+    width: 65px;
+    height: 27px;
+    margin: 30px auto 0;
+  }
+}
+
+.introTlt {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 27px 0 0 0;
+  font-weight: bold;
+  margin: 0;
+}
+
+.introSubTlt {
+  text-transform: uppercase;
+  padding: 24px 0 0 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.intro {
+  .introText {
+    text-align: center;
+    padding-top: 6px;
+    .tripple.slimPadding p {
+      padding-top: 11px;
+    }
+    &.slimPadding p {
+      padding-top: 6px;
+    }
+    p {
+      padding: 20px 0 0 0;
+    }
+    .tripple {
+      width: 315px;
+      float: left;
+      margin-top: -6px;
+      padding: 0 0 0 15px;
+      &:first-child {
+        padding: 0;
+      }
+    }
+    &.emblem {
+      padding: 5px 0 86px 0;
+    }
+  }
+  .emblemImg {
+    position: absolute;
+    bottom: -54px;
+    left: 426px;
+  }
+  .introText.dip {
+    padding: 5px 0 55px 0;
+  }
+  .introDip {
+    position: absolute;
+    bottom: -20px;
+    left: 442.5px;
+  }
+}
+
+/* IMAGES WITH WHITE TEXT ON TOP
+--------------------------------------------------------------*/
+
+.imageWrapper {
+  margin: auto;
+  position: relative;
+  padding-top: 3px;
+  width: 977px;
+  background: #fff;
+  &:first-child {
+    padding-top: 0;
+  }
+  img {
+    width: 977px;
+  }
+}
+
+.imageTextBox {
+  width: 540px;
+  position: absolute;
+  text-align: center;
+  margin: 0 221px;
+  top: 60px;
+  text-shadow: 1px 1px 1px #000000;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  &.first {
+    top: 86px;
+  }
+  .whiteTlt20 {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .whiteSubTlt {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: normal;
+    padding-top: 4px;
+    text-transform: none;
+  }
+  .whiteTlt25 {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+  }
+  p {
+    color: #fff;
+    font-size: 13px;
+    padding-top: 20px;
+  }
+}
+
+/* JOBS POSTINGS
+--------------------------------------------------------------*/
+
+.jobViteWrapper {
+  position: relative;
+  padding-top: 60px;
+}
+
+/* ABOUT PAGE
+--------------------------------------------------------------*/
+
+.story {
+  padding: 0 60px 0 60px;
+  background: #fff;
+  width: 857px;
+  margin: auto;
+  .st_about_storyTlt {
+    padding-top: 54px;
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+  }
+  .textWrapper {
+    padding: 3px 0 109px 0;
+    .text {
+      padding-top: 16px;
+    }
+  }
+}
+
+.milestones {
+  .wrapper {
+    position: relative;
+  }
+  .st_about_milestoneTlt {
+    font-size: 20px;
+    position: absolute;
+    top: -55px;
+    left: 60px;
+  }
+  .slider {
+    .dateCircle {
+      position: absolute;
+      top: 17px;
+      left: 16px;
+      width: 124px;
+      height: 124px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 19.5px;
+      text-transform: uppercase;
+      background: url(https://resources.luxuryretreats.com/images/st_date_circle.png) no-repeat;
+      line-height: 122px;
+      span {
+        display: inline-block;
+        margin: 40px 0 40px 0;
+        /*for IE 7 to be centered somewhat vertically*/
+        vertical-align: middle;
+        line-height: 20px;
+      }
+    }
+    .captionWrapper {
+      background: #000000;
+      background: rgba(0, 0, 0, 0.75);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 344px;
+      height: 431px;
+      padding: 60px 32px 0 32px;
+      .st_about_captionTlt {
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin: 0;
+        line-height: 22px;
+      }
+      .text {
+        color: #fff;
+        font-size: 13px;
+        line-height: 16px;
+        margin: 0;
+        padding: 25px 45px 22px 0;
+      }
+      .readMore {
+        padding: 11px 0 11px 0;
+        a {
+          padding: 11px 30px 11px 28px;
+          background: #4cb7cd;
+          color: #fff;
+          font-size: 10px;
+        }
+      }
+    }
+    .rsNav {
+      left: 569px;
+    }
+    .rsDefault {
+      .rsBullets {
+        position: absolute;
+        z-index: 35;
+        right: 0;
+        bottom: 30px;
+        width: 388px;
+        height: auto;
+        margin: 0 auto;
+        background: url(https://resources.luxuryretreats.com/images/st_milestone_timeline.png);
+        text-align: center;
+        line-height: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        padding: 0 0 0 20px;
+      }
+      .rsBullet {
+        &.rsNavSelected span {
+          background-color: #4cb7cd;
+          width: 12px;
+          height: 12px;
+          margin-top: -1px;
+        }
+        width: 8px;
+        height: 8px;
+        float: left;
+        margin: 0 9px;
+        span {
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+/* PRIVACY TERMS & POLICY
+--------------------------------------------------------------*/
+
+#PrivacyTerms .container {
+  padding-top: 33px;
+  padding-bottom: 30px;
+}
+
+.containerLeft {
+  float: left;
+}
+
+.containerRight {
+  float: right;
+}
+
+.st_privacy_sectionTlt {
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#PrivacyTerms {
+  .textWrapper {
+    width: 456px;
+    padding-top: 27px;
+    .text {
+      padding-top: 8px;
+      p {
+        padding-top: 16px;
+        font-size: 11px;
+      }
+      ul {
+        font-size: 11px;
+        li {
+          list-style: outside;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  .copyright {
+    padding-top: 29px;
+    clear: both;
+    p {
+      font-style: italic;
+      line-height: 14px;
+      font-size: 11px;
+    }
+  }
+}
+
+/* LEADERSHIP/MANAGEMENT TEAM
+--------------------------------------------------------------*/
+
+.st_team_sectionTlt {
+  font-size: 20px;
+  font-weight: normal;
+  padding-bottom: 12px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.st_team_name {
+  font-size: 13px;
+}
+
+.st_team_title {
+  font-style: italic;
+  color: #505050;
+  line-height: 16px;
+  font-size: 12px;
+  margin: 0;
+}
+
+.st_team_bio {
+  padding-top: 16px;
+}
+
+.bigMemberWrapper {
+  clear: both;
+  padding-top: 15px;
+  .portrait {
+    width: 378px;
+    height: 235px;
+    overflow: hidden;
+    background: #d8d8d8;
+    float: left;
+  }
+  .st_team_profileBox {
+    width: 558px;
+    float: right;
+  }
+  .st_team_name {
+    padding-top: 3px;
+  }
+}
+
+.teamSection {
+  clear: both;
+  padding-top: 58px;
+}
+
+.row {
+  clear: both;
+  padding-top: 28px;
+  &.first {
+    padding-top: 18px;
+  }
+}
+
+.smallMemberWrapper {
+  float: left;
+  width: 211px;
+  padding-left: 44px;
+  &:first-child {
+    padding: 0;
+  }
+  .portrait {
+    width: 211px;
+    height: 115px;
+    overflow: hidden;
+    background: #d8d8d8;
+  }
+  .st_team_name {
+    padding-top: 17px;
+  }
+}
+
+/* PRESS INFO
+--------------------------------------------------------------*/
+
+#Press .mainContent {
+  padding-top: 32px;
+  padding-bottom: 30px;
+}
+
+.pressInfo {
+  width: 315px;
+  height: 877px;
+  margin-bottom: 17px;
+  background: #ffffff;
+  hr {
+    margin: 13px 0 0 0;
+  }
+  .black {
+    background: black;
+    height: 45px;
+    text-align: center;
+    .st_press_sectionTlt {
+      color: #ffffff;
+      font-size: 20px;
+      padding-top: 10px;
+      font-weight: normal;
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+  .white {
+    background: #ffffff;
+    padding: 0 17px;
+    .st_press_subSectionTlt {
+      padding-top: 30px;
+      font-size: 20px;
+      color: #000;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+    }
+    .media {
+      margin-top: -2px;
+      .name {
+        padding-top: 11px;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 16px;
+        color: black;
+      }
+      .position {
+        font-size: 12px;
+        font-style: italic;
+        line-height: 16px;
+        color: #505050;
+      }
+      .contact {
+        font-size: 12px;
+        line-height: 16px;
+        color: #434343;
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+    .digitalMagazine a {
+      font-size: 13px;
+    }
+    .pressReleases {
+      padding-top: 5px;
+      a {
+        font-size: 13px;
+      }
+      .details {
+        padding: 14px 0 5px 0;
+        font-size: 12px;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.colLeft, .colMiddle {
+  width: 315px;
+  padding-right: 16px;
+  float: left;
+}
+
+.colRight {
+  width: 315px;
+  float: left;
+}
+
+.pressBox {
+  margin: 0 0 17px 0;
+  height: 430px;
+  width: 315px;
+  background: #ffffff;
+  position: relative;
+  img {
+    width: 315px;
+    height: 308px;
+    overflow: hidden;
+  }
+  .content {
+    padding: 14px 17px 0;
+    .st_press_articleTlt {
+      font-size: 14px;
+      color: #000;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+    }
+    p {
+      padding-top: 10px;
+    }
+  }
+  a.readMore {
+    position: absolute;
+    bottom: 14px;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+}
+
+/* CONTACT PAGE
+--------------------------------------------------------------*/
+
+.st_contact_mainContent {
+  margin-top: 44px;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.st_contact_sectionTlt {
+  font-size: 20px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.reachUs {
+  position: absolute;
+  top: 0;
+  left: 521px;
+  width: 456px;
+  color: #505050;
+  line-height: 16px;
+  font-size: 12px;
+  margin: 0;
+}
+
+/*.reachUs hr
+    {
+        margin: 20px 0 0 0;
+    }*/
+
+.reachUsSection {
+  padding-top: 25px;
+}
+
+.reachUs .fixedSpacing {
+  width: 330px;
+  float: right;
+  text-align: left;
+}
+
+.assistBox {
+  background: #e1e1e1;
+  width: 421px;
+  min-height: 257px;
+  padding: 30px 0 30px 35px;
+  position: relative;
+  .comments {
+    position: absolute;
+    top: 157px;
+    left: 35px;
+    overflow: auto;
+    vertical-align: top;
+    border: #ececec solid 1px;
+    width: 383px;
+    height: 60px;
+    font-size: 10px;
+  }
+  .contact_selectWrapper {
+    position: absolute;
+    top: 79px;
+    left: 35px;
+    line-height: normal;
+    /*style-select*/
+    background: url("https://resources.luxuryretreats.com/images/comboboxArrow.png") no-repeat scroll right center white;
+    border: 1px solid #ECECEC;
+    float: left;
+    height: 20px;
+    margin-right: 15px;
+    overflow: hidden;
+    padding: 0 25px 0 0;
+    width: 160px;
+  }
+}
+
+/*used to style select*/
+
+#contact_form_subject {
+  background: transparent;
+  width: 220px;
+  padding: 2px 0 5px 5px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 20px;
+  -webkit-appearance: none;
+  color: #000;
+  margin-left: 0;
+  outline: none;
+}
+
+/*select element*/
+
+.assistBox {
+  .subject {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: normal;
+    margin-right: 15px;
+    height: 20px;
+    width: 187px;
+    font-size: 10px;
+    border: #ececec solid 1px;
+  }
+  input {
+    position: absolute;
+    line-height: normal;
+    border: #ececec solid 1px;
+    height: 22px;
+    width: 180px;
+    height: 20px;
+    padding-left: 5px;
+    font-size: 10px;
+    &.email {
+      top: 79px;
+      left: 236px;
+    }
+    &.firstName {
+      top: 117px;
+      left: 35px;
+    }
+    &.lastName {
+      top: 117px;
+      left: 236px;
+    }
+  }
+  .submit {
+    position: absolute;
+    top: 250px;
+    left: 173px;
+    background: none repeat scroll 0 0 #4cb7cd;
+    border: 0 none;
+    color: #ffffff;
+    font-size: 11px;
+    height: 24px;
+    text-transform: uppercase;
+    width: 113px;
+  }
+}
+
+.contact_errorContainer {
+  width: 386px;
+  text-align: center;
+  color: red;
+  font-size: 12px;
+  padding-top: 230px;
+  .error {
+    display: block;
+  }
+}
+
+/*ensures default labels do not appear*/
+
+.assistBox {
+  input.error, select.error {
+    border: red 1px solid;
+  }
+}
+
+#Contact .redBorder {
+  border: 1px solid red;
+}
+
+#contact_loading {
+  display: none;
+  position: absolute;
+  left: 220px;
+  top: 250px;
+}
+
+#contact_successfullySent {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 12px;
+  width: 389px;
+}
+
+#contact_notSuccessfull {
+  color: red;
+  top: 300px;
+  text-align: center;
+  font-size: 12px;
+  width: 389px;
+}
+
+/* PARTNERSHIP PAGE
+--------------------------------------------------------------*/
+
+#PropertyOwners .container {
+  padding-top: 57px;
+  margin-bottom: 65px;
+  clear: both;
+}
+
+.contactCurators {
+  padding: 35px 0 60px 0;
+  a {
+    padding: 11px 30px 11px 28px;
+    background: #4cb7cd;
+    color: #fff;
+    font-size: 10px;
+  }
+}
+
+.resultsLeft {
+  float: left;
+  position: relative;
+  width: 506px;
+}
+
+.resultsRight {
+  width: 431px;
+  float: right;
+  color: #505050;
+  font-size: 12px;
+  line-height: 16px;
+  p {
+    padding-top: 20px;
+  }
+  ul {
+    padding-top: 0;
+    li {
+      margin-left: 22px;
+      list-style-image: url("https://resources.luxuryretreats.com/images/st_arrow_bullet.png");
+    }
+  }
+}
+
+.ownersWhy {
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.ownerComment {
+  padding-top: 20px;
+}
+
+.resultsRight {
+  q {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .origin {
+    font-size: 12px;
+    padding-top: 4px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+.resultsTlt {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* PARTNERSHIP DIALOG MODAL FORM ELEMENTS
+--------------------------------------------------------------*/
+
+.formCloseStyle {
+  background: url("https://resources.luxuryretreats.com/images/dialogClose.gif") no-repeat scroll right 2px transparent;
+  color: #8E8E8E;
+  font-size: 12px;
+  padding-right: 15px;
+  position: absolute;
+  right: 0;
+  top: 3px;
+  margin-right: -24px;
+}
+
+.PartnerCloseFormRectangleBtn {
+  position: absolute;
+  top: 381px;
+  left: 165px;
+  text-align: center;
+  margin: 0 auto;
+  a {
+    padding: 5px 30px 5px 28px;
+    background: #8e8e8e;
+    color: #fff;
+    font-size: 10px;
+  }
+}
+
+.popupPartnerDialog {
+  position: relative;
+  height: auto;
+  width: 400px;
+  display: block;
+  background-image: none;
+  background-color: #f9f9f8;
+  border: none;
+  color: #222222;
+  input {
+    width: 182px;
+    height: 20px;
+    border: 1px solid #ececec;
+    font-size: 10px;
+  }
+  #partner_form_bedrooms {
+    font-size: 10px;
+    /*used to syle select*/
+    background: transparent;
+    width: 220px;
+    padding: 2px 0 5px 5px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 20px;
+    -webkit-appearance: none;
+    color: #000;
+    margin-left: 0;
+    outline: none;
+  }
+}
+
+/*used to syle select*/
+
+#partner_form_container {
+  .styled-select {
+    background: url("https://resources.luxuryretreats.com/images/comboboxArrow.png") no-repeat scroll right center white;
+    border: 1px solid #ECECEC;
+    float: left;
+    height: 20px;
+    margin-right: 15px;
+    overflow: hidden;
+    padding: 0 25px 0 0;
+    width: 160px;
+  }
+  .left {
+    left: 0;
+    position: absolute;
+  }
+  .right {
+    left: 201px;
+    position: absolute;
+  }
+  .row1 {
+    top: 158px;
+    position: absolute;
+  }
+  .row2 {
+    top: 193px;
+    position: absolute;
+  }
+  .row3 {
+    top: 228px;
+    position: absolute;
+  }
+  .row4 {
+    top: 263px;
+    position: absolute;
+  }
+  .row5 {
+    top: 298px;
+    position: absolute;
+  }
+}
+
+#partner_submitDiv {
+  position: absolute;
+  top: 378px;
+  left: 155px;
+}
+
+#partner_form_container {
+  position: relative;
+  font-size: 12px;
+  color: #434343;
+  padding: 50px 0 0 17px;
+  line-height: 16px;
+  #tltForm {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+  }
+  p {
+    width: 383px;
+    padding-top: 5px;
+  }
+}
+
+#partner_form_additionalComments {
+  .redBorder {
+    border: 1px solid red;
+  }
+  width: 383px;
+  height: 65px;
+  border: 1px solid #ececec;
+}
+
+#partner_form_container .submit {
+  background: #4cb7cd;
+  color: #fff;
+  border: none;
+  width: 113px;
+  height: 24px;
+  font-size: 12px;
+}
+
+#partner_loading {
+  position: absolute;
+  left: 193px;
+  top: 390px;
+}
+
+#partner_successfullySent {
+  position: absolute;
+  top: 410px;
+  text-align: center;
+  font-size: 12px;
+  width: 389px;
+}
+
+#partner_notSuccessfull {
+  color: red;
+  position: absolute;
+  top: 410px;
+  text-align: center;
+  font-size: 12px;
+  width: 389px;
+}
+
+#partner_form_container .redBorder {
+  border: 1px solid red;
+}
+
+.partner_errorContainer {
+  padding-top: 265px;
+  text-align: center;
+  color: red;
+  font-size: 12px;
+  .error {
+    display: block;
+    border: none;
+  }
+}
+
+#partner_form_container input.error {
+  border: red 1px solid;
+}
+
+/* LAZY LOADER
+--------------------------------------------------------------*/
+
+.lazy {
+  display: none;
+}
+
+/* ROYAL SLIDER
+--------------------------------------------------------------*/
+
+#About .royalSlider {
+  width: 977px;
+  height: 431px;
+}
+
+/*Royal Slider Arrows*/
+
+.rsDefault {
+  .rsArrowIcn {
+    background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat 0 -100px transparent;
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+    height: 60px;
+    left: 50%;
+    margin-top: -16px;
+    position: absolute;
+    width: 60px;
+  }
+  &.rsHor {
+    .rsArrowLeft .rsArrowIcn {
+      background-position: 0 -100px;
+      margin-left: -22px;
+    }
+    .rsArrowRight .rsArrowIcn {
+      background-position: 0 -160px;
+      margin-left: -39px;
+    }
+  }
+}
+
+.boxHeader {
+  background: #dddddd url('http://careers.jobvite.com/bg-btn-default.gif') repeat-x 0 0;
+  height: 30px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  width: 220px;
+  margin-top: 33px;
+  border-left: solid 1px #DEDEDE;
+  border-right: solid 1px #DEDEDE;
+  border-top: solid 1px #DEDEDE;
+}
+
+.boxContent {
+  border: 1px solid #DEDEDE;
+  font-size: 11px;
+  margin: 0;
+  padding: 10px 0 10px 5px;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  width: 215px;
+}
+
+
+.intro {
+  margin-top: 90px;
+}
