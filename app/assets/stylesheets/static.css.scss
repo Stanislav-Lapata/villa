@@ -38,7 +38,7 @@ hr {
   width: 1010px;
   margin: auto;
   padding: 0 0;
-  background: url(https://resources.luxuryretreats.com/images/st_wrapper_shadow.gif) repeat-y;
+  background: image-url('st_wrapper_shadow.gif') repeat-y;
 }
 
 /* FONT
@@ -93,7 +93,7 @@ ul {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   }
   .whiteLine {
-    background: url(https://resources.luxuryretreats.com/images/st_banner_white_line.png) no-repeat;
+    background: url('st_banner_white_line.png') no-repeat;
     height: 64px;
     width: 1px;
     margin: 0 24px 0 30px;
@@ -128,7 +128,7 @@ ul {
         color: #505050;
         font-size: 11px;
         padding: 3px 20px 3px 13px;
-        background: url(https://resources.luxuryretreats.com/images/st_menu_bullet.jpg) no-repeat right 5px;
+        background: url('st_menu_bullet.jpg') no-repeat right 5px;
         &:hover {
           color: #4cb7cd;
         }
@@ -156,7 +156,7 @@ ul {
     position: relative;
   }
   .arrow {
-    background: url(https://resources.luxuryretreats.com/images/st_down_arrow.gif) no-repeat;
+    background: url('st_down_arrow.gif') no-repeat;
     width: 65px;
     height: 27px;
     margin: 30px auto 0;
@@ -335,7 +335,7 @@ ul {
       color: #ffffff;
       font-size: 19.5px;
       text-transform: uppercase;
-      background: url(https://resources.luxuryretreats.com/images/st_date_circle.png) no-repeat;
+      background: url('st_date_circle.png') no-repeat;
       line-height: 122px;
       span {
         display: inline-block;
@@ -391,7 +391,7 @@ ul {
         width: 388px;
         height: auto;
         margin: 0 auto;
-        background: url(https://resources.luxuryretreats.com/images/st_milestone_timeline.png);
+        background: url('st_milestone_timeline.png');
         text-align: center;
         line-height: 12px;
         overflow: hidden;
@@ -745,7 +745,7 @@ ul {
     left: 35px;
     line-height: normal;
     /*style-select*/
-    background: url("https://resources.luxuryretreats.com/images/comboboxArrow.png") no-repeat scroll right center white;
+    background: image-url("comboboxArrow.png") no-repeat scroll right center white;
     border: 1px solid #ECECEC;
     float: left;
     height: 20px;
@@ -905,7 +905,7 @@ ul {
     padding-top: 0;
     li {
       margin-left: 22px;
-      list-style-image: url("https://resources.luxuryretreats.com/images/st_arrow_bullet.png");
+      list-style-image: image-url("st_arrow_bullet.png");
     }
   }
 }
@@ -945,7 +945,7 @@ ul {
 --------------------------------------------------------------*/
 
 .formCloseStyle {
-  background: url("https://resources.luxuryretreats.com/images/dialogClose.gif") no-repeat scroll right 2px transparent;
+  background: image-url("dialogClose.gif") no-repeat scroll right 2px transparent;
   color: #8E8E8E;
   font-size: 12px;
   padding-right: 15px;
@@ -1005,7 +1005,7 @@ ul {
 
 #partner_form_container {
   .styled-select {
-    background: url("https://resources.luxuryretreats.com/images/comboboxArrow.png") no-repeat scroll right center white;
+    background: image-url("comboboxArrow.png") no-repeat scroll right center white;
     border: 1px solid #ECECEC;
     float: left;
     height: 20px;
@@ -1147,7 +1147,7 @@ ul {
 
 .rsDefault {
   .rsArrowIcn {
-    background: url(https://resources.luxuryretreats.com/images/spritesGlobal.png) no-repeat 0 -100px transparent;
+    background: image-url('spritesGlobal.png') no-repeat 0 -100px transparent;
     border-radius: 2px 2px 2px 2px;
     cursor: pointer;
     height: 60px;
@@ -1169,7 +1169,7 @@ ul {
 }
 
 .boxHeader {
-  background: #dddddd url('http://careers.jobvite.com/bg-btn-default.gif') repeat-x 0 0;
+  background: #dddddd image-url('http://careers.jobvite.com/bg-btn-default.gif') repeat-x 0 0;
   height: 30px;
   text-align: left;
   font-weight: bold;
