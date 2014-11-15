@@ -1,3 +1,4 @@
+<% sale ||= false %>
 <div class="villaBlockContainer" itemscope="http://schema.org/LodgingBusiness" id="item0" style="position: relative; visibility: visible;">
 
     <%= link_to image_tag(villa.images.first.image.url, class: 'villaPhoto', itemprop: 'photo', alt: villa.name), villa, class: 'villaPhotoUrl', itemprop: 'url' %>
