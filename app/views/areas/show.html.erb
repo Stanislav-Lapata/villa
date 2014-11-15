@@ -22,10 +22,11 @@
             <nav id="searchContainer">
 
                 <div id="searchNavContainer" style="display: block;">
-
-                    <div id="btnBack">
-                        <%= link_to t(:back, scope: 'villas'), @area.parent if @area.parent %>
-                    </div>
+                    <% if @area.parent %>
+                        <div id="btnBack">
+                            <%= link_to t(:back, scope: 'villas'), @area.parent %>
+                        </div>
+                    <% end %>
                     <ul id="ajaxSearchNav">
                         <% @area.children.each do |area| %>
                             <li id="item<%= area.id %>" style="display: list-item;">

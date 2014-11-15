@@ -17,10 +17,14 @@
         </div>
 
         <div class="villaPrice" itemprop="priceRange">
-            <span class="vpMin"><%= number_to_currency(villa.price_from, precision: 0) %></span>
-            <span class="dollarSymbol">- </span>
-            <span class="vpMax"><%= number_to_currency(villa.price_to, precision: 0) %></span>
-            <span class="nightly">/<%= t(:per_night, scope: 'villas') %></span>
+            <% if sale %>
+                <span class="vpMin"><%= number_to_currency(villa.sale_price, precision: 0) %></span>
+            <% else %>
+                <span class="vpMin"><%= number_to_currency(villa.price_from, precision: 0) %></span>
+                <span class="dollarSymbol">- </span>
+                <span class="vpMax"><%= number_to_currency(villa.price_to, precision: 0) %></span>
+                <span class="nightly">/<%= t(:per_night, scope: 'villas') %></span>
+            <% end %>
         </div>
 
         <div class="villaDetailsLink">

@@ -1,5 +1,4 @@
 <header>
-<%= search_form_for @q, url: villas_path do |f| %>
   <div id="headerWrapper">
       <nav>
           <ul id="mainMenu" class="mainMenu">
@@ -72,10 +71,14 @@
 
               <ul>
                   <li class="lnkSeachFilter searchControls itemWrapper">
-                      <a href="javascript:;" id="openRentalSearchFilter" class="openSearchFilter"><span class="arrowRB"><%= t(:rental, scope: 'navigation') %></span></a>
+                    <%= link_to rental_filters_path, remote: true, class: 'openSearchFilter' do %>
+                      <span class="arrowRB"><%= t(:rental, scope: 'navigation') %></span>
+                    <% end %>
                   </li>
                   <li class="lnkSeachFilter searchControls itemWrapper">
-                      <a href="javascript:;" id="openSaleSearchFilter" class="openSearchFilter"><span class="arrowRB"><%= t(:sale, scope: 'navigation') %></span></a>
+                    <%= link_to sale_filters_path, remote: true, class: 'openSearchFilter' do %>
+                      <span class="arrowRB"><%= t(:sale, scope: 'navigation') %></span>
+                    <% end %>
                   </li>
               </ul>
           </div>
@@ -88,12 +91,11 @@
       </div>
   </div>
 
-  <div class="headerDropdownWrapper rental" style="<%= 'display: none;' if (controller_name == 'villas' && action_name == 'show') || (action_name == 'contact') %>">
-    <%= render 'shared/rental_filters', f: f %>
+  <div class="headerDropdownWrapper" style="<%= 'display: none;' if (controller_name == 'villas' && action_name == 'show') || (action_name == 'contact') %>">
+    <% if params[:q][:rental_eq] %>
+      <%= render 'shared/rental_filters' %>
+    <% else %>
+      <%= render 'shared/sale_filters' %>
+    <% end %>
   </div>
-  <div class="headerDropdownWrapper sale" style="display: none;">
-
-    <%= render 'shared/sale_filters', f: f %>
-  </div>
-<% end %>
 </header>

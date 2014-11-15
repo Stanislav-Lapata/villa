@@ -13,7 +13,7 @@
                 </div>
 
                 <div id="ajaxResult">
-                    <%= render @villas %>
+                    <%= render @villas, sale: !!params[:q][:sale_eq] %>
                 </div>
 
                 <div id="infinite-scrolling" style="margin-bottom: 100px;">

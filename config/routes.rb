@@ -34,5 +34,8 @@ JqVilla::Application.routes.draw do
   get '/faq', to: 'home#faq', as: :faq
   get '/contact', to: 'home#contact', as: :contact
 
+  get '/filters/rental', to: 'filters#rental', as: :rental_filters
+  get '/filters/sale', to: 'filters#sale', as: :sale_filters
+
   root 'home#index'
 end

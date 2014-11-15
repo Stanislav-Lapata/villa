@@ -1,0 +1,22 @@
+$('.headerDropdownWrapper').html("<%=j render('shared/rental_filters') %>")
+
+var slider;
+
+$('#sfAmount').text("$" + ($('#sfPriceSliderMin').val()) + " - $" + ($('#sfPriceSliderMax').val()));
+
+slider = $('#sfSlider');
+
+slider.slider({
+  range: true,
+  min: $('#sfPriceSliderMin').data('min'),
+  max: $('#sfPriceSliderMax').data('min'),
+  values: [$('#sfPriceSliderMin').val(), $('#sfPriceSliderMax').val()],
+  slide: function(event, ui) {
+    $('#sfPriceSliderMin').val(ui.values[0]);
+    $('#sfPriceSliderMax').val(ui.values[1]);
+    return $('#sfAmount').text("$" + ui.values[0] + " - $" + ui.values[1]);
+  },
+  create: function() {
+    return $('#sfAmount').text("$" + (slider.slider("values", 0)) + " - $" + (slider.slider("values", 1)));
+  }
+});

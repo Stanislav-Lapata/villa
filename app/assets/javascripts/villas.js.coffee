@@ -23,11 +23,10 @@ $ ->
     $('#wishListdialog-modal').dialog('close')
 
   initSlider = ->
-    $('#sfRentalAmount').text("$#{$('#sfPriceSliderMin').val()} - $#{$('#sfPriceSliderMax').val()}")
-    $('#sfSaleAmount').text("$#{$('#sfSalePriceSliderMin').val()} - $#{$('#sfSalePriceSliderMax').val()}")
+    $('#sfAmount').text("$#{$('#sfPriceSliderMin').val()} - $#{$('#sfPriceSliderMax').val()}")
 
-    rent_slider = $('#sfRentalSlider')
-    rent_slider.slider
+    slider = $('#sfSlider')
+    slider.slider
       range: true
       min: $('#sfPriceSliderMin').data('min')
       max: $('#sfPriceSliderMax').data('min')
@@ -38,25 +37,9 @@ $ ->
       slide: (event, ui) ->
         $('#sfPriceSliderMin').val(ui.values[0])
         $('#sfPriceSliderMax').val(ui.values[1])
-        $('#sfRentalAmount').text("$#{ui.values[0]} - $#{ui.values[1]}")
+        $('#sfAmount').text("$#{ui.values[0]} - $#{ui.values[1]}")
       create: ->
-        $('#sfRentalAmount').text("$#{rent_slider.slider("values", 0)} - $#{rent_slider.slider("values", 1)}")
-
-    sale_slider = $('#sfSaleSlider')
-    sale_slider.slider
-      range: true
-      min: $('#sfSalePriceSliderMin').data('min')
-      max: $('#sfSalePriceSliderMax').data('min')
-      values: [
-        $('#sfSalePriceSliderMin').val()
-        $('#sfSalePriceSliderMax').val()
-      ]
-      slide: (event, ui) ->
-        $('#sfSalePriceSliderMin').val(ui.values[0])
-        $('#sfSalePriceSliderMax').val(ui.values[1])
-        $('#sfSaleAmount').text("$#{ui.values[0]} - $#{ui.values[1]}")
-      create: ->
-        $('#sfSaleAmount').text("$#{sale_slider.slider("values", 0)} - $#{sale_slider.slider("values", 1)}")
+        $('#sfAmount').text("$#{slider.slider("values", 0)} - $#{slider.slider("values", 1)}")
 
   initSlider()
 
@@ -107,7 +90,7 @@ $ ->
 
   generate_regions = ->
     regions = []
-    $('#sfRentalSearchOptions .sfSubRegion').each (region) ->
+    $('#sfSearchOptions .sfSubRegion').each (region) ->
       checked_regions = $(".selectAll:checked", @)
       if checked_regions.length
         parent_region = $('.selectAll', @)
@@ -116,23 +99,11 @@ $ ->
         $(".region3Checkbox:checked", @).each ->
           regions.push($(@).data('label'))
 
-    $('.sfLocation:visible').val(regions.join(', '))
-
-    regions = []
-    $('#sfSaleSearchOptions .sfSubRegion').each (region) ->
-      checked_regions = $(".selectAll:checked", @)
-      if checked_regions.length
-        parent_region = $('.selectAll', @)
-        regions.push(parent_region.data('label'))
-      else
-        $(".region3Checkbox:checked", @).each ->
-          regions.push($(@).data('label'))
-
-    $('.sfLocation:visible').val(regions.join(', '))
+    $('#sfLocation').val(regions.join(', '))
 
   generate_regions()
 
-  $(".region3Checkbox").on "click", ->
+  $(".headerDropdownWrapper").on "click", '.region3Checkbox', ->
     block_container = $(@).closest('.sfSubRegionBlock')
     checked_regions = $(".region3Checkbox:checked", block_container)
     select_all = $('.selectAll', block_container.parent())
@@ -140,28 +111,21 @@ $ ->
 
     generate_regions()
 
-  $('.sfShowHideArea').on 'click', ->
+  $('.headerDropdownWrapper').on 'click', '.sfShowHideArea', (e) ->
+    e.stopPropagation()
     $('.sfBottom').toggle('show')
     $('.sfMoreBtn').toggle('hide')
     setSideInfo()
 
-  $('#sfRentalInputSearchContainer').on 'click', ->
+  $('.headerDropdownWrapper').on 'click', '#sfInputSearchContainer', ->
     conteiner = $(@)
     conteiner.addClass('highlight')
-    $('#sfRentalSearchOptions').addClass('open')
-    $('#sfRentalSearchOptions').on 'mouseleave', ->
+    $('#sfSearchOptions').addClass('open')
+    $('#sfSearchOptions').on 'mouseleave', ->
       conteiner.removeClass('highlight')
-      $('#sfRentalSearchOptions').removeClass('open')
+      $('#sfSearchOptions').removeClass('open')
 
-  $('#sfSaleInputSearchContainer').on 'click', ->
-    conteiner = $(@)
-    conteiner.addClass('highlight')
-    $('#sfSaleSearchOptions').addClass('open')
-    $('#sfSaleSearchOptions').on 'mouseleave', ->
-      conteiner.removeClass('highlight')
-      $('#sfSaleSearchOptions').removeClass('open')
-
-  $('.selectAll').on 'click', ->
+  $('.headerDropdownWrapper').on 'click', '.selectAll', ->
     sub_areas = $(".sub#{@id.split('all-')[1]}")
     checked_sub_areas = $(".sub#{@id.split('all-')[1]}:checked")
     sub_areas.prop('checked', $(@).is(':checked'))
@@ -194,14 +158,10 @@ $ ->
       $('#readMoreLnk, #shortview').show()
       $('#fullview, #readLessLnk').hide()
 
-  $('#openRentalSearchFilter').on 'click', ->
-    $('.headerDropdownWrapper.sale').hide()
-    $('.headerDropdownWrapper.sale input').prop('disabled', true)
-    $('.headerDropdownWrapper.rental').show()
-    $('.headerDropdownWrapper.rental input').prop('disabled', false)
+  # $('#openRentalSearchFilter').on 'click', ->
+  #   $('.headerDropdownWrapper.sale').hide()
+  #   $('.headerDropdownWrapper.rental').show()
 
-  $('#openSaleSearchFilter').on 'click', ->
-    $('.headerDropdownWrapper.rental').hide()
-    $('.headerDropdownWrapper.rental input').prop('disabled', true)
-    $('.headerDropdownWrapper.sale').show()
-    $('.headerDropdownWrapper.sale input').prop('disabled', false)
+  # $('#openSaleSearchFilter').on 'click', ->
+  #   $('.headerDropdownWrapper.rental').hide()
+  #   $('.headerDropdownWrapper.sale').show()
