@@ -19,6 +19,40 @@
                 <%= image_tag 'caribbean.jpg', alt: 'Caribbean', class: 'destinationBanner', itemprop: 'photo' %>
             </div>
 
+            <nav id="searchContainer">
+
+                <div id="searchNavContainer" style="display: block;">
+
+                    <div id="btnBack">
+                        <%= link_to t(:back, scope: 'villas'), @area.parent if @area.parent %>
+                    </div>
+                    <ul id="ajaxSearchNav">
+                        <% @area.children.each do |area| %>
+                            <li id="item<%= area.id %>" style="display: list-item;">
+                                <%= link_to area do %>
+                                    <span class="snName"><%= area.name %></span> (<span class="snCount"><%= area.villas.count %></span>)
+                                <% end %>
+                            </li>
+                        <% end %>
+                    </ul>
+
+                </div>
+                <div class="navPromoBlock">
+                    <div class="uppercase navPromoBlock-title">Got a question?<br>Give us a call!</div>
+                    <div class="navPromoBlock-phone">
+                        <div class="navPromoBlock-phoneNumber">
+                            <strong>Russia:</strong> <br>+7 903 978 75 85
+                        </div>
+                        <div class="navPromoBlock-phoneNumber">
+                            <strong>Thailand:</strong> <br>+66 910 43 43 10
+                        </div>
+                        <div class="navPromoBlock-phoneNumber">
+                            <strong>United Kingdom:</strong> <br>+44 208 144 55 64
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
             <div id="contentBlock">
                 <div id="searchHeadContainer">
                     <div id="tltWrapper">

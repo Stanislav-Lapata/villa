@@ -1,0 +1,105 @@
+<div id="searchFilterBg" class="searchFilterBg less" style="display: block;">
+  <%= f.hidden_field :sale_eq, value: true %>
+  <%= f.hidden_field :sale_price_gteq, value: params[:q][:sale_price_gteq] || 10000, id: 'sfSalePriceSliderMin', data: {min: 10000} %>
+  <%= f.hidden_field :sale_price_lteq, value: params[:q][:sale_price_lteq] || 10000000, id: 'sfSalePriceSliderMax', data: {min: 10000000} %>
+  <div class="sfTop">
+      <div class="searchFilterWrapper">
+          <div class="sfInputWrapper">
+
+              <div id="sfSaleInputSearchContainer" class="sfInputSearchContainer rounded">
+                  <input id="sfSaleLocation" class="sfLocation" name="sfLocation" value="" readonly="readonly" onfocus="this.blur()" />
+                  <div id="sfSearchDropDown" class="sfSearchDropDown"></div>
+              </div>
+              <div id="sfSearchOptionsArrow" class="sfSearchOptionsArrow"></div>
+              <div id="sfSaleSearchOptions" class="sfSearchOptions">
+                <ul>
+                  <% Area.roots.each do |s_area| %>
+                    <li>
+                      <fieldset>
+                        <div class="sfSearchOptionsBar"></div>
+                          <div class="sfRegionName"><%= s_area.name %> <span class="selectCount"></span></div>
+                          <ul class="sfSubRegion ">
+                              <li class="sfSubRegionBlock">
+                                <div class="sfSelectAll">
+                                  <span class="sfRegion2Name"><%= s_area.name %></span>
+                                  <div class="selectWrapper">
+                                    <input id="all-<%= s_area.id %>" data-count="<%= s_area.children.count %>" data-label="<%= s_area.name %>" class="selectAll" name="select_all[]" value="<%= s_area.id %>" type="checkbox" <%= "checked" if (params[:select_all].include?(s_area.id.to_s) rescue false) %> />
+                                    <label for="all-<%= s_area.id %>" class="selectAll"><span></span><%= t(:select_all, scope: 'navigation') %></label>
+                                  </div>
+                                </div>
+                              </li>
+                              <% s_area.children.each_slice(14) do |slice| %>
+                                <li class="sfSubRegionBlock slice">
+                                  <ul class="sfSearchRow">
+                                    <% slice.each do |area| %>
+                                      <li>
+                                        <div class="selectWrapper">
+                                          <input id="villa-<%= area.id %>" class="sub<%= s_area.id %> region3Checkbox" value="<%= area.id %>" name="q[area_id_place_eq][]" data-label="<%= area.name %>" type="checkbox" <%= "checked" if (params[:q][:area_id_place_eq].include?(area.id.to_s) rescue false) %> />
+                                          <label for="villa-<%= area.id %>"><span></span><%= area.name %></label>
+                                        </div>
+                                      </li>
+                                    <% end %>
+                                  </ul>
+                                </li>
+                              <% end %>
+                          </ul>
+                      </fieldset>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+          </div>
+          <div class="sfInputWrapper">
+            <div class="sfBedroomContainer rounded">
+              <%= f.select :bedrooms_eq, 1.upto(Villa.max_bedrooms_count).map {|e| "#{e} BR" }, {include_blank: t(:bedrooms, scope: 'villas')}, id: 'sfBedroom' %>
+            </div>
+          </div>
+          <div class="sfInputWrapper sfSubmit">
+
+              <%= f.submit t(:search, scope: 'navigation'), id: 'sfSubmit', class: 'button rounded' %>
+          </div>
+          <div class="sfBlock sfShowHideArea sfMoreBtn">
+              <a id="sfMore"><%= t(:more_filters, scope: 'navigation') %> <span class="sfMoreArrow"></span></a>
+          </div>
+      </div>
+  </div>
+  <div class="sfBottom">
+    <div class="searchFilterWrapper">
+      <div class="sfBlock title">
+          <span class="filterTlt"><%= t(:filters, scope: 'navigation') %>:</span>
+      </div>
+      <div class="sfBlock slider">
+          <label for="sfSaleAmount"><%= t(:nightly_rate, scope: 'navigation') %>: </label>
+          <span id="sfSaleAmount" style="border: 0; color: #fff;"></span>
+          <div id="sfSaleSlider" class="sfSlider"></div>
+      </div>
+      <div class="sfBlock sort">
+          <div><%= t(:sort_by, scope: 'villas') %></div>
+          <div class="sfSortContainer rounded">
+            <%= f.select :s, sort_by_select_values, id: 'sfSort' %>
+          </div>
+      </div>
+
+      <div class="sfBlock sfShowHideArea">
+          <a id="sfLess"><%= t(:hide_filters, scope: 'navigation') %> <span class="sfHideArrow"></span></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="myAccountDropDownWrapper">
+  <div class="myAccountDropDownArrow"></div>
+  <div id="myAccountDropDown" class="rounded">
+    <ul id="notLoggedIn" class="notLoggedIn">
+      <li>
+        <a href="#" class="iFavorites"><%= t(:favorites, scope: 'navigation') %> <span class="wlCount countStyle">0</span></a>
+        <div class="buildWishlist">
+          <span class="strong">START BUILDING YOUR WISHLIST</span><br/>
+          Add your favorites and save them for later, or request multiple properties at the same time. We'll save your wishlist for your next visit.
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>

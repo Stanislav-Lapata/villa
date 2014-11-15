@@ -23,46 +23,66 @@ $ ->
     $('#wishListdialog-modal').dialog('close')
 
   initSlider = ->
-    if $('.sfFilterType:checked').val() == 'rent'
-      min_selector = '#sfPriceSliderMin'
-      max_selector = '#sfPriceSliderMax'
-      $('#sfSalePriceSliderMin, #sfSalePriceSliderMax').prop('disabled', true)
-      $('#sfPriceSliderMin, #sfPriceSliderMax').prop('disabled', false)
-    else
-      min_selector = '#sfSalePriceSliderMin'
-      max_selector = '#sfSalePriceSliderMax'
-      $('#sfPriceSliderMin, #sfPriceSliderMax').prop('disabled', true)
-      $('#sfSalePriceSliderMin, #sfSalePriceSliderMax').prop('disabled', false)
+    $('#sfRentalAmount').text("$#{$('#sfPriceSliderMin').val()} - $#{$('#sfPriceSliderMax').val()}")
+    $('#sfSaleAmount').text("$#{$('#sfSalePriceSliderMin').val()} - $#{$('#sfSalePriceSliderMax').val()}")
 
-    $('#sfAmount').text("$#{$(min_selector).val()} - $#{$(max_selector).val()}")
-
-    sliderable = $('#sfSlider')
-    sliderable.slider
+    rent_slider = $('#sfRentalSlider')
+    rent_slider.slider
       range: true
-      min: $(min_selector).data('min')
-      max: $(max_selector).data('min')
+      min: $('#sfPriceSliderMin').data('min')
+      max: $('#sfPriceSliderMax').data('min')
       values: [
-        $(min_selector).val()
-        $(max_selector).val()
+        $('#sfPriceSliderMin').val()
+        $('#sfPriceSliderMax').val()
       ]
       slide: (event, ui) ->
-        $(min_selector).val(ui.values[0])
-        $(max_selector).val(ui.values[1])
-        $('#sfAmount').text("$#{ui.values[0]} - $#{ui.values[1]}")
+        $('#sfPriceSliderMin').val(ui.values[0])
+        $('#sfPriceSliderMax').val(ui.values[1])
+        $('#sfRentalAmount').text("$#{ui.values[0]} - $#{ui.values[1]}")
       create: ->
-        $('#sfAmount').text("$#{sliderable.slider("values", 0)} - $#{sliderable.slider("values", 1)}")
+        $('#sfRentalAmount').text("$#{rent_slider.slider("values", 0)} - $#{rent_slider.slider("values", 1)}")
+
+    sale_slider = $('#sfSaleSlider')
+    sale_slider.slider
+      range: true
+      min: $('#sfSalePriceSliderMin').data('min')
+      max: $('#sfSalePriceSliderMax').data('min')
+      values: [
+        $('#sfSalePriceSliderMin').val()
+        $('#sfSalePriceSliderMax').val()
+      ]
+      slide: (event, ui) ->
+        $('#sfSalePriceSliderMin').val(ui.values[0])
+        $('#sfSalePriceSliderMax').val(ui.values[1])
+        $('#sfSaleAmount').text("$#{ui.values[0]} - $#{ui.values[1]}")
+      create: ->
+        $('#sfSaleAmount').text("$#{sale_slider.slider("values", 0)} - $#{sale_slider.slider("values", 1)}")
 
   initSlider()
 
-  $('.sfFilterType').on 'click', ->
-    initSlider()
+  setSideInfo = ->
+    if $('.sfBottom').is(':visible')
+      top = 280 - $(window).scrollTop()
+    else
+      top = 200 - $(window).scrollTop()
 
+    if top <= 0
+      top = 20
+      $('#ajaxSearchNav').hide()
+    else
+      $('#ajaxSearchNav').show()
+
+    $('#searchContainer').css({top: "#{top}px"})
 
   $(document).on 'scroll', ->
     if 710 < $(window).scrollTop() < 1035
       $('#villaAnchorMenu, .villa-reservation').removeClass('normal').addClass('makeFixed fixPosition')
     else
       $('#villaAnchorMenu, .villa-reservation').removeClass('makeFixed fixPosition').addClass('normal')
+
+    setSideInfo()
+
+
 
   $('#navDestination, #navContact').on 'click', (e) ->
     if $(@).hasClass('selected')
@@ -87,7 +107,7 @@ $ ->
 
   generate_regions = ->
     regions = []
-    $('.sfSubRegion').each (region) ->
+    $('#sfRentalSearchOptions .sfSubRegion').each (region) ->
       checked_regions = $(".selectAll:checked", @)
       if checked_regions.length
         parent_region = $('.selectAll', @)
@@ -96,7 +116,19 @@ $ ->
         $(".region3Checkbox:checked", @).each ->
           regions.push($(@).data('label'))
 
-    $('#sfLocation').val(regions.join(', '))
+    $('.sfLocation:visible').val(regions.join(', '))
+
+    regions = []
+    $('#sfSaleSearchOptions .sfSubRegion').each (region) ->
+      checked_regions = $(".selectAll:checked", @)
+      if checked_regions.length
+        parent_region = $('.selectAll', @)
+        regions.push(parent_region.data('label'))
+      else
+        $(".region3Checkbox:checked", @).each ->
+          regions.push($(@).data('label'))
+
+    $('.sfLocation:visible').val(regions.join(', '))
 
   generate_regions()
 
@@ -111,14 +143,23 @@ $ ->
   $('.sfShowHideArea').on 'click', ->
     $('.sfBottom').toggle('show')
     $('.sfMoreBtn').toggle('hide')
+    setSideInfo()
 
-  $('#sfInputSearchContainer').on 'click', ->
+  $('#sfRentalInputSearchContainer').on 'click', ->
     conteiner = $(@)
     conteiner.addClass('highlight')
-    $('#sfSearchOptions').addClass('open')
-    $('#sfSearchOptions').on 'mouseleave', ->
+    $('#sfRentalSearchOptions').addClass('open')
+    $('#sfRentalSearchOptions').on 'mouseleave', ->
       conteiner.removeClass('highlight')
-      $('#sfSearchOptions').removeClass('open')
+      $('#sfRentalSearchOptions').removeClass('open')
+
+  $('#sfSaleInputSearchContainer').on 'click', ->
+    conteiner = $(@)
+    conteiner.addClass('highlight')
+    $('#sfSaleSearchOptions').addClass('open')
+    $('#sfSaleSearchOptions').on 'mouseleave', ->
+      conteiner.removeClass('highlight')
+      $('#sfSaleSearchOptions').removeClass('open')
 
   $('.selectAll').on 'click', ->
     sub_areas = $(".sub#{@id.split('all-')[1]}")
@@ -153,5 +194,14 @@ $ ->
       $('#readMoreLnk, #shortview').show()
       $('#fullview, #readLessLnk').hide()
 
-  $('#openSearchFilter').on 'click', ->
-    $('.headerDropdownWrapper').toggle('show')
+  $('#openRentalSearchFilter').on 'click', ->
+    $('.headerDropdownWrapper.sale').hide()
+    $('.headerDropdownWrapper.sale input').prop('disabled', true)
+    $('.headerDropdownWrapper.rental').show()
+    $('.headerDropdownWrapper.rental input').prop('disabled', false)
+
+  $('#openSaleSearchFilter').on 'click', ->
+    $('.headerDropdownWrapper.rental').hide()
+    $('.headerDropdownWrapper.rental input').prop('disabled', true)
+    $('.headerDropdownWrapper.sale').show()
+    $('.headerDropdownWrapper.sale input').prop('disabled', false)

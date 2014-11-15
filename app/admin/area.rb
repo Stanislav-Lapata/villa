@@ -14,6 +14,7 @@ ActiveAdmin.register Area do
     column :name do |resource|
       "<span style=\"padding-left:#{resource.depth*24}px\">&bull; #{resource[:name]}</span>".html_safe
     end
+    column :slug
     column :show_on_home_page do |resource|
       if resource.show_on_home_page?
         status_tag('true', :ok)
@@ -30,6 +31,7 @@ ActiveAdmin.register Area do
   show do
     attributes_table do
       row :name
+      row :slug
       row :test do
         render "nested_areas"
       end
@@ -42,6 +44,7 @@ ActiveAdmin.register Area do
   form do |f|
     f.inputs "Admin Details" do
       f.input :name
+      f.input :slug
       f.input :parent
       f.input :show_on_home_page
       f.input :rental

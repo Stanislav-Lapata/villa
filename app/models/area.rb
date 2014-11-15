@@ -15,6 +15,10 @@ class Area < ActiveRecord::Base
   scope :for_rent, -> { where(rental: true) }
   scope :for_sale, -> { where(sale: true) }
 
+  before_save do |area|
+    self.slug = area.name.parameterize
+  end
+
   def pretty_name
     ancestor_chain = self.ancestors.inject("") do |name, ancestor|
       name += "#{ancestor.name} -> "
@@ -27,6 +31,6 @@ class Area < ActiveRecord::Base
   end
 
   def to_param
-    "#{id}-#{name}"
+    "#{id}-#{slug}"
   end
 end

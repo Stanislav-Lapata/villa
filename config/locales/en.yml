@@ -43,7 +43,9 @@ en:
     check_in: 'Check-In'
     check_out: 'Check-Out'
     rentals: "Luxury Rentals"
+    rental: 'Rental'
     sales: "Luxury Sales"
+    sale: "Sale"
     faq: "FAQ"
     contact: "Contact"
     house_rentals: "House rentals"
@@ -104,6 +106,7 @@ en:
     inquire: 'Inquire'
     get_started: 'Let’s Get Started!'
     fill_details: 'Fill in your details to connect with a Villa Specialist and start planning your perfect trip.'
+    back: 'BACK'
 
   contact:
     contact_form: "Contact Form"

@@ -19,7 +19,9 @@ ru:
     check_in: 'Заезд'
     check_out: 'Выезд'
     rentals: "Аренда вилл"
+    rental: "Аренда"
     sales: "Продажа вилл"
+    sale: "Продажа"
     faq: "FAQ"
     contact: "Контакты"
     house_rentals: "Аренда"
@@ -80,6 +82,7 @@ ru:
     inquire: 'Заказ'
     get_started: 'Давайте начнем!'
     fill_details: 'Введите данные и начните планировать свое идеальное путешествие.'
+    back: 'НАЗАД'
 
   contact:
     contact_form: "Контактная форма"
